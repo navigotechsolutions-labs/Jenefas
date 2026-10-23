@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jenefas & Jenefas | TV Mounts, AV Fixtures & Appliance Brackets | Since 1978 Chennai</title>
+  <meta name="description" content="South India's leading manufacturer and wholesaler of heavy-duty LED/LCD TV wall mounts, projector ceiling mounts, monitor arms, and AC stands. Ritchie Street, Chennai.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            display: ['"Space Grotesk"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#f0f7ff',
+              100: '#e0effe',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#075985',
+              800: '#0c4a6e',
+              900: '#082f49',
+            },
+            accent: {
+              400: '#fb923c',
+              500: '#f97316',
+              600: '#ea580c',
+            },
+            slate: {
+              850: '#151f32',
+              900: '#0f172a',
+              950: '#080c16',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .badge-glow {
+      box-shadow: 0 0 15px rgba(249, 115, 22, 0.35);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #334155;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-accent-500 selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <header class="bg-slate-900 border-b border-slate-800 text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+      <div class="flex items-center gap-3">
+        <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-accent-500/10 text-accent-400 font-semibold border border-accent-500/30">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i> Estd. 1978 • 48 Years of Manufacturing Trust
+        </span>
+        <span class="hidden md:inline text-slate-400">|</span>
+        <span class="hidden md:flex items-center gap-1 text-slate-400">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-slate-500"></i> Ritchie Street, Wallers Road, Chennai
+        </span>
+      </div>
+      <div class="flex items-center gap-4 text-slate-300">
+        <a href="tel:+919840817220" class="hover:text-white transition flex items-center gap-1.5">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-accent-500"></i>
+          <span class="font-medium">+91 98408 17220</span>
+        </a>
+        <span class="text-slate-700">|</span>
+        <a href="https://wa.me/919840817220?text=Hello%20Jenefas%20team,%20I%20would%20like%20to%20inquire%20about%20wholesale%20dealer%20prices." target="_blank" class="hover:text-emerald-400 text-emerald-400 font-medium transition flex items-center gap-1">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+          <span>WhatsApp Quick Order</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Navigation -->
+  <nav class="sticky top-0 z-40 bg-slate-950/90 backdrop-blur-md border-b border-slate-850">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3">
+          <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-accent-500 to-amber-600 flex items-center justify-center font-display font-bold text-white text-xl shadow-lg shadow-accent-500/20">
+            J
+          </div>
+          <div>
+            <div class="text-xl font-bold font-display tracking-tight text-white flex items-center gap-2">
+              JENEFAS &amp; JENEFAS
+            </div>
+            <p class="text-xs text-slate-400 tracking-wider uppercase font-semibold">AV Mounts &amp; Industrial Brackets</p>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+          <a href="#catalogue" class="text-slate-300 hover:text-accent-400 transition">Digital Catalogue</a>
+          <a href="#mount-finder" class="text-slate-300 hover:text-accent-400 transition">3-Click VESA Finder</a>
+          <a href="#why-jenefas" class="text-slate-300 hover:text-accent-400 transition">Why Jenefas</a>
+          <a href="#showroom" class="text-slate-300 hover:text-accent-400 transition">Ritchie Street Store</a>
+        </div>
+
+        <!-- Action Button -->
+        <div class="flex items-center gap-3">
+          <button onclick="openRfqModal()" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-amber-500 hover:from-accent-600 hover:to-amber-600 text-white font-semibold text-sm px-4 py-2.5 rounded-lg transition shadow-md shadow-accent-500/25 active:scale-95">
+            <i data-lucide="clipboard-list" class="w-4 h-4"></i>
+            <span>Wholesale RFQ</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden py-16 md:py-24 border-b border-slate-850 bg-gradient-to-b from-slate-900 to-slate-950">
+    <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f29370f_1px,transparent_1px),linear-gradient(to_bottom,#1f29370f_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-xs font-semibold text-slate-300">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>2026 Product Catalogue Live • Ritchie Street Wholesale Pricing</span>
+          </div>
+          
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight text-white leading-tight">
+            South India's Pioneer in <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-accent-400 via-amber-400 to-orange-400">
+              AV &amp; Display Mounting
+            </span>
+          </h1>
+          
+          <p class="text-lg text-slate-300 max-w-2xl leading-relaxed">
+            Founded in 1978 by <strong>Mannan Robert</strong>, Jenefas engineers ultra-durable cold-rolled steel wall brackets, full-motion articulating arms, ceiling drops, and appliance mounts. Serving 5,000+ dealers, electronics showrooms, and commercial integrators pan-India.
+          </p>
+
+          <!-- Key Highlights -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-4 border-t border-slate-800">
+            <div>
+              <div class="text-2xl sm:text-3xl font-display font-bold text-accent-400">48+</div>
+              <div class="text-xs text-slate-400 uppercase font-medium mt-0.5">Years Legacy (1978)</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-display font-bold text-white">2.0 mm</div>
+              <div class="text-xs text-slate-400 uppercase font-medium mt-0.5">Cold Rolled Steel</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-display font-bold text-white">100+</div>
+              <div class="text-xs text-slate-400 uppercase font-medium mt-0.5">Mount Models</div>
+            </div>
+            <div>
+              <div class="text-2xl sm:text-3xl font-display font-bold text-emerald-400">100%</div>
+              <div class="text-xs text-slate-400 uppercase font-medium mt-0.5">Ritchie St. Trust</div>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="#catalogue" class="inline-flex items-center gap-2 bg-accent-500 hover:bg-accent-600 text-white font-semibold px-6 py-3.5 rounded-lg transition shadow-lg shadow-accent-500/30">
+              <i data-lucide="grid" class="w-4 h-4"></i>
+              <span>Explore Digital Catalogue</span>
+            </a>
+            <a href="#mount-finder" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-6 py-3.5 rounded-lg border border-slate-700 transition">
+              <i data-lucide="compass" class="w-4 h-4 text-accent-400"></i>
+              <span>3-Click VESA Finder</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column / Quick Interactive Preview -->
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl bg-gradient-to-b from-slate-850 to-slate-900 p-6 border border-slate-700/80 shadow-2xl relative overflow-hidden">
+            <div class="absolute -right-16 -top-16 w-48 h-48 bg-accent-500/10 rounded-full blur-3xl"></div>
+            
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+              <div class="flex items-center gap-2.5">
+                <div class="w-3 h-3 rounded-full bg-emerald-500"></div>
+                <h3 class="font-display font-bold text-white">Dealer Direct Order Channel</h3>
+              </div>
+              <span class="text-xs text-accent-400 font-semibold">Immediate Dispatch</span>
+            </div>
+
+            <div class="space-y-4 my-5 text-sm">
+              <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 flex items-start gap-3">
+                <i data-lucide="shield-check" class="w-5 h-5 text-accent-400 shrink-0 mt-0.5"></i>
+                <div>
+                  <h4 class="font-semibold text-white">Commercial Grade Materials</h4>
+                  <p class="text-xs text-slate-400 mt-0.5">3X safety load-tested cold-rolled carbon steel plates with anti-corrosion electrostatic coating.</p>
+                </div>
+              </div>
+              
+              <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 flex items-start gap-3">
+                <i data-lucide="package-check" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+                <div>
+                  <h4 class="font-semibold text-white">Bulk Carton Wholesale Packaging</h4>
+                  <p class="text-xs text-slate-400 mt-0.5">Custom master carton packing with full installation hardware, heavy anchors &amp; spirit levels.</p>
+                </div>
+              </div>
+
+              <div class="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800 flex items-start gap-3">
+                <i data-lucide="truck" class="w-5 h-5 text-blue-400 shrink-0 mt-0.5"></i>
+                <div>
+                  <h4 class="font-semibold text-white">Same-Day Transport Booking</h4>
+                  <p class="text-xs text-slate-400 mt-0.5">Direct dispatch across Tamil Nadu, Kerala, Karnataka, Andhra &amp; Telangana via parcel service.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="https://wa.me/919840817220?text=Hi%20Mannan%20Robert%20sir,%20I%20am%20contacting%20you%20from%20the%20Jenefas%20catalogue%20regarding%20wholesale%20dealer%20pricing." target="_blank" class="w-full flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-3 rounded-xl transition shadow-lg shadow-emerald-950/50">
+                <i data-lucide="message-square" class="w-4 h-4"></i>
+                <span>Direct WhatsApp to Founder: +91 98408 17220</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive 3-Click Mount Finder -->
+  <section id="mount-finder" class="py-12 bg-slate-900 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 p-6 md:p-8 rounded-2xl border border-slate-800 shadow-xl">
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
+          <div>
+            <div class="flex items-center gap-2 text-accent-400 text-xs font-bold uppercase tracking-wider">
+              <i data-lucide="sparkles" class="w-4 h-4"></i> Interactive Sizing Tool
+            </div>
+            <h2 class="text-2xl md:text-3xl font-display font-bold text-white mt-1">3-Click VESA &amp; Mount Finder</h2>
+            <p class="text-sm text-slate-400">Instantly match your TV screen size and preferred mounting movement to the exact Jenefas model.</p>
+          </div>
+          <button onclick="resetFilters()" class="text-xs text-slate-400 hover:text-white underline self-start md:self-auto">Reset Finder</button>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <!-- Step 1: Screen Size -->
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
+              Step 1: TV Screen Size
+            </label>
+            <select id="finderSize" onchange="runMountFinder()" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-accent-500">
+              <option value="">All Screen Sizes</option>
+              <option value="14-32">14" - 32" (Compact / Bedroom)</option>
+              <option value="32-55">32" - 55" (Standard Living Room)</option>
+              <option value="55-75">55" - 75" (Large Format / 4K)</option>
+              <option value="75+">75" - 100"+ (Commercial / Mega)</option>
+            </select>
+          </div>
+
+          <!-- Step 2: Mount Type -->
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
+              Step 2: Motion Style
+            </label>
+            <select id="finderMotion" onchange="runMountFinder()" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-accent-500">
+              <option value="">All Motion Types</option>
+              <option value="fixed">Ultra-Slim Fixed (Flat)</option>
+              <option value="tilt">Tilt (Glare Reduction ±15°)</option>
+              <option value="motion">Full-Motion Swivel &amp; Extend</option>
+              <option value="ceiling">Ceiling Drop / Commercial</option>
+              <option value="desk">Gas-Spring Monitor Arm</option>
+            </select>
+          </div>
+
+          <!-- Step 3: Match Output -->
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-center">
+            <label class="block text-xs font-bold uppercase tracking-wider text-accent-400 mb-1">
+              Step 3: Instant Match
+            </label>
+            <div id="finderMatchCount" class="text-sm font-semibold text-white">
+              Showing all 18+ precision products
+            </div>
+            <a href="#catalogue" class="mt-2 text-xs font-bold text-accent-400 hover:text-accent-300 inline-flex items-center gap-1">
+              <span>View Filtered Results Below</span>
+              <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Digital Catalogue Section -->
+  <section id="catalogue" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
+      <div>
+        <span class="text-accent-400 text-xs font-bold uppercase tracking-wider">Product Lineup 2026</span>
+        <h2 class="text-3xl font-display font-bold text-white mt-1">Interactive Digital Catalogue</h2>
+        <p class="text-sm text-slate-400 mt-1">Direct from the manufacturer. Filter by category, VESA specification, or screen size.</p>
+      </div>
+
+      <!-- Search Box -->
+      <div class="w-full md:w-80">
+        <div class="relative">
+          <input type="text" id="searchInput" oninput="renderProducts()" placeholder="Search model, VESA, 65 inch..." class="w-full bg-slate-900 border border-slate-800 focus:border-accent-500 text-sm text-white rounded-xl pl-10 pr-4 py-2.5 focus:outline-none">
+          <i data-lucide="search" class="w-4 h-4 text-slate-500 absolute left-3.5 top-3"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 custom-scrollbar">
+      <button onclick="setCategory('all')" data-cat="all" class="cat-pill px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap bg-accent-500 text-white shadow-md shadow-accent-500/20">All Products</button>
+      <button onclick="setCategory('fixed')" data-cat="fixed" class="cat-pill px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap bg-slate-900 text-slate-300 hover:text-white border border-slate-800">Fixed TV Mounts</button>
+      <button onclick="setCategory('tilt')" data-cat="tilt" class="cat-pill px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap bg-slate-900 text-slate-300 hover:text-white border border-slate-800">Tilt Mounts</button>
+      <button onclick="setCategory('motion')" data-cat="motion" class="cat-pill px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap bg-slate-900 text-slate-300 hover:text-white border border-slate-800">Full-Motion Swivel</button>
+      <button onclick="setCategory('ceiling')" data-cat="ceiling" class="cat-pill px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap bg-slate-900 text-slate-300 hover:text-white border border-slate-800">Ceiling &amp; Video Wall</button>
+      <button onclick="setCategory('desk')" data-cat="desk" class="cat-pill px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap bg-slate-900 text-slate-300 hover:text-white border border-slate-800">Monitor Arms</button>
+      <button onclick="setCategory('projector')" data-cat="projector" class="cat-pill px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap bg-slate-900 text-slate-300 hover:text-white border border-slate-800">Projector &amp; Audio</button>
+      <button onclick="setCategory('appliance')" data-cat="appliance" class="cat-pill px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap bg-slate-900 text-slate-300 hover:text-white border border-slate-800">Appliance Brackets</button>
+    </div>
+
+    <!-- Product Grid -->
+    <div id="productGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Populated via JavaScript -->
+    </div>
+
+    <div id="emptyState" class="hidden text-center py-16 bg-slate-900/50 rounded-2xl border border-slate-800 mt-4">
+      <i data-lucide="package-search" class="w-12 h-12 text-slate-600 mx-auto mb-3"></i>
+      <h3 class="text-lg font-bold text-white">No mounting products match your filter</h3>
+      <p class="text-xs text-slate-400 mt-1">Try adjusting the screen size, category, or search term.</p>
+      <button onclick="resetFilters()" class="mt-4 px-4 py-2 rounded-lg bg-accent-500 text-white text-xs font-semibold">Reset All Filters</button>
+    </div>
+  </section>
+
+  <!-- Why Jenefas / Ritchie Street Authority -->
+  <section id="why-jenefas" class="py-16 bg-slate-900/60 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-accent-400 text-xs font-bold uppercase tracking-wider">Industrial Strength Guarantee</span>
+        <h2 class="text-3xl font-display font-bold text-white mt-1">Why Dealers Choose Jenefas Since 1978</h2>
+        <p class="text-sm text-slate-400 mt-2">Unlike flimsy imported brackets, Jenefas products are fabricated for Indian wall conditions and long-term safety.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 space-y-3">
+          <div class="w-12 h-12 rounded-xl bg-accent-500/10 border border-accent-500/20 text-accent-400 flex items-center justify-center font-bold">
+            <i data-lucide="layers" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Heavy-Gauge Cold Rolled Carbon Steel</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Constructed with 1.5mm to 3.0mm thickness cold-rolled steel sheets. Tested to 3X to 4X rated load capacity without arm deflection or drooping over time.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 space-y-3">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">
+            <i data-lucide="shield" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Electrostatic Anti-Corrosion Coating</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Every bracket undergoes automated ultrasonic degreasing and high-temperature matte black powder coating, resisting Chennai's coastal humidity and rust.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 space-y-3">
+          <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center font-bold">
+            <i data-lucide="wrench" class="w-6 h-6"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white">Complete Pro-Grade Hardware Kit</h3>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Every carton includes heavy Fischer-style nylon wall plugs, Grade 8.8 TV back screws (M4, M6, M8 with spacers), and integrated magnetic spirit levels.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showroom & Contact Section -->
+  <section id="showroom" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      
+      <!-- Contact Info -->
+      <div class="lg:col-span-5 space-y-6">
+        <div>
+          <span class="text-accent-400 text-xs font-bold uppercase tracking-wider">Visit Our Chennai Showroom</span>
+          <h2 class="text-3xl font-display font-bold text-white mt-1">Ritchie Street Landmark</h2>
+          <p class="text-sm text-slate-400 mt-2">Located at the prime junction of Wallers Road &amp; Ritchie Street, Chennai's electronics capital.</p>
+        </div>
+
+        <div class="space-y-4 text-sm">
+          <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-900 border border-slate-800">
+            <i data-lucide="map-pin" class="w-5 h-5 text-accent-500 shrink-0 mt-0.5"></i>
+            <div>
+              <div class="font-bold text-white">Jenefas &amp; Jenefas</div>
+              <div class="text-xs text-slate-400 mt-1">
+                1-A, Wallers Road, near Ritchie Street / Mount Road Junction,<br>
+                Chintadripet, Chennai, Tamil Nadu – 600002
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-900 border border-slate-800">
+            <i data-lucide="phone-call" class="w-5 h-5 text-emerald-400 shrink-0 mt-0.5"></i>
+            <div>
+              <div class="font-bold text-white">Direct Inquiries &amp; Dealer Support</div>
+              <div class="text-xs text-slate-300 mt-1 space-y-0.5">
+                <div>Mobile: <a href="tel:+919840817220" class="hover:underline font-semibold text-white">+91 98408 17220</a> / <a href="tel:+919600006869" class="hover:underline font-semibold text-white">+91 96000 06869</a></div>
+                <div>Landline: <a href="tel:04442149551" class="hover:underline">044 4214 9551</a></div>
+                <div>Email: <a href="mailto:mannanrobert@gmail.com" class="hover:underline text-accent-400">mannanrobert@gmail.com</a> / <a href="mailto:jenefas@jenefas.com" class="hover:underline text-accent-400">jenefas@jenefas.com</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 p-4 rounded-xl bg-slate-900 border border-slate-800">
+            <i data-lucide="clock" class="w-5 h-5 text-amber-400 shrink-0 mt-0.5"></i>
+            <div>
+              <div class="font-bold text-white">Showroom Timings</div>
+              <div class="text-xs text-slate-400 mt-1">
+                Monday to Saturday: 10:30 AM – 8:00 PM<br>
+                <span class="text-amber-400 font-medium">Sunday Holiday</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pt-2">
+          <a href="https://maps.google.com/?q=Jenefas+%26+Jenefas+Wallers+Road+Chennai" target="_blank" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-5 py-3 rounded-xl border border-slate-700 text-xs font-bold transition">
+            <i data-lucide="navigation" class="w-4 h-4 text-accent-400"></i>
+            <span>Open in Google Maps</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Map Embed -->
+      <div class="lg:col-span-7 h-96 rounded-2xl overflow-hidden border border-slate-800 shadow-2xl relative">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.4613519499326!2d80.2710656!3d13.0699214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52661ca77704d9%3A0x7556bc776a8b9ef0!2sJenefas%20%26%20Jenefas!5e0!3m2!1sen!2sin!4v1783826650641!5m2!1sen!2sin"
+          width="100%"
+          height="100%"
+          style="border:0; filter: contrast(1.05) saturate(1.1);"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Wholesale RFQ Modal -->
+  <div id="rfqModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 relative shadow-2xl space-y-4">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <div>
+          <h3 class="text-lg font-bold text-white font-display">Wholesale Request For Quote (RFQ)</h3>
+          <p class="text-xs text-slate-400">Dealer pricing for TV showrooms, electricians, and AV contractors.</p>
+        </div>
+        <button onclick="closeRfqModal()" class="text-slate-400 hover:text-white p-1 rounded-lg">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <form id="rfqForm" onsubmit="submitRfq(event)" class="space-y-3.5 text-xs">
+        <div>
+          <label class="block font-semibold text-slate-300 mb-1">Selected Product / Model</label>
+          <input type="text" id="rfqProduct" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white font-medium focus:border-accent-500 focus:outline-none" readonly>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">Your Full Name *</label>
+            <input type="text" id="rfqName" required placeholder="e.g. Ramesh Kumar" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white focus:border-accent-500 focus:outline-none">
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">Business / Firm Name</label>
+            <input type="text" id="rfqCompany" placeholder="e.g. Star Electronics" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white focus:border-accent-500 focus:outline-none">
+          </div>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">Mobile / WhatsApp Number *</label>
+            <input type="tel" id="rfqPhone" required placeholder="+91 98765 43210" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white focus:border-accent-500 focus:outline-none">
+          </div>
+          <div>
+            <label class="block font-semibold text-slate-300 mb-1">Quantity Needed (Pcs / Boxes)</label>
+            <input type="text" id="rfqQuantity" placeholder="e.g. 50 pcs (2 cartons)" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white focus:border-accent-500 focus:outline-none">
+          </div>
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-300 mb-1">City / Delivery Location</label>
+          <input type="text" id="rfqCity" placeholder="e.g. Coimbatore / Madurai / Bangalore" class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white focus:border-accent-500 focus:outline-none">
+        </div>
+
+        <div>
+          <label class="block font-semibold text-slate-300 mb-1">Additional Notes</label>
+          <textarea id="rfqNotes" rows="2" placeholder="Required delivery timeline or special VESA requirements..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white focus:border-accent-500 focus:outline-none"></textarea>
+        </div>
+
+        <div class="pt-2 flex gap-3">
+          <button type="submit" class="flex-1 bg-accent-500 hover:bg-accent-600 text-white font-bold py-2.5 rounded-lg transition shadow-md shadow-accent-500/20">
+            Submit &amp; Open in WhatsApp
+          </button>
+          <button type="button" onclick="closeRfqModal()" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold rounded-lg">
+            Cancel
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Quick Button -->
+  <a href="https://wa.me/919840817220?text=Hello%20Jenefas%20team,%20I%20am%20interested%20in%20becoming%20a%20dealer%20/%20ordering%20mounts." target="_blank" class="fixed bottom-6 right-6 z-40 bg-emerald-600 hover:bg-emerald-500 text-white p-3.5 rounded-full shadow-2xl flex items-center gap-2 hover:scale-105 transition active:scale-95 group">
+    <i data-lucide="message-circle" class="w-6 h-6"></i>
+    <span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs transition-all duration-300 text-xs font-bold pr-1">Chat with Jenefas</span>
+  </a>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 border-t border-slate-900 py-12 text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8 border-b border-slate-900">
+        <div class="space-y-3">
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded bg-accent-500 flex items-center justify-center font-bold text-white text-xs">J</div>
+            <span class="text-sm font-bold text-white">Jenefas &amp; Jenefas</span>
+          </div>
+          <p class="text-slate-400">
+            Pioneers in high-strength TV mounting brackets and appliance fixtures since 1978. Wallers Road, Ritchie Street, Chennai.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider text-[11px] mb-3">Product Categories</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="#catalogue" onclick="setCategory('fixed')" class="hover:text-accent-400">Fixed TV Mounts</a></li>
+            <li><a href="#catalogue" onclick="setCategory('tilt')" class="hover:text-accent-400">Tilt TV Mounts</a></li>
+            <li><a href="#catalogue" onclick="setCategory('motion')" class="hover:text-accent-400">Full-Motion Articulating</a></li>
+            <li><a href="#catalogue" onclick="setCategory('ceiling')" class="hover:text-accent-400">Ceiling &amp; Video Wall</a></li>
+            <li><a href="#catalogue" onclick="setCategory('desk')" class="hover:text-accent-400">Gas-Spring Monitor Arms</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider text-[11px] mb-3">Dealer Services</h4>
+          <ul class="space-y-2 text-slate-400">
+            <li><a href="#" onclick="openRfqModal('All Models - Dealer Price List')" class="hover:text-accent-400">Wholesale Price List</a></li>
+            <li><a href="#why-jenefas" class="hover:text-accent-400">Cold Rolled Steel Specs</a></li>
+            <li><a href="#mount-finder" class="hover:text-accent-400">VESA Sizing Guide</a></li>
+            <li><a href="#showroom" class="hover:text-accent-400">Showroom Directions</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-bold text-white uppercase tracking-wider text-[11px] mb-3">Contact</h4>
+          <p class="text-slate-400">Founder: Mannan Robert</p>
+          <p class="text-slate-400 mt-1">1-A, Wallers Road, Ritchie Street, Chennai 600002</p>
+          <p class="text-slate-300 font-semibold mt-1.5">+91 98408 17220 / 044 4214 9551</p>
+          <p class="text-slate-400 mt-1">mannanrobert@gmail.com</p>
+        </div>
+      </div>
+
+      <div class="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          © 1978 – 2026 Jenefas &amp; Jenefas. All rights reserved.
+        </div>
+        <div class="flex items-center gap-4">
+          <span>Ritchie Street Electronics Trade Association</span>
+          <span>•</span>
+          <span>Made for Chennai AV Professionals</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Client-side Logic Script -->
+  <script>
+    let products = [];
+    let currentCategory = 'all';
+
+    // Fetch products
+    async function loadProducts() {
+      try {
+        const response = await fetch('data/products.json');
+        products = await response.json();
+      } catch (e) {
+        console.warn('Fallback to inline sample data if fetch fails locally without web server');
+        // Fallback array if opened via file:// protocol directly
+        products = [
+          {
+            "id": "JF-FX32",
+            "title": "Ultra Slim Fixed TV Mount",
+            "category": "fixed",
+            "categoryName": "Fixed TV Mounts",
+            "screenSize": "14\" - 32\"",
+            "sizeGroup": "14-32",
+            "vesa": "75x75, 100x100, 200x200 mm",
+            "maxLoad": "25 kg / 55 lbs",
+            "wallDistance": "20 mm",
+            "motion": "Fixed",
+            "features": ["Low profile ultra-slim fit", "Integrated bubble level", "Quick snap-in lock mechanism"],
+            "cartonPack": "25 pcs / box",
+            "idealFor": "Bedrooms, small conference rooms, budget hotel installations"
+          },
+          {
+            "id": "JF-FX55",
+            "title": "Standard Heavy-Duty Fixed Mount",
+            "category": "fixed",
+            "categoryName": "Fixed TV Mounts",
+            "screenSize": "32\" - 55\"",
+            "sizeGroup": "32-55",
+            "vesa": "200x200 up to 400x400 mm",
+            "maxLoad": "45 kg / 99 lbs",
+            "wallDistance": "25 mm",
+            "motion": "Fixed",
+            "features": ["Reinforced cold-rolled steel plate", "Security anti-theft locking screws", "Wide cable pass-through"],
+            "cartonPack": "20 pcs / box",
+            "idealFor": "Living rooms, apartment complexes, commercial displays"
+          },
+          {
+            "id": "JF-TL65",
+            "title": "Heavy-Duty Anti-Glare Tilt Mount",
+            "category": "tilt",
+            "categoryName": "Tilt TV Mounts",
+            "screenSize": "32\" - 65\"",
+            "sizeGroup": "32-55",
+            "vesa": "200x200 to 400x400 mm",
+            "maxLoad": "50 kg / 110 lbs",
+            "wallDistance": "53 mm",
+            "motion": "Tilt (-15° to +5°)",
+            "features": ["Quick-release pull cords", "Precision laser-cut cold rolled steel", "Heavy electrostatic powder coating"],
+            "cartonPack": "10 pcs / box",
+            "idealFor": "Master bedrooms, conference rooms, restaurants"
+          },
+          {
+            "id": "JF-FM55-D",
+            "title": "Dual-Arm Cantilever Full-Motion Mount",
+            "category": "motion",
+            "categoryName": "Full Motion Mounts",
+            "screenSize": "32\" - 65\"",
+            "sizeGroup": "32-55",
+            "vesa": "200x200 to 400x400 mm",
+            "maxLoad": "45 kg / 99 lbs",
+            "wallDistance": "70 mm - 460 mm",
+            "motion": "Swivel ±60°, Tilt ±15°, Level ±3°",
+            "features": ["Twin load-bearing steel arms", "Smooth glide extension & retraction", "Horizontal post-install leveling"],
+            "cartonPack": "6 pcs / box",
+            "idealFor": "Open floor plans, multi-view living rooms, executive suites"
+          },
+          {
+            "id": "JF-FM75-HD",
+            "title": "Heavy-Duty Dual-Arm Articulating Mount",
+            "category": "motion",
+            "categoryName": "Full Motion Mounts",
+            "screenSize": "50\" - 85\"",
+            "sizeGroup": "55-75",
+            "vesa": "200x200 to 600x400 mm",
+            "maxLoad": "65 kg / 143 lbs",
+            "wallDistance": "80 mm - 520 mm",
+            "motion": "Swivel ±60°, Tilt ±15°",
+            "features": ["Extreme stability with no sag", "Dual heavy hinges with brass washers", "Tested up to 4x rated capacity"],
+            "cartonPack": "4 pcs / box",
+            "idealFor": "Premium 75\" & 85\" OLED/QLED screens, high-end residences"
+          },
+          {
+            "id": "JF-CL55-S",
+            "title": "Telescopic Ceiling TV Drop Mount",
+            "category": "ceiling",
+            "categoryName": "Ceiling & Commercial Mounts",
+            "screenSize": "32\" - 55\"",
+            "sizeGroup": "32-55",
+            "vesa": "100x100 to 400x400 mm",
+            "maxLoad": "50 kg / 110 lbs",
+            "wallDistance": "600 mm - 1000 mm drop",
+            "motion": "360° Swivel, -15° Tilt",
+            "features": ["Adjustable ceiling drop column", "Internal cable routing pipe", "Sloped/vaulted ceiling adapter included"],
+            "cartonPack": "4 pcs / box",
+            "idealFor": "Gyms, hospitals, airport lounges, retail shopping malls"
+          },
+          {
+            "id": "JF-MA-01",
+            "title": "Gas-Spring Ergonomic Single Monitor Arm",
+            "category": "desk",
+            "categoryName": "Monitor Arms & Desks",
+            "screenSize": "17\" - 32\"",
+            "sizeGroup": "14-32",
+            "vesa": "75x75, 100x100 mm",
+            "maxLoad": "9 kg / 19.8 lbs",
+            "wallDistance": "Desk clamp / Grommet",
+            "motion": "360° Rotation (Portrait/Landscape), ±90° Swivel, ±45° Tilt",
+            "features": ["Internal counter-balance gas spring", "Desk clamp and grommet mount included", "Concealed cable management channels"],
+            "cartonPack": "6 pcs / box",
+            "idealFor": "IT workplaces, software developers, trading terminals"
+          },
+          {
+            "id": "JF-PR-ADJ",
+            "title": "Universal Telescopic Projector Ceiling Mount",
+            "category": "projector",
+            "categoryName": "Projector & Audio Stands",
+            "screenSize": "Universal projector fitting",
+            "sizeGroup": "Universal",
+            "vesa": "Universal 4-arm spider fitting (up to 380mm dia)",
+            "maxLoad": "20 kg / 44 lbs",
+            "wallDistance": "430 mm - 650 mm (Extendable to 1.2m)",
+            "motion": "360° Rotation, ±15° Tilt & Roll",
+            "features": ["Universal 4-point mounting legs", "Quick disconnect for lamp replacement", "Hollow pole for HDMI/power wire routing"],
+            "cartonPack": "10 pcs / box",
+            "idealFor": "Home theaters, school classrooms, corporate meeting rooms"
+          },
+          {
+            "id": "JF-AC-STD",
+            "title": "Split AC Outdoor Heavy-Duty Stand (Pair)",
+            "category": "appliance",
+            "categoryName": "Appliance Brackets",
+            "screenSize": "1.0 Ton to 2.5 Ton AC units",
+            "sizeGroup": "Universal",
+            "vesa": "Universal slot alignment",
+            "maxLoad": "180 kg / 396 lbs",
+            "wallDistance": "450 mm bracket length",
+            "motion": "Rigid Wall Mount",
+            "features": ["Electrostatically powder-coated for exterior weatherproofing", "Anti-vibration rubber bush set included", "High-gauge galvanized steel sheet"],
+            "cartonPack": "10 pairs / bundle",
+            "idealFor": "HVAC contractors, residential & commercial air conditioning"
+          }
+        ];
+      }
+      renderProducts();
+    }
+
+    function setCategory(cat) {
+      currentCategory = cat;
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        if (btn.getAttribute('data-cat') === cat) {
+          btn.className = 'cat-pill px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap bg-accent-500 text-white shadow-md shadow-accent-500/20';
+        } else {
+          btn.className = 'cat-pill px-4 py-2 rounded-xl text-xs font-semibold whitespace-nowrap bg-slate-900 text-slate-300 hover:text-white border border-slate-800';
+        }
+      });
+      renderProducts();
+    }
+
+    function renderProducts() {
+      const grid = document.getElementById('productGrid');
+      const emptyState = document.getElementById('emptyState');
+      const query = document.getElementById('searchInput').value.toLowerCase().trim();
+      const finderSize = document.getElementById('finderSize').value;
+      const finderMotion = document.getElementById('finderMotion').value;
+
+      const filtered = products.filter(p => {
+        // Category check
+        const matchesCategory = (currentCategory === 'all' || p.category === currentCategory);
+        
+        // Search query check
+        const matchesSearch = !query || 
+          p.id.toLowerCase().includes(query) ||
+          p.title.toLowerCase().includes(query) ||
+          p.vesa.toLowerCase().includes(query) ||
+          p.screenSize.toLowerCase().includes(query) ||
+          p.categoryName.toLowerCase().includes(query);
+
+        // Finder filters
+        const matchesSize = !finderSize || p.sizeGroup === finderSize || p.sizeGroup === 'Universal';
+        const matchesMotion = !finderMotion || p.category === finderMotion;
+
+        return matchesCategory && matchesSearch && matchesSize && matchesMotion;
+      });
+
+      document.getElementById('finderMatchCount').innerText = `Matched ${filtered.length} products available for dispatch`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        emptyState.classList.remove('hidden');
+        return;
+      }
+
+      emptyState.classList.add('hidden');
+      grid.innerHTML = filtered.map(p => {
+        const whatsappMsg = encodeURIComponent(`Hi Jenefas team, I am interested in wholesale pricing for model ${p.id} (${p.title}). Please send dealer quote.`);
+        const whatsappUrl = `https://wa.me/919840817220?text=${whatsappMsg}`;
+
+        return `
+          <div class="rounded-2xl bg-slate-900 border border-slate-800 hover:border-slate-700 transition p-5 flex flex-col justify-between group hover:shadow-xl hover:shadow-slate-950">
+            <div>
+              <div class="flex items-center justify-between gap-2 pb-3 border-b border-slate-800/80">
+                <span class="px-2.5 py-1 rounded-md bg-slate-950 text-accent-400 font-mono text-xs font-bold border border-slate-800">
+                  ${p.id}
+                </span>
+                <span class="text-[11px] font-semibold text-slate-400 bg-slate-850 px-2 py-0.5 rounded">
+                  ${p.categoryName}
+                </span>
+              </div>
+
+              <h3 class="text-base font-bold text-white mt-3 group-hover:text-accent-400 transition">
+                ${p.title}
+              </h3>
+
+              <div class="mt-4 space-y-2 text-xs">
+                <div class="flex items-center justify-between text-slate-400 py-1 border-b border-slate-850">
+                  <span class="flex items-center gap-1.5"><i data-lucide="tv" class="w-3.5 h-3.5 text-slate-500"></i> Screen Range:</span>
+                  <span class="font-semibold text-slate-200">${p.screenSize}</span>
+                </div>
+                <div class="flex items-center justify-between text-slate-400 py-1 border-b border-slate-850">
+                  <span class="flex items-center gap-1.5"><i data-lucide="maximize" class="w-3.5 h-3.5 text-slate-500"></i> VESA Pattern:</span>
+                  <span class="font-semibold text-slate-200 text-right">${p.vesa}</span>
+                </div>
+                <div class="flex items-center justify-between text-slate-400 py-1 border-b border-slate-850">
+                  <span class="flex items-center gap-1.5"><i data-lucide="weight" class="w-3.5 h-3.5 text-slate-500"></i> Max Load:</span>
+                  <span class="font-bold text-emerald-400">${p.maxLoad}</span>
+                </div>
+                <div class="flex items-center justify-between text-slate-400 py-1 border-b border-slate-850">
+                  <span class="flex items-center gap-1.5"><i data-lucide="move" class="w-3.5 h-3.5 text-slate-500"></i> Movement:</span>
+                  <span class="font-semibold text-slate-200">${p.motion}</span>
+                </div>
+                <div class="flex items-center justify-between text-slate-400 py-1">
+                  <span class="flex items-center gap-1.5"><i data-lucide="package" class="w-3.5 h-3.5 text-slate-500"></i> Packaging:</span>
+                  <span class="font-semibold text-amber-400">${p.cartonPack}</span>
+                </div>
+              </div>
+
+              <div class="mt-3 bg-slate-950/60 p-2.5 rounded-lg border border-slate-850/80">
+                <p class="text-[11px] text-slate-400 leading-relaxed">
+                  <span class="text-slate-300 font-semibold">Recommended for:</span> ${p.idealFor}
+                </p>
+              </div>
+            </div>
+
+            <div class="mt-5 pt-3 border-t border-slate-800/80 flex gap-2">
+              <a href="${whatsappUrl}" target="_blank" class="flex-1 inline-flex items-center justify-center gap-1.5 bg-emerald-700/30 hover:bg-emerald-600 text-emerald-300 hover:text-white border border-emerald-600/40 text-xs font-bold py-2.5 rounded-xl transition">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                <span>WhatsApp Quote</span>
+              </a>
+              <button onclick="openRfqModal('${p.id} - ${p.title}')" class="px-3.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold rounded-xl border border-slate-700 transition" title="Request Bulk Dealer Quote">
+                <i data-lucide="file-text" class="w-4 h-4"></i>
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      lucide.createIcons();
+    }
+
+    function runMountFinder() {
+      const motion = document.getElementById('finderMotion').value;
+      if (motion) {
+        setCategory(motion);
+      } else {
+        renderProducts();
+      }
+    }
+
+    function resetFilters() {
+      document.getElementById('searchInput').value = '';
+      document.getElementById('finderSize').value = '';
+      document.getElementById('finderMotion').value = '';
+      setCategory('all');
+    }
+
+    function openRfqModal(productName = '') {
+      document.getElementById('rfqProduct').value = productName || 'All Models / Wholesale Dealership Catalog';
+      document.getElementById('rfqModal').classList.remove('hidden');
+    }
+
+    function closeRfqModal() {
+      document.getElementById('rfqModal').classList.add('hidden');
+    }
+
+    function submitRfq(e) {
+      e.preventDefault();
+      const product = document.getElementById('rfqProduct').value;
+      const name = document.getElementById('rfqName').value;
+      const company = document.getElementById('rfqCompany').value;
+      const phone = document.getElementById('rfqPhone').value;
+      const qty = document.getElementById('rfqQuantity').value;
+      const city = document.getElementById('rfqCity').value;
+      const notes = document.getElementById('rfqNotes').value;
+
+      const text = `*New Wholesale RFQ from Jenefas Web Platform*\n\n` +
+                   `• *Product:* ${product}\n` +
+                   `• *Name:* ${name}\n` +
+                   `• *Company:* ${company || 'N/A'}\n` +
+                   `• *Phone:* ${phone}\n` +
+                   `• *Quantity:* ${qty || 'Dealer wholesale list'}\n` +
+                   `• *City:* ${city || 'Tamil Nadu'}\n` +
+                   `• *Notes:* ${notes || 'Immediate inquiry'}`;
+
+      const url = `https://wa.me/919840817220?text=${encodeURIComponent(text)}`;
+      closeRfqModal();
+      window.open(url, '_blank');
+    }
+
+    // Initialize
+    window.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+      loadProducts();
+    });
+  </script>
+</body>
+</html>

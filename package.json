@@ -1,0 +1,18 @@
+{
+  "name": "jenefas-platform",
+  "version": "1.0.0",
+  "description": "Modern B2B Digital Catalogue & Lead Engine for Jenefas & Jenefas (Ritchie Street, Chennai)",
+  "scripts": {
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "jenefas",
+    "tv-mounts",
+    "vesa",
+    "ritchie-street",
+    "chennai",
+    "b2b-catalog"
+  ],
+  "author": "Antigravity & Project Team",
+  "license": "ISC"
+}
