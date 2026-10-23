@@ -83,6 +83,27 @@ When meeting with **Mr. Mannan Robert**:
 
 ## 🚀 How to Run the Prototype Locally
 
+The Product 28 interactive 3D concept is available at
+`http://localhost:3000/demos/product-28/` after running:
+
+```powershell
+npm ci
+npm start
+```
+
+`npm start` builds the unchanged static catalogue plus the isolated Three.js pilot
+into `dist/`, then serves that directory on port 3000. The catalogue also links to
+the demo below its heading. The pilot includes English/Tamil controls and is a
+catalogue-based concept, pending manufacturer verification.
+
+Use `npm run build` to build without serving. For checks, run
+`npx playwright install chromium` once, then `npm test`.
+See [the implementation and verification record](docs/CODEX_3D_ASSEMBLY_PLAN.md)
+for scope, assumptions and the photos/dimensions needed for an accurate guide.
+
+The original catalogue can still be previewed directly as described below; the
+3D pilot needs the build above.
+
 To run the interactive prototype:
 
 ```bash

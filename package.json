@@ -1,9 +1,13 @@
 {
   "name": "jenefas-platform",
   "version": "1.0.0",
+  "type": "module",
   "description": "Modern B2B Digital Catalogue & Lead Engine for Jenefas & Jenefas (Ritchie Street, Chennai)",
   "scripts": {
-    "start": "npx serve ."
+    "start": "npm run build && serve dist -l 3000",
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/animation.test.mjs && playwright test",
+    "test:unit": "node --test tests/animation.test.mjs"
   },
   "keywords": [
     "jenefas",
@@ -14,5 +18,16 @@
     "b2b-catalog"
   ],
   "author": "Antigravity & Project Team",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.1",
+    "esbuild": "^0.28.2",
+    "serve": "^14.2.6"
+  },
+  "overrides": {
+    "compression": "^1.8.2"
+  }
 }
