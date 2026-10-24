@@ -34,9 +34,57 @@
         <h2 id="sequence-title" data-i18n="sequenceTitle">From parts to form</h2>
         <p class="panel-description" data-i18n="sequenceHelp">Explore four visible parts. This order illustrates the structure; it is not an installation procedure.</p>
         <ol id="stages" class="stages"></ol>
-        <div class="active-detail" aria-live="polite" aria-atomic="true"><span class="eyebrow" data-i18n="activePart">ACTIVE PART</span><h3 id="part-title"></h3><p id="part-description"></p></div>
+        <div class="active-detail" aria-live="polite" aria-atomic="true">
+          <span class="eyebrow" data-i18n="activePart">ACTIVE PART</span>
+          <h3 id="part-title"></h3>
+          <p id="part-description"></p>
+          <div class="evidence-box">
+            <div class="evidence-block known-block">
+              <span class="evidence-badge known-badge" data-i18n="evidenceTitle">Observed in catalogue</span>
+              <p id="part-evidence" class="evidence-text"></p>
+            </div>
+            <div class="evidence-block unknown-block">
+              <span class="evidence-badge unknown-badge" data-i18n="unknownTitle">Unknown / Needs verification</span>
+              <p id="part-unknown" class="evidence-text"></p>
+            </div>
+          </div>
+        </div>
       </aside>
     </div>
+
+    <section class="evaluation-card" aria-labelledby="eval-heading">
+      <div class="eval-content">
+        <div class="eval-header">
+          <span class="eyebrow" data-i18n="evaluationTitle">PILOT EVALUATION & PRODUCTION READINESS</span>
+          <h2 id="eval-heading">Evaluation Checklist & Production Gate</h2>
+          <p data-i18n="evaluationDesc">This pilot illustrates overall component form based on Catalogue Page 7. Step-by-step mechanical fastening steps remain unpublished pending physical manufacturer verification.</p>
+        </div>
+        <div class="eval-grid">
+          <div class="eval-item completed">
+            <h3 class="eval-subhead">✓ Completed in Pilot</h3>
+            <ul>
+              <li>Interactive 3D procedural geometry & materials</li>
+              <li>Continuous exploded-to-assembled animation</li>
+              <li>Dual-language English / Tamil interface</li>
+              <li>Explicit catalogue evidence vs. unknown mapping</li>
+            </ul>
+          </div>
+          <div class="eval-item blocked">
+            <h3 class="eval-subhead">⏳ Pending Manufacturer Evidence</h3>
+            <ul>
+              <li>Precise plate, tube & rail mm dimensions</li>
+              <li>Fastener sizes, grades & tightening tools</li>
+              <li>Factory-assembled vs. user-assembled joints</li>
+              <li>Certified maximum TV screen size & weight limit</li>
+            </ul>
+          </div>
+        </div>
+        <div class="checklist-ref">
+          <span data-i18n="checklistNote">View Offline Manufacturer Checklist (docs/PRODUCT_28_MANUFACTURER_CHECKLIST.md)</span>
+        </div>
+      </div>
+    </section>
+
     <section class="reference"><div><p class="eyebrow" data-i18n="reference">CATALOGUE REFERENCE</p><h2 data-i18n="referenceTitle">A visual study, with clear limits.</h2><p data-i18n="referenceText">The upper-right Product 28 illustration shows a rectangular base, a round post and two horizontal rails. Connections are schematic; holes, fasteners and dimensions are intentionally unspecified.</p><a href="./assets/page_7.png" target="_blank" rel="noopener" data-i18n="openReference">View catalogue page 7 ↗</a></div><a href="./assets/page_7.png" target="_blank" rel="noopener" aria-label="Catalogue page 7, Product 28 in the upper right"><img src="./assets/page_7.png" alt="Jenefas catalogue page 7; Product 28 appears in the upper-right section." width="1333" height="993" loading="lazy"></a></section>
   </main>
   <footer><span>JENEFAS & JENEFAS</span><span data-i18n="footer">Product 28 · Concept study · Manufacturer verification pending</span></footer>

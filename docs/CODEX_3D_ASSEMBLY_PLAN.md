@@ -184,11 +184,26 @@ For an accurate guide, obtain:
 
 Next work: replace schematic geometry with approved product evidence, validate the sequence and safety content, review Tamil copy, then test representative mobile hardware and other browsers.
 
+## Product 28 Pilot Improvements (October 24, 2026)
+1. **Explicit Evidence vs. Unknown Identification:**
+   - Enriched the active component panel with real-time bilingual evidence badges:
+     - `Observed in catalogue` (`பட்டியலில் காணப்படுவது`): confirmed features from Catalogue Page 7.
+     - `Unknown / Needs verification` (`சரிபார்க்கப்படாத விவரங்கள்`): unverified fasteners, plate gauge, tube OD, TV mounting slots.
+2. **Evaluation & Production Readiness Gate:**
+   - Added an on-page Evaluation card summarizing completed prototype capabilities vs. blocked physical manufacturer dependencies.
+   - Unpublished physical fastening instructions remain protected until verified.
+3. **Manufacturer Checklist Created:**
+   - Created `docs/PRODUCT_28_MANUFACTURER_CHECKLIST.md` detailing 5 photographic angles, dimensional tables, BOM fastener inventory, and publication gate criteria.
+4. **Automated Verification:**
+   - 4 unit tests (`tests/animation.test.mjs`) passing.
+   - 3 Chromium browser integration scenarios (`tests/browser/product-28.spec.js`) passing, validating evidence rendering, Tamil localization, touch orbit/pinch, reduced motion, and WebGL error handling.
+
 ## Deployment status
 - **Date:** 2026-10-24
 - **Platform:** Netlify (`navigotechsolutions` team)
 - **Live Site URL:** https://jenefas.netlify.app/
 - **3D Pilot URL:** https://jenefas.netlify.app/demos/product-28/
 - **Netlify Project Admin:** https://app.netlify.com/projects/jenefas
+*(Note: Per project instructions, further deployments require separate user instruction).*
 
 

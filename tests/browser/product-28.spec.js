@@ -21,10 +21,13 @@ test('desktop: controls, animation, keyboard, assets and console', async ({ page
   page.on('response', response => { if (response.status() >= 400) errors.push(`${response.status()} ${response.url()}`); });
   await ready(page);
   await expect(page.getByText('Concept demo based on catalogue imagery. Assembly details require manufacturer verification.')).toBeVisible();
+  await expect(page.locator('.evaluation-card')).toBeVisible();
   await page.screenshot({ path: 'test-results/desktop-exploded.png', fullPage: true });
   await page.locator('#next').click();
   await expect(page.locator('#progress')).toHaveValue('250', { timeout: 10000 });
   await expect(page.locator('#part-title')).toHaveText('Rectangular base');
+  await expect(page.locator('#part-evidence')).toContainText('Flat rectangular plate footprint');
+  await expect(page.locator('#part-unknown')).toContainText('Base plate gauge');
   await page.locator('#previous').click();
   await expect(page.locator('#progress')).toHaveValue('0', { timeout: 10000 });
   await page.locator('#play').click();
@@ -37,6 +40,7 @@ test('desktop: controls, animation, keyboard, assets and console', async ({ page
   await seek(page, 630);
   await expect(page.locator('#progress-value')).toHaveText('63%');
   await expect(page.locator('#part-title')).toHaveText('Lower mounting rail');
+  await expect(page.locator('#part-evidence')).toContainText('Lower horizontal direct rail');
   await page.locator('#assemble').click();
   await expect(page.locator('#progress')).toHaveValue('1000', { timeout: 15000 });
   await expect(page.locator('#next')).toBeDisabled();
@@ -75,9 +79,12 @@ test('desktop: controls, animation, keyboard, assets and console', async ({ page
   await expect(page.locator('html')).toHaveAttribute('lang', 'ta');
   await expect(page.locator('#translated-note')).toBeVisible();
   await expect(page.locator('#part-title')).toHaveText('செவ்வக அடித்தளம்');
+  await expect(page.locator('#part-evidence')).toContainText('அடித்தளம்');
   await page.locator('#stages button').nth(2).click();
   await expect(page.locator('#progress')).toHaveValue('500', { timeout: 12000 });
   await expect(page.locator('#part-title')).toHaveText('செங்குத்துத் தூண்');
+  await expect(page.locator('#part-evidence')).toContainText('செங்குத்துத் தூண்');
+  await expect(page.locator('#part-unknown')).toContainText('தூணின் விட்டம்');
   await page.locator('#language').selectOption('en');
   await expect(page.locator('#part-title')).toHaveText('Vertical post');
   expect(errors).toEqual([]);
