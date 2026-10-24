@@ -184,17 +184,51 @@ For an accurate guide, obtain:
 
 Next work: replace schematic geometry with approved product evidence, validate the sequence and safety content, review Tamil copy, then test representative mobile hardware and other browsers.
 
+## Product 28 Pilot Improvements (October 24, 2026)
+1. **Explicit Evidence vs. Unknown Identification:**
+   - Enriched the active component panel with real-time bilingual evidence badges:
+     - `Observed in catalogue` (`பட்டியலில் காணப்படுவது`): confirmed features from Catalogue Page 7.
+     - `Unknown / Needs verification` (`சரிபார்க்கப்படாத விவரங்கள்`): unverified fasteners, plate gauge, tube OD, TV mounting slots.
+2. **Evaluation & Production Readiness Gate:**
+   - Added an on-page Evaluation card summarizing completed prototype capabilities vs. blocked physical manufacturer dependencies.
+   - Unpublished physical fastening instructions remain protected until verified.
+3. **Manufacturer Checklist Created:**
+   - Created `docs/PRODUCT_28_MANUFACTURER_CHECKLIST.md` detailing 5 photographic angles, dimensional tables, BOM fastener inventory, and publication gate criteria.
+4. **Automated Verification:**
+   - 4 unit tests (`tests/animation.test.mjs`) passing.
+   - 3 Chromium browser integration scenarios (`tests/browser/product-28.spec.js`) passing, validating evidence rendering, Tamil localization, touch orbit/pinch, reduced motion, and WebGL error handling.
+
 ## Deployment status
 - **Date:** 2026-10-24
 - **Platform:** Netlify (`navigotechsolutions` team)
 - **Live Site URL:** https://jenefas.netlify.app/
-- **3D Pilot URL:** https://jenefas.netlify.app/demos/product-28/
+- **Production Deploy ID:** `6adca46e14de8ac0851ea433`
+- **Deployed Commit:** `f16d45f` (integrated with Product 29)
+- **Verified Working Routes:**
+  - Catalogue: https://jenefas.netlify.app/
+  - Product 28 Pilot: https://jenefas.netlify.app/demos/product-28/
+  - Product 29 Pilot: https://jenefas.netlify.app/demos/product-29/
+- **Netlify Configuration:**
+  - Production Branch: `master`
+  - Build Command: `npm run build`
+  - Publish Directory: `dist`
+  - Configuration File: `netlify.toml`
 - **Netlify Project Admin:** https://app.netlify.com/projects/jenefas
+- **GitHub Continuous Deployment Status:** **Not Connected**. The Netlify site `jenefas` was created and published via Netlify CLI (`deploy_source: "cli"`). It is not connected via a GitHub OAuth application or webhook integration (`build_settings` is empty in Netlify API). Adding `netlify.toml` standardizes build commands and publish directories for local and CI environments, but does **not** enable automatic deployments on git push until the GitHub repository is connected in Netlify admin settings.
 
+## Production Verification & Remaining Limitations
+- **Verification Completed:**
+  - All static assets (HTML, viewer.js, styles.css, page_7.png, products.json) return HTTP 200 OK without catch-all redirects.
+  - Interactive stage selection, bilingual English/Tamil toggling, and camera controls verified live.
+  - 5 unit tests and 6 Playwright browser integration tests passing.
+- **Checksum & Deployed Asset Audit:**
+  - All 8 non-HTML assets (`data/products.json`, `page_7.png`, `styles.css`, `viewer.js`, `viewer.js.map` across both pilots) have **identical SHA-256 checksums** between a fresh local build and live Netlify production.
+  - The 3 HTML files (`index.html`, `demos/product-28/index.html`, `demos/product-29/index.html`) differ over HTTP only by Netlify platform edge post-processing: Netlify's `pretty_urls` link normalization (`../../index.html` → `/`), an informational HTML comment in `<head>`, and a footer HUD script on the free tier. Stripping Netlify's CDN injections confirms 100% source fidelity.
+- **Remaining Limitations:**
+  - Geometry and animation for both Product 28 and Product 29 remain illustrative concepts derived from catalogue imagery.
+  - Step-by-step physical fastening and installation instructions remain unpublished pending physical manufacturer verification (see `docs/PRODUCT_28_MANUFACTURER_CHECKLIST.md` and `docs/PRODUCT_29_EVALUATION.md`).
 
-
-## Second concept: Product 29 (24 October 2026)
-Added an isolated V-base stand demo at /demos/product-29/, reusing the Product 28
-viewer/state. See PRODUCT_29_EVALUATION.md for evidence, checks, limitations and
-pricing assumptions. Build and five unit checks passed; browser checks are blocked
-by the local environment. Not manufacturer-approved; not deployed.
+## Customer page structure and menus
+Added a responsive main menu, dedicated assembly-demo discovery section and
+cross-product/return navigation. See NAVIGATION_STRUCTURE.md for scope and
+verification limits. No deployment performed.

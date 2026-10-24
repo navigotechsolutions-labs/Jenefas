@@ -55,6 +55,10 @@ function update(force = false) {
     $('stage-count').textContent = `${String(stage).padStart(2, '0')} / ${String(state.stageCount).padStart(2, '0')}`;
     $('part-title').textContent = text.stages[stage];
     $('part-description').textContent = text.descriptions[stage];
+    const partEvidence = $('part-evidence');
+    if (partEvidence) partEvidence.textContent = text.evidence[stage];
+    const partUnknown = $('part-unknown');
+    if (partUnknown) partUnknown.textContent = text.unknowns[stage];
     stageButtons.forEach(({ button }, index) => {
       if (index === stage) button.setAttribute('aria-current', 'step');
       else button.removeAttribute('aria-current');
