@@ -214,6 +214,7 @@ Next work: replace schematic geometry with approved product evidence, validate t
   - Publish Directory: `dist`
   - Configuration File: `netlify.toml`
 - **Netlify Project Admin:** https://app.netlify.com/projects/jenefas
+- **GitHub Continuous Deployment Status:** **Not Connected**. The Netlify site `jenefas` was created and published via Netlify CLI (`deploy_source: "cli"`). It is not connected via a GitHub OAuth application or webhook integration (`build_settings` is empty in Netlify API). Adding `netlify.toml` standardizes build commands and publish directories for local and CI environments, but does **not** enable automatic deployments on git push until the GitHub repository is connected in Netlify admin settings.
 
 ## Production Verification & Remaining Limitations
 - **Verification Completed:**
