@@ -192,3 +192,9 @@ Next work: replace schematic geometry with approved product evidence, validate t
 - **Netlify Project Admin:** https://app.netlify.com/projects/jenefas
 
 
+
+## Second concept: Product 29 (24 October 2026)
+Added an isolated V-base stand demo at /demos/product-29/, reusing the Product 28
+viewer/state. See PRODUCT_29_EVALUATION.md for evidence, checks, limitations and
+pricing assumptions. Build and five unit checks passed; browser checks are blocked
+by the local environment. Not manufacturer-approved; not deployed.

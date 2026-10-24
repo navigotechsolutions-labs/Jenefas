@@ -6,8 +6,8 @@
   "scripts": {
     "start": "npm run build && serve dist -l 3000",
     "build": "node scripts/build.mjs",
-    "test": "node --test tests/animation.test.mjs && playwright test",
-    "test:unit": "node --test tests/animation.test.mjs"
+    "test": "node --test tests/*.test.mjs && playwright test",
+    "test:unit": "node --test tests/*.test.mjs"
   },
   "keywords": [
     "jenefas",
