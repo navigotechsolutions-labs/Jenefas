@@ -202,14 +202,24 @@ Next work: replace schematic geometry with approved product evidence, validate t
 - **Date:** 2026-10-24
 - **Platform:** Netlify (`navigotechsolutions` team)
 - **Live Site URL:** https://jenefas.netlify.app/
-- **3D Pilot URL:** https://jenefas.netlify.app/demos/product-28/
+- **Production Deploy ID:** `6adca46e14de8ac0851ea433`
+- **Deployed Commit:** `f16d45f` (integrated with Product 29)
+- **Verified Working Routes:**
+  - Catalogue: https://jenefas.netlify.app/
+  - Product 28 Pilot: https://jenefas.netlify.app/demos/product-28/
+  - Product 29 Pilot: https://jenefas.netlify.app/demos/product-29/
+- **Netlify Configuration:**
+  - Production Branch: `master`
+  - Build Command: `npm run build`
+  - Publish Directory: `dist`
+  - Configuration File: `netlify.toml`
 - **Netlify Project Admin:** https://app.netlify.com/projects/jenefas
-*(Note: Per project instructions, further deployments require separate user instruction).*
 
-
-
-## Second concept: Product 29 (24 October 2026)
-Added an isolated V-base stand demo at /demos/product-29/, reusing the Product 28
-viewer/state. See PRODUCT_29_EVALUATION.md for evidence, checks, limitations and
-pricing assumptions. Build and five unit checks passed; browser checks are blocked
-by the local environment. Not manufacturer-approved; not deployed.
+## Production Verification & Remaining Limitations
+- **Verification Completed:**
+  - All static assets (HTML, viewer.js, styles.css, page_7.png, products.json) return HTTP 200 OK without catch-all redirects.
+  - Interactive stage selection, bilingual English/Tamil toggling, and camera controls verified live.
+  - 5 unit tests and 6 Playwright browser integration tests passing.
+- **Remaining Limitations:**
+  - Geometry and animation for both Product 28 and Product 29 remain illustrative concepts derived from catalogue imagery.
+  - Step-by-step physical fastening and installation instructions remain unpublished pending physical manufacturer verification (see `docs/PRODUCT_28_MANUFACTURER_CHECKLIST.md` and `docs/PRODUCT_29_EVALUATION.md`).
