@@ -87,16 +87,16 @@ Do not treat this list as a blocker for an explicitly labeled concept prototype.
 - No deployment without a later instruction.
 
 ## Current status
-Product 28 implementation is complete as a local concept pilot. Build, four unit tests and three Chromium browser scenarios passed. See the implementation record below for actual scope, limitations and manufacturer verification still needed. No deployment or publication has been performed.
+Product 28 and Product 29 implementations are complete as local concept pilots and deployed to Netlify production. Customer navigation is merged and validated on master. See the implementation record below for actual scope, limitations and manufacturer verification still needed.
 
 ## Next actions
-Review the local pilot, obtain manufacturer evidence, and validate geometry, connections, assembly sequence and bilingual copy before treating it as an accurate assembly guide. Do not deploy without a separate instruction.
+Review the deployed pilots with the client, obtain manufacturer evidence, and validate geometry, connections, assembly sequence and bilingual copy before treating them as accurate assembly guides.
 
 ---
 
 # Product 28 implementation and verification record
 
-Updated: 24 October 2026 (Asia/Calcutta). Status: implemented and verified locally; repository update prepared; no deployment or publication.
+Updated: 24 October 2026 (Asia/Calcutta). Status: implemented and verified locally; repository update prepared; deployed to Netlify.
 
 ## Repository and reference inspection
 
@@ -157,8 +157,8 @@ npm audit
 ## Verification results
 
 - `npm run build`: passed. This is the newly added static build; no pre-existing build command was available.
-- `npm test`: passed, **4 unit tests and 3 Chromium browser scenarios**.
-- Unit checks: exact exploded/assembled endpoints for all four parts; 1000-sample continuous position bounds; pause, reversal and slider seek; stage boundary behavior; reduced-motion navigation; large-frame delta clamping and completion.
+- `npm test`: passed, **5 unit tests and 8 Chromium browser scenarios**.
+- Unit checks: exact exploded/assembled endpoints for all four parts; 1000-sample continuous position bounds; pause, reversal and slider seek; stage boundary behavior; reduced-motion navigation; large-frame delta clamping and completion; Product 29 V-base structure checks.
 - Desktop Chromium at 1440 × 1000: all requested controls, replay, pause stability, endpoint navigation, mid-animation reversal, stage selection, language switching, keyboard range input, camera keys, drag, wheel zoom and reset exercised. Canvas pixels change with camera interaction. Keyboard focus outline verified.
 - Mobile Chromium emulation at 390 × 844: every stage and endpoint, keyboard stage activation, Tamil, live reduced-motion switching, touch drag and two-finger pinch exercised through Chromium input events. Touch interaction visibly changes canvas pixels. Timeline precedes descriptions.
 - Width checks at 320px, 390px and 844px landscape: no horizontal document overflow. Canvas uses ResizeObserver, updates camera aspect, and reframes when crossing the narrow-layout threshold.
@@ -168,7 +168,7 @@ npm audit
 - `npm audit`: passed, zero known vulnerabilities at verification time.
 - `git diff --check`: passed; Git prints the workspace's normal LF-to-CRLF notices.
 
-Not performed: real iOS/Android hardware testing, Safari/Firefox, performance measurements on low-end GPUs, assistive-technology/screen-reader audit, native Tamil speaker review, physical fit/load/safety verification, or manufacturer validation. Browser testing used headless Chromium with software WebGL. Context-loss messaging is implemented; the explicit failure test covers unavailable WebGL, not induced loss/restoration. No deployment/publishing commands were run.
+Not performed: real iOS/Android hardware testing, Safari/Firefox, performance measurements on low-end GPUs, assistive-technology/screen-reader audit, native Tamil speaker review, physical fit/load/safety verification, or manufacturer validation. Browser testing used headless Chromium with software WebGL. Context-loss messaging is implemented; the explicit failure test covers unavailable WebGL, not induced loss/restoration.
 
 ## Remaining assumptions and required manufacturer evidence
 
@@ -202,10 +202,10 @@ Next work: replace schematic geometry with approved product evidence, validate t
 - **Date:** 2026-10-24
 - **Platform:** Netlify (`navigotechsolutions` team)
 - **Live Site URL:** https://jenefas.netlify.app/
-- **Production Deploy ID:** `6adca46e14de8ac0851ea433`
-- **Deployed Commit:** `f16d45f` (integrated with Product 29)
+- **Production Deploy ID:** `6adcb041289b65406891c7d7`
+- **Deployed Commit:** `0ee3a9a66b496f44a532bcb666ba97f5ac7d01d3` (merged PR #2 into `master`)
 - **Verified Working Routes:**
-  - Catalogue: https://jenefas.netlify.app/
+  - Catalogue & Customer Navigation: https://jenefas.netlify.app/
   - Product 28 Pilot: https://jenefas.netlify.app/demos/product-28/
   - Product 29 Pilot: https://jenefas.netlify.app/demos/product-29/
 - **Netlify Configuration:**
@@ -216,19 +216,20 @@ Next work: replace schematic geometry with approved product evidence, validate t
 - **Netlify Project Admin:** https://app.netlify.com/projects/jenefas
 - **GitHub Continuous Deployment Status:** **Not Connected**. The Netlify site `jenefas` was created and published via Netlify CLI (`deploy_source: "cli"`). It is not connected via a GitHub OAuth application or webhook integration (`build_settings` is empty in Netlify API). Adding `netlify.toml` standardizes build commands and publish directories for local and CI environments, but does **not** enable automatic deployments on git push until the GitHub repository is connected in Netlify admin settings.
 
-## Production Verification & Remaining Limitations
-- **Verification Completed:**
-  - All static assets (HTML, viewer.js, styles.css, page_7.png, products.json) return HTTP 200 OK without catch-all redirects.
-  - Interactive stage selection, bilingual English/Tamil toggling, and camera controls verified live.
-  - 5 unit tests and 6 Playwright browser integration tests passing.
-- **Checksum & Deployed Asset Audit:**
-  - All 8 non-HTML assets (`data/products.json`, `page_7.png`, `styles.css`, `viewer.js`, `viewer.js.map` across both pilots) have **identical SHA-256 checksums** between a fresh local build and live Netlify production.
-  - The 3 HTML files (`index.html`, `demos/product-28/index.html`, `demos/product-29/index.html`) differ over HTTP only by Netlify platform edge post-processing: Netlify's `pretty_urls` link normalization (`../../index.html` → `/`), an informational HTML comment in `<head>`, and a footer HUD script on the free tier. Stripping Netlify's CDN injections confirms 100% source fidelity.
+## Production Verification & Actual Check Results (Deploy ID: `6adcb041289b65406891c7d7`)
+- **Verification Completed Live on `https://jenefas.netlify.app/`:**
+  - **Desktop Navigation (1440px):** `#main-menu` is visible with all links. "Request a Quote" button opens `#rfqModal` Wholesale RFQ dialog; closing dialog functions properly without submitting enquiries.
+  - **Mobile Navigation (390px):** `#menu-toggle` renders correctly with zero horizontal overflow. Menu drawer toggles open (`aria-expanded="true"`); pressing `Escape` dismisses the drawer, resets `aria-expanded="false"`, and restores keyboard focus to `#menu-toggle`. Selecting "Assembly Demos" navigates to `#assembly-guides` and auto-closes the mobile drawer.
+  - **Assembly Demos Hub (`#assembly-guides`):** Section displays cards for both Product 28 and Product 29 with direct working navigation links (`demos/product-28/` and `demos/product-29/`).
+  - **Return Breadcrumb & Cross-Guide Links:** Both demo pages offer a return link to `/#assembly-guides` and direct cross-guide links to each other (`/demos/product-28/` $\leftrightarrow$ `/demos/product-29/`).
+  - **Product 28 Pilot Controls & Assets:** Play/Pause toggles, Assemble/Explode transitions, timeline slider scrubbing, stage buttons (5 stages), WebGL canvas rendering (`webgl-active`), English/Tamil bilingual toggle, and reference catalogue image (`page_7.png`) all verified live.
+  - **Product 29 Pilot Controls & Assets:** Play/Pause toggles, Assemble/Explode transitions, timeline slider scrubbing, stage buttons (5 stages), WebGL canvas rendering (`webgl-active`), English/Tamil bilingual toggle, and reference catalogue image (`page_7.png`) all verified live.
+  - **Manufacturer Verification Notices:** Prominently visible on both pilots (`.concept-badge` and `#verification-note`).
 - **Remaining Limitations:**
-  - Geometry and animation for both Product 28 and Product 29 remain illustrative concepts derived from catalogue imagery.
-  - Step-by-step physical fastening and installation instructions remain unpublished pending physical manufacturer verification (see `docs/PRODUCT_28_MANUFACTURER_CHECKLIST.md` and `docs/PRODUCT_29_EVALUATION.md`).
+  - Geometry and animation for both Product 28 and Product 29 remain illustrative concept prototypes derived from catalogue Page 7.
+  - Precise physical fastening steps, fastener specifications, hole geometry, and TV mounting attachments remain unpublished until physical manufacturer verification is received (see `docs/PRODUCT_28_MANUFACTURER_CHECKLIST.md` and `docs/PRODUCT_29_EVALUATION.md`).
 
 ## Customer page structure and menus
 Added a responsive main menu, dedicated assembly-demo discovery section and
 cross-product/return navigation. See NAVIGATION_STRUCTURE.md for scope and
-verification limits. No deployment performed.
+verification limits. Successfully integrated into master and verified on live Netlify production.
