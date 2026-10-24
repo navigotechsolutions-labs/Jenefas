@@ -87,7 +87,7 @@ Do not treat this list as a blocker for an explicitly labeled concept prototype.
 - No deployment without a later instruction.
 
 ## Current status
-Product 28 and Product 29 implementations are complete as local concept pilots and deployed to Netlify production. Customer navigation is merged and validated on master. See the implementation record below for actual scope, limitations and manufacturer verification still needed.
+Product 28 and Product 29 implementations are complete as local concept pilots and deployed to Netlify production. Original brand identity (red/yellow logo and white/red frontend) is merged and deployed live.
 
 ## Next actions
 Review the deployed pilots with the client, obtain manufacturer evidence, and validate geometry, connections, assembly sequence and bilingual copy before treating them as accurate assembly guides.
@@ -202,10 +202,10 @@ Next work: replace schematic geometry with approved product evidence, validate t
 - **Date:** 2026-10-24
 - **Platform:** Netlify (`navigotechsolutions` team)
 - **Live Site URL:** https://jenefas.netlify.app/
-- **Production Deploy ID:** `6adcb041289b65406891c7d7`
-- **Deployed Commit:** `0ee3a9a66b496f44a532bcb666ba97f5ac7d01d3` (merged PR #2 into `master`)
+- **Production Deploy ID:** `6adcc66f4a09d55dc3fc53fd`
+- **Deployed Commit:** `1a308f9` (merged PR #4 with SVG isolation fixes into `master`)
 - **Verified Working Routes:**
-  - Catalogue & Customer Navigation: https://jenefas.netlify.app/
+  - Catalogue & Original Branding: https://jenefas.netlify.app/
   - Product 28 Pilot: https://jenefas.netlify.app/demos/product-28/
   - Product 29 Pilot: https://jenefas.netlify.app/demos/product-29/
 - **Netlify Configuration:**
@@ -216,8 +216,11 @@ Next work: replace schematic geometry with approved product evidence, validate t
 - **Netlify Project Admin:** https://app.netlify.com/projects/jenefas
 - **GitHub Continuous Deployment Status:** **Not Connected**. The Netlify site `jenefas` was created and published via Netlify CLI (`deploy_source: "cli"`). It is not connected via a GitHub OAuth application or webhook integration (`build_settings` is empty in Netlify API). Adding `netlify.toml` standardizes build commands and publish directories for local and CI environments, but does **not** enable automatic deployments on git push until the GitHub repository is connected in Netlify admin settings.
 
-## Production Verification & Actual Check Results (Deploy ID: `6adcb041289b65406891c7d7`)
+## Production Verification & Actual Check Results (Deploy ID: `6adcc66f4a09d55dc3fc53fd`)
 - **Verification Completed Live on `https://jenefas.netlify.app/`:**
+  - **Original Brand Logo:** Renders crisply across homepage and both demo headers/footers with red oval and yellow "Something DIFFERENT" slogan.
+  - **Catalogue Image Isolation:** SVG `<clipPath>` ensures zero bleed from adjacent TV screens or clamp graphics in hero or guide cards.
+  - **White/Red Theme:** Professional white/light slate layout with Jenefas red buttons and accents. Zero leftover orange rules.
   - **Desktop Navigation (1440px):** `#main-menu` is visible with all links. "Request a Quote" button opens `#rfqModal` Wholesale RFQ dialog; closing dialog functions properly without submitting enquiries.
   - **Mobile Navigation (390px):** `#menu-toggle` renders correctly with zero horizontal overflow. Menu drawer toggles open (`aria-expanded="true"`); pressing `Escape` dismisses the drawer, resets `aria-expanded="false"`, and restores keyboard focus to `#menu-toggle`. Selecting "Assembly Demos" navigates to `#assembly-guides` and auto-closes the mobile drawer.
   - **Assembly Demos Hub (`#assembly-guides`):** Section displays cards for both Product 28 and Product 29 with direct working navigation links (`demos/product-28/` and `demos/product-29/`).
@@ -228,8 +231,3 @@ Next work: replace schematic geometry with approved product evidence, validate t
 - **Remaining Limitations:**
   - Geometry and animation for both Product 28 and Product 29 remain illustrative concept prototypes derived from catalogue Page 7.
   - Precise physical fastening steps, fastener specifications, hole geometry, and TV mounting attachments remain unpublished until physical manufacturer verification is received (see `docs/PRODUCT_28_MANUFACTURER_CHECKLIST.md` and `docs/PRODUCT_29_EVALUATION.md`).
-
-## Customer page structure and menus
-Added a responsive main menu, dedicated assembly-demo discovery section and
-cross-product/return navigation. See NAVIGATION_STRUCTURE.md for scope and
-verification limits. Successfully integrated into master and verified on live Netlify production.
