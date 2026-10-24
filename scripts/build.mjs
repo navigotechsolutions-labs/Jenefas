@@ -19,3 +19,5 @@ console.log('Static catalogue and Product 28 pilot built in dist/.');
 await mkdir('dist/demos/product-29', {recursive:true});
 for (const name of ['index.html','styles.css']) await copyFile(`demos/product-29/${name}`, `dist/demos/product-29/${name}`);
 await build({entryPoints:['demos/product-29/src/main.js'],outfile:'dist/demos/product-29/viewer.js',bundle:true,format:'esm',minify:true,sourcemap:true,target:['es2022']});
+
+await cp('assets', 'dist/assets', {recursive:true});
