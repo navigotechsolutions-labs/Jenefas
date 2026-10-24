@@ -221,6 +221,9 @@ Next work: replace schematic geometry with approved product evidence, validate t
   - All static assets (HTML, viewer.js, styles.css, page_7.png, products.json) return HTTP 200 OK without catch-all redirects.
   - Interactive stage selection, bilingual English/Tamil toggling, and camera controls verified live.
   - 5 unit tests and 6 Playwright browser integration tests passing.
+- **Checksum & Deployed Asset Audit:**
+  - All 8 non-HTML assets (`data/products.json`, `page_7.png`, `styles.css`, `viewer.js`, `viewer.js.map` across both pilots) have **identical SHA-256 checksums** between a fresh local build and live Netlify production.
+  - The 3 HTML files (`index.html`, `demos/product-28/index.html`, `demos/product-29/index.html`) differ over HTTP only by Netlify platform edge post-processing: Netlify's `pretty_urls` link normalization (`../../index.html` → `/`), an informational HTML comment in `<head>`, and a footer HUD script on the free tier. Stripping Netlify's CDN injections confirms 100% source fidelity.
 - **Remaining Limitations:**
   - Geometry and animation for both Product 28 and Product 29 remain illustrative concepts derived from catalogue imagery.
   - Step-by-step physical fastening and installation instructions remain unpublished pending physical manufacturer verification (see `docs/PRODUCT_28_MANUFACTURER_CHECKLIST.md` and `docs/PRODUCT_29_EVALUATION.md`).
