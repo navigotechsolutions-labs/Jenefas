@@ -182,5 +182,13 @@ For an accurate guide, obtain:
 4. Manufacturer-approved assembly order, orientation/locking details, adjustment procedure and inspection points, supported by an installation manual or recorded demonstration.
 5. Manufacturer-confirmed TV attachment interface/compatibility, load/stability limits and test basis, handling requirements, warnings and approval of the final English/Tamil instructions.
 
-Next work: replace schematic geometry with approved product evidence, validate the sequence and safety content, review Tamil copy, then test representative mobile hardware and other browsers. Deployment requires a separate explicit request.
+Next work: replace schematic geometry with approved product evidence, validate the sequence and safety content, review Tamil copy, then test representative mobile hardware and other browsers.
+
+## Deployment status
+- **Date:** 2026-10-24
+- **Platform:** Netlify (`navigotechsolutions` team)
+- **Live Site URL:** https://jenefas.netlify.app/
+- **3D Pilot URL:** https://jenefas.netlify.app/demos/product-28/
+- **Netlify Project Admin:** https://app.netlify.com/projects/jenefas
+
 
