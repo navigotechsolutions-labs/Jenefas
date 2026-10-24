@@ -590,3 +590,5 @@ html[lang=ta] .controls button {
     transition: none !important;
   }
 }
+
+.guide-navigation{display:flex;flex-wrap:wrap;gap:12px;align-items:center;max-width:1440px;margin:auto;padding:16px 28px;font-size:13px;border-bottom:1px solid #dce1e7}.guide-navigation a{min-height:44px;display:inline-flex;align-items:center}.other-guide{margin-left:auto}.guide-navigation a:focus-visible{outline:3px solid #bf450b;outline-offset:3px}@media(max-width:480px){.guide-navigation{padding:12px 16px}.other-guide{margin-left:0;flex-basis:100%}}
