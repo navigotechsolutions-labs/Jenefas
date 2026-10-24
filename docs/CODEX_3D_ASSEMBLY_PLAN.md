@@ -227,3 +227,8 @@ Next work: replace schematic geometry with approved product evidence, validate t
 - **Remaining Limitations:**
   - Geometry and animation for both Product 28 and Product 29 remain illustrative concepts derived from catalogue imagery.
   - Step-by-step physical fastening and installation instructions remain unpublished pending physical manufacturer verification (see `docs/PRODUCT_28_MANUFACTURER_CHECKLIST.md` and `docs/PRODUCT_29_EVALUATION.md`).
+
+## Customer page structure and menus
+Added a responsive main menu, dedicated assembly-demo discovery section and
+cross-product/return navigation. See NAVIGATION_STRUCTURE.md for scope and
+verification limits. No deployment performed.

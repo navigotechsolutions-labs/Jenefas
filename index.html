@@ -63,6 +63,17 @@
       background: #334155;
       border-radius: 4px;
     }
+
+    [id] {scroll-margin-top:100px}
+    .skip-link{position:fixed;top:-100px;left:16px;z-index:100;background:white;color:#111;padding:12px}.skip-link:focus{top:12px}
+    .customer-nav{position:sticky;top:0;z-index:40;background:#080f1e;border-bottom:1px solid #263347}
+    .nav-row{max-width:1280px;margin:auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .nav-brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:15px}.nav-brand small{display:block;font-size:11px;color:#94a3b8;font-weight:400}.nav-mark{background:#f97316;border-radius:10px;padding:9px 15px;font-size:22px;color:white}
+    .nav-menu{display:flex;align-items:center;gap:20px;font-size:13px}.nav-menu a{padding:12px 0;color:#cbd5e1}.nav-menu a:hover,.nav-menu a[aria-current]{color:#fb923c}.nav-quote,.nav-toggle{min-height:44px;border:1px solid #475569;border-radius:8px;padding:10px 14px}.nav-quote{background:#ea580c;color:white;font-weight:700}.nav-toggle{display:none}
+    .customer-nav :focus-visible,.guide-hub a:focus-visible{outline:3px solid #fb923c;outline-offset:4px}
+    .guide-hub{max-width:1280px;margin:auto;padding:64px 24px}.guide-heading{display:flex;justify-content:space-between;align-items:center;gap:24px}.guide-kicker{font-size:11px;letter-spacing:.12em;color:#fb923c;font-weight:700}.guide-heading h2{font-size:30px;font-weight:700;margin:8px 0}.guide-heading p,.guide-card p{color:#94a3b8;font-size:14px;line-height:1.7}.guide-heading>a{font-size:13px;color:#fb923c}.guide-notice{padding:14px 18px;border:1px solid #6b482c;background:#271b15;border-radius:10px;font-size:13px;color:#fed7aa;margin:24px 0}.guide-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.guide-card{display:block;padding:28px;border:1px solid #334155;background:#0f172a;border-radius:16px}.guide-card:hover{border-color:#fb923c}.guide-code{font-size:11px;color:#fb923c;font-weight:700}.guide-card h3{font-size:22px;font-weight:700;margin:12px 0}.guide-open{display:inline-block;margin-top:24px;color:#fb923c;font-weight:600;font-size:14px}
+    @media(max-width:1100px){.nav-row{flex-wrap:wrap}.nav-toggle{display:block;margin-left:auto}.nav-menu{display:none;flex-basis:100%;flex-direction:column;align-items:stretch;gap:0}.nav-menu.is-open{display:flex}.nav-menu a{border-top:1px solid #263347;padding:14px 4px}.nav-quote{margin-top:10px}.guide-heading{display:block}.guide-heading>a{display:inline-block;margin-top:16px}}
+    @media(max-width:600px){.nav-row{padding:12px 16px}.nav-brand{font-size:12px}.guide-grid{grid-template-columns:1fr}.guide-hub{padding:40px 16px}.guide-heading h2{font-size:25px}.guide-card{padding:22px}}
   </style>
 </head>
 <body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-accent-500 selection:text-white">
@@ -93,42 +104,19 @@
     </div>
   </header>
 
-  <!-- Main Navigation -->
-  <nav class="sticky top-0 z-40 bg-slate-950/90 backdrop-blur-md border-b border-slate-850">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-20">
-        <!-- Logo -->
-        <a href="#" class="flex items-center gap-3">
-          <div class="w-11 h-11 rounded-lg bg-gradient-to-br from-accent-500 to-amber-600 flex items-center justify-center font-display font-bold text-white text-xl shadow-lg shadow-accent-500/20">
-            J
-          </div>
-          <div>
-            <div class="text-xl font-bold font-display tracking-tight text-white flex items-center gap-2">
-              JENEFAS &amp; JENEFAS
-            </div>
-            <p class="text-xs text-slate-400 tracking-wider uppercase font-semibold">AV Mounts &amp; Industrial Brackets</p>
-          </div>
-        </a>
-
-        <!-- Desktop Navigation -->
-        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="#catalogue" class="text-slate-300 hover:text-accent-400 transition">Digital Catalogue</a>
-          <a href="#mount-finder" class="text-slate-300 hover:text-accent-400 transition">3-Click VESA Finder</a>
-          <a href="#why-jenefas" class="text-slate-300 hover:text-accent-400 transition">Why Jenefas</a>
-          <a href="#showroom" class="text-slate-300 hover:text-accent-400 transition">Ritchie Street Store</a>
-        </div>
-
-        <!-- Action Button -->
-        <div class="flex items-center gap-3">
-          <button onclick="openRfqModal()" class="inline-flex items-center gap-2 bg-gradient-to-r from-accent-500 to-amber-500 hover:from-accent-600 hover:to-amber-600 text-white font-semibold text-sm px-4 py-2.5 rounded-lg transition shadow-md shadow-accent-500/25 active:scale-95">
-            <i data-lucide="clipboard-list" class="w-4 h-4"></i>
-            <span>Wholesale RFQ</span>
-          </button>
-        </div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <nav class="customer-nav" aria-label="Main navigation">
+    <div class="nav-row">
+      <a class="nav-brand" href="#home"><span class="nav-mark">J</span><span>JENEFAS &amp; JENEFAS<small>Mounts &amp; brackets</small></span></a>
+      <button class="nav-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-menu">Menu ☰</button>
+      <div class="nav-menu" id="main-menu">
+        <a href="#catalogue">Products</a><a href="#mount-finder">Find a Mount</a><a href="#assembly-guides">Assembly Demos</a><a href="#why-jenefas">About Us</a><a href="#showroom">Contact &amp; Store</a>
+        <button class="nav-quote" onclick="openRfqModal()">Request a Quote</button>
       </div>
     </div>
   </nav>
-
+  <main id="main-content" tabindex="-1">
+  <div id="home"></div>
   <!-- Hero Section -->
   <section class="relative overflow-hidden py-16 md:py-24 border-b border-slate-850 bg-gradient-to-b from-slate-900 to-slate-950">
     <div class="absolute inset-0 bg-[linear-gradient(to_right,#1f29370f_1px,transparent_1px),linear-gradient(to_bottom,#1f29370f_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
@@ -181,7 +169,7 @@
             </a>
             <a href="#mount-finder" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold px-6 py-3.5 rounded-lg border border-slate-700 transition">
               <i data-lucide="compass" class="w-4 h-4 text-accent-400"></i>
-              <span>3-Click VESA Finder</span>
+              <span>Find a Mount</span>
             </a>
           </div>
         </div>
@@ -306,9 +294,9 @@
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
       <div>
         <span class="text-accent-400 text-xs font-bold uppercase tracking-wider">Product Lineup 2026</span>
-        <h2 class="text-3xl font-display font-bold text-white mt-1">Interactive Digital Catalogue</h2>
+        <h2 class="text-3xl font-display font-bold text-white mt-1">Browse Products</h2>
         <p class="text-sm text-slate-400 mt-1">Direct from the manufacturer. Filter by category, VESA specification, or screen size.</p>
-        <a href="demos/product-28/" class="inline-block mt-3 text-sm text-accent-400 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4">Explore Product 28 · Interactive 3D assembly concept →</a> <a href="demos/product-29/" style="display:inline-block;padding:12px;color:#f97316">Explore Product 29 · V-base 3D concept →</a>
+
       </div>
 
       <!-- Search Box -->
@@ -342,6 +330,16 @@
       <h3 class="text-lg font-bold text-white">No mounting products match your filter</h3>
       <p class="text-xs text-slate-400 mt-1">Try adjusting the screen size, category, or search term.</p>
       <button onclick="resetFilters()" class="mt-4 px-4 py-2 rounded-lg bg-accent-500 text-white text-xs font-semibold">Reset All Filters</button>
+    </div>
+  </section>
+
+
+  <section id="assembly-guides" class="guide-hub" aria-labelledby="guide-title">
+    <div class="guide-heading"><div><span class="guide-kicker">GET TO KNOW YOUR PRODUCT</span><h2 id="guide-title">Explore the assembly demos</h2><p>Choose a stand to rotate its model and explore the main parts.</p></div><a href="#showroom">Need fitting help? Contact us →</a></div>
+    <p class="guide-notice">These are visual concept demos. Actual fitting steps and connections still require manufacturer verification.</p>
+    <div class="guide-grid">
+      <a class="guide-card" href="demos/product-28/"><span class="guide-code">PRODUCT 28 · CONCEPT DEMO</span><h3>Rectangle-base table-top stand</h3><p>Flat rectangular base, upright support and two direct rails.</p><span class="guide-open">Explore Product 28 →</span></a>
+      <a class="guide-card" href="demos/product-29/"><span class="guide-code">PRODUCT 29 · CONCEPT DEMO</span><h3>V-base table-top stand</h3><p>V-shaped base, upright support and two direct rails.</p><span class="guide-open">Explore Product 29 →</span></a>
     </div>
   </section>
 
@@ -460,6 +458,7 @@
   </section>
 
   <!-- Wholesale RFQ Modal -->
+  </main>
   <div id="rfqModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
     <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-lg w-full p-6 relative shadow-2xl space-y-4">
       <div class="flex justify-between items-center border-b border-slate-800 pb-3">
@@ -554,11 +553,11 @@
         </div>
 
         <div>
-          <h4 class="font-bold text-white uppercase tracking-wider text-[11px] mb-3">Dealer Services</h4>
+          <h4 class="font-bold text-white uppercase tracking-wider text-[11px] mb-3">Help &amp; Enquiries</h4>
           <ul class="space-y-2 text-slate-400">
-            <li><a href="#" onclick="openRfqModal('All Models - Dealer Price List')" class="hover:text-accent-400">Wholesale Price List</a></li>
+            <li><a href="#catalogue" onclick="event.preventDefault();openRfqModal('All Models - Dealer Price List')" class="hover:text-accent-400">Wholesale Price List</a></li>
             <li><a href="#why-jenefas" class="hover:text-accent-400">Cold Rolled Steel Specs</a></li>
-            <li><a href="#mount-finder" class="hover:text-accent-400">VESA Sizing Guide</a></li>
+            <li><a href="#mount-finder" class="hover:text-accent-400">Find a Mount</a></li><li><a href="#assembly-guides" class="hover:text-accent-400">Assembly Demos</a></li>
             <li><a href="#showroom" class="hover:text-accent-400">Showroom Directions</a></li>
           </ul>
         </div>
@@ -587,6 +586,18 @@
 
   <!-- Client-side Logic Script -->
   <script>
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mainMenu = document.getElementById('main-menu');
+    function closeMenu(){mainMenu.classList.remove('is-open');menuToggle.setAttribute('aria-expanded','false');}
+    menuToggle.addEventListener('click',()=>{const open=menuToggle.getAttribute('aria-expanded')!=='true';mainMenu.classList.toggle('is-open',open);menuToggle.setAttribute('aria-expanded',String(open));});
+    mainMenu.addEventListener('click',event=>{if(event.target.closest('a,button'))closeMenu();});
+    document.addEventListener('keydown',event=>{if(event.key==='Escape'&&menuToggle.getAttribute('aria-expanded')==='true'){closeMenu();menuToggle.focus();}});
+    document.addEventListener('click',event=>{if(!event.target.closest('.customer-nav'))closeMenu();});
+    matchMedia('(min-width:1101px)').addEventListener('change',closeMenu);
+    function markSection(){mainMenu.querySelectorAll('a').forEach(link=>{if(link.hash===location.hash)link.setAttribute('aria-current','location');else link.removeAttribute('aria-current');});}
+    addEventListener('hashchange',markSection);markSection();
+
     let products = [];
     let currentCategory = 'all';
 
