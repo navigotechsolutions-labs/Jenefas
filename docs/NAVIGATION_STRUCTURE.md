@@ -14,6 +14,7 @@ a main landmark, focus styles and anchor scroll offsets are included.
 
 Validation: static build passed; five unit tests passed; HTML checks verified
 unique IDs, one main landmark and valid same-page section targets on all three
-pages. Two browser journeys were added but not executed: Chromium installation
-failed with a truncated download. Visual/mobile browser review remains pending.
+pages. All 8 browser integration journeys (navigation journeys, Product 28 and Product 29)
+were executed and passed in Chromium. Visual/mobile layout reviews and screenshots at 390px
+and 1440px verified with zero horizontal overflow.
 No deployment. Based on review/deployed-production-release to preserve PR #2.
