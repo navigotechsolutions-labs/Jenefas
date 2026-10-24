@@ -57,9 +57,22 @@ export function createScene(container, product, reducedMotion) {
   const parts = product.parts.map(part => {
     const geometry = part.shape === 'cylinder'
       ? new THREE.CylinderGeometry(part.radius, part.radius, part.height, 48)
-      : new THREE.BoxGeometry(...part.size);
+      : new THREE.BoxGeometry(...(part.size || [1, 1, 1]));
     const material = new THREE.MeshStandardMaterial({ color: '#20252c', metalness: .72, roughness: .36 });
-    const mesh = new THREE.Mesh(geometry, material);
+    let mesh;
+    if (part.shape === 'vBase') {
+      // Two visible feet form one schematic V base, not two claimed loose parts.
+      geometry.dispose();
+      mesh = new THREE.Group();
+      mesh.material = material;
+      for (const sign of [-1, 1]) {
+        const foot = new THREE.Mesh(new THREE.BoxGeometry(.52, .14, 2.05), material);
+        foot.rotation.y = sign * .68;
+        foot.position.set(sign * .64, 0, .78);
+        foot.castShadow = foot.receiveShadow = true;
+        mesh.add(foot);
+      }
+    } else mesh = new THREE.Mesh(geometry, material);
     mesh.name = `product-${product.code}-${part.id}`;
     mesh.castShadow = mesh.receiveShadow = true;
     scene.add(mesh);
