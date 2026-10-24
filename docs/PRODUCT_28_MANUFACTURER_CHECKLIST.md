@@ -37,7 +37,7 @@ To verify structural anatomy, obtain high-resolution photographs of the actual P
 | **Rectangular Base** | Length (X) | mm | Estimated (~360 mm) | `[     ]` |
 | | Width / Depth (Z) | mm | Estimated (~190 mm) | `[     ]` |
 | | Plate Thickness | mm | Unknown (~3-5 mm) | `[     ]` |
-| | Material / Finish | - | Black coated steel | `[     ]` |
+| | Material / Finish | - | Dark/black appearance (material & coating unverified) | `[     ]` |
 | | Rubber feet count & type | qty | Unknown | `[     ]` |
 | **Vertical Post** | Outside Diameter | mm | Estimated (~25-32 mm) | `[     ]` |
 | | Wall Thickness | mm | Unknown (gauge) | `[     ]` |
