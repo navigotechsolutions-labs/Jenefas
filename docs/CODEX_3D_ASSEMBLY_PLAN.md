@@ -198,6 +198,73 @@ Next work: replace schematic geometry with approved product evidence, validate t
    - 4 unit tests (`tests/animation.test.mjs`) passing.
    - 3 Chromium browser integration scenarios (`tests/browser/product-28.spec.js`) passing, validating evidence rendering, Tamil localization, touch orbit/pinch, reduced motion, and WebGL error handling.
 
+## Measurement Display Support & Specification Engine (October 2026)
+- **Status:** Implemented and verified locally across unit and browser test suites. **Not deployed.**
+- **Architecture & Source Accuracy:**
+  - Dedicated measurement module: `demos/product-28/src/measurements.js`.
+  - Schema defines status (`verified` vs `pending`), values in millimetres (`mm`), sources, and notes. Missing or unverified values are strictly `null`.
+  - Illustrative Three.js scene units are strictly kept separate and never multiplied or converted to mm.
+  - Dimension arrows with invented values are strictly prohibited: for unverified parameters, the 3D scene renders zero lines or arrows, surfacing a clear "Measurement pending" (`அளவீடு நிலுவையில் உள்ளது`) notice instead.
+  - Clamp product support: comprehensive schema defined (`clampProductMeasurements`) covering all 6 clamp parameters:
+    1. Overall width, height, and depth
+    2. Minimum and maximum clamp opening (mechanical jaw clearance)
+    3. Supported desk/edge thickness range (safe clamping range with padding margin)
+    4. Jaw width and depth
+    5. Throat depth / usable horizontal reach
+    6. Mounting hole diameter and centre-to-centre spacing
+  - **Mechanical clamp opening vs. Supported desk thickness distinction:**
+    - Mechanical clamp opening represents the physical clearance between bare jaw surfaces at maximum extension.
+    - Supported desk thickness represents the manufacturer-recommended safe mounting range including margin for anti-scratch padding and minimum thread engagement.
+  - **Product 28 and Product 29 Conformance:**
+    - Both products are Table Top Stands (rectangular base and V-base respectively) and do not have clamps.
+    - Zero clamp fields are attached to Products 28 and 29.
+    - All 11 structural dimensions for Product 28 and 10 dimensions for Product 29 have `value: null` and `status: 'pending'`, requiring physical manufacturer drawings.
+- **Interface & Viewer Controls:**
+  - `Show Dimensions` / `Hide Dimensions` (`#toggle-measurements`) toggle button added.
+  - Single measurement selector (`#measurement-select`) preventing label overlap.
+  - Camera-projected 2D HTML badges (`#measurement-overlay`) pinned to 3D midpoints, ensuring crystal-clear legibility and zero mirroring/distortion during rotation and zooming.
+  - Stage filtering: assembled view displays overall dimensions; selecting individual component stages filters to that component's dimensions.
+  - Interactive matching measurement table (`#measurements-table`) beside/below the viewer with English/Tamil localization, status badges (`verified` / `pending`), and direct row selection.
+  - Prominent technical disclaimers:
+    - *"Animation movement is illustrative and does not represent an approved adjustment range."*
+    - *"Scene units express visual proportions only. Illustrative units are not converted to millimetres."*
+- **Validation & Test Coverage:**
+  - 10 unit tests in `tests/measurements.test.mjs`, `animation.test.mjs`, and `product-29.test.mjs`.
+  - 12 browser automation tests across `navigation.spec.js`, `product-28.spec.js`, `product-29.spec.js`, and `measurements.spec.js`.
+  - All tests passing with zero errors.
+
+## Fasteners Bill of Materials (BOM) & Step-Linked Specification (October 2026)
+- **Status:** Implemented, audited for data accuracy, and verified locally across unit and browser test suites. **Not deployed.**
+- **Architecture & Source Accuracy Correction:**
+  - Fastener engine module: `demos/product-28/src/fasteners.js`.
+  - **Zero Synthetic Fixtures in Production:** Synthetic clamp measurements and clamp fastener fixtures were relocated exclusively to `tests/fixtures/synthetic-test-fixtures.mjs`. Production modules export zero synthetic fixtures.
+  - **Neutral Connection Records for Products 28 & 29:**
+    - Catalogue Page 7 gives only schematic views without fastener callouts or joint methods.
+    - Speculative hardware entries (`B1`, `W1`, `R1`, `R2`, `TV1`, `SP1`) were removed and replaced with neutral connection records:
+      - `CONN-BASE-POST`: Base-to-Post Connection (Stage 1)
+      - `CONN-LOWER-RAIL`: Lower Rail-to-Post Connection (Stage 3)
+      - `CONN-UPPER-RAIL`: Upper Rail-to-Post Connection (Stage 4)
+      - `CONN-TV-MOUNT`: Television Interface / Attachment (Stage 4)
+    - Named screws, washers, or spacers are only shown when supported by confirmed physical evidence. All hardware, diameter, length, head type, tool, and washer fields remain strictly `null`.
+    - Manufacturer checklist status: checklist documents (`docs/PRODUCT_28_MANUFACTURER_CHECKLIST.md`) identify missing information and are never treated as proof of verification.
+    - Verified installation locations require both recorded manufacturer approval (`approved === true`) and confirmed source reference (`source != null`) before any 3D pins, rings, or instructions render.
+  - **Customer-Facing Status Messaging:**
+    - Unverified connections display simple customer-facing pending text: `"Pending verification"` / `"உறுதிப்படுத்தல் நிலுவையில் உள்ளது"`.
+    - Unverified installation locations display: `"Pending manufacturer verification"`.
+    - Zero invented tightening torque or wall-anchor suitability claims.
+- **Interface & Viewer Integration:**
+  - Interactive Fasteners Table (`#fasteners-table`) beside a detailed specification card (`#fastener-detail-card`).
+  - Clicking any connection in the list highlights its row, seeks the 3D animation to the linked step, and displays its specification.
+  - Stage synchronization: scrubbing or selecting an assembly step synchronizes the highlighted connection record.
+  - Preserves 3D viewer, measurement toggle/filtering, and bilingual English/Tamil interface.
+  - Replaced developer-facing evaluation checklist with customer-facing "Guide Status" card on both Product 28 and Product 29.
+  - Fully translated guide navigation (`allDemos`, `currentProduct`, `otherGuide`, `guideNavAria`) in English and Tamil.
+  - WebGL fallback: when WebGL is unavailable, the 3D canvas displays a helpful localized message while catalogue images, part descriptions, measurements table, connection table, and language switching remain fully interactive.
+- **Validation & Test Coverage:**
+  - 18 unit tests passing (`tests/*.test.mjs`), including strict assertions that production bundles export zero synthetic clamp fixtures, Products 28 and 29 use neutral connection records, and approval gates enforce recorded evidence.
+  - 15 browser automation tests passing (`playwright test`).
+  - Responsive visual inspection confirmed at 320px, 390px, and 1440px across both product guides.
+
 ## Deployment status
 - **Date:** 2026-10-24
 - **Platform:** Netlify (`navigotechsolutions` team)

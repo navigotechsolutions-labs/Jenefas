@@ -13,7 +13,12 @@
     <a class="brand" href="../../index.html" aria-label="Jenefas home"><img class="original-logo" src="../../assets/jenefas-logo.svg" alt="Jenefas.com - Something DIFFERENT" width="180" height="84"></a>
     <div class="header-actions"><a href="../../index.html#catalogue" data-i18n="back">← Catalogue</a><label class="language"><span data-i18n="language">Language</span><select id="language"><option value="en">English</option><option value="ta">தமிழ்</option></select></label></div>
   </header>
-  <nav class="guide-navigation" aria-label="Product guide navigation"><a href="../../index.html#assembly-guides">All assembly demos</a><span aria-hidden="true"> / </span><span aria-current="page">Product 29</span><a class="other-guide" href="../product-28/">View Product 28 →</a></nav>
+  <nav class="guide-navigation" aria-label="Product guide navigation">
+    <a href="../../index.html#assembly-guides" data-i18n="allDemos">All assembly demos</a>
+    <span aria-hidden="true"> / </span>
+    <span aria-current="page" data-i18n="currentProduct">Product 29</span>
+    <a class="other-guide" href="../product-28/" data-i18n="viewProduct28">View Product 28 →</a>
+  </nav>
   <main id="main-content">
     <div class="intro"><div><p class="eyebrow" data-i18n="eyebrow">PRODUCT 29 / INTERACTIVE CONCEPT</p><h1 data-i18n="title">Table Top Stand</h1><p class="subtitle" data-i18n="subtitle">Laser V Type Base • Direct Rail</p></div><span class="concept-badge" data-i18n="badge">3D assembly pilot</span></div>
     <div class="notice"><span aria-hidden="true">ⓘ</span><div><p id="verification-note" lang="en">Concept demo based on catalogue imagery. Assembly details require manufacturer verification.</p><p id="translated-note" lang="ta" hidden>பட்டியல் படங்களை அடிப்படையாகக் கொண்ட கருத்து விளக்கம். பொருத்தும் விவரங்களுக்கு உற்பத்தியாளரின் சரிபார்ப்பு தேவை.</p></div></div>
@@ -21,7 +26,17 @@
       <section class="viewer" aria-labelledby="viewer-title">
         <div class="viewer-top"><h2 id="viewer-title" data-i18n="viewerTitle">Explore the structure</h2><span class="schematic" data-i18n="schematic">SCHEMATIC · NOT TO SCALE</span></div>
         <div id="viewport"><p id="loading" role="status" data-i18n="loading">Loading 3D viewer…</p><div id="viewer-error" role="alert" hidden></div></div>
-        <div class="viewer-bottom"><p id="view-help" data-i18n="viewHelp">Drag to rotate · Scroll / pinch to zoom</p><button id="reset" class="quiet" data-i18n="reset">Reset view</button></div>
+        <div class="viewer-bottom">
+          <div class="viewer-actions">
+            <button id="toggle-measurements" class="measurement-toggle-btn" type="button" aria-pressed="false" data-i18n="showMeasurements">Show Dimensions</button>
+            <div class="measurement-select-wrapper" id="measurement-select-wrapper" hidden>
+              <label for="measurement-select" class="visually-hidden" data-i18n="selectMeasurement">Select measurement to view</label>
+              <select id="measurement-select" aria-label="Select measurement to view"></select>
+            </div>
+          </div>
+          <p id="view-help" data-i18n="viewHelp">Drag to rotate · Scroll / pinch to zoom</p>
+          <button id="reset" class="quiet" data-i18n="reset">Reset view</button>
+        </div>
         <p class="keyboard-help" id="keyboard-help" data-i18n="keyboardHelp">Keyboard: focus the model, use arrow keys to rotate, + / − to zoom, Home to reset.</p>
       </section>
       <section class="timeline" aria-label="Assembly controls" id="assembly-controls">
@@ -39,6 +54,94 @@
         <div class="active-detail" aria-live="polite" aria-atomic="true"><span class="eyebrow" data-i18n="activePart">ACTIVE PART</span><h3 id="part-title"></h3><p id="part-description"></p></div>
       </aside>
     </div>
+
+    <section class="measurements-section" id="measurements-section" aria-labelledby="measurements-title">
+      <div class="measurements-header">
+        <span class="eyebrow" data-i18n="measurementsEyebrow">DIMENSIONS & SPECIFICATIONS</span>
+        <h2 id="measurements-title" data-i18n="measurementsTitle">Product Dimensions & Technical Specifications</h2>
+        <p id="measurements-desc" class="measurements-desc" data-i18n="measurementsDesc">Stored in millimetres (mm) from manufacturer-approved drawings or physical spec sheets. Missing values remain pending verification.</p>
+      </div>
+      <div class="measurements-disclaimers">
+        <p class="measurement-note warning-note">
+          <span aria-hidden="true">⚠️</span>
+          <span data-i18n="animationDisclaimer">Animation movement is illustrative and does not represent an approved adjustment range.</span>
+        </p>
+        <p class="measurement-note info-note">
+          <span aria-hidden="true">ℹ️</span>
+          <span data-i18n="noInventedDimensionsNotice">Scene units express visual proportions only. Illustrative units are not converted to millimetres.</span>
+        </p>
+      </div>
+      <div class="table-container">
+        <table class="measurements-table" id="measurements-table">
+          <thead>
+            <tr>
+              <th scope="col" data-i18n="colParameter">Parameter</th>
+              <th scope="col" data-i18n="colValue">Value (mm)</th>
+              <th scope="col" data-i18n="colStatus">Status</th>
+              <th scope="col" data-i18n="colSource">Source / Note</th>
+            </tr>
+          </thead>
+          <tbody id="measurements-tbody">
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="fasteners-section" id="fasteners-section" aria-labelledby="fasteners-title">
+      <div class="fasteners-header">
+        <span class="eyebrow" data-i18n="fastenersEyebrow">CONNECTIONS & HARDWARE</span>
+        <h2 id="fasteners-title" data-i18n="fastenersTitle">Assembly Connections & Hardware</h2>
+        <p id="fasteners-desc" class="fasteners-desc" data-i18n="fastenersDesc">This section lists joints between parts. Supplied screws, brackets, and television interface hardware require manufacturer confirmation.</p>
+      </div>
+      <div class="fasteners-disclaimers">
+        <p class="fastener-note warning-note">
+          <span aria-hidden="true">⚠️</span>
+          <span data-i18n="fastenerDisclaimer">Tightening torque, wall-anchor suitability, and connection methods are never estimated and require manufacturer certification.</span>
+        </p>
+      </div>
+      <div class="fasteners-layout">
+        <div class="table-container fasteners-table-container">
+          <table class="fasteners-table" id="fasteners-table">
+            <thead>
+              <tr>
+                <th scope="col" data-i18n="colFastenerId">Code</th>
+                <th scope="col" data-i18n="colFastenerName">Connection / Interface</th>
+                <th scope="col" data-i18n="colFastenerStage">Assembly Step</th>
+                <th scope="col" data-i18n="colFastenerQty">Qty</th>
+                <th scope="col" data-i18n="colFastenerDiameter">Diameter</th>
+                <th scope="col" data-i18n="colFastenerLength">Length</th>
+                <th scope="col" data-i18n="colFastenerHead">Head Type</th>
+                <th scope="col" data-i18n="colFastenerTool">Tool Required</th>
+                <th scope="col" data-i18n="colFastenerWashers">Washers / Spacers</th>
+                <th scope="col" data-i18n="colStatus">Status</th>
+              </tr>
+            </thead>
+            <tbody id="fasteners-tbody">
+            </tbody>
+          </table>
+        </div>
+        <div class="fastener-detail-card" id="fastener-detail-card" aria-live="polite">
+          <span class="eyebrow" data-i18n="activeFastenerDetail">FASTENER SPECIFICATION & VERIFIED LOCATION</span>
+          <h3 id="fastener-detail-title"></h3>
+          <p id="fastener-detail-stage" class="detail-stage-tag"></p>
+          <dl class="fastener-spec-grid" id="fastener-spec-grid">
+          </dl>
+          <div class="fastener-location-box" id="fastener-location-box">
+            <h4 data-i18n="colFastenerLocation">Installation Location</h4>
+            <p id="fastener-location-desc" class="location-desc"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="guide-status-section" aria-labelledby="guide-status-heading">
+      <div class="guide-status-card">
+        <span class="eyebrow" data-i18n="guideStatusEyebrow">GUIDE STATUS</span>
+        <h2 id="guide-status-heading" data-i18n="guideStatusTitle">Model & Verification Status</h2>
+        <p data-i18n="guideStatusDesc">This model shows the product structure. Assembly details and measurements are awaiting manufacturer confirmation.</p>
+      </div>
+    </section>
+
     <section class="reference"><div><p class="eyebrow" data-i18n="reference">CATALOGUE REFERENCE</p><h2 data-i18n="referenceTitle">A visual study, with clear limits.</h2><p data-i18n="referenceText">The lower-right Product 29 illustration shows a V-shaped base, a round post and two horizontal rails. Connections are schematic; holes, fasteners and dimensions are intentionally unspecified.</p><a href="../product-28/assets/page_7.png" target="_blank" rel="noopener" data-i18n="openReference">View catalogue page 7 ↗</a></div><a href="../product-28/assets/page_7.png" target="_blank" rel="noopener" aria-label="Catalogue page 7, Product 29 in the lower right"><img src="../product-28/assets/page_7.png" alt="Jenefas catalogue page 7; Product 29 appears in the lower-right section." width="1333" height="993" loading="lazy"></a></section>
   </main>
   <footer><span>JENEFAS & JENEFAS</span><span data-i18n="footer">Product 29 · Concept study · Manufacturer verification pending</span></footer>
