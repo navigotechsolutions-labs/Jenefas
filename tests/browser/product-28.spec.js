@@ -20,8 +20,8 @@ test('desktop: controls, animation, keyboard, assets and console', async ({ page
   page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
   page.on('response', response => { if (response.status() >= 400) errors.push(`${response.status()} ${response.url()}`); });
   await ready(page);
-  await expect(page.getByText('Concept demo based on catalogue imagery. Assembly details require manufacturer verification.')).toBeVisible();
-  await expect(page.locator('.evaluation-card')).toBeVisible();
+  await expect(page.getByText('This preview illustrates the product structure. Final assembly steps, hardware and measurements require manufacturer confirmation.')).toBeVisible();
+  await expect(page.locator('.guide-status-card')).toBeVisible();
   await page.screenshot({ path: 'test-results/desktop-exploded.png', fullPage: true });
   await page.locator('#next').click();
   await expect(page.locator('#progress')).toHaveValue('250', { timeout: 10000 });

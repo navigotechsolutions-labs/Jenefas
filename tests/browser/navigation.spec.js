@@ -27,7 +27,7 @@ test('mobile menu supports keyboard dismissal, navigation and quote entry', asyn
   // 3. Selecting a link closes the mobile menu
   await toggle.click();
   await expect(menu).toBeVisible();
-  await menu.getByRole('link', { name: 'Assembly Demos', exact: true }).click();
+  await menu.getByRole('link', { name: 'Assembly & Support', exact: true }).click();
   await expect(page).toHaveURL(/#assembly-guides$/);
   await expect(menu).toBeHidden();
   await expect(page.locator('#assembly-guides')).toBeVisible();
@@ -58,13 +58,13 @@ test('desktop navigation and both guide return paths are discoverable', async ({
   await expect(page.locator('#main-menu')).toBeVisible();
   await page.screenshot({ path: 'test-results/nav-desktop-header.png' });
 
-  // Verify Assembly Demos link on desktop scrolls to section
-  await page.locator('#main-menu').getByRole('link', { name: 'Assembly Demos', exact: true }).click();
+  // Verify Assembly & Support link on desktop scrolls to section
+  await page.locator('#main-menu').getByRole('link', { name: 'Assembly & Support', exact: true }).click();
   await expect(page).toHaveURL(/#assembly-guides$/);
   await expect(page.locator('#assembly-guides')).toBeVisible();
   await page.screenshot({ path: 'test-results/nav-desktop-assembly-guides.png' });
 
-  // Verify Assembly Demos links to both products and both demos return to assembly section
+  // Verify Assembly & Support links to both products and both demos return to assembly section
   for (const code of [28, 29]) {
     await page.goto('/');
     const guideLink = page.locator('#assembly-guides').getByRole('link', { name: new RegExp(`PRODUCT ${code}`, 'i') });

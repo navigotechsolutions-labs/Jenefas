@@ -10,9 +10,92 @@
     "maxLoad": "25 kg / 55 lbs",
     "wallDistance": "20 mm",
     "motion": "Fixed",
-    "features": ["Low profile ultra-slim fit", "Integrated bubble level", "Quick snap-in lock mechanism"],
+    "features": [
+      "Low profile ultra-slim fit",
+      "Integrated bubble level",
+      "Quick snap-in lock mechanism"
+    ],
     "cartonPack": "25 pcs / box",
-    "idealFor": "Bedrooms, small conference rooms, budget hotel installations"
+    "idealFor": "Bedrooms, small conference rooms, budget hotel installations",
+    "code": "FX32",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "14\" - 32\"",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "vesa": {
+        "value": "75x75, 100x100, 200x200 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "maxLoad": {
+        "value": "25 kg / 55 lbs",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "wallDistance": {
+        "value": "20 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "motion": {
+        "value": "Fixed",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Primary mounting bracket / arm assembly (catalogue design)"
+      ],
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-FX32",
+    "displayIdentifier": "JF-FX32",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-FX55",
@@ -25,9 +108,92 @@
     "maxLoad": "45 kg / 99 lbs",
     "wallDistance": "25 mm",
     "motion": "Fixed",
-    "features": ["Reinforced cold-rolled steel plate", "Security anti-theft locking screws", "Wide cable pass-through"],
+    "features": [
+      "Reinforced cold-rolled steel plate",
+      "Security anti-theft locking screws",
+      "Wide cable pass-through"
+    ],
     "cartonPack": "20 pcs / box",
-    "idealFor": "Living rooms, apartment complexes, commercial displays"
+    "idealFor": "Living rooms, apartment complexes, commercial displays",
+    "code": "FX55",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "32\" - 55\"",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "vesa": {
+        "value": "200x200 up to 400x400 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "maxLoad": {
+        "value": "45 kg / 99 lbs",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "wallDistance": {
+        "value": "25 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "motion": {
+        "value": "Fixed",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Primary mounting bracket / arm assembly (catalogue design)"
+      ],
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-FX55",
+    "displayIdentifier": "JF-FX55",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-FX75",
@@ -40,9 +206,92 @@
     "maxLoad": "65 kg / 143 lbs",
     "wallDistance": "28 mm",
     "motion": "Fixed",
-    "features": ["Dual-rail heavy support", "Reinforced 2.0mm gauge steel", "Lateral shift adjustment"],
+    "features": [
+      "Dual-rail heavy support",
+      "Reinforced 2.0mm gauge steel",
+      "Lateral shift adjustment"
+    ],
     "cartonPack": "10 pcs / box",
-    "idealFor": "Showrooms, corporate boardrooms, large home theaters"
+    "idealFor": "Showrooms, corporate boardrooms, large home theaters",
+    "code": "FX75",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "43\" - 75\"",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "vesa": {
+        "value": "200x200 up to 600x400 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "maxLoad": {
+        "value": "65 kg / 143 lbs",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "wallDistance": {
+        "value": "28 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "motion": {
+        "value": "Fixed",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Primary mounting bracket / arm assembly (catalogue design)"
+      ],
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-FX75",
+    "displayIdentifier": "JF-FX75",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-TL43",
@@ -55,9 +304,92 @@
     "maxLoad": "35 kg / 77 lbs",
     "wallDistance": "45 mm",
     "motion": "Tilt (-12° to +5°)",
-    "features": ["Tool-less tilt tension knob", "Glaring light reduction", "Ample spacing for cable clearance"],
+    "features": [
+      "Tool-less tilt tension knob",
+      "Glaring light reduction",
+      "Ample spacing for cable clearance"
+    ],
     "cartonPack": "15 pcs / box",
-    "idealFor": "Elevated bedroom installations, clinic waiting rooms"
+    "idealFor": "Elevated bedroom installations, clinic waiting rooms",
+    "code": "TL43",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "26\" - 43\"",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "vesa": {
+        "value": "100x100 to 200x200 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "maxLoad": {
+        "value": "35 kg / 77 lbs",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "wallDistance": {
+        "value": "45 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "motion": {
+        "value": "Tilt (-12° to +5°)",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Primary mounting bracket / arm assembly (catalogue design)"
+      ],
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-TL43",
+    "displayIdentifier": "JF-TL43",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-TL65",
@@ -70,9 +402,92 @@
     "maxLoad": "50 kg / 110 lbs",
     "wallDistance": "53 mm",
     "motion": "Tilt (-15° to +5°)",
-    "features": ["Quick-release pull cords", "Precision laser-cut cold rolled steel", "Heavy electrostatic powder coating"],
+    "features": [
+      "Quick-release pull cords",
+      "Precision laser-cut cold rolled steel",
+      "Heavy electrostatic powder coating"
+    ],
     "cartonPack": "10 pcs / box",
-    "idealFor": "Master bedrooms, conference rooms, restaurants"
+    "idealFor": "Master bedrooms, conference rooms, restaurants",
+    "code": "TL65",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "32\" - 65\"",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "vesa": {
+        "value": "200x200 to 400x400 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "maxLoad": {
+        "value": "50 kg / 110 lbs",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "wallDistance": {
+        "value": "53 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "motion": {
+        "value": "Tilt (-15° to +5°)",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Primary mounting bracket / arm assembly (catalogue design)"
+      ],
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-TL65",
+    "displayIdentifier": "JF-TL65",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-TL85",
@@ -85,9 +500,92 @@
     "maxLoad": "75 kg / 165 lbs",
     "wallDistance": "65 mm",
     "motion": "Tilt (-15° to +5°)",
-    "features": ["Industrial grade 2.5mm bracket arms", "Wide wall plate spanning 2 studs", "High load safety factor (3x)"],
+    "features": [
+      "Industrial grade 2.5mm bracket arms",
+      "Wide wall plate spanning 2 studs",
+      "High load safety factor (3x)"
+    ],
     "cartonPack": "5 pcs / box",
-    "idealFor": "High-ceiling venues, luxury living rooms, sports bars"
+    "idealFor": "High-ceiling venues, luxury living rooms, sports bars",
+    "code": "TL85",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "55\" - 85\"",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "vesa": {
+        "value": "300x300 to 800x400 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "maxLoad": {
+        "value": "75 kg / 165 lbs",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "wallDistance": {
+        "value": "65 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "motion": {
+        "value": "Tilt (-15° to +5°)",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Primary mounting bracket / arm assembly (catalogue design)"
+      ],
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-TL85",
+    "displayIdentifier": "JF-TL85",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-FM32-S",
@@ -100,9 +598,92 @@
     "maxLoad": "25 kg / 55 lbs",
     "wallDistance": "60 mm - 380 mm",
     "motion": "Swivel ±90°, Tilt ±15°",
-    "features": ["380mm arm extension", "Corner installation friendly", "Integrated cable guide clips"],
+    "features": [
+      "380mm arm extension",
+      "Corner installation friendly",
+      "Integrated cable guide clips"
+    ],
     "cartonPack": "10 pcs / box",
-    "idealFor": "Kitchens, studios, corner wall mountings"
+    "idealFor": "Kitchens, studios, corner wall mountings",
+    "code": "FM32-S",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "17\" - 42\"",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "vesa": {
+        "value": "75x75, 100x100, 200x200 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "maxLoad": {
+        "value": "25 kg / 55 lbs",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "wallDistance": {
+        "value": "60 mm - 380 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "motion": {
+        "value": "Swivel ±90°, Tilt ±15°",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Primary mounting bracket / arm assembly (catalogue design)"
+      ],
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-FM32-S",
+    "displayIdentifier": "JF-FM32-S",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-FM55-D",
@@ -115,9 +696,92 @@
     "maxLoad": "45 kg / 99 lbs",
     "wallDistance": "70 mm - 460 mm",
     "motion": "Swivel ±60°, Tilt ±15°, Level ±3°",
-    "features": ["Twin load-bearing steel arms", "Smooth glide extension & retraction", "Horizontal post-install leveling"],
+    "features": [
+      "Twin load-bearing steel arms",
+      "Smooth glide extension & retraction",
+      "Horizontal post-install leveling"
+    ],
     "cartonPack": "6 pcs / box",
-    "idealFor": "Open floor plans, multi-view living rooms, executive suites"
+    "idealFor": "Open floor plans, multi-view living rooms, executive suites",
+    "code": "FM55-D",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "32\" - 65\"",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "vesa": {
+        "value": "200x200 to 400x400 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "maxLoad": {
+        "value": "45 kg / 99 lbs",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "wallDistance": {
+        "value": "70 mm - 460 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "motion": {
+        "value": "Swivel ±60°, Tilt ±15°, Level ±3°",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Primary mounting bracket / arm assembly (catalogue design)"
+      ],
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-FM55-D",
+    "displayIdentifier": "JF-FM55-D",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-FM75-HD",
@@ -130,9 +794,92 @@
     "maxLoad": "65 kg / 143 lbs",
     "wallDistance": "80 mm - 520 mm",
     "motion": "Swivel ±60°, Tilt ±15°",
-    "features": ["Extreme stability with no sag", "Dual heavy hinges with brass washers", "Tested up to 4x rated capacity"],
+    "features": [
+      "Extreme stability with no sag",
+      "Dual heavy hinges with brass washers",
+      "Tested up to 4x rated capacity"
+    ],
     "cartonPack": "4 pcs / box",
-    "idealFor": "Premium 75\" & 85\" OLED/QLED screens, high-end residences"
+    "idealFor": "Premium 75\" & 85\" OLED/QLED screens, high-end residences",
+    "code": "FM75-HD",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "50\" - 85\"",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "vesa": {
+        "value": "200x200 to 600x400 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "maxLoad": {
+        "value": "65 kg / 143 lbs",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "wallDistance": {
+        "value": "80 mm - 520 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "motion": {
+        "value": "Swivel ±60°, Tilt ±15°",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Primary mounting bracket / arm assembly (catalogue design)"
+      ],
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-FM75-HD",
+    "displayIdentifier": "JF-FM75-HD",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-FM100-PRO",
@@ -145,9 +892,92 @@
     "maxLoad": "90 kg / 198 lbs",
     "wallDistance": "90 mm - 650 mm",
     "motion": "Swivel ±45°, Tilt ±15°",
-    "features": ["Industrial 3.0mm carbon steel", "Massive 650mm extension range", "Built for commercial interactive panels & touch displays"],
+    "features": [
+      "Industrial 3.0mm carbon steel",
+      "Massive 650mm extension range",
+      "Built for commercial interactive panels & touch displays"
+    ],
     "cartonPack": "2 pcs / box",
-    "idealFor": "Interactive touch displays, auditoriums, broadcast studios"
+    "idealFor": "Interactive touch displays, auditoriums, broadcast studios",
+    "code": "FM100-PRO",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "65\" - 100\"",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "vesa": {
+        "value": "300x300 to 800x600 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "maxLoad": {
+        "value": "90 kg / 198 lbs",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "wallDistance": {
+        "value": "90 mm - 650 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "motion": {
+        "value": "Swivel ±45°, Tilt ±15°",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Primary mounting bracket / arm assembly (catalogue design)"
+      ],
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-FM100-PRO",
+    "displayIdentifier": "JF-FM100-PRO",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-CL55-S",
@@ -160,9 +990,92 @@
     "maxLoad": "50 kg / 110 lbs",
     "wallDistance": "600 mm - 1000 mm drop",
     "motion": "360° Swivel, -15° Tilt",
-    "features": ["Adjustable ceiling drop column", "Internal cable routing pipe", "Sloped/vaulted ceiling adapter included"],
+    "features": [
+      "Adjustable ceiling drop column",
+      "Internal cable routing pipe",
+      "Sloped/vaulted ceiling adapter included"
+    ],
     "cartonPack": "4 pcs / box",
-    "idealFor": "Gyms, hospitals, airport lounges, retail shopping malls"
+    "idealFor": "Gyms, hospitals, airport lounges, retail shopping malls",
+    "code": "CL55-S",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "32\" - 55\"",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "vesa": {
+        "value": "100x100 to 400x400 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "maxLoad": {
+        "value": "50 kg / 110 lbs",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "wallDistance": {
+        "value": "600 mm - 1000 mm drop",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "motion": {
+        "value": "360° Swivel, -15° Tilt",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Primary mounting bracket / arm assembly (catalogue design)"
+      ],
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-CL55-S",
+    "displayIdentifier": "JF-CL55-S",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-CL65-D",
@@ -175,9 +1088,92 @@
     "maxLoad": "90 kg total (45 kg per side)",
     "wallDistance": "1000 mm - 1500 mm drop",
     "motion": "Dual display 360° rotation",
-    "features": ["Dual sided advertising display mount", "Heavy-gauge steel ceiling collar", "Independent tilt adjustment"],
+    "features": [
+      "Dual sided advertising display mount",
+      "Heavy-gauge steel ceiling collar",
+      "Independent tilt adjustment"
+    ],
     "cartonPack": "2 pcs / box",
-    "idealFor": "Supermarkets, metro stations, airport flight displays"
+    "idealFor": "Supermarkets, metro stations, airport flight displays",
+    "code": "CL65-D",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "40\" - 65\"",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "vesa": {
+        "value": "200x200 to 600x400 mm per side",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "maxLoad": {
+        "value": "90 kg total (45 kg per side)",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "wallDistance": {
+        "value": "1000 mm - 1500 mm drop",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "motion": {
+        "value": "Dual display 360° rotation",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Primary mounting bracket / arm assembly (catalogue design)"
+      ],
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-CL65-D",
+    "displayIdentifier": "JF-CL65-D",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-MA-01",
@@ -190,9 +1186,92 @@
     "maxLoad": "9 kg / 19.8 lbs",
     "wallDistance": "Desk clamp / Grommet",
     "motion": "360° Rotation (Portrait/Landscape), ±90° Swivel, ±45° Tilt",
-    "features": ["Internal counter-balance gas spring", "Desk clamp and grommet mount included", "Concealed cable management channels"],
+    "features": [
+      "Internal counter-balance gas spring",
+      "Desk clamp and grommet mount included",
+      "Concealed cable management channels"
+    ],
     "cartonPack": "6 pcs / box",
-    "idealFor": "IT workplaces, software developers, trading terminals"
+    "idealFor": "IT workplaces, software developers, trading terminals",
+    "code": "MA-01",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "17\" - 32\"",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "vesa": {
+        "value": "75x75, 100x100 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "maxLoad": {
+        "value": "9 kg / 19.8 lbs",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "wallDistance": {
+        "value": "Desk clamp / Grommet",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "motion": {
+        "value": "360° Rotation (Portrait/Landscape), ±90° Swivel, ±45° Tilt",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Primary mounting bracket / arm assembly (catalogue design)"
+      ],
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-MA-01",
+    "displayIdentifier": "JF-MA-01",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-MA-02",
@@ -205,9 +1284,92 @@
     "maxLoad": "9 kg per arm (18 kg total)",
     "wallDistance": "Desk clamp / Grommet",
     "motion": "Dual independent 360° pivot",
-    "features": ["Heavy aluminum die-cast body", "Fluid height adjustment", "Optimized desk ergonomics"],
+    "features": [
+      "Heavy aluminum die-cast body",
+      "Fluid height adjustment",
+      "Optimized desk ergonomics"
+    ],
     "cartonPack": "4 pcs / box",
-    "idealFor": "Multi-monitor financial analysts, designers, customer support"
+    "idealFor": "Multi-monitor financial analysts, designers, customer support",
+    "code": "MA-02",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "17\" - 32\" (x2)",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "vesa": {
+        "value": "75x75, 100x100 mm each",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "maxLoad": {
+        "value": "9 kg per arm (18 kg total)",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "wallDistance": {
+        "value": "Desk clamp / Grommet",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "motion": {
+        "value": "Dual independent 360° pivot",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Primary mounting bracket / arm assembly (catalogue design)"
+      ],
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-MA-02",
+    "displayIdentifier": "JF-MA-02",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-PR-ADJ",
@@ -220,9 +1382,92 @@
     "maxLoad": "20 kg / 44 lbs",
     "wallDistance": "430 mm - 650 mm (Extendable to 1.2m)",
     "motion": "360° Rotation, ±15° Tilt & Roll",
-    "features": ["Universal 4-point mounting legs", "Quick disconnect for lamp replacement", "Hollow pole for HDMI/power wire routing"],
+    "features": [
+      "Universal 4-point mounting legs",
+      "Quick disconnect for lamp replacement",
+      "Hollow pole for HDMI/power wire routing"
+    ],
     "cartonPack": "10 pcs / box",
-    "idealFor": "Home theaters, school classrooms, corporate meeting rooms"
+    "idealFor": "Home theaters, school classrooms, corporate meeting rooms",
+    "code": "PR-ADJ",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "Universal projector fitting",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "vesa": {
+        "value": "Universal 4-arm spider fitting (up to 380mm dia)",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "maxLoad": {
+        "value": "20 kg / 44 lbs",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "wallDistance": {
+        "value": "430 mm - 650 mm (Extendable to 1.2m)",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "motion": {
+        "value": "360° Rotation, ±15° Tilt & Roll",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Primary mounting bracket / arm assembly (catalogue design)"
+      ],
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-PR-ADJ",
+    "displayIdentifier": "JF-PR-ADJ",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-SPK-01",
@@ -235,9 +1480,92 @@
     "maxLoad": "15 kg per bracket",
     "wallDistance": "140 mm from wall",
     "motion": "±60° Swivel, ±10° Tilt",
-    "features": ["Adjustable side clamps with rubber pads", "Safety steel lanyard attachment", "Solid steel vibration-dampened frame"],
+    "features": [
+      "Adjustable side clamps with rubber pads",
+      "Safety steel lanyard attachment",
+      "Solid steel vibration-dampened frame"
+    ],
     "cartonPack": "10 pairs / box",
-    "idealFor": "Surround sound home theaters, auditoriums, places of worship"
+    "idealFor": "Surround sound home theaters, auditoriums, places of worship",
+    "code": "SPK-01",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "Bookshelf & Studio Speakers",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "vesa": {
+        "value": "Universal clamping plate",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "maxLoad": {
+        "value": "15 kg per bracket",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "wallDistance": {
+        "value": "140 mm from wall",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "motion": {
+        "value": "±60° Swivel, ±10° Tilt",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Primary mounting bracket / arm assembly (catalogue design)"
+      ],
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-SPK-01",
+    "displayIdentifier": "JF-SPK-01",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-AC-STD",
@@ -250,9 +1578,92 @@
     "maxLoad": "180 kg / 396 lbs",
     "wallDistance": "450 mm bracket length",
     "motion": "Rigid Wall Mount",
-    "features": ["Electrostatically powder-coated for exterior weatherproofing", "Anti-vibration rubber bush set included", "High-gauge galvanized steel sheet"],
+    "features": [
+      "Electrostatically powder-coated for exterior weatherproofing",
+      "Anti-vibration rubber bush set included",
+      "High-gauge galvanized steel sheet"
+    ],
     "cartonPack": "10 pairs / bundle",
-    "idealFor": "HVAC contractors, residential & commercial air conditioning"
+    "idealFor": "HVAC contractors, residential & commercial air conditioning",
+    "code": "AC-STD",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "1.0 Ton to 2.5 Ton AC units",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "vesa": {
+        "value": "Universal slot alignment",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "maxLoad": {
+        "value": "180 kg / 396 lbs",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "wallDistance": {
+        "value": "450 mm bracket length",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "motion": {
+        "value": "Rigid Wall Mount",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Primary mounting bracket / arm assembly (catalogue design)"
+      ],
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-AC-STD",
+    "displayIdentifier": "JF-AC-STD",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-MW-01",
@@ -265,8 +1676,307 @@
     "maxLoad": "40 kg / 88 lbs",
     "wallDistance": "Extendable 300 mm to 465 mm",
     "motion": "Extendable depth",
-    "features": ["Telescopic depth slide with locking pin", "Front lip stops oven sliding", "Rust-resistant kitchen finish"],
+    "features": [
+      "Telescopic depth slide with locking pin",
+      "Front lip stops oven sliding",
+      "Rust-resistant kitchen finish"
+    ],
     "cartonPack": "20 pairs / box",
-    "idealFor": "Modular kitchens, canteen counters, bakery setups"
+    "idealFor": "Modular kitchens, canteen counters, bakery setups",
+    "code": "MW-01",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "20L to 40L Microwave Ovens",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "vesa": {
+        "value": "Universal base slots",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "maxLoad": {
+        "value": "40 kg / 88 lbs",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "wallDistance": {
+        "value": "Extendable 300 mm to 465 mm",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "motion": {
+        "value": "Extendable depth",
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Primary mounting bracket / arm assembly (catalogue design)"
+      ],
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-MW-01",
+    "displayIdentifier": "JF-MW-01",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
+  },
+  {
+    "id": "JF-TT28",
+    "code": "28",
+    "title": "Rectangle-Base Table-Top TV Stand",
+    "category": "tabletop",
+    "categoryName": "Table-Top Stands",
+    "screenSize": "32\" - 55\"",
+    "sizeGroup": "32-55",
+    "vesa": "200x200 to 400x400 mm",
+    "maxLoad": null,
+    "wallDistance": "Table-top freestanding",
+    "motion": "Fixed Direct Rail",
+    "features": [
+      "Flat rectangular steel base plate",
+      "Vertical cylindrical upright column",
+      "Dual horizontal direct mounting rails"
+    ],
+    "cartonPack": "Packaging details awaiting confirmation",
+    "idealFor": "Credenzas, AV furniture, desks where wall mounting is prohibited",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "32\" - 55\"",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue Page 7 scan"
+      },
+      "vesa": {
+        "value": "200x200 to 400x400 mm",
+        "status": "unconfirmed_estimate",
+        "source": "Catalogue illustration proportion estimate - awaiting manufacturer verification"
+      },
+      "maxLoad": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      },
+      "wallDistance": {
+        "value": "Freestanding",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue Page 7 scan"
+      },
+      "motion": {
+        "value": "Fixed Direct Rail",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue Page 7 scan"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Rectangular base plate (proportions from catalogue Page 7)",
+        "Vertical column support",
+        "Dual direct mounting rails"
+      ],
+      "unconfirmed": "Joint fasteners, base-to-post connection bolts, and TV mounting hardware await manufacturer BOM confirmation."
+    },
+    "installationRequirements": "Stable, level tabletop surface capable of supporting combined stand and TV weight.",
+    "guideUrl": "demos/product-28/",
+    "guideType": "3D concept preview",
+    "image": "demos/product-28/assets/page_7.png",
+    "imageCrop": {
+      "x": 1115,
+      "y": 110,
+      "width": 185,
+      "height": 235
+    },
+    "verifiedStatus": "concept_prototype",
+    "identifierType": "manufacturer_catalogue_code",
+    "manufacturerCode": "28",
+    "internalId": "JF-TT28",
+    "displayIdentifier": "Product 28",
+    "visibleComponents": [
+      "Rectangular steel base plate (observed on Catalogue Page 7)",
+      "Vertical cylindrical upright column",
+      "Twin direct horizontal mounting rails"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "manufacturer_catalogue_scan",
+    "sourceReference": "Jenefas Catalogue Page 7 scan (demos/product-28/assets/page_7.png)",
+    "supportedAttributes": [
+      "manufacturer_catalogue_code",
+      "tabletop_form_factor",
+      "visible_structural_components",
+      "general_display_stand_archetype"
+    ],
+    "unconfirmedAttributes": [
+      "exact_dimensions_mm",
+      "certified_weight_limit_kg",
+      "supported_vesa_patterns",
+      "hardware_fastener_bom"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": true,
+    "provenanceStatus": "verified_catalogue_source"
+  },
+  {
+    "id": "JF-TT29",
+    "code": "29",
+    "title": "V-Base Table-Top TV Stand",
+    "category": "tabletop",
+    "categoryName": "Table-Top Stands",
+    "screenSize": "32\" - 55\"",
+    "sizeGroup": "32-55",
+    "vesa": "200x200 to 400x400 mm",
+    "maxLoad": null,
+    "wallDistance": "Table-top freestanding",
+    "motion": "Fixed Direct Rail",
+    "features": [
+      "V-profile angled steel base legs",
+      "Vertical cylindrical upright column",
+      "Dual horizontal direct mounting rails"
+    ],
+    "cartonPack": "Packaging details awaiting confirmation",
+    "idealFor": "Narrow TV consoles, soundbar clearance, modern living rooms",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "32\" - 55\"",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue Page 7 scan"
+      },
+      "vesa": {
+        "value": "200x200 to 400x400 mm",
+        "status": "unconfirmed_estimate",
+        "source": "Catalogue illustration proportion estimate - awaiting manufacturer verification"
+      },
+      "maxLoad": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      },
+      "wallDistance": {
+        "value": "Freestanding",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue Page 7 scan"
+      },
+      "motion": {
+        "value": "Fixed Direct Rail",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue Page 7 scan"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "V-profile angled steel base legs (proportions from catalogue Page 7)",
+        "Vertical column support",
+        "Dual direct mounting rails"
+      ],
+      "unconfirmed": "Joint fasteners, base-to-post connection bolts, and TV mounting hardware await manufacturer BOM confirmation."
+    },
+    "installationRequirements": "Stable, level tabletop surface with minimum depth matching base spread.",
+    "guideUrl": "demos/product-29/",
+    "guideType": "3D concept preview",
+    "image": "demos/product-28/assets/page_7.png",
+    "imageCrop": {
+      "x": 945,
+      "y": 750,
+      "width": 170,
+      "height": 225
+    },
+    "verifiedStatus": "concept_prototype",
+    "identifierType": "manufacturer_catalogue_code",
+    "manufacturerCode": "29",
+    "internalId": "JF-TT29",
+    "displayIdentifier": "Product 29",
+    "visibleComponents": [
+      "V-shaped steel base frame (observed on Catalogue Page 7)",
+      "Vertical cylindrical upright column",
+      "Twin direct horizontal mounting rails"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "manufacturer_catalogue_scan",
+    "sourceReference": "Jenefas Catalogue Page 7 scan (demos/product-28/assets/page_7.png)",
+    "supportedAttributes": [
+      "manufacturer_catalogue_code",
+      "tabletop_form_factor",
+      "visible_structural_components",
+      "general_display_stand_archetype"
+    ],
+    "unconfirmedAttributes": [
+      "exact_dimensions_mm",
+      "certified_weight_limit_kg",
+      "supported_vesa_patterns",
+      "hardware_fastener_bom"
+    ],
+    "publicVisibility": true,
+    "isPublicCatalogue": true,
+    "provenanceStatus": "verified_catalogue_source"
   }
 ]
