@@ -56,6 +56,11 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": "25 kg / 55 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
@@ -69,7 +74,16 @@
     "guideUrl": null,
     "guideType": null,
     "image": null,
-    "verifiedStatus": "catalogue_observed"
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-FX32",
+    "displayIdentifier": "JF-FX32",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   },
   {
     "id": "JF-FX55",
@@ -128,6 +142,11 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": "45 kg / 99 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
@@ -141,7 +160,16 @@
     "guideUrl": null,
     "guideType": null,
     "image": null,
-    "verifiedStatus": "catalogue_observed"
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-FX55",
+    "displayIdentifier": "JF-FX55",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   },
   {
     "id": "JF-FX75",
@@ -200,6 +228,11 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": "65 kg / 143 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
@@ -213,7 +246,16 @@
     "guideUrl": null,
     "guideType": null,
     "image": null,
-    "verifiedStatus": "catalogue_observed"
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-FX75",
+    "displayIdentifier": "JF-FX75",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   },
   {
     "id": "JF-TL43",
@@ -272,6 +314,11 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": "35 kg / 77 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
@@ -285,7 +332,16 @@
     "guideUrl": null,
     "guideType": null,
     "image": null,
-    "verifiedStatus": "catalogue_observed"
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-TL43",
+    "displayIdentifier": "JF-TL43",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   },
   {
     "id": "JF-TL65",
@@ -344,6 +400,11 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": "50 kg / 110 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
@@ -357,7 +418,16 @@
     "guideUrl": null,
     "guideType": null,
     "image": null,
-    "verifiedStatus": "catalogue_observed"
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-TL65",
+    "displayIdentifier": "JF-TL65",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   },
   {
     "id": "JF-TL85",
@@ -416,6 +486,11 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": "75 kg / 165 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
@@ -429,7 +504,16 @@
     "guideUrl": null,
     "guideType": null,
     "image": null,
-    "verifiedStatus": "catalogue_observed"
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-TL85",
+    "displayIdentifier": "JF-TL85",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   },
   {
     "id": "JF-FM32-S",
@@ -488,6 +572,11 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": "25 kg / 55 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
@@ -501,7 +590,16 @@
     "guideUrl": null,
     "guideType": null,
     "image": null,
-    "verifiedStatus": "catalogue_observed"
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-FM32-S",
+    "displayIdentifier": "JF-FM32-S",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   },
   {
     "id": "JF-FM55-D",
@@ -560,6 +658,11 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": "45 kg / 99 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
@@ -573,7 +676,16 @@
     "guideUrl": null,
     "guideType": null,
     "image": null,
-    "verifiedStatus": "catalogue_observed"
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-FM55-D",
+    "displayIdentifier": "JF-FM55-D",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   },
   {
     "id": "JF-FM75-HD",
@@ -632,6 +744,11 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": "65 kg / 143 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
@@ -645,7 +762,16 @@
     "guideUrl": null,
     "guideType": null,
     "image": null,
-    "verifiedStatus": "catalogue_observed"
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-FM75-HD",
+    "displayIdentifier": "JF-FM75-HD",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   },
   {
     "id": "JF-FM100-PRO",
@@ -704,6 +830,11 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": "90 kg / 198 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
@@ -717,7 +848,16 @@
     "guideUrl": null,
     "guideType": null,
     "image": null,
-    "verifiedStatus": "catalogue_observed"
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-FM100-PRO",
+    "displayIdentifier": "JF-FM100-PRO",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   },
   {
     "id": "JF-CL55-S",
@@ -776,6 +916,11 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": "50 kg / 110 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
@@ -789,7 +934,16 @@
     "guideUrl": null,
     "guideType": null,
     "image": null,
-    "verifiedStatus": "catalogue_observed"
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-CL55-S",
+    "displayIdentifier": "JF-CL55-S",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   },
   {
     "id": "JF-CL65-D",
@@ -848,6 +1002,11 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": "90 kg total (45 kg per side)",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
@@ -861,7 +1020,16 @@
     "guideUrl": null,
     "guideType": null,
     "image": null,
-    "verifiedStatus": "catalogue_observed"
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-CL65-D",
+    "displayIdentifier": "JF-CL65-D",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   },
   {
     "id": "JF-MA-01",
@@ -920,6 +1088,11 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": "9 kg / 19.8 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
@@ -933,7 +1106,16 @@
     "guideUrl": null,
     "guideType": null,
     "image": null,
-    "verifiedStatus": "catalogue_observed"
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-MA-01",
+    "displayIdentifier": "JF-MA-01",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   },
   {
     "id": "JF-MA-02",
@@ -992,6 +1174,11 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": "9 kg per arm (18 kg total)",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
@@ -1005,7 +1192,16 @@
     "guideUrl": null,
     "guideType": null,
     "image": null,
-    "verifiedStatus": "catalogue_observed"
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-MA-02",
+    "displayIdentifier": "JF-MA-02",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   },
   {
     "id": "JF-PR-ADJ",
@@ -1064,6 +1260,11 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": "20 kg / 44 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
@@ -1077,7 +1278,16 @@
     "guideUrl": null,
     "guideType": null,
     "image": null,
-    "verifiedStatus": "catalogue_observed"
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-PR-ADJ",
+    "displayIdentifier": "JF-PR-ADJ",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   },
   {
     "id": "JF-SPK-01",
@@ -1136,6 +1346,11 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": "15 kg per bracket",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
@@ -1149,7 +1364,16 @@
     "guideUrl": null,
     "guideType": null,
     "image": null,
-    "verifiedStatus": "catalogue_observed"
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-SPK-01",
+    "displayIdentifier": "JF-SPK-01",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   },
   {
     "id": "JF-AC-STD",
@@ -1208,6 +1432,11 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": "180 kg / 396 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
@@ -1221,7 +1450,16 @@
     "guideUrl": null,
     "guideType": null,
     "image": null,
-    "verifiedStatus": "catalogue_observed"
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-AC-STD",
+    "displayIdentifier": "JF-AC-STD",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   },
   {
     "id": "JF-MW-01",
@@ -1280,6 +1518,11 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": "40 kg / 88 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
@@ -1293,7 +1536,16 @@
     "guideUrl": null,
     "guideType": null,
     "image": null,
-    "verifiedStatus": "catalogue_observed"
+    "verifiedStatus": "catalogue_observed",
+    "identifierType": "internal_platform_id",
+    "manufacturerCode": null,
+    "internalId": "JF-MW-01",
+    "displayIdentifier": "JF-MW-01",
+    "visibleComponents": [
+      "Primary mounting bracket / arm assembly (catalogue design)"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   },
   {
     "id": "JF-TT28",
@@ -1312,7 +1564,7 @@
       "Vertical cylindrical upright column",
       "Dual horizontal direct mounting rails"
     ],
-    "cartonPack": null,
+    "cartonPack": "Packaging details awaiting confirmation",
     "idealFor": "Credenzas, AV furniture, desks where wall mounting is prohibited",
     "pricing": "Request price",
     "specifications": {
@@ -1353,6 +1605,12 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
       }
     },
     "includedParts": {
@@ -1365,7 +1623,7 @@
     },
     "installationRequirements": "Stable, level tabletop surface capable of supporting combined stand and TV weight.",
     "guideUrl": "demos/product-28/",
-    "guideType": "concept_prototype",
+    "guideType": "3D concept preview",
     "image": "demos/product-28/assets/page_7.png",
     "imageCrop": {
       "x": 1115,
@@ -1373,7 +1631,18 @@
       "width": 185,
       "height": 235
     },
-    "verifiedStatus": "concept_prototype"
+    "verifiedStatus": "concept_prototype",
+    "identifierType": "manufacturer_catalogue_code",
+    "manufacturerCode": "28",
+    "internalId": "JF-TT28",
+    "displayIdentifier": "Product 28",
+    "visibleComponents": [
+      "Rectangular steel base plate (observed on Catalogue Page 7)",
+      "Vertical cylindrical upright column",
+      "Twin direct horizontal mounting rails"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   },
   {
     "id": "JF-TT29",
@@ -1392,7 +1661,7 @@
       "Vertical cylindrical upright column",
       "Dual horizontal direct mounting rails"
     ],
-    "cartonPack": null,
+    "cartonPack": "Packaging details awaiting confirmation",
     "idealFor": "Narrow TV consoles, soundbar clearance, modern living rooms",
     "pricing": "Request price",
     "specifications": {
@@ -1433,6 +1702,12 @@
         "unit": "kg",
         "status": "pending",
         "source": null
+      },
+      "weightLimit": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
       }
     },
     "includedParts": {
@@ -1445,7 +1720,7 @@
     },
     "installationRequirements": "Stable, level tabletop surface with minimum depth matching base spread.",
     "guideUrl": "demos/product-29/",
-    "guideType": "concept_prototype",
+    "guideType": "3D concept preview",
     "image": "demos/product-28/assets/page_7.png",
     "imageCrop": {
       "x": 945,
@@ -1453,6 +1728,17 @@
       "width": 170,
       "height": 225
     },
-    "verifiedStatus": "concept_prototype"
+    "verifiedStatus": "concept_prototype",
+    "identifierType": "manufacturer_catalogue_code",
+    "manufacturerCode": "29",
+    "internalId": "JF-TT29",
+    "displayIdentifier": "Product 29",
+    "visibleComponents": [
+      "V-shaped steel base frame (observed on Catalogue Page 7)",
+      "Vertical cylindrical upright column",
+      "Twin direct horizontal mounting rails"
+    ],
+    "confirmedPackageContents": null,
+    "packageContentsStatus": "awaiting_manufacturer_bom"
   }
 ]

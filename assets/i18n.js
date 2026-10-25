@@ -9,6 +9,11 @@ export const i18nData = {
     navContact: 'Contact',
     navQuote: 'Request a Quote',
     menuToggleAria: 'Toggle navigation menu',
+    languageLabel: 'Language',
+    
+    // Partial catalogue notice
+    partialNoticeTitle: 'Curated Digital Catalogue',
+    partialNoticeText: 'This digital catalogue highlights 20 selected mounting systems from our 90+ model manufacturing range. For unlisted models or wholesale bulk orders, contact our Ritchie Street sales desk directly.',
     
     // Hero
     heroEyebrow: 'JENEFAS & JENEFAS · RITCHIE STREET, CHENNAI',
@@ -31,25 +36,34 @@ export const i18nData = {
     catProjector: 'Projector & Audio',
     catAppliance: 'Appliance Brackets',
     
-    // Finder
+    // Guided Finder
     finderEyebrow: 'Interactive Selection Tool',
     finderTitle: 'Find the Right Mount for Your Display',
-    finderDesc: 'Match products by mounting location, screen size, and required movement. Specifications are evaluated against confirmed manufacturer dimensions.',
-    finderStep1: 'Step 1: Mounting Surface',
-    finderStep2: 'Step 2: Display Screen Size',
-    finderStep3: 'Step 3: Desired Movement',
+    finderDesc: 'Answer four quick questions. We evaluate only against confirmed manufacturer specifications and highlight where verification is pending.',
+    finderStep1: '1. Mounting Location',
+    finderStep2: '2. Display Screen Size',
+    finderStep3: '3. Estimated Display Weight',
+    finderStep4: '4. Desired Movement',
     finderOptWall: 'Wall Mount (Concrete / Brick)',
     finderOptCeiling: 'Ceiling Drop / Roof Truss',
     finderOptDesk: 'Desk Clamp / Monitor Arm',
     finderOptTabletop: 'Tabletop Stand (Freestanding)',
-    finderOptAllSizes: 'All Screen Sizes',
-    finderOptAllMotion: 'All Movement Types',
+    finderOptAllSizes: 'Any Screen Size',
+    finderOptUnder30kg: 'Under 30 kg (Standard LED)',
+    finderOpt30to50kg: '30 kg – 50 kg (Large / Heavy LED)',
+    finderOptOver50kg: 'Over 50 kg (Commercial Display)',
+    finderOptAllMotion: 'Any Movement Style',
+    finderOptFixed: 'Fixed (Flat against wall)',
+    finderOptTilt: 'Tilt (Glare adjustment ±15°)',
+    finderOptMotion: 'Full-Motion Swivel & Extend',
     finderReset: 'Reset Finder',
-    finderResults: 'Matching Products',
-    finderNoMatch: 'No confirmed match for these specific filters. Ask our team for custom advice.',
+    finderResultsTitle: 'Guided Recommendations',
+    finderStatusVerified: 'Matches available verified criteria',
+    finderStatusMoreInfo: 'More information required (e.g. TV weight or VESA spacing)',
+    finderStatusNoMatch: 'No confirmed match found in this curated range. Ask our team for custom fabrication advice.',
     
     // Product Card
-    cardCode: 'Model',
+    cardCode: 'Model Reference',
     cardScreen: 'Screen Range',
     cardVesa: 'VESA Pattern',
     cardLoad: 'Max Load',
@@ -67,12 +81,14 @@ export const i18nData = {
     detailDimensionsTab: 'Check Dimensions',
     detailIncludedTab: 'What is Included',
     detailInstallationTab: 'Installation & Support',
-    detailAssemblyGuideBtn: 'Launch Interactive Assembly Guide',
+    detailConceptBtn: 'Open 3D Concept Preview',
     detailPriceOnRequest: 'Price available on request (Wholesale & Retail)',
     detailAskCompatibility: 'Ask About Display Compatibility',
     detailAwaitingMeasurements: 'Detailed technical measurements are awaiting manufacturer confirmation drawings.',
-    detailConfirmedParts: 'Confirmed Included Parts',
-    detailUnconfirmedParts: 'Pending Hardware Confirmation',
+    detailVisiblePartsTitle: 'Visible Product Components (From Catalogue)',
+    detailPackageStatusTitle: 'Package Contents Status',
+    detailPackageNotice: 'Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners are included.',
+    detailPackagingNotice: 'Packaging details awaiting confirmation from warehouse.',
     detailToolsTitle: 'Installation & Tools Notice',
     
     // Compare
@@ -81,7 +97,7 @@ export const i18nData = {
     compareClear: 'Clear Comparison',
     compareClose: 'Close Comparison',
     
-    // RFQ Modal
+    // RFQ Modal & Destination
     rfqTitle: 'Request a Quote / Compatibility Check',
     rfqSubtitle: 'Direct enquiry to our Ritchie Street showroom & sales desk.',
     rfqNameLabel: 'Your Full Name *',
@@ -90,8 +106,9 @@ export const i18nData = {
     rfqQtyLabel: 'Estimated Quantity (Units / Cartons)',
     rfqCityLabel: 'City / Delivery Location',
     rfqQuestionLabel: 'Display Model or Compatibility Question',
-    rfqSubmitWhatsApp: 'Send via WhatsApp',
-    rfqCancel: 'Cancel'
+    rfqSubmitWhatsApp: 'Prepare WhatsApp Message Draft',
+    rfqCancel: 'Cancel',
+    rfqNotice: 'Submitting prepares a structured message draft for you to review and send to our verified WhatsApp number (+91 98408 17220).'
   },
   ta: {
     brandName: 'ஜெனிபாஸ் & ஜெனிபாஸ்',
@@ -103,6 +120,11 @@ export const i18nData = {
     navContact: 'தொடர்பு',
     navQuote: 'விலைப்பட்டியல் கோரிக்கை',
     menuToggleAria: 'வழிசெலுத்தல் மெனுவை மாற்று',
+    languageLabel: 'மொழி',
+    
+    // Partial catalogue notice
+    partialNoticeTitle: 'தேர்ந்தெடுக்கப்பட்ட டிஜிட்டல் பட்டியல்',
+    partialNoticeText: 'எங்களின் 90+ தயாரிப்பு வகைகளில் இருந்து 20 தேர்ந்தெடுக்கப்பட்ட மாதிரிகள் இங்கே காட்டப்பட்டுள்ளன. மற்ற மாதிரிகள் அல்லது மொத்த ஆர்டர்களுக்கு எங்களின் ரிச்சி தெரு விற்பனை மேசையை நேரடியாக தொடர்பு கொள்ளவும்.',
     
     // Hero
     heroEyebrow: 'ஜெனிபாஸ் & ஜெனிபாஸ் · ரிச்சி தெரு, சென்னை',
@@ -125,30 +147,39 @@ export const i18nData = {
     catProjector: 'புரொஜெக்டர் ஸ்டாண்டுகள்',
     catAppliance: 'மின்சாதன பிராக்கெட்டுகள்',
     
-    // Finder
+    // Guided Finder
     finderEyebrow: 'தேர்வு செய்யும் கருவி',
     finderTitle: 'உங்கள் டிவிக்கு ஏற்ற மவுண்ட்டை தேர்ந்தெடுக்கவும்',
-    finderDesc: 'பொருத்தும் இடம், திரை அளவு மற்றும் இயக்கம் அடிப்படையில் தேர்ந்தெடுக்கவும். தயாரிப்பாளரால் உறுதிப்படுத்தப்பட்ட அளவுகளுடன் மட்டுமே ஒப்பிடப்படுகிறது.',
-    finderStep1: 'படி 1: பொருத்தும் இடம்',
-    finderStep2: 'படி 2: திரை அளவு',
-    finderStep3: 'படி 3: தேவையான இயக்கம்',
+    finderDesc: 'நான்கு எளிய கேள்விகளுக்கு பதிலளிக்கவும். உறுதிப்படுத்தப்பட்ட அளவுகளுடன் மட்டுமே ஒப்பிடப்படுகிறது.',
+    finderStep1: '1. பொருத்தும் இடம்',
+    finderStep2: '2. திரை அளவு',
+    finderStep3: '3. டிவியின் உத்தேச எடை',
+    finderStep4: '4. தேவையான இயக்கம்',
     finderOptWall: 'சுவர் மவுண்ட் (செங்கல் / கான்கிரீட்)',
     finderOptCeiling: 'சீலிங் மவுண்ட் (மேற்கூரை)',
     finderOptDesk: 'மேசை கிளாம்ப / மானிட்டர் ஆர்ம்',
     finderOptTabletop: 'டேபிள் டாப் ஸ்டாண்ட்',
     finderOptAllSizes: 'அனைத்து திரை அளவுகள்',
+    finderOptUnder30kg: '30 கிலோ வரை (சாதாரண LED)',
+    finderOpt30to50kg: '30 – 50 கிலோ (பெரிய LED)',
+    finderOptOver50kg: '50 கிலோவுக்கு மேல் (வணிக டிஸ்பிளே)',
     finderOptAllMotion: 'அனைத்து இயக்க முறைகள்',
+    finderOptFixed: 'நிலையானது (Fixed)',
+    finderOptTilt: 'சாய்வு வசதி (Tilt ±15°)',
+    finderOptMotion: 'முழு சுழற்சி (Full-Motion)',
     finderReset: 'மீட்டமைக்க',
-    finderResults: 'பொருந்தும் பொருட்கள்',
-    finderNoMatch: 'தேர்ந்தெடுத்த தேர்வுகளுக்கு தயாரிப்பு விவரம் கிடைக்கவில்லை. எங்கள் குழுவை அணுகவும்.',
+    finderResultsTitle: 'பரிந்துரைக்கப்பட்ட முடிவுகள்',
+    finderStatusVerified: 'உறுதிப்படுத்தப்பட்ட அளவுகளுடன் பொருந்துகிறது',
+    finderStatusMoreInfo: 'கூடுதல் விவரங்கள் தேவை (டிவி எடை அல்லது VESA அளவு)',
+    finderStatusNoMatch: 'தேர்ந்தெடுத்த தேர்வுகளுக்கு தயாரிப்பு விவரம் கிடைக்கவில்லை. எங்கள் குழுவை அணுகவும்.',
     
     // Product Card
-    cardCode: 'மாதிரி எண்',
+    cardCode: 'மாதிரி குறிப்பு',
     cardScreen: 'திரை அளவு வரம்பு',
     cardVesa: 'VESA அளவு',
     cardLoad: 'அதிகபட்ச எடை',
     cardMotion: 'இயக்கம்',
-    cardPackaging: 'பெட்டி பேக்கிங்',
+    cardPackaging: 'பேக்கிங்',
     cardPricing: 'விலை கேட்கவும்',
     cardViewBtn: 'பொருளைப் பார்க்க',
     cardEnquireBtn: 'வாட்ஸ்அப் விலை',
@@ -161,12 +192,14 @@ export const i18nData = {
     detailDimensionsTab: 'அளவுகள் பார்க்க',
     detailIncludedTab: 'உள்ளடக்கிய பாகங்கள்',
     detailInstallationTab: 'நிறுவல் மற்றும் ஆதரவு',
-    detailAssemblyGuideBtn: '3D அசெம்பிளி வழிகாட்டியைத் திறக்கவும்',
+    detailConceptBtn: '3D கருத்து மாதிரியைத் திறக்கவும்',
     detailPriceOnRequest: 'விலை கோரிக்கையின் பேரில் வழங்கப்படும் (மொத்த மற்றும் சில்லறை)',
     detailAskCompatibility: 'பொருந்துமா என்று கேட்கவும்',
     detailAwaitingMeasurements: 'தயாரிப்பாளர் வரைபட உறுதிப்படுத்தலுக்காக தொழில்நுட்ப அளவுகள் காத்திருக்கின்றன.',
-    detailConfirmedParts: 'உறுதிப்படுத்தப்பட்ட பாகங்கள்',
-    detailUnconfirmedParts: 'உறுதிப்படுத்தல் நிலுவையில் உள்ள பாகங்கள்',
+    detailVisiblePartsTitle: 'பட்டியலில் காணப்படும் பாகங்கள்',
+    detailPackageStatusTitle: 'பேக்கேஜ் பாகங்கள் நிலை',
+    detailPackageNotice: 'திருகுகள், வாஷர்கள் மற்றும் கருவிகள் உற்பத்தியாளர் சரிபார்ப்பு நிலுவையில் உள்ளன. இணைக்கப்பட்டுள்ளதாக கருத வேண்டாம்.',
+    detailPackagingNotice: 'பேக்கிங் விவரங்கள் உறுதிப்படுத்தல் நிலுவையில் உள்ளன.',
     detailToolsTitle: 'நிறுவல் & கருவிகள் அறிவிப்பு',
     
     // Compare
@@ -175,7 +208,7 @@ export const i18nData = {
     compareClear: 'அனைத்தையும் நீக்க',
     compareClose: 'மூடுக',
     
-    // RFQ Modal
+    // RFQ Modal & Destination
     rfqTitle: 'விலைப்பட்டியல் / பொருந்துதல் கோரிக்கை',
     rfqSubtitle: 'ரிச்சி தெரு விற்பனை மேசைக்கு நேரடி கோரிக்கை.',
     rfqNameLabel: 'முழு பெயர் *',
@@ -184,7 +217,8 @@ export const i18nData = {
     rfqQtyLabel: 'தேவைப்படும் எண்ணிக்கை',
     rfqCityLabel: 'நகரம் / டெலிவரி இடம்',
     rfqQuestionLabel: 'டிவி மாதிரி அல்லது ஏதேனும் கேள்விகள்',
-    rfqSubmitWhatsApp: 'வாட்ஸ்அப் மூலம் அனுப்பவும்',
-    rfqCancel: 'ரத்து செய்'
+    rfqSubmitWhatsApp: 'வாட்ஸ்அப் செய்தி வரைவை உருவாக்கவும்',
+    rfqCancel: 'ரத்து செய்',
+    rfqNotice: 'இதனை சமர்ப்பிக்கும் போது எங்கள் வாட்ஸ்அப் எண்ணிற்கு (+91 98408 17220) அனுப்புவதற்கான செய்தி வரைவு உருவாக்கப்படும்.'
   }
 };

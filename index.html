@@ -109,10 +109,23 @@
   <nav class="customer-nav" aria-label="Main navigation">
     <div class="nav-row">
       <a class="nav-brand" href="#home" aria-label="Jenefas home"><img class="original-logo" src="assets/jenefas-logo.svg" alt="Jenefas.com - Something DIFFERENT" width="200" height="93"></a>
-      <button class="nav-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-menu">Menu ☰</button>
+      <div class="flex items-center gap-2">
+        <label class="language text-xs flex items-center gap-1 text-slate-300">
+          <span data-i18n="languageLabel">Language</span>:
+          <select id="siteLanguage" onchange="switchSiteLanguage(this.value)" class="bg-slate-900 border border-slate-700 text-white rounded px-2 py-1 text-xs">
+            <option value="en">English</option>
+            <option value="ta">தமிழ்</option>
+          </select>
+        </label>
+        <button class="nav-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-menu">Menu ☰</button>
+      </div>
       <div class="nav-menu" id="main-menu">
-        <a href="#catalogue">Products</a><a href="#mount-finder">Find the Right Product</a><a href="#assembly-guides">Assembly &amp; Support</a><a href="#why-jenefas">About Jenefas</a><a href="#showroom">Contact</a>
-        <button class="nav-quote" onclick="openRfqModal()">Request a Quote</button>
+        <a href="#catalogue" data-i18n="navProducts">Products</a>
+        <a href="#mount-finder" data-i18n="navFinder">Find the Right Product</a>
+        <a href="#assembly-guides" data-i18n="navAssembly">Assembly &amp; Support</a>
+        <a href="#why-jenefas" data-i18n="navAbout">About Jenefas</a>
+        <a href="#showroom" data-i18n="navContact">Contact</a>
+        <button class="nav-quote" onclick="openRfqModal()" data-i18n="navQuote">Request a Quote</button>
       </div>
     </div>
   </nav>
@@ -127,63 +140,94 @@
   </section>
   <div class="brand-divider"><span>TV MOUNTS</span><span>TABLE-TOP STANDS</span><span>MONITOR ARMS</span><span>MOUNTING ACCESSORIES</span></div>
 
-  <!-- Interactive 3-Click Mount Finder -->
+  <!-- Guided Product Finder -->
   <section id="mount-finder" class="py-12 bg-slate-900 border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 p-6 md:p-8 rounded-2xl border border-slate-800 shadow-xl">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
           <div>
             <div class="flex items-center gap-2 text-accent-400 text-xs font-bold uppercase tracking-wider">
-              <i data-lucide="sparkles" class="w-4 h-4"></i> Interactive Sizing Tool
+              <i data-lucide="sparkles" class="w-4 h-4"></i> <span data-i18n="finderEyebrow">Interactive Selection Tool</span>
             </div>
-            <h2 class="text-2xl md:text-3xl font-display font-bold text-white mt-1">Find a mount for your space</h2>
-            <p class="text-sm text-slate-400">Shortlist products by screen size and movement. Confirm TV weight, mounting-hole spacing and compatibility with our team.</p>
+            <h2 class="text-2xl md:text-3xl font-display font-bold text-white mt-1" data-i18n="finderTitle">Find the Right Mount for Your Display</h2>
+            <p class="text-sm text-slate-400 mt-1" data-i18n="finderDesc">Answer four quick questions. We evaluate only against confirmed manufacturer specifications and highlight where verification is pending.</p>
           </div>
-          <button onclick="resetFilters()" class="text-xs text-slate-400 hover:text-white underline self-start md:self-auto">Reset Finder</button>
+          <button id="guidedResetBtn" onclick="resetGuidedFinder()" class="text-xs text-slate-400 hover:text-white underline self-start md:self-auto" data-i18n="finderReset">Reset Finder</button>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <!-- Step 1: Screen Size -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Question 1: Mounting Surface -->
           <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
-            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
-              Step 1: TV Screen Size
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2" data-i18n="finderStep1">
+              1. Mounting Location
             </label>
-            <select id="finderSize" onchange="runMountFinder()" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-accent-500">
-              <option value="">All Screen Sizes</option>
-              <option value="14-32">14" - 32" (Compact / Bedroom)</option>
-              <option value="32-55">32" - 55" (Standard Living Room)</option>
-              <option value="55-75">55" - 75" (Large Format / 4K)</option>
-              <option value="75+">75" - 100"+ (Commercial / Mega)</option>
+            <select id="guidedSurface" onchange="runGuidedFinder()" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500">
+              <option value="">All Locations</option>
+              <option value="wall">Wall Mount (Brick / Concrete)</option>
+              <option value="ceiling">Ceiling Drop / Truss</option>
+              <option value="desk">Desk Clamp / Grommet</option>
+              <option value="tabletop">Tabletop Stand (Freestanding)</option>
             </select>
           </div>
 
-          <!-- Step 2: Mount Type -->
+          <!-- Question 2: Screen Size -->
           <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
-            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
-              Step 2: Motion Style
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2" data-i18n="finderStep2">
+              2. Display Screen Size
             </label>
-            <select id="finderMotion" onchange="runMountFinder()" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-accent-500">
-              <option value="">All Motion Types</option>
-              <option value="fixed">Ultra-Slim Fixed (Flat)</option>
-              <option value="tilt">Tilt (Glare Reduction ±15°)</option>
-              <option value="motion">Full-Motion Swivel &amp; Extend</option>
-              <option value="ceiling">Ceiling Drop / Commercial</option>
-              <option value="desk">Gas-Spring Monitor Arm</option>
+            <select id="guidedSize" onchange="runGuidedFinder()" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500">
+              <option value="">Any Screen Size</option>
+              <option value="14-32">14" - 32" (Small)</option>
+              <option value="32-55">32" - 55" (Standard)</option>
+              <option value="55-75">55" - 75" (Large 4K)</option>
+              <option value="75+">75" - 100"+ (Commercial)</option>
             </select>
           </div>
 
-          <!-- Step 3: Match Output -->
-          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-center">
-            <label class="block text-xs font-bold uppercase tracking-wider text-accent-400 mb-1">
-              Step 3: Instant Match
+          <!-- Question 3: Estimated TV Weight -->
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2" data-i18n="finderStep3">
+              3. Estimated Display Weight
             </label>
-            <div id="finderMatchCount" class="text-sm font-semibold text-white">
-              Showing all 18+ precision products
+            <select id="guidedWeight" onchange="runGuidedFinder()" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500">
+              <option value="">Any Weight</option>
+              <option value="under30">Under 30 kg (Standard LED)</option>
+              <option value="30to50">30 kg – 50 kg (Large / Heavy LED)</option>
+              <option value="over50">Over 50 kg (Commercial Display)</option>
+            </select>
+          </div>
+
+          <!-- Question 4: Motion Style -->
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2" data-i18n="finderStep4">
+              4. Desired Movement
+            </label>
+            <select id="guidedMotion" onchange="runGuidedFinder()" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500">
+              <option value="">Any Movement Style</option>
+              <option value="fixed">Fixed (Flat against surface)</option>
+              <option value="tilt">Tilt (Glare reduction ±15°)</option>
+              <option value="motion">Full-Motion Swivel & Extend</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Guided Outcome Box -->
+        <div id="guidedOutcomeContainer" class="mt-5 p-4 rounded-xl bg-slate-950/80 border border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-3">
+          <div>
+            <div id="guidedOutcomeBadge" class="inline-block text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-1">
+              Matches available verified criteria
             </div>
-            <a href="#catalogue" class="mt-2 text-xs font-bold text-accent-400 hover:text-accent-300 inline-flex items-center gap-1">
-              <span>View Filtered Results Below</span>
-              <i data-lucide="arrow-down" class="w-3.5 h-3.5"></i>
-            </a>
+            <div id="guidedOutcomeText" class="text-xs text-slate-300">
+              Select answers above to shortlist mounts matching your display.
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <button onclick="applyFinderFilter()" class="bg-accent-500 hover:bg-accent-600 text-white font-bold text-xs px-4 py-2 rounded-lg transition">
+              View Filtered Catalogue Below ↓
+            </button>
+            <button onclick="openGuidedRfq()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold px-3 py-2 rounded-lg border border-slate-700">
+              Ask Compatibility Desk
+            </button>
           </div>
         </div>
       </div>
@@ -192,6 +236,16 @@
 
   <!-- Digital Catalogue Section -->
   <section id="catalogue" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Honest Partial Catalogue Notice Banner -->
+    <div id="catalogue-notice-banner" class="mb-8 p-4 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 flex items-start gap-3">
+      <i data-lucide="info" class="w-5 h-5 text-amber-400 shrink-0 mt-0.5"></i>
+      <div class="text-xs leading-relaxed">
+        <strong class="font-bold text-white block mb-0.5" data-i18n="partialNoticeTitle">Curated Digital Catalogue</strong>
+        <span data-i18n="partialNoticeText">This digital catalogue highlights 20 selected mounting systems from our 90+ model manufacturing range. For unlisted models or wholesale bulk orders, contact our Ritchie Street sales desk directly.</span>
+      </div>
+    </div>
+
     <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
       <div>
         <span class="text-accent-400 text-xs font-bold uppercase tracking-wider">Product Lineup 2026</span>
@@ -416,9 +470,14 @@
           <textarea id="rfqNotes" rows="2" placeholder="Required delivery timeline or special VESA requirements..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white focus:border-accent-500 focus:outline-none"></textarea>
         </div>
 
+        <div class="p-3 bg-slate-950 rounded-lg border border-slate-800 text-[11px] text-slate-400 leading-relaxed">
+          <strong class="text-slate-300 block mb-0.5">Enquiry Submission Notice:</strong>
+          Submitting prepares a structured message draft with your selected product and requirements to review and send to our verified WhatsApp sales desk (+91 98408 17220).
+        </div>
+
         <div class="pt-2 flex gap-3">
-          <button type="submit" class="flex-1 bg-accent-500 hover:bg-accent-600 text-white font-bold py-2.5 rounded-lg transition shadow-md shadow-accent-500/20">
-            Submit &amp; Open in WhatsApp
+          <button type="submit" id="rfqSubmitBtn" class="flex-1 bg-accent-500 hover:bg-accent-600 text-white font-bold py-2.5 rounded-lg transition shadow-md shadow-accent-500/20">
+            Prepare WhatsApp Draft
           </button>
           <button type="button" onclick="closeRfqModal()" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold rounded-lg">
             Cancel
@@ -548,6 +607,62 @@
 
     let products = [];
     let currentCategory = 'all';
+    let currentLang = 'en';
+    let guidedFinderResults = [];
+
+    // I18N Data
+    const i18n = {
+      en: {
+        languageLabel: 'Language',
+        navProducts: 'Products',
+        navFinder: 'Find the Right Product',
+        navAssembly: 'Assembly & Support',
+        navAbout: 'About Jenefas',
+        navContact: 'Contact',
+        navQuote: 'Request a Quote',
+        partialNoticeTitle: 'Curated Digital Catalogue',
+        partialNoticeText: 'This digital catalogue highlights 20 selected mounting systems from our 90+ model manufacturing range. For unlisted models or wholesale bulk orders, contact our Ritchie Street sales desk directly.',
+        finderEyebrow: 'Interactive Selection Tool',
+        finderTitle: 'Find the Right Mount for Your Display',
+        finderDesc: 'Answer four quick questions. We evaluate only against confirmed manufacturer specifications and highlight where verification is pending.',
+        finderStep1: '1. Mounting Location',
+        finderStep2: '2. Display Screen Size',
+        finderStep3: '3. Estimated Display Weight',
+        finderStep4: '4. Desired Movement',
+        finderReset: 'Reset Finder'
+      },
+      ta: {
+        languageLabel: 'மொழி',
+        navProducts: 'பொருட்கள்',
+        navFinder: 'மவுண்ட் தேர்வு',
+        navAssembly: 'பொருத்துதல் வழிகாட்டி',
+        navAbout: 'எங்களை பற்றி',
+        navContact: 'தொடர்பு',
+        navQuote: 'விலைப்பட்டியல்',
+        partialNoticeTitle: 'தேர்ந்தெடுக்கப்பட்ட டிஜிட்டல் பட்டியல்',
+        partialNoticeText: 'எங்களின் 90+ தயாரிப்பு வகைகளில் இருந்து 20 தேர்ந்தெடுக்கப்பட்ட மாதிரிகள் இங்கே காட்டப்பட்டுள்ளன. மற்ற மாதிரிகள் அல்லது மொத்த ஆர்டர்களுக்கு எங்களின் ரிச்சி தெரு விற்பனை மேசையை நேரடியாக தொடர்பு கொள்ளவும்.',
+        finderEyebrow: 'தேர்வு செய்யும் கருவி',
+        finderTitle: 'உங்கள் டிவிக்கு ஏற்ற மவுண்ட்டை தேர்ந்தெடுக்கவும்',
+        finderDesc: 'நான்கு எளிய கேள்விகளுக்கு பதிலளிக்கவும். உறுதிப்படுத்தப்பட்ட அளவுகளுடன் மட்டுமே ஒப்பிடப்படுகிறது.',
+        finderStep1: '1. பொருத்தும் இடம்',
+        finderStep2: '2. திரை அளவு',
+        finderStep3: '3. டிவியின் உத்தேச எடை',
+        finderStep4: '4. தேவையான இயக்கம்',
+        finderReset: 'மீட்டமைக்க'
+      }
+    };
+
+    function switchSiteLanguage(lang) {
+      currentLang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18n[lang] && i18n[lang][key]) {
+          el.textContent = i18n[lang][key];
+        }
+      });
+      runGuidedFinder();
+      renderProducts();
+    }
 
     // Fetch products
     async function loadProducts() {
@@ -555,147 +670,10 @@
         const response = await fetch('data/products.json');
         products = await response.json();
       } catch (e) {
-        console.warn('Fallback to inline sample data if fetch fails locally without web server');
-        // Fallback array if opened via file:// protocol directly
-        products = [
-          {
-            "id": "JF-FX32",
-            "title": "Ultra Slim Fixed TV Mount",
-            "category": "fixed",
-            "categoryName": "Fixed TV Mounts",
-            "screenSize": "14\" - 32\"",
-            "sizeGroup": "14-32",
-            "vesa": "75x75, 100x100, 200x200 mm",
-            "maxLoad": "25 kg / 55 lbs",
-            "wallDistance": "20 mm",
-            "motion": "Fixed",
-            "features": ["Low profile ultra-slim fit", "Integrated bubble level", "Quick snap-in lock mechanism"],
-            "cartonPack": "25 pcs / box",
-            "idealFor": "Bedrooms, small conference rooms, budget hotel installations"
-          },
-          {
-            "id": "JF-FX55",
-            "title": "Standard Heavy-Duty Fixed Mount",
-            "category": "fixed",
-            "categoryName": "Fixed TV Mounts",
-            "screenSize": "32\" - 55\"",
-            "sizeGroup": "32-55",
-            "vesa": "200x200 up to 400x400 mm",
-            "maxLoad": "45 kg / 99 lbs",
-            "wallDistance": "25 mm",
-            "motion": "Fixed",
-            "features": ["Reinforced cold-rolled steel plate", "Security anti-theft locking screws", "Wide cable pass-through"],
-            "cartonPack": "20 pcs / box",
-            "idealFor": "Living rooms, apartment complexes, commercial displays"
-          },
-          {
-            "id": "JF-TL65",
-            "title": "Heavy-Duty Anti-Glare Tilt Mount",
-            "category": "tilt",
-            "categoryName": "Tilt TV Mounts",
-            "screenSize": "32\" - 65\"",
-            "sizeGroup": "32-55",
-            "vesa": "200x200 to 400x400 mm",
-            "maxLoad": "50 kg / 110 lbs",
-            "wallDistance": "53 mm",
-            "motion": "Tilt (-15° to +5°)",
-            "features": ["Quick-release pull cords", "Precision laser-cut cold rolled steel", "Heavy electrostatic powder coating"],
-            "cartonPack": "10 pcs / box",
-            "idealFor": "Master bedrooms, conference rooms, restaurants"
-          },
-          {
-            "id": "JF-FM55-D",
-            "title": "Dual-Arm Cantilever Full-Motion Mount",
-            "category": "motion",
-            "categoryName": "Full Motion Mounts",
-            "screenSize": "32\" - 65\"",
-            "sizeGroup": "32-55",
-            "vesa": "200x200 to 400x400 mm",
-            "maxLoad": "45 kg / 99 lbs",
-            "wallDistance": "70 mm - 460 mm",
-            "motion": "Swivel ±60°, Tilt ±15°, Level ±3°",
-            "features": ["Twin load-bearing steel arms", "Smooth glide extension & retraction", "Horizontal post-install leveling"],
-            "cartonPack": "6 pcs / box",
-            "idealFor": "Open floor plans, multi-view living rooms, executive suites"
-          },
-          {
-            "id": "JF-FM75-HD",
-            "title": "Heavy-Duty Dual-Arm Articulating Mount",
-            "category": "motion",
-            "categoryName": "Full Motion Mounts",
-            "screenSize": "50\" - 85\"",
-            "sizeGroup": "55-75",
-            "vesa": "200x200 to 600x400 mm",
-            "maxLoad": "65 kg / 143 lbs",
-            "wallDistance": "80 mm - 520 mm",
-            "motion": "Swivel ±60°, Tilt ±15°",
-            "features": ["Extreme stability with no sag", "Dual heavy hinges with brass washers", "Tested up to 4x rated capacity"],
-            "cartonPack": "4 pcs / box",
-            "idealFor": "Premium 75\" & 85\" OLED/QLED screens, high-end residences"
-          },
-          {
-            "id": "JF-CL55-S",
-            "title": "Telescopic Ceiling TV Drop Mount",
-            "category": "ceiling",
-            "categoryName": "Ceiling & Commercial Mounts",
-            "screenSize": "32\" - 55\"",
-            "sizeGroup": "32-55",
-            "vesa": "100x100 to 400x400 mm",
-            "maxLoad": "50 kg / 110 lbs",
-            "wallDistance": "600 mm - 1000 mm drop",
-            "motion": "360° Swivel, -15° Tilt",
-            "features": ["Adjustable ceiling drop column", "Internal cable routing pipe", "Sloped/vaulted ceiling adapter included"],
-            "cartonPack": "4 pcs / box",
-            "idealFor": "Gyms, hospitals, airport lounges, retail shopping malls"
-          },
-          {
-            "id": "JF-MA-01",
-            "title": "Gas-Spring Ergonomic Single Monitor Arm",
-            "category": "desk",
-            "categoryName": "Monitor Arms & Desks",
-            "screenSize": "17\" - 32\"",
-            "sizeGroup": "14-32",
-            "vesa": "75x75, 100x100 mm",
-            "maxLoad": "9 kg / 19.8 lbs",
-            "wallDistance": "Desk clamp / Grommet",
-            "motion": "360° Rotation (Portrait/Landscape), ±90° Swivel, ±45° Tilt",
-            "features": ["Internal counter-balance gas spring", "Desk clamp and grommet mount included", "Concealed cable management channels"],
-            "cartonPack": "6 pcs / box",
-            "idealFor": "IT workplaces, software developers, trading terminals"
-          },
-          {
-            "id": "JF-PR-ADJ",
-            "title": "Universal Telescopic Projector Ceiling Mount",
-            "category": "projector",
-            "categoryName": "Projector & Audio Stands",
-            "screenSize": "Universal projector fitting",
-            "sizeGroup": "Universal",
-            "vesa": "Universal 4-arm spider fitting (up to 380mm dia)",
-            "maxLoad": "20 kg / 44 lbs",
-            "wallDistance": "430 mm - 650 mm (Extendable to 1.2m)",
-            "motion": "360° Rotation, ±15° Tilt & Roll",
-            "features": ["Universal 4-point mounting legs", "Quick disconnect for lamp replacement", "Hollow pole for HDMI/power wire routing"],
-            "cartonPack": "10 pcs / box",
-            "idealFor": "Home theaters, school classrooms, corporate meeting rooms"
-          },
-          {
-            "id": "JF-AC-STD",
-            "title": "Split AC Outdoor Heavy-Duty Stand (Pair)",
-            "category": "appliance",
-            "categoryName": "Appliance Brackets",
-            "screenSize": "1.0 Ton to 2.5 Ton AC units",
-            "sizeGroup": "Universal",
-            "vesa": "Universal slot alignment",
-            "maxLoad": "180 kg / 396 lbs",
-            "wallDistance": "450 mm bracket length",
-            "motion": "Rigid Wall Mount",
-            "features": ["Electrostatically powder-coated for exterior weatherproofing", "Anti-vibration rubber bush set included", "High-gauge galvanized steel sheet"],
-            "cartonPack": "10 pairs / bundle",
-            "idealFor": "HVAC contractors, residential & commercial air conditioning"
-          }
-        ];
+        console.warn('Fallback failed', e);
       }
       renderProducts();
+      runGuidedFinder();
     }
 
     function setCategory(cat) {
@@ -710,14 +688,106 @@
       renderProducts();
     }
 
+    // Guided Finder Engine
+    function runGuidedFinder() {
+      const surface = document.getElementById('guidedSurface').value;
+      const size = document.getElementById('guidedSize').value;
+      const weight = document.getElementById('guidedWeight').value;
+      const motion = document.getElementById('guidedMotion').value;
+
+      const badge = document.getElementById('guidedOutcomeBadge');
+      const text = document.getElementById('guidedOutcomeText');
+
+      if (!surface && !size && !weight && !motion) {
+        badge.className = 'inline-block text-[11px] font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700 mb-1';
+        badge.textContent = currentLang === 'ta' ? 'தேர்வு நிலுவையில் உள்ளது' : 'Selection In Progress';
+        text.textContent = currentLang === 'ta' ? 'டிவி மவுண்ட்களை தேர்ந்தெடுக்க மேலே உள்ள கேள்விகளுக்கு பதிலளிக்கவும்.' : 'Select answers above to shortlist mounts matching your display specifications.';
+        guidedFinderResults = products;
+        return;
+      }
+
+      const matches = products.filter(p => {
+        // Surface check
+        if (surface === 'wall' && !['fixed', 'tilt', 'motion'].includes(p.category)) return false;
+        if (surface === 'ceiling' && p.category !== 'ceiling') return false;
+        if (surface === 'desk' && p.category !== 'desk') return false;
+        if (surface === 'tabletop' && p.category !== 'tabletop') return false;
+
+        // Size check
+        if (size && p.sizeGroup !== size && p.sizeGroup !== 'Universal') return false;
+
+        // Motion check
+        if (motion && p.category !== motion) return false;
+
+        // Weight check
+        if (weight) {
+          const loadStr = p.maxLoad || '';
+          const matchNum = loadStr.match(/(\d+)\s*kg/i);
+          const maxKg = matchNum ? parseInt(matchNum[1], 10) : null;
+          if (maxKg !== null) {
+            if (weight === 'under30' && maxKg < 20) return false;
+            if (weight === '30to50' && maxKg < 35) return false;
+            if (weight === 'over50' && maxKg < 55) return false;
+          }
+        }
+
+        return true;
+      });
+
+      guidedFinderResults = matches;
+
+      if (matches.length > 0) {
+        badge.className = 'inline-block text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-1';
+        badge.textContent = currentLang === 'ta' ? 'உறுதிப்படுத்தப்பட்ட அளவுகளுடன் பொருந்துகிறது' : 'Matches available verified criteria';
+        text.textContent = currentLang === 'ta' 
+          ? `${matches.length} மாதிரிகள் உங்கள் தேவைகளுடன் பொருந்துகின்றன. மாதிரி விவரங்களை கீழே காணவும்.`
+          : `Matched ${matches.length} models matching your selection. Check full specifications below.`;
+      } else {
+        badge.className = 'inline-block text-[11px] font-bold px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-1';
+        badge.textContent = currentLang === 'ta' ? 'நேரடி மாதிரி கிடைக்கவில்லை' : 'More Information Required';
+        text.textContent = currentLang === 'ta'
+          ? 'இந்த அளவுகளுக்கு நேரடி மாதிரி கிடைக்கவில்லை. எங்கள் விற்பனை மேசையை அணுகி பிரத்யேக அமைப்பை தேர்ந்தெடுக்கவும்.'
+          : 'No standard model matches all selected filters in this curated range. Ask our team for custom advice.';
+      }
+
+      renderProducts();
+    }
+
+    function resetGuidedFinder() {
+      document.getElementById('guidedSurface').value = '';
+      document.getElementById('guidedSize').value = '';
+      document.getElementById('guidedWeight').value = '';
+      document.getElementById('guidedMotion').value = '';
+      runGuidedFinder();
+      renderProducts();
+    }
+
+    function applyFinderFilter() {
+      renderProducts();
+      const el = document.getElementById('catalogue');
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function openGuidedRfq() {
+      const surface = document.getElementById('guidedSurface').value || 'Any';
+      const size = document.getElementById('guidedSize').value || 'Any';
+      const weight = document.getElementById('guidedWeight').value || 'Any';
+      const motion = document.getElementById('guidedMotion').value || 'Any';
+
+      const context = `Finder Inquiry: Surface=${surface}, Size=${size}, Weight=${weight}, Motion=${motion}`;
+      openRfqModal(context);
+    }
+
     function renderProducts() {
       const grid = document.getElementById('productGrid');
       const emptyState = document.getElementById('emptyState');
       const query = document.getElementById('searchInput').value.toLowerCase().trim();
-      const finderSize = document.getElementById('finderSize').value;
-      const finderMotion = document.getElementById('finderMotion').value;
 
-      const filtered = products.filter(p => {
+      const sourceList = (guidedFinderResults.length > 0 && (document.getElementById('guidedSurface').value || document.getElementById('guidedSize').value || document.getElementById('guidedWeight').value || document.getElementById('guidedMotion').value))
+        ? guidedFinderResults
+        : products;
+
+      const filtered = sourceList.filter(p => {
         // Category check
         const matchesCategory = (currentCategory === 'all' || p.category === currentCategory);
         
@@ -725,18 +795,13 @@
         const matchesSearch = !query || 
           p.id.toLowerCase().includes(query) ||
           p.title.toLowerCase().includes(query) ||
-          p.vesa.toLowerCase().includes(query) ||
-          p.screenSize.toLowerCase().includes(query) ||
-          p.categoryName.toLowerCase().includes(query) || (p.wallDistance && p.wallDistance.toLowerCase().includes(query));
+          (p.code && p.code.toLowerCase().includes(query)) ||
+          (p.vesa && p.vesa.toLowerCase().includes(query)) ||
+          (p.screenSize && p.screenSize.toLowerCase().includes(query)) ||
+          (p.categoryName && p.categoryName.toLowerCase().includes(query));
 
-        // Finder filters
-        const matchesSize = !finderSize || p.sizeGroup === finderSize || p.sizeGroup === 'Universal';
-        const matchesMotion = !finderMotion || p.category === finderMotion;
-
-        return matchesCategory && matchesSearch && matchesSize && matchesMotion;
+        return matchesCategory && matchesSearch;
       });
-
-      document.getElementById('finderMatchCount').innerText = `Matched ${filtered.length} products available for dispatch`;
 
       if (filtered.length === 0) {
         grid.innerHTML = '';
@@ -746,7 +811,8 @@
 
       emptyState.classList.add('hidden');
       grid.innerHTML = filtered.map(p => {
-        const whatsappMsg = encodeURIComponent(`Hi Jenefas team, I am interested in wholesale pricing for model ${p.id} (${p.title}). Please send dealer quote.`);
+        const prodUrl = window.location.origin ? `${window.location.origin}/product/?id=${p.id}` : `product/?id=${p.id}`;
+        const whatsappMsg = encodeURIComponent(`Hi Jenefas team, I am interested in wholesale pricing for ${p.displayIdentifier || p.id} (${p.title}). Link: ${prodUrl}. Please send dealer quote.`);
         const whatsappUrl = `https://wa.me/919840817220?text=${whatsappMsg}`;
 
         return `
@@ -754,7 +820,7 @@
             <div>
               <div class="flex items-center justify-between gap-2 pb-3 border-b border-slate-800/80">
                 <span class="px-2.5 py-1 rounded-md bg-slate-950 text-accent-400 font-mono text-xs font-bold border border-slate-800">
-                  ${p.id}
+                  ${p.displayIdentifier || p.id}
                 </span>
                 <span class="text-[11px] font-semibold text-slate-400 bg-slate-850 px-2 py-0.5 rounded">
                   ${p.categoryName}
@@ -776,7 +842,7 @@
                 </div>
                 <div class="flex items-center justify-between text-slate-400 py-1 border-b border-slate-850">
                   <span class="flex items-center gap-1.5"><i data-lucide="weight" class="w-3.5 h-3.5 text-slate-500"></i> Max Load:</span>
-                  <span class="font-bold text-emerald-400">${p.maxLoad}</span>
+                  <span class="font-bold text-emerald-400">${p.maxLoad || 'Awaiting test report'}</span>
                 </div>
                 <div class="flex items-center justify-between text-slate-400 py-1 border-b border-slate-850">
                   <span class="flex items-center gap-1.5"><i data-lucide="move" class="w-3.5 h-3.5 text-slate-500"></i> Movement:</span>
@@ -810,7 +876,7 @@
                   <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
                   <span>WhatsApp Quote</span>
                 </a>
-                <button onclick="openRfqModal('${p.id} - ${p.title}')" class="px-3 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold rounded-xl border border-slate-700 transition" title="Request Bulk Dealer Quote">
+                <button onclick="openRfqModal('${p.displayIdentifier || p.id} - ${p.title}')" class="px-3 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold rounded-xl border border-slate-700 transition" title="Request Bulk Dealer Quote">
                   <i data-lucide="file-text" class="w-4 h-4"></i>
                 </button>
               </div>
@@ -822,19 +888,9 @@
       lucide.createIcons();
     }
 
-    function runMountFinder() {
-      const motion = document.getElementById('finderMotion').value;
-      if (motion) {
-        setCategory(motion);
-      } else {
-        renderProducts();
-      }
-    }
-
     function resetFilters() {
       document.getElementById('searchInput').value = '';
-      document.getElementById('finderSize').value = '';
-      document.getElementById('finderMotion').value = '';
+      resetGuidedFinder();
       setCategory('all');
     }
 
@@ -850,12 +906,17 @@
     function submitRfq(e) {
       e.preventDefault();
       const product = document.getElementById('rfqProduct').value;
-      const name = document.getElementById('rfqName').value;
-      const company = document.getElementById('rfqCompany').value;
-      const phone = document.getElementById('rfqPhone').value;
-      const qty = document.getElementById('rfqQuantity').value;
-      const city = document.getElementById('rfqCity').value;
-      const notes = document.getElementById('rfqNotes').value;
+      const name = document.getElementById('rfqName').value.trim();
+      const company = document.getElementById('rfqCompany').value.trim();
+      const phone = document.getElementById('rfqPhone').value.trim();
+      const qty = document.getElementById('rfqQuantity').value.trim();
+      const city = document.getElementById('rfqCity').value.trim();
+      const notes = document.getElementById('rfqNotes').value.trim();
+
+      if (!name || !phone) {
+        alert('Please provide your name and mobile number.');
+        return;
+      }
 
       const text = `*New Wholesale RFQ from Jenefas Web Platform*\n\n` +
                    `• *Product:* ${product}\n` +
@@ -936,7 +997,7 @@
               <th class="p-3 text-slate-400 font-bold uppercase w-1/4">Feature</th>
               ${items.map(p => `
                 <th class="p-3 text-white font-bold w-1/4">
-                  <div class="font-mono text-accent-400">${p.id}</div>
+                  <div class="font-mono text-accent-400">${p.displayIdentifier || p.id}</div>
                   <div class="text-sm mt-0.5">${p.title}</div>
                 </th>
               `).join('')}
@@ -968,8 +1029,8 @@
               ${items.map(p => `<td class="p-3 text-slate-200">${p.wallDistance}</td>`).join('')}
             </tr>
             <tr>
-              <td class="p-3 text-slate-400 font-medium">Ideal For</td>
-              ${items.map(p => `<td class="p-3 text-slate-300">${p.idealFor}</td>`).join('')}
+              <td class="p-3 text-slate-400 font-medium">Packaging</td>
+              ${items.map(p => `<td class="p-3 text-amber-400">${p.cartonPack}</td>`).join('')}
             </tr>
             <tr>
               <td class="p-3 text-slate-400 font-medium">Action</td>

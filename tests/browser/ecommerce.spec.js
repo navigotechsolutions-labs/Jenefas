@@ -97,4 +97,117 @@ test.describe('E-Commerce Catalogue & Product Detail Specs', () => {
     }
   });
 
+  test('Guided 4-Step Product Finder filters honestly with explicit verification status', async ({ page }) => {
+    await page.goto('/');
+
+    // Check partial catalogue banner exists
+    const notice = page.locator('#catalogue-notice-banner');
+    await expect(notice).toBeVisible();
+    await expect(notice).toContainText('Curated Digital Catalogue');
+    await expect(notice).toContainText('90+ model manufacturing range');
+
+    // Select Table Top surface
+    await page.locator('#guidedSurface').selectOption('tabletop');
+    const outcomeContainer = page.locator('#guidedOutcomeContainer');
+    await expect(outcomeContainer).toBeVisible();
+    await expect(page.locator('#guidedOutcomeBadge')).toContainText('Matches available verified criteria');
+    await expect(page.locator('#productGrid')).toContainText('Rectangle-Base Table-Top TV Stand');
+
+    // Select Ceiling drop with 75+ and over 50kg requiring custom verification
+    await page.locator('#guidedSurface').selectOption('ceiling');
+    await page.locator('#guidedSize').selectOption('75+');
+    await page.locator('#guidedWeight').selectOption('over50');
+    await expect(page.locator('#guidedOutcomeBadge')).toContainText('More Information Required');
+
+    // Reset finder
+    await page.locator('#guidedResetBtn').click();
+    await expect(page.locator('#productGrid > div')).toHaveCount(20);
+  });
+
+  test('Bilingual language switching functions seamlessly on Homepage and Product Detail', async ({ page }) => {
+    // 1. Homepage switching
+    await page.goto('/');
+    await page.locator('#siteLanguage').selectOption('ta');
+
+    // Verify Tamil labels
+    await expect(page.locator('[data-i18n="finderTitle"]')).toContainText('உங்கள் டிவிக்கு ஏற்ற மவுண்ட்டை தேர்ந்தெடுக்கவும்');
+    await expect(page.locator('[data-i18n="navProducts"]')).toHaveText('பொருட்கள்');
+
+    // Switch back to English
+    await page.locator('#siteLanguage').selectOption('en');
+    await expect(page.locator('[data-i18n="finderTitle"]')).toContainText('Find the Right Mount for Your Display');
+
+    // 2. Product Detail switching
+    await page.goto('/product/?id=JF-TT28');
+    await page.locator('#productLanguage').selectOption('ta');
+
+    await expect(page.locator('#tab-btn-included')).toHaveText('உள்ளடக்கிய பாகங்கள்');
+    await expect(page.locator('[data-i18n="navProducts"]')).toHaveText('பொருட்கள்');
+
+    // Switch back to English
+    await page.locator('#productLanguage').selectOption('en');
+    await expect(page.locator('#tab-btn-included')).toHaveText('What is Included');
+  });
+
+  test('RFQ modal prepares structured WhatsApp draft without fake backend submission', async ({ page }) => {
+    // Test on Homepage RFQ modal
+    await page.goto('/');
+    await page.evaluate(() => window.openRfqModal('Product 28'));
+    await expect(page.locator('#rfqModal')).toBeVisible();
+
+    // Verify WhatsApp notice banner in modal
+    const notice = page.locator('#rfqModal');
+    await expect(notice).toContainText('WhatsApp Draft');
+
+    // Fill the enquiry form
+    await page.locator('#rfqName').fill('Ritchie Street Partner');
+    await page.locator('#rfqCompany').fill('Audio Visuals Chennai');
+    await page.locator('#rfqPhone').fill('9840123456');
+    await page.locator('#rfqQuantity').fill('50 pcs');
+
+    // Listen to window.open call
+    let openedUrl = '';
+    await page.exposeFunction('mockOpenCapture', (url) => { openedUrl = url; });
+    await page.evaluate(() => {
+      window.open = (url) => { window.mockOpenCapture(url); return null; };
+    });
+
+    await page.locator('#rfqSubmitBtn').click();
+
+    // Verify WhatsApp URL format
+    expect(openedUrl).toContain('https://wa.me/919840817220?text=');
+    expect(openedUrl).toContain('Audio%20Visuals%20Chennai');
+    expect(openedUrl).toContain('Product%2028');
+
+    // Also test Product Detail RFQ Modal
+    await page.goto('/product/?id=JF-TT28');
+    await page.locator('button.btn-rfq').click();
+    await expect(page.locator('#productRfqModal')).toBeVisible();
+    await page.locator('#prodRfqName').fill('Chennai Dealer');
+    await page.locator('#prodRfqPhone').fill('9840999999');
+
+    let prodOpenedUrl = '';
+    await page.exposeFunction('mockProdOpenCapture', (url) => { prodOpenedUrl = url; });
+    await page.evaluate(() => {
+      window.open = (url) => { window.mockProdOpenCapture(url); return null; };
+    });
+
+    await page.locator('#prodRfqSubmitBtn').click();
+    expect(prodOpenedUrl).toContain('https://wa.me/919840817220?text=');
+    expect(prodOpenedUrl).toContain('Chennai%20Dealer');
+  });
+
+  test('Package honesty: separates visible components from confirmed package contents', async ({ page }) => {
+    await page.goto('/product/?id=JF-TT28');
+
+    // Visible components tab
+    await page.locator('#tab-btn-included').click();
+    await expect(page.locator('#tab-included')).toBeVisible();
+    await expect(page.locator('#tab-included')).toContainText('Visible Product Components (From Catalogue Scans)');
+    await expect(page.locator('#tab-included')).toContainText('Package Contents Notice: Hardware pack contents');
+
+    // 3D guide link is labeled Concept Preview
+    const launchLink = page.locator('#guide-launch-link');
+    await expect(launchLink).toContainText('Launch 3D Concept Preview');
+  });
 });
