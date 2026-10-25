@@ -12,8 +12,8 @@ export const i18nData = {
     languageLabel: 'Language',
     
     // Partial catalogue notice
-    partialNoticeTitle: 'Curated Digital Catalogue',
-    partialNoticeText: 'This digital catalogue showcases selected mounting and stand systems from the Jenefas product range. For unlisted models, specialized brackets, or wholesale bulk inquiries, contact our Ritchie Street sales desk directly.',
+    partialNoticeTitle: 'Curated Digital Prototype Showcase',
+    partialNoticeText: 'This digital showcase features verified tabletop stand models from Page 7 of the Jenefas manufacturer catalogue (Product 28 and Product 29). For wall brackets, ceiling drops, appliance stands, or unlisted wholesale items, contact our Ritchie Street sales desk directly.',
     
     // Hero
     heroEyebrow: 'JENEFAS & JENEFAS · RITCHIE STREET, CHENNAI',
@@ -65,7 +65,7 @@ export const i18nData = {
     
     finderScreenLabel: '4. Screen Diagonal (Inches, Supplementary)',
     finderScreenAny: 'Any screen size (optional)',
-    finderScreenNotice: 'Supplementary guideline only. Physical VESA spacing and display weight govern actual mounting safety.',
+    finderScreenNotice: 'These checks help narrow your selection. Installation and mounting-surface requirements must also be confirmed.',
     
     finderModelLabel: '5. TV Brand & Model (Optional)',
     finderModelPlaceholder: 'e.g. Sony Bravia 55X90L / Samsung Crystal 4K',
@@ -90,9 +90,9 @@ export const i18nData = {
     // Desk Clamp Specific
     finderDeskThickness: 'Desk Surface Thickness (mm)',
     finderDeskDisplays: 'Number of Screens',
-    finderDeskSingle: 'Single Monitor Arm (JF-MA-01)',
-    finderDeskDual: 'Dual Monitor Arms (JF-MA-02)',
-    finderDeskWarning: 'Surface Safety Notice: Desk clamps require solid wood, steel, or reinforced desk edges. Not suitable for tempered glass or hollow honeycomb cardboard desks without structural reinforcement.',
+    finderDeskSingle: 'Single Monitor Arm',
+    finderDeskDual: 'Dual Monitor Arms',
+    finderDeskWarning: 'Surface Safety Notice: Desk clamps require verification against the specific product\'s documented surface requirements and edge thickness. Not suitable for tempered glass or hollow desks without approved reinforcement.',
     
     // Other Specific
     finderOtherType: 'Utility Application Type',
@@ -173,8 +173,8 @@ export const i18nData = {
     languageLabel: 'மொழி',
     
     // Partial catalogue notice
-    partialNoticeTitle: 'தேர்ந்தெடுக்கப்பட்ட டிஜிட்டல் பட்டியல்',
-    partialNoticeText: 'ஜெனிஃபாஸ் தயாரிப்பு வரிசையிலிருந்து தேர்ந்தெடுக்கப்பட்ட மவுண்ட்கள் மற்றும் ஸ்டாண்டுகள் இங்கே காட்டப்பட்டுள்ளன. பிற மாதிரிகள், பிரத்யேக பிராக்கெட்டுகள் அல்லது மொத்த ஆர்டர்களுக்கு எங்களின் ரிச்சி தெரு விற்பனை மேசையை நேரடியாக தொடர்பு கொள்ளவும்.',
+    partialNoticeTitle: 'தேர்ந்தெடுக்கப்பட்ட மாதிரி பட்டியல்',
+    partialNoticeText: 'ஜெனிஃபாஸ் தொழிற்சாலை பட்டியலின் பக்கம் 7-ல் உள்ள சரிபார்க்கப்பட்ட டேபிள் டாப் ஸ்டாண்ட் மாதிரிகள் (Product 28 மற்றும் Product 29) இங்கே காட்சிப்படுத்தப்பட்டுள்ளன. பிற சுவர் மவுண்ட்கள் அல்லது மொத்த ஆர்டர்களுக்கு எங்களின் ரிச்சி தெரு விற்பனை மேசையை நேரடியாக தொடர்பு கொள்ளவும்.',
     
     // Hero
     heroEyebrow: 'ஜெனிபாஸ் & ஜெனிபாஸ் · ரிச்சி தெரு, சென்னை',
@@ -226,7 +226,7 @@ export const i18nData = {
     
     finderScreenLabel: '4. திரை அளவு (அங்குலம், கூடுதல் வழிகாட்டி)',
     finderScreenAny: 'அனைத்து திரை அளவுகள் (விருப்பத்தேர்வு)',
-    finderScreenNotice: 'இது கூடுதல் வழிகாட்டுதல் மட்டுமே. VESA அளவு மற்றும் டிவியின் எடையே பாதுகாப்பை தீர்மானிக்கிறது.',
+    finderScreenNotice: 'இந்த தேர்வுகள் பொருத்தமான மாதிரியை குறுகலாக்க உதவுகின்றன. நிறுவல் மற்றும் சுவர்/மேற்பரப்பு தேவைகளும் உறுதிப்படுத்தப்பட வேண்டும்.',
     
     finderModelLabel: '5. டிவி பிராண்ட் & மாடல் (விருப்பத்தேர்வு)',
     finderModelPlaceholder: 'எ.கா. Sony Bravia 55X90L / Samsung Crystal 4K',
@@ -251,9 +251,9 @@ export const i18nData = {
     // Desk Clamp Specific
     finderDeskThickness: 'மேசை பலகையின் தடிமன் (மிமீ)',
     finderDeskDisplays: 'மானிட்டர் எண்ணிக்கை',
-    finderDeskSingle: 'ஒற்றைத் திரை ஆர்ம் (JF-MA-01)',
-    finderDeskDual: 'இரட்டைத் திரை ஆர்ம்கள் (JF-MA-02)',
-    finderDeskWarning: 'பாதுகாப்பு அறிவிப்பு: கிளாம்ப மவுண்ட்களை திடமான மர அல்லது எஃகு மேசைகளில் மட்டுமே பொருத்த வேண்டும். கண்ணாடியால் ஆன அல்லது வெற்று அட்டை மேசைகளில் கூடுதல் வலுவூட்டல் இன்றி பொருத்தக்கூடாது.',
+    finderDeskSingle: 'ஒற்றைத் திரை ஆர்ம்',
+    finderDeskDual: 'இரட்டைத் திரை ஆர்ம்கள்',
+    finderDeskWarning: 'பாதுகாப்பு அறிவிப்பு: கிளாம்ப மவுண்ட்களை பொருத்துவதற்கு முன் தயாரிப்பின் அதிகாரப்பூர்வ மேற்பரப்பு தேவைகள் மற்றும் பலகை தடிமனை சரிபார்க்க வேண்டும். கண்ணாடியால் ஆன அல்லது வெற்று மேசைகளுக்கு பொருந்தாது.',
     
     // Other Specific
     finderOtherType: 'சாதன வகை',

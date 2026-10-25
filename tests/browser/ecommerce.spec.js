@@ -6,22 +6,25 @@ test.describe('E-Commerce Catalogue & Product Detail Specs', () => {
     await page.goto('/');
 
     const cards = page.locator('#productGrid > div');
-    await expect(cards).toHaveCount(20);
+    await expect(cards).toHaveCount(2);
 
     // Verify search matches product code and title
     const searchInput = page.locator('#searchInput');
-    await searchInput.fill('JF-FX32');
+    await searchInput.fill('Product 28');
     await expect(page.locator('#productGrid > div')).toHaveCount(1);
-    await expect(page.locator('#productGrid')).toContainText('Ultra Slim Fixed TV Mount');
+    await expect(page.locator('#productGrid')).toContainText('Rectangle-Base Table-Top TV Stand');
 
     // Clear search
     await searchInput.fill('');
-    await expect(page.locator('#productGrid > div')).toHaveCount(20);
+    await expect(page.locator('#productGrid > div')).toHaveCount(2);
   });
 
   test('Product detail page loads with direct URL and displays specifications', async ({ page }) => {
     await page.goto('/product/?id=JF-FX55');
 
+    // Gracefully handled planning reference notice
+    await expect(page.locator('#planning-notice-banner')).toBeVisible();
+    await expect(page.locator('#planning-notice-banner')).toContainText('Planning Reference');
     await expect(page.locator('#product-badge-code')).toHaveText('JF-FX55');
     await expect(page.locator('#product-title')).toHaveText('Standard Heavy-Duty Fixed Mount');
     await expect(page.locator('#product-category')).toHaveText('Fixed TV Mounts');
@@ -59,17 +62,13 @@ test.describe('E-Commerce Catalogue & Product Detail Specs', () => {
     await page.goto('/');
 
     // Add first product to compare
-    await page.locator('#compare-btn-JF-FX32').click();
+    await page.locator('#compare-btn-JF-TT28').click();
     await expect(page.locator('#compareBar')).not.toHaveClass(/translate-y-full/);
     await expect(page.locator('#compareActionBtn')).toHaveText('Compare (1)');
 
     // Add second product
-    await page.locator('#compare-btn-JF-FX55').click();
+    await page.locator('#compare-btn-JF-TT29').click();
     await expect(page.locator('#compareActionBtn')).toHaveText('Compare (2)');
-
-    // Add third product
-    await page.locator('#compare-btn-JF-TL43').click();
-    await expect(page.locator('#compareActionBtn')).toHaveText('Compare (3)');
 
     // Open comparison modal
     await page.locator('#compareActionBtn').click();
@@ -100,10 +99,10 @@ test.describe('E-Commerce Catalogue & Product Detail Specs', () => {
   test('Guided 4-Step Product Finder filters honestly with explicit verification status', async ({ page }) => {
     await page.goto('/');
 
-    // Check partial catalogue banner exists
+    // Check prototype showcase notice banner exists
     const notice = page.locator('#catalogue-notice-banner');
     await expect(notice).toBeVisible();
-    await expect(notice).toContainText('Curated Digital Catalogue');
+    await expect(notice).toContainText('Curated Digital Prototype Showcase');
 
     // Select Table Top surface
     await page.locator('#guidedSurface').selectOption('tabletop');
@@ -117,15 +116,19 @@ test.describe('E-Commerce Catalogue & Product Detail Specs', () => {
     await expect(page.locator('#guidedOutcomeBadge')).toContainText('More Information Required');
     await expect(page.locator('#productGrid')).toContainText('Rectangle-Base Table-Top TV Stand');
 
-    // Select Wall mount - verify state preservation & switch notice
-    await page.locator('#guidedSurface').selectOption('wall');
+    // Navigate to Product 28 details
+    await page.locator('#productGrid a:has-text("View Details")').first().click();
+    await expect(page.locator('#product-title')).toContainText('Table-Top TV Stand');
+
+    // Return to Homepage via browser back and verify state is preserved
+    await page.goBack();
+    await expect(page.locator('#guidedSurface')).toHaveValue('tabletop');
     await expect(page.locator('#guidedVesa')).toHaveValue('200x200');
     await expect(page.locator('#guidedWeightInput')).toHaveValue('15');
-    await expect(page.locator('#finderSwitchNotice')).toBeVisible();
 
     // Reset finder
     await page.locator('#guidedResetBtn').click();
-    await expect(page.locator('#productGrid > div')).toHaveCount(20);
+    await expect(page.locator('#productGrid > div')).toHaveCount(2);
   });
 
   test('Bilingual language switching functions seamlessly on Homepage and Product Detail', async ({ page }) => {

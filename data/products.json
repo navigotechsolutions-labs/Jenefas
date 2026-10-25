@@ -93,7 +93,9 @@
       "hardware_fastener_bom",
       "carton_packaging"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-FX55",
@@ -189,7 +191,9 @@
       "hardware_fastener_bom",
       "carton_packaging"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-FX75",
@@ -285,7 +289,9 @@
       "hardware_fastener_bom",
       "carton_packaging"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-TL43",
@@ -381,7 +387,9 @@
       "hardware_fastener_bom",
       "carton_packaging"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-TL65",
@@ -477,7 +485,9 @@
       "hardware_fastener_bom",
       "carton_packaging"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-TL85",
@@ -573,7 +583,9 @@
       "hardware_fastener_bom",
       "carton_packaging"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-FM32-S",
@@ -669,7 +681,9 @@
       "hardware_fastener_bom",
       "carton_packaging"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-FM55-D",
@@ -765,7 +779,9 @@
       "hardware_fastener_bom",
       "carton_packaging"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-FM75-HD",
@@ -861,7 +877,9 @@
       "hardware_fastener_bom",
       "carton_packaging"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-FM100-PRO",
@@ -957,7 +975,9 @@
       "hardware_fastener_bom",
       "carton_packaging"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-CL55-S",
@@ -1053,7 +1073,9 @@
       "hardware_fastener_bom",
       "carton_packaging"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-CL65-D",
@@ -1149,7 +1171,9 @@
       "hardware_fastener_bom",
       "carton_packaging"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-MA-01",
@@ -1245,7 +1269,9 @@
       "hardware_fastener_bom",
       "carton_packaging"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-MA-02",
@@ -1341,7 +1367,9 @@
       "hardware_fastener_bom",
       "carton_packaging"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-PR-ADJ",
@@ -1437,7 +1465,9 @@
       "hardware_fastener_bom",
       "carton_packaging"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-SPK-01",
@@ -1533,7 +1563,9 @@
       "hardware_fastener_bom",
       "carton_packaging"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-AC-STD",
@@ -1629,7 +1661,9 @@
       "hardware_fastener_bom",
       "carton_packaging"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-MW-01",
@@ -1725,7 +1759,9 @@
       "hardware_fastener_bom",
       "carton_packaging"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": false,
+    "provenanceStatus": "internal_planning_reference"
   },
   {
     "id": "JF-TT28",
@@ -1831,7 +1867,9 @@
       "supported_vesa_patterns",
       "hardware_fastener_bom"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": true,
+    "provenanceStatus": "verified_catalogue_source"
   },
   {
     "id": "JF-TT29",
@@ -1937,6 +1975,8 @@
       "supported_vesa_patterns",
       "hardware_fastener_bom"
     ],
-    "publicVisibility": true
+    "publicVisibility": true,
+    "isPublicCatalogue": true,
+    "provenanceStatus": "verified_catalogue_source"
   }
 ]

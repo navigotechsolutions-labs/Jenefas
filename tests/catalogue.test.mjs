@@ -53,6 +53,15 @@ test('Product 28 and 29 specific isolation and 3D concept preview status', () =>
   // Verify unknown measurements are pending
   assert.equal(p28.specifications.maxLoad.value, null);
   assert.equal(p29.specifications.maxLoad.value, null);
+
+  // Verify public catalogue separation: only products with source evidence are public
+  assert.equal(p28.isPublicCatalogue, true);
+  assert.equal(p29.isPublicCatalogue, true);
+  assert.equal(p28.provenanceStatus, 'verified_catalogue_source');
+  assert.equal(p29.provenanceStatus, 'verified_catalogue_source');
+
+  const publicCount = products.filter(p => p.isPublicCatalogue).length;
+  assert.equal(publicCount, 2, 'Only Product 28 and Product 29 should be in the public catalogue showcase');
 });
 
 test('Guided Finder logic handles categories, weights, and search filters honestly', () => {

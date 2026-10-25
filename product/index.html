@@ -369,6 +369,12 @@
       <span id="crumb-product" style="color: #0f172a; font-weight: 600;">Product</span>
     </div>
 
+    <!-- Planning Reference Notice Banner -->
+    <div id="planning-notice-banner" style="display: none; margin-bottom: 20px; padding: 14px 18px; border-radius: 12px; background: #fffbeb; border: 1px solid #fde68a; color: #92400e; font-size: 13px; line-height: 1.5;">
+      <strong>Planning Reference:</strong> This record (<span id="planning-notice-id"></span>) is an internal planning reference from development taxonomy and is awaiting manufacturer catalogue verification.
+      <a href="../#catalogue" style="color: #b91c1c; font-weight: 700; margin-left: 8px; text-decoration: underline;">← Return to Curated Catalogue</a>
+    </div>
+
     <!-- Product not found state -->
     <div id="product-not-found" style="display: none; padding: 48px 24px; text-align: center; background: white; border-radius: 16px; border: 1px solid var(--border-color);">
       <h2 style="font-size: 24px; font-weight: 700; color: #0f172a;">Product Not Found</h2>
@@ -412,7 +418,7 @@
           </div>
           <div style="display: flex; gap: 8px;">
             <a href="#" id="whatsapp-enquiry-link" target="_blank" class="btn-enquire">
-              <span>💬</span> WhatsApp Enquiry
+              <span>💬</span> Ask About This Product
             </a>
             <button onclick="openProductRfq()" class="btn-rfq">
               Request Quote
@@ -434,6 +440,9 @@
               <!-- Populated by JS -->
             </tbody>
           </table>
+          <div class="notice-card" id="missing-specs-notice" style="margin-top: 16px; background: #f8fafc; border: 1px solid #e2e8f0; color: #475569; font-size: 12px; line-height: 1.5;">
+            <strong>Technical Information Notice:</strong> Precise millimetre drawings, fastener specifications, and certified load limits for this model are pending manufacturer verification. Values not confirmed by manufacturer drawings are kept pending.
+          </div>
         </div>
 
         <!-- Tab: What is Included -->
@@ -526,6 +535,17 @@
     };
 
     function renderProduct(p) {
+      if (!p.isPublicCatalogue) {
+        const banner = document.getElementById('planning-notice-banner');
+        if (banner) {
+          banner.style.display = 'block';
+          document.getElementById('planning-notice-id').textContent = p.displayIdentifier || p.id;
+        }
+      } else {
+        const banner = document.getElementById('planning-notice-banner');
+        if (banner) banner.style.display = 'none';
+      }
+
       document.title = `${p.title} (${p.id}) | Jenefas & Jenefas Chennai`;
       document.getElementById('crumb-category').textContent = p.categoryName;
       document.getElementById('crumb-product').textContent = p.title;
@@ -659,6 +679,7 @@
       document.getElementById('productRfqModal').style.display = 'none';
     };
 
+    let preparedProdDraftText = '';
     window.submitProductRfq = function(e) {
       e.preventDefault();
       const product = document.getElementById('prodRfqProduct').value;
@@ -667,16 +688,41 @@
       const phone = document.getElementById('prodRfqPhone').value.trim();
       const qty = document.getElementById('prodRfqQty').value.trim();
       const pageUrl = window.location.href;
-      const text = `*New Wholesale RFQ from Jenefas Web Platform*\n\n` +
+      preparedProdDraftText = `*New Wholesale RFQ from Jenefas Web Platform*\n\n` +
                    `• *Product:* ${product}\n` +
                    `• *Link:* ${pageUrl}\n` +
                    `• *Name:* ${name}\n` +
                    `• *Company:* ${company || 'N/A'}\n` +
                    `• *Phone:* ${phone}\n` +
                    `• *Quantity:* ${qty || 'Dealer wholesale list'}`;
-      const url = `https://wa.me/919840817220?text=${encodeURIComponent(text)}`;
-      closeProductRfq();
-      window.open(url, '_blank');
+      const url = `https://wa.me/919840817220?text=${encodeURIComponent(preparedProdDraftText)}`;
+      
+      const recovery = document.getElementById('prodRfqRecovery');
+      if (recovery) {
+        recovery.style.display = 'block';
+        document.getElementById('prodRfqDirectLink').href = url;
+      }
+      const submitBtn = document.getElementById('prodRfqSubmitBtn');
+      if (submitBtn) {
+        submitBtn.textContent = 'Review Enquiry in WhatsApp ✓';
+      }
+      try {
+        window.open(url, '_blank');
+      } catch (err) {
+        console.warn('Popup blocked, recovery link available', err);
+      }
+    };
+
+    window.copyProdDraft = function() {
+      if (preparedProdDraftText) {
+        navigator.clipboard.writeText(preparedProdDraftText).then(() => {
+          const btn = document.getElementById('prodRfqCopyBtn');
+          if (btn) {
+            btn.textContent = 'Copied!';
+            setTimeout(() => { btn.textContent = 'Copy'; }, 2000);
+          }
+        });
+      }
     };
 
     init();
@@ -714,13 +760,20 @@
             <input type="text" id="prodRfqQty" placeholder="e.g. 20 pcs" style="width:100%; padding:8px 10px; border:1px solid #cbd5e1; border-radius:6px; font-size:13px;">
           </div>
         </div>
+        <div id="prodRfqRecovery" style="display:none; margin-bottom:14px; padding:10px 12px; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:6px; font-size:11px;">
+          <strong style="display:block; color:#166534; margin-bottom:4px;">Draft Prepared:</strong>
+          <div style="display:flex; gap:8px;">
+            <a href="#" id="prodRfqDirectLink" target="_blank" style="flex:1; text-align:center; background:#16a34a; color:#fff; padding:6px 10px; border-radius:4px; text-decoration:none; font-weight:700;">Open WhatsApp ↗</a>
+            <button type="button" id="prodRfqCopyBtn" onclick="copyProdDraft()" style="background:#e2e8f0; border:none; padding:6px 10px; border-radius:4px; font-weight:600; cursor:pointer;">Copy</button>
+          </div>
+        </div>
         <div style="padding:10px 12px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; font-size:11px; color:#64748b; margin-bottom:16px;">
           <strong style="display:block; color:#0f172a; margin-bottom:2px;">WhatsApp Draft Notice:</strong>
-          Submitting prepares a structured message draft with this product's code and details to review and send to our verified WhatsApp sales desk (+91 98408 17220).
+          Submitting prepares a structured message draft with this product's code and details to review and send to our verified WhatsApp sales desk (+91 98408 17220). Zero messages or orders are placed automatically.
         </div>
         <div style="display:flex; gap:10px;">
           <button type="submit" id="prodRfqSubmitBtn" style="flex:1; background:var(--primary-red); color:#fff; border:none; padding:10px 16px; border-radius:6px; font-weight:700; cursor:pointer; font-size:13px;">
-            Prepare WhatsApp Draft
+            Review Enquiry in WhatsApp ↗
           </button>
           <button type="button" onclick="closeProductRfq()" style="background:#f1f5f9; color:#475569; border:none; padding:10px 16px; border-radius:6px; font-weight:600; cursor:pointer; font-size:13px;">
             Cancel

@@ -349,7 +349,16 @@ function translate() {
     select.setAttribute('aria-label', text.selectMeasurement);
   }
 
-  if (errorKey) $('viewer-error').textContent = text[errorKey];
+  if (errorKey) {
+    $('viewer-error').innerHTML = `
+      <div class="viewer-fallback-card" style="display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; box-sizing:border-box;">
+        <p style="font-weight:600; color:#b91c1c; font-size:13px; line-height:1.5; margin:0;">${text[errorKey]}</p>
+        <div style="background:white; border:1px solid #e2e8f0; border-radius:8px; padding:6px; max-width:260px; box-shadow:0 2px 4px rgba(0,0,0,0.06);">
+          <img src="./assets/page_7.png" alt="Catalogue page 7 reference" style="max-width:100%; height:auto; display:block; border-radius:4px;">
+        </div>
+      </div>
+    `;
+  }
   update(true);
 }
 

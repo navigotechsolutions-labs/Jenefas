@@ -304,3 +304,26 @@ test('15. Submitting RFQ prepares draft and provides copyable recovery without f
   assert.equal(i18nData.en.rfqSubmitWhatsApp, 'Review Enquiry in WhatsApp ↗');
   assert.equal(i18nData.ta.rfqSubmitWhatsApp, 'வாட்ஸ்அப்பில் விசாரணையை மதிப்பாய்வு செய்யவும் ↗');
 });
+
+test('16. Do not infer VESA compatibility merely because pattern is smaller than maximum dimensions', () => {
+  const discreteMount = {
+    id: 'TEST-DISCRETE-01',
+    sourceType: 'manufacturer_catalogue_scan',
+    vesa: '75x75, 100x100, 200x200',
+    maxLoad: '25 kg'
+  };
+
+  // 150x150 is smaller than 200x200, but not an explicitly supported pattern
+  const res = checkProductVesaSupport(discreteMount, '150x150');
+  assert.equal(res.status, 'fail', 'Must not infer compatibility for 150x150 on discrete 75/100/200 mount');
+
+  // 75x75 on a rail that starts at 200x200 must fail
+  const railMount = {
+    id: 'TEST-RAIL-01',
+    sourceType: 'manufacturer_catalogue_scan',
+    vesa: '200x200 to 400x400 mm',
+    maxLoad: '40 kg'
+  };
+  const railRes = checkProductVesaSupport(railMount, '75x75');
+  assert.equal(railRes.status, 'fail', '75x75 is smaller than rail minimum span of 200x200');
+});

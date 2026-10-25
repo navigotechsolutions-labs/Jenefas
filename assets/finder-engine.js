@@ -10,31 +10,38 @@ export function checkProductVesaSupport(product, targetVesa) {
 
   const str = product.vesa || '';
   const matches = str.match(/(\d+)x(\d+)/g);
-  let maxW = 0, maxH = 0;
-  let explicitlyListed = false;
+  if (!matches || matches.length === 0) return { status: 'unknown' };
 
-  if (matches) {
-    for (const m of matches) {
-      const [w, h] = m.split('x').map(Number);
-      if (w === tW && h === tH) explicitlyListed = true;
-      if (w > maxW) maxW = w;
-      if (h > maxH) maxH = h;
+  let explicitlyListed = false;
+  let minW = Infinity, minH = Infinity;
+  let maxW = 0, maxH = 0;
+
+  for (const m of matches) {
+    const [w, h] = m.split('x').map(Number);
+    if (w === tW && h === tH) explicitlyListed = true;
+    if (w < minW) minW = w;
+    if (h < minH) minH = h;
+    if (w > maxW) maxW = w;
+    if (h > maxH) maxH = h;
+  }
+
+  // 1. Explicitly enumerated pattern passes
+  if (explicitlyListed) {
+    return { status: 'pass', maxW, maxH };
+  }
+
+  // 2. Documented continuous adjustment rail geometry (e.g., "200x200 to 400x400 mm")
+  const isContinuousRange = str.toLowerCase().includes(' to ') || str.toLowerCase().includes('up to');
+  if (isContinuousRange) {
+    const lowerW = str.toLowerCase().includes('up to') ? (minW > 100 ? 75 : minW) : minW;
+    const lowerH = str.toLowerCase().includes('up to') ? (minH > 100 ? 75 : minH) : minH;
+
+    if (tW >= lowerW && tW <= maxW && tH >= lowerH && tH <= maxH) {
+      return { status: 'pass', maxW, maxH };
     }
   }
 
-  // If target exceeds max dimensions, definite failure
-  if (maxW > 0 && maxH > 0 && (tW > maxW || tH > maxH)) {
-    return { status: 'fail', maxW, maxH };
-  }
-
-  if (explicitlyListed || (tW <= maxW && tH <= maxH && (str.toLowerCase().includes('up to') || str.toLowerCase().includes('to')))) {
-    return { status: 'pass', maxW, maxH };
-  }
-
-  if (tW <= maxW && tH <= maxH) {
-    return { status: 'pass', maxW, maxH };
-  }
-
+  // Do not infer VESA compatibility merely because target is smaller than max dimensions
   return { status: 'fail', maxW, maxH };
 }
 
