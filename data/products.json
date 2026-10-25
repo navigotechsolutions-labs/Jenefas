@@ -10,9 +10,66 @@
     "maxLoad": "25 kg / 55 lbs",
     "wallDistance": "20 mm",
     "motion": "Fixed",
-    "features": ["Low profile ultra-slim fit", "Integrated bubble level", "Quick snap-in lock mechanism"],
+    "features": [
+      "Low profile ultra-slim fit",
+      "Integrated bubble level",
+      "Quick snap-in lock mechanism"
+    ],
     "cartonPack": "25 pcs / box",
-    "idealFor": "Bedrooms, small conference rooms, budget hotel installations"
+    "idealFor": "Bedrooms, small conference rooms, budget hotel installations",
+    "code": "FX32",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "14\" - 32\"",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "vesa": {
+        "value": "75x75, 100x100, 200x200 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "maxLoad": {
+        "value": "25 kg / 55 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "wallDistance": {
+        "value": "20 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "motion": {
+        "value": "Fixed",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Main mounting bracket assembly",
+        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+      ],
+      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed"
   },
   {
     "id": "JF-FX55",
@@ -25,9 +82,66 @@
     "maxLoad": "45 kg / 99 lbs",
     "wallDistance": "25 mm",
     "motion": "Fixed",
-    "features": ["Reinforced cold-rolled steel plate", "Security anti-theft locking screws", "Wide cable pass-through"],
+    "features": [
+      "Reinforced cold-rolled steel plate",
+      "Security anti-theft locking screws",
+      "Wide cable pass-through"
+    ],
     "cartonPack": "20 pcs / box",
-    "idealFor": "Living rooms, apartment complexes, commercial displays"
+    "idealFor": "Living rooms, apartment complexes, commercial displays",
+    "code": "FX55",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "32\" - 55\"",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "vesa": {
+        "value": "200x200 up to 400x400 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "maxLoad": {
+        "value": "45 kg / 99 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "wallDistance": {
+        "value": "25 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "motion": {
+        "value": "Fixed",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Main mounting bracket assembly",
+        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+      ],
+      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed"
   },
   {
     "id": "JF-FX75",
@@ -40,9 +154,66 @@
     "maxLoad": "65 kg / 143 lbs",
     "wallDistance": "28 mm",
     "motion": "Fixed",
-    "features": ["Dual-rail heavy support", "Reinforced 2.0mm gauge steel", "Lateral shift adjustment"],
+    "features": [
+      "Dual-rail heavy support",
+      "Reinforced 2.0mm gauge steel",
+      "Lateral shift adjustment"
+    ],
     "cartonPack": "10 pcs / box",
-    "idealFor": "Showrooms, corporate boardrooms, large home theaters"
+    "idealFor": "Showrooms, corporate boardrooms, large home theaters",
+    "code": "FX75",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "43\" - 75\"",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "vesa": {
+        "value": "200x200 up to 600x400 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "maxLoad": {
+        "value": "65 kg / 143 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "wallDistance": {
+        "value": "28 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "motion": {
+        "value": "Fixed",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Main mounting bracket assembly",
+        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+      ],
+      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed"
   },
   {
     "id": "JF-TL43",
@@ -55,9 +226,66 @@
     "maxLoad": "35 kg / 77 lbs",
     "wallDistance": "45 mm",
     "motion": "Tilt (-12° to +5°)",
-    "features": ["Tool-less tilt tension knob", "Glaring light reduction", "Ample spacing for cable clearance"],
+    "features": [
+      "Tool-less tilt tension knob",
+      "Glaring light reduction",
+      "Ample spacing for cable clearance"
+    ],
     "cartonPack": "15 pcs / box",
-    "idealFor": "Elevated bedroom installations, clinic waiting rooms"
+    "idealFor": "Elevated bedroom installations, clinic waiting rooms",
+    "code": "TL43",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "26\" - 43\"",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "vesa": {
+        "value": "100x100 to 200x200 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "maxLoad": {
+        "value": "35 kg / 77 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "wallDistance": {
+        "value": "45 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "motion": {
+        "value": "Tilt (-12° to +5°)",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Main mounting bracket assembly",
+        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+      ],
+      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed"
   },
   {
     "id": "JF-TL65",
@@ -70,9 +298,66 @@
     "maxLoad": "50 kg / 110 lbs",
     "wallDistance": "53 mm",
     "motion": "Tilt (-15° to +5°)",
-    "features": ["Quick-release pull cords", "Precision laser-cut cold rolled steel", "Heavy electrostatic powder coating"],
+    "features": [
+      "Quick-release pull cords",
+      "Precision laser-cut cold rolled steel",
+      "Heavy electrostatic powder coating"
+    ],
     "cartonPack": "10 pcs / box",
-    "idealFor": "Master bedrooms, conference rooms, restaurants"
+    "idealFor": "Master bedrooms, conference rooms, restaurants",
+    "code": "TL65",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "32\" - 65\"",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "vesa": {
+        "value": "200x200 to 400x400 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "maxLoad": {
+        "value": "50 kg / 110 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "wallDistance": {
+        "value": "53 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "motion": {
+        "value": "Tilt (-15° to +5°)",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Main mounting bracket assembly",
+        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+      ],
+      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed"
   },
   {
     "id": "JF-TL85",
@@ -85,9 +370,66 @@
     "maxLoad": "75 kg / 165 lbs",
     "wallDistance": "65 mm",
     "motion": "Tilt (-15° to +5°)",
-    "features": ["Industrial grade 2.5mm bracket arms", "Wide wall plate spanning 2 studs", "High load safety factor (3x)"],
+    "features": [
+      "Industrial grade 2.5mm bracket arms",
+      "Wide wall plate spanning 2 studs",
+      "High load safety factor (3x)"
+    ],
     "cartonPack": "5 pcs / box",
-    "idealFor": "High-ceiling venues, luxury living rooms, sports bars"
+    "idealFor": "High-ceiling venues, luxury living rooms, sports bars",
+    "code": "TL85",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "55\" - 85\"",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "vesa": {
+        "value": "300x300 to 800x400 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "maxLoad": {
+        "value": "75 kg / 165 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "wallDistance": {
+        "value": "65 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "motion": {
+        "value": "Tilt (-15° to +5°)",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Main mounting bracket assembly",
+        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+      ],
+      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed"
   },
   {
     "id": "JF-FM32-S",
@@ -100,9 +442,66 @@
     "maxLoad": "25 kg / 55 lbs",
     "wallDistance": "60 mm - 380 mm",
     "motion": "Swivel ±90°, Tilt ±15°",
-    "features": ["380mm arm extension", "Corner installation friendly", "Integrated cable guide clips"],
+    "features": [
+      "380mm arm extension",
+      "Corner installation friendly",
+      "Integrated cable guide clips"
+    ],
     "cartonPack": "10 pcs / box",
-    "idealFor": "Kitchens, studios, corner wall mountings"
+    "idealFor": "Kitchens, studios, corner wall mountings",
+    "code": "FM32-S",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "17\" - 42\"",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "vesa": {
+        "value": "75x75, 100x100, 200x200 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "maxLoad": {
+        "value": "25 kg / 55 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "wallDistance": {
+        "value": "60 mm - 380 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "motion": {
+        "value": "Swivel ±90°, Tilt ±15°",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Main mounting bracket assembly",
+        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+      ],
+      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed"
   },
   {
     "id": "JF-FM55-D",
@@ -115,9 +514,66 @@
     "maxLoad": "45 kg / 99 lbs",
     "wallDistance": "70 mm - 460 mm",
     "motion": "Swivel ±60°, Tilt ±15°, Level ±3°",
-    "features": ["Twin load-bearing steel arms", "Smooth glide extension & retraction", "Horizontal post-install leveling"],
+    "features": [
+      "Twin load-bearing steel arms",
+      "Smooth glide extension & retraction",
+      "Horizontal post-install leveling"
+    ],
     "cartonPack": "6 pcs / box",
-    "idealFor": "Open floor plans, multi-view living rooms, executive suites"
+    "idealFor": "Open floor plans, multi-view living rooms, executive suites",
+    "code": "FM55-D",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "32\" - 65\"",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "vesa": {
+        "value": "200x200 to 400x400 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "maxLoad": {
+        "value": "45 kg / 99 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "wallDistance": {
+        "value": "70 mm - 460 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "motion": {
+        "value": "Swivel ±60°, Tilt ±15°, Level ±3°",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Main mounting bracket assembly",
+        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+      ],
+      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed"
   },
   {
     "id": "JF-FM75-HD",
@@ -130,9 +586,66 @@
     "maxLoad": "65 kg / 143 lbs",
     "wallDistance": "80 mm - 520 mm",
     "motion": "Swivel ±60°, Tilt ±15°",
-    "features": ["Extreme stability with no sag", "Dual heavy hinges with brass washers", "Tested up to 4x rated capacity"],
+    "features": [
+      "Extreme stability with no sag",
+      "Dual heavy hinges with brass washers",
+      "Tested up to 4x rated capacity"
+    ],
     "cartonPack": "4 pcs / box",
-    "idealFor": "Premium 75\" & 85\" OLED/QLED screens, high-end residences"
+    "idealFor": "Premium 75\" & 85\" OLED/QLED screens, high-end residences",
+    "code": "FM75-HD",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "50\" - 85\"",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "vesa": {
+        "value": "200x200 to 600x400 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "maxLoad": {
+        "value": "65 kg / 143 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "wallDistance": {
+        "value": "80 mm - 520 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "motion": {
+        "value": "Swivel ±60°, Tilt ±15°",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Main mounting bracket assembly",
+        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+      ],
+      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed"
   },
   {
     "id": "JF-FM100-PRO",
@@ -145,9 +658,66 @@
     "maxLoad": "90 kg / 198 lbs",
     "wallDistance": "90 mm - 650 mm",
     "motion": "Swivel ±45°, Tilt ±15°",
-    "features": ["Industrial 3.0mm carbon steel", "Massive 650mm extension range", "Built for commercial interactive panels & touch displays"],
+    "features": [
+      "Industrial 3.0mm carbon steel",
+      "Massive 650mm extension range",
+      "Built for commercial interactive panels & touch displays"
+    ],
     "cartonPack": "2 pcs / box",
-    "idealFor": "Interactive touch displays, auditoriums, broadcast studios"
+    "idealFor": "Interactive touch displays, auditoriums, broadcast studios",
+    "code": "FM100-PRO",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "65\" - 100\"",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "vesa": {
+        "value": "300x300 to 800x600 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "maxLoad": {
+        "value": "90 kg / 198 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "wallDistance": {
+        "value": "90 mm - 650 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "motion": {
+        "value": "Swivel ±45°, Tilt ±15°",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Main mounting bracket assembly",
+        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+      ],
+      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed"
   },
   {
     "id": "JF-CL55-S",
@@ -160,9 +730,66 @@
     "maxLoad": "50 kg / 110 lbs",
     "wallDistance": "600 mm - 1000 mm drop",
     "motion": "360° Swivel, -15° Tilt",
-    "features": ["Adjustable ceiling drop column", "Internal cable routing pipe", "Sloped/vaulted ceiling adapter included"],
+    "features": [
+      "Adjustable ceiling drop column",
+      "Internal cable routing pipe",
+      "Sloped/vaulted ceiling adapter included"
+    ],
     "cartonPack": "4 pcs / box",
-    "idealFor": "Gyms, hospitals, airport lounges, retail shopping malls"
+    "idealFor": "Gyms, hospitals, airport lounges, retail shopping malls",
+    "code": "CL55-S",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "32\" - 55\"",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "vesa": {
+        "value": "100x100 to 400x400 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "maxLoad": {
+        "value": "50 kg / 110 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "wallDistance": {
+        "value": "600 mm - 1000 mm drop",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "motion": {
+        "value": "360° Swivel, -15° Tilt",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Main mounting bracket assembly",
+        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+      ],
+      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed"
   },
   {
     "id": "JF-CL65-D",
@@ -175,9 +802,66 @@
     "maxLoad": "90 kg total (45 kg per side)",
     "wallDistance": "1000 mm - 1500 mm drop",
     "motion": "Dual display 360° rotation",
-    "features": ["Dual sided advertising display mount", "Heavy-gauge steel ceiling collar", "Independent tilt adjustment"],
+    "features": [
+      "Dual sided advertising display mount",
+      "Heavy-gauge steel ceiling collar",
+      "Independent tilt adjustment"
+    ],
     "cartonPack": "2 pcs / box",
-    "idealFor": "Supermarkets, metro stations, airport flight displays"
+    "idealFor": "Supermarkets, metro stations, airport flight displays",
+    "code": "CL65-D",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "40\" - 65\"",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "vesa": {
+        "value": "200x200 to 600x400 mm per side",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "maxLoad": {
+        "value": "90 kg total (45 kg per side)",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "wallDistance": {
+        "value": "1000 mm - 1500 mm drop",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "motion": {
+        "value": "Dual display 360° rotation",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Main mounting bracket assembly",
+        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+      ],
+      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed"
   },
   {
     "id": "JF-MA-01",
@@ -190,9 +874,66 @@
     "maxLoad": "9 kg / 19.8 lbs",
     "wallDistance": "Desk clamp / Grommet",
     "motion": "360° Rotation (Portrait/Landscape), ±90° Swivel, ±45° Tilt",
-    "features": ["Internal counter-balance gas spring", "Desk clamp and grommet mount included", "Concealed cable management channels"],
+    "features": [
+      "Internal counter-balance gas spring",
+      "Desk clamp and grommet mount included",
+      "Concealed cable management channels"
+    ],
     "cartonPack": "6 pcs / box",
-    "idealFor": "IT workplaces, software developers, trading terminals"
+    "idealFor": "IT workplaces, software developers, trading terminals",
+    "code": "MA-01",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "17\" - 32\"",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "vesa": {
+        "value": "75x75, 100x100 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "maxLoad": {
+        "value": "9 kg / 19.8 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "wallDistance": {
+        "value": "Desk clamp / Grommet",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "motion": {
+        "value": "360° Rotation (Portrait/Landscape), ±90° Swivel, ±45° Tilt",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Main mounting bracket assembly",
+        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+      ],
+      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed"
   },
   {
     "id": "JF-MA-02",
@@ -205,9 +946,66 @@
     "maxLoad": "9 kg per arm (18 kg total)",
     "wallDistance": "Desk clamp / Grommet",
     "motion": "Dual independent 360° pivot",
-    "features": ["Heavy aluminum die-cast body", "Fluid height adjustment", "Optimized desk ergonomics"],
+    "features": [
+      "Heavy aluminum die-cast body",
+      "Fluid height adjustment",
+      "Optimized desk ergonomics"
+    ],
     "cartonPack": "4 pcs / box",
-    "idealFor": "Multi-monitor financial analysts, designers, customer support"
+    "idealFor": "Multi-monitor financial analysts, designers, customer support",
+    "code": "MA-02",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "17\" - 32\" (x2)",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "vesa": {
+        "value": "75x75, 100x100 mm each",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "maxLoad": {
+        "value": "9 kg per arm (18 kg total)",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "wallDistance": {
+        "value": "Desk clamp / Grommet",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "motion": {
+        "value": "Dual independent 360° pivot",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Main mounting bracket assembly",
+        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+      ],
+      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed"
   },
   {
     "id": "JF-PR-ADJ",
@@ -220,9 +1018,66 @@
     "maxLoad": "20 kg / 44 lbs",
     "wallDistance": "430 mm - 650 mm (Extendable to 1.2m)",
     "motion": "360° Rotation, ±15° Tilt & Roll",
-    "features": ["Universal 4-point mounting legs", "Quick disconnect for lamp replacement", "Hollow pole for HDMI/power wire routing"],
+    "features": [
+      "Universal 4-point mounting legs",
+      "Quick disconnect for lamp replacement",
+      "Hollow pole for HDMI/power wire routing"
+    ],
     "cartonPack": "10 pcs / box",
-    "idealFor": "Home theaters, school classrooms, corporate meeting rooms"
+    "idealFor": "Home theaters, school classrooms, corporate meeting rooms",
+    "code": "PR-ADJ",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "Universal projector fitting",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "vesa": {
+        "value": "Universal 4-arm spider fitting (up to 380mm dia)",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "maxLoad": {
+        "value": "20 kg / 44 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "wallDistance": {
+        "value": "430 mm - 650 mm (Extendable to 1.2m)",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "motion": {
+        "value": "360° Rotation, ±15° Tilt & Roll",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Main mounting bracket assembly",
+        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+      ],
+      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed"
   },
   {
     "id": "JF-SPK-01",
@@ -235,9 +1090,66 @@
     "maxLoad": "15 kg per bracket",
     "wallDistance": "140 mm from wall",
     "motion": "±60° Swivel, ±10° Tilt",
-    "features": ["Adjustable side clamps with rubber pads", "Safety steel lanyard attachment", "Solid steel vibration-dampened frame"],
+    "features": [
+      "Adjustable side clamps with rubber pads",
+      "Safety steel lanyard attachment",
+      "Solid steel vibration-dampened frame"
+    ],
     "cartonPack": "10 pairs / box",
-    "idealFor": "Surround sound home theaters, auditoriums, places of worship"
+    "idealFor": "Surround sound home theaters, auditoriums, places of worship",
+    "code": "SPK-01",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "Bookshelf & Studio Speakers",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "vesa": {
+        "value": "Universal clamping plate",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "maxLoad": {
+        "value": "15 kg per bracket",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "wallDistance": {
+        "value": "140 mm from wall",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "motion": {
+        "value": "±60° Swivel, ±10° Tilt",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Main mounting bracket assembly",
+        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+      ],
+      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed"
   },
   {
     "id": "JF-AC-STD",
@@ -250,9 +1162,66 @@
     "maxLoad": "180 kg / 396 lbs",
     "wallDistance": "450 mm bracket length",
     "motion": "Rigid Wall Mount",
-    "features": ["Electrostatically powder-coated for exterior weatherproofing", "Anti-vibration rubber bush set included", "High-gauge galvanized steel sheet"],
+    "features": [
+      "Electrostatically powder-coated for exterior weatherproofing",
+      "Anti-vibration rubber bush set included",
+      "High-gauge galvanized steel sheet"
+    ],
     "cartonPack": "10 pairs / bundle",
-    "idealFor": "HVAC contractors, residential & commercial air conditioning"
+    "idealFor": "HVAC contractors, residential & commercial air conditioning",
+    "code": "AC-STD",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "1.0 Ton to 2.5 Ton AC units",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "vesa": {
+        "value": "Universal slot alignment",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "maxLoad": {
+        "value": "180 kg / 396 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "wallDistance": {
+        "value": "450 mm bracket length",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "motion": {
+        "value": "Rigid Wall Mount",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Main mounting bracket assembly",
+        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+      ],
+      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed"
   },
   {
     "id": "JF-MW-01",
@@ -265,8 +1234,225 @@
     "maxLoad": "40 kg / 88 lbs",
     "wallDistance": "Extendable 300 mm to 465 mm",
     "motion": "Extendable depth",
-    "features": ["Telescopic depth slide with locking pin", "Front lip stops oven sliding", "Rust-resistant kitchen finish"],
+    "features": [
+      "Telescopic depth slide with locking pin",
+      "Front lip stops oven sliding",
+      "Rust-resistant kitchen finish"
+    ],
     "cartonPack": "20 pairs / box",
-    "idealFor": "Modular kitchens, canteen counters, bakery setups"
+    "idealFor": "Modular kitchens, canteen counters, bakery setups",
+    "code": "MW-01",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "20L to 40L Microwave Ovens",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "vesa": {
+        "value": "Universal base slots",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "maxLoad": {
+        "value": "40 kg / 88 lbs",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "wallDistance": {
+        "value": "Extendable 300 mm to 465 mm",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "motion": {
+        "value": "Extendable depth",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue 2026"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Main mounting bracket assembly",
+        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+      ],
+      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+    },
+    "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
+    "guideUrl": null,
+    "guideType": null,
+    "image": null,
+    "verifiedStatus": "catalogue_observed"
+  },
+  {
+    "id": "JF-TT28",
+    "code": "28",
+    "title": "Rectangle-Base Table-Top TV Stand",
+    "category": "tabletop",
+    "categoryName": "Table-Top Stands",
+    "screenSize": "32\" - 55\"",
+    "sizeGroup": "32-55",
+    "vesa": "200x200 to 400x400 mm",
+    "maxLoad": null,
+    "wallDistance": "Table-top freestanding",
+    "motion": "Fixed Direct Rail",
+    "features": [
+      "Flat rectangular steel base plate",
+      "Vertical cylindrical upright column",
+      "Dual horizontal direct mounting rails"
+    ],
+    "cartonPack": null,
+    "idealFor": "Credenzas, AV furniture, desks where wall mounting is prohibited",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "32\" - 55\"",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue Page 7"
+      },
+      "vesa": {
+        "value": "200x200 to 400x400 mm",
+        "status": "unconfirmed",
+        "source": "Catalogue proportion estimate - awaiting manufacturer confirmation"
+      },
+      "maxLoad": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      },
+      "wallDistance": {
+        "value": "Freestanding",
+        "status": "catalogue_observed",
+        "source": "Catalogue Page 7"
+      },
+      "motion": {
+        "value": "Fixed Direct Rail",
+        "status": "catalogue_observed",
+        "source": "Catalogue Page 7"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "Rectangular base plate (proportions from catalogue Page 7)",
+        "Vertical column support",
+        "Dual direct mounting rails"
+      ],
+      "unconfirmed": "Joint fasteners, base-to-post connection bolts, TV mounting screws awaiting manufacturer confirmation"
+    },
+    "installationRequirements": "Stable, level tabletop surface capable of supporting combined stand and TV weight.",
+    "guideUrl": "demos/product-28/",
+    "guideType": "concept_prototype",
+    "image": "demos/product-28/assets/page_7.png",
+    "imageCrop": {
+      "x": 1115,
+      "y": 110,
+      "width": 185,
+      "height": 235
+    },
+    "verifiedStatus": "concept_prototype"
+  },
+  {
+    "id": "JF-TT29",
+    "code": "29",
+    "title": "V-Base Table-Top TV Stand",
+    "category": "tabletop",
+    "categoryName": "Table-Top Stands",
+    "screenSize": "32\" - 55\"",
+    "sizeGroup": "32-55",
+    "vesa": "200x200 to 400x400 mm",
+    "maxLoad": null,
+    "wallDistance": "Table-top freestanding",
+    "motion": "Fixed Direct Rail",
+    "features": [
+      "V-profile angled steel base legs",
+      "Vertical cylindrical upright column",
+      "Dual horizontal direct mounting rails"
+    ],
+    "cartonPack": null,
+    "idealFor": "Narrow TV consoles, soundbar clearance, modern living rooms",
+    "pricing": "Request price",
+    "specifications": {
+      "screenSize": {
+        "value": "32\" - 55\"",
+        "status": "catalogue_observed",
+        "source": "Jenefas Catalogue Page 7"
+      },
+      "vesa": {
+        "value": "200x200 to 400x400 mm",
+        "status": "unconfirmed",
+        "source": "Catalogue proportion estimate - awaiting manufacturer confirmation"
+      },
+      "maxLoad": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      },
+      "wallDistance": {
+        "value": "Freestanding",
+        "status": "catalogue_observed",
+        "source": "Catalogue Page 7"
+      },
+      "motion": {
+        "value": "Fixed Direct Rail",
+        "status": "catalogue_observed",
+        "source": "Catalogue Page 7"
+      },
+      "dimensions": {
+        "value": null,
+        "unit": "mm",
+        "status": "pending",
+        "source": null
+      },
+      "weight": {
+        "value": null,
+        "unit": "kg",
+        "status": "pending",
+        "source": null
+      }
+    },
+    "includedParts": {
+      "confirmed": [
+        "V-shaped base frame (proportions from catalogue Page 7)",
+        "Vertical column support",
+        "Dual direct mounting rails"
+      ],
+      "unconfirmed": "Joint fasteners, leg joining bolts, TV mounting screws awaiting manufacturer confirmation"
+    },
+    "installationRequirements": "Stable, level tabletop surface with minimum depth matching base spread.",
+    "guideUrl": "demos/product-29/",
+    "guideType": "concept_prototype",
+    "image": "demos/product-28/assets/page_7.png",
+    "imageCrop": {
+      "x": 945,
+      "y": 750,
+      "width": 170,
+      "height": 225
+    },
+    "verifiedStatus": "concept_prototype"
   }
 ]

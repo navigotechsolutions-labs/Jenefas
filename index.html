@@ -111,7 +111,7 @@
       <a class="nav-brand" href="#home" aria-label="Jenefas home"><img class="original-logo" src="assets/jenefas-logo.svg" alt="Jenefas.com - Something DIFFERENT" width="200" height="93"></a>
       <button class="nav-toggle" id="menu-toggle" aria-expanded="false" aria-controls="main-menu">Menu ☰</button>
       <div class="nav-menu" id="main-menu">
-        <a href="#catalogue">Products</a><a href="#mount-finder">Find a Mount</a><a href="#assembly-guides">Assembly Demos</a><a href="#why-jenefas">About Us</a><a href="#showroom">Contact &amp; Store</a>
+        <a href="#catalogue">Products</a><a href="#mount-finder">Find the Right Product</a><a href="#assembly-guides">Assembly &amp; Support</a><a href="#why-jenefas">About Jenefas</a><a href="#showroom">Contact</a>
         <button class="nav-quote" onclick="openRfqModal()">Request a Quote</button>
       </div>
     </div>
@@ -425,6 +425,47 @@
           </button>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- Comparison Tray Sticky Floating Bar -->
+  <div id="compareBar" class="fixed bottom-0 left-0 right-0 z-30 bg-slate-900 border-t border-slate-700 p-4 shadow-2xl transition-transform duration-300 transform translate-y-full flex items-center justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <span class="text-xs font-bold uppercase tracking-wider text-accent-400">Compare Models:</span>
+      <div id="compareSelectedChips" class="flex items-center gap-2"></div>
+    </div>
+    <div class="flex items-center gap-2">
+      <button onclick="openCompareModal()" id="compareActionBtn" class="bg-accent-500 hover:bg-accent-600 text-white text-xs font-bold px-4 py-2 rounded-xl transition">
+        Compare (0)
+      </button>
+      <button onclick="clearComparison()" class="text-xs text-slate-400 hover:text-white px-2 py-1">
+        Clear
+      </button>
+    </div>
+  </div>
+
+  <!-- Comparison Modal -->
+  <div id="compareModal" class="fixed inset-0 z-50 hidden bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl max-w-4xl w-full p-6 relative shadow-2xl space-y-4 max-h-[90vh] flex flex-col">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-3">
+        <div>
+          <h3 class="text-lg font-bold text-white font-display">Side-by-Side Product Comparison</h3>
+          <p class="text-xs text-slate-400">Comparing up to 3 models with verified catalogue specifications.</p>
+        </div>
+        <button onclick="closeCompareModal()" class="text-slate-400 hover:text-white p-1 rounded-lg">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <div class="overflow-x-auto custom-scrollbar flex-1" id="compareTableContainer">
+        <!-- Rendered by JS -->
+      </div>
+
+      <div class="pt-3 border-t border-slate-800 flex justify-end">
+        <button onclick="closeCompareModal()" class="px-5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold rounded-xl transition">
+          Close Comparison
+        </button>
+      </div>
     </div>
   </div>
 
@@ -754,14 +795,25 @@
               </div>
             </div>
 
-            <div class="mt-5 pt-3 border-t border-slate-800/80 flex gap-2">
-              <a href="${whatsappUrl}" target="_blank" class="flex-1 inline-flex items-center justify-center gap-1.5 bg-emerald-700/30 hover:bg-emerald-600 text-emerald-300 hover:text-white border border-emerald-600/40 text-xs font-bold py-2.5 rounded-xl transition">
-                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
-                <span>WhatsApp Quote</span>
-              </a>
-              <button onclick="openRfqModal('${p.id} - ${p.title}')" class="px-3.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold rounded-xl border border-slate-700 transition" title="Request Bulk Dealer Quote">
-                <i data-lucide="file-text" class="w-4 h-4"></i>
-              </button>
+            <div class="mt-5 pt-3 border-t border-slate-800/80 flex flex-col gap-2">
+              <div class="flex gap-2">
+                <a href="product/?id=${p.id}" class="flex-1 inline-flex items-center justify-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 text-xs font-bold py-2 rounded-xl transition">
+                  <i data-lucide="info" class="w-3.5 h-3.5"></i>
+                  <span>View Product</span>
+                </a>
+                <button onclick="toggleCompare('${p.id}')" id="compare-btn-${p.id}" class="compare-toggle-btn px-3 bg-slate-800/60 hover:bg-slate-700 text-slate-300 text-xs font-semibold rounded-xl border border-slate-700 transition" title="Add to comparison">
+                  <span>Compare</span>
+                </button>
+              </div>
+              <div class="flex gap-2">
+                <a href="${whatsappUrl}" target="_blank" class="flex-1 inline-flex items-center justify-center gap-1.5 bg-emerald-700/30 hover:bg-emerald-600 text-emerald-300 hover:text-white border border-emerald-600/40 text-xs font-bold py-2 rounded-xl transition">
+                  <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+                  <span>WhatsApp Quote</span>
+                </a>
+                <button onclick="openRfqModal('${p.id} - ${p.title}')" class="px-3 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold rounded-xl border border-slate-700 transition" title="Request Bulk Dealer Quote">
+                  <i data-lucide="file-text" class="w-4 h-4"></i>
+                </button>
+              </div>
             </div>
           </div>
         `;
@@ -817,6 +869,127 @@
       const url = `https://wa.me/919840817220?text=${encodeURIComponent(text)}`;
       closeRfqModal();
       window.open(url, '_blank');
+    }
+
+    let comparedProducts = [];
+
+    function toggleCompare(id) {
+      const idx = comparedProducts.indexOf(id);
+      if (idx !== -1) {
+        comparedProducts.splice(idx, 1);
+      } else {
+        if (comparedProducts.length >= 3) {
+          alert('You can compare a maximum of 3 products at a time.');
+          return;
+        }
+        comparedProducts.push(id);
+      }
+      updateCompareUI();
+    }
+
+    function clearComparison() {
+      comparedProducts = [];
+      updateCompareUI();
+    }
+
+    function updateCompareUI() {
+      const bar = document.getElementById('compareBar');
+      const actionBtn = document.getElementById('compareActionBtn');
+      const chips = document.getElementById('compareSelectedChips');
+
+      if (comparedProducts.length > 0) {
+        bar.classList.remove('translate-y-full');
+      } else {
+        bar.classList.add('translate-y-full');
+      }
+
+      actionBtn.textContent = `Compare (${comparedProducts.length})`;
+      chips.innerHTML = comparedProducts.map(id => {
+        return `<span class="bg-slate-800 text-white font-mono text-[11px] px-2 py-0.5 rounded border border-slate-700">${id}</span>`;
+      }).join('');
+
+      document.querySelectorAll('.compare-toggle-btn').forEach(btn => {
+        const id = btn.id.replace('compare-btn-', '');
+        if (comparedProducts.includes(id)) {
+          btn.classList.add('bg-accent-500', 'text-white');
+          btn.classList.remove('bg-slate-800/60', 'text-slate-300');
+          btn.innerHTML = '<span>Added ✓</span>';
+        } else {
+          btn.classList.remove('bg-accent-500', 'text-white');
+          btn.classList.add('bg-slate-800/60', 'text-slate-300');
+          btn.innerHTML = '<span>Compare</span>';
+        }
+      });
+    }
+
+    function openCompareModal() {
+      if (comparedProducts.length === 0) return;
+      const modal = document.getElementById('compareModal');
+      const container = document.getElementById('compareTableContainer');
+
+      const items = comparedProducts.map(id => products.find(p => p.id === id)).filter(Boolean);
+
+      container.innerHTML = `
+        <table class="w-full text-left border-collapse text-xs">
+          <thead>
+            <tr class="border-b border-slate-800">
+              <th class="p-3 text-slate-400 font-bold uppercase w-1/4">Feature</th>
+              ${items.map(p => `
+                <th class="p-3 text-white font-bold w-1/4">
+                  <div class="font-mono text-accent-400">${p.id}</div>
+                  <div class="text-sm mt-0.5">${p.title}</div>
+                </th>
+              `).join('')}
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-800/60">
+            <tr>
+              <td class="p-3 text-slate-400 font-medium">Category</td>
+              ${items.map(p => `<td class="p-3 text-slate-200">${p.categoryName}</td>`).join('')}
+            </tr>
+            <tr>
+              <td class="p-3 text-slate-400 font-medium">Screen Range</td>
+              ${items.map(p => `<td class="p-3 text-slate-200">${p.screenSize}</td>`).join('')}
+            </tr>
+            <tr>
+              <td class="p-3 text-slate-400 font-medium">VESA Pattern</td>
+              ${items.map(p => `<td class="p-3 text-slate-200">${p.vesa}</td>`).join('')}
+            </tr>
+            <tr>
+              <td class="p-3 text-slate-400 font-medium">Max Load</td>
+              ${items.map(p => `<td class="p-3 font-bold text-emerald-400">${p.maxLoad || 'Awaiting confirmation'}</td>`).join('')}
+            </tr>
+            <tr>
+              <td class="p-3 text-slate-400 font-medium">Movement</td>
+              ${items.map(p => `<td class="p-3 text-slate-200">${p.motion}</td>`).join('')}
+            </tr>
+            <tr>
+              <td class="p-3 text-slate-400 font-medium">Clearance</td>
+              ${items.map(p => `<td class="p-3 text-slate-200">${p.wallDistance}</td>`).join('')}
+            </tr>
+            <tr>
+              <td class="p-3 text-slate-400 font-medium">Ideal For</td>
+              ${items.map(p => `<td class="p-3 text-slate-300">${p.idealFor}</td>`).join('')}
+            </tr>
+            <tr>
+              <td class="p-3 text-slate-400 font-medium">Action</td>
+              ${items.map(p => `
+                <td class="p-3">
+                  <a href="product/?id=${p.id}" class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold px-3 py-1.5 rounded-lg text-[11px]">
+                    View Specs →
+                  </a>
+                </td>
+              `).join('')}
+            </tr>
+          </tbody>
+        </table>
+      `;
+
+      modal.classList.remove('hidden');
+    }
+
+    function closeCompareModal() {
+      document.getElementById('compareModal').classList.add('hidden');
     }
 
     // Initialize

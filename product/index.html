@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | Jenefas &amp; Jenefas Chennai</title>
+  <meta name="description" content="Detailed specifications, compatibility details, included parts and assembly guidance for Jenefas mounting hardware.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/brand.css">
+  <style>
+    :root {
+      --primary-red: #b91c1c;
+      --border-color: #e2e8f0;
+      --bg-card: #ffffff;
+      --text-muted: #64748b;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 20px;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+    }
+    .original-logo {
+      max-width: 140px;
+      height: auto;
+    }
+    .breadcrumb-nav {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .breadcrumb-nav a {
+      color: var(--primary-red);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .breadcrumb-nav a:hover {
+      text-decoration: underline;
+    }
+    .product-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+      gap: 40px;
+      align-items: start;
+    }
+    .gallery-panel {
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+      max-width: 100%;
+      overflow: hidden;
+    }
+    .gallery-display {
+      width: 100%;
+      height: 380px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #fafafa;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 16px;
+      border: 1px solid #f1f5f9;
+    }
+    .gallery-display img, .gallery-display svg {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    .gallery-actions {
+      display: flex;
+      gap: 12px;
+    }
+    .view-mode-btn {
+      flex: 1;
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      border: 1px solid var(--border-color);
+      background: white;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    .view-mode-btn.active {
+      border-color: var(--primary-red);
+      color: var(--primary-red);
+      background: #fef2f2;
+    }
+    .info-panel {
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 32px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+    }
+    .badge-code {
+      display: inline-block;
+      font-family: monospace;
+      font-weight: 700;
+      font-size: 12px;
+      padding: 4px 8px;
+      background: #f1f5f9;
+      color: var(--primary-red);
+      border-radius: 6px;
+      margin-bottom: 8px;
+    }
+    .product-title {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 8px 0 12px 0;
+    }
+    .product-category-tag {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    .price-enquiry-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 24px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .price-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .price-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .btn-enquire {
+      background: #059669;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-enquire:hover {
+      background: #047857;
+    }
+    .btn-rfq {
+      background: var(--primary-red);
+      color: white;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 13px;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-rfq:hover {
+      background: #991b1b;
+    }
+    .tabs-header {
+      display: flex;
+      border-bottom: 1px solid var(--border-color);
+      margin: 32px 0 20px 0;
+      gap: 24px;
+    }
+    .tab-btn {
+      padding: 12px 4px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+    }
+    .tab-btn.active {
+      color: var(--primary-red);
+      border-bottom-color: var(--primary-red);
+    }
+    .tab-content {
+      display: none;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+    .spec-table th, .spec-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #f1f5f9;
+      text-align: left;
+    }
+    .spec-table th {
+      color: var(--text-muted);
+      font-weight: 600;
+      width: 35%;
+    }
+    .spec-table td {
+      font-weight: 600;
+      color: #1e293b;
+    }
+    .status-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 6px;
+    }
+    .status-badge.observed {
+      background: #e0f2fe;
+      color: #0369a1;
+    }
+    .status-badge.unconfirmed {
+      background: #fef3c7;
+      color: #92400e;
+    }
+    .status-badge.pending {
+      background: #f1f5f9;
+      color: #64748b;
+    }
+    .notice-card {
+      padding: 14px 18px;
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 10px;
+      font-size: 13px;
+      color: #854d0e;
+      margin-top: 16px;
+    }
+    .btn-guide-launch {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-red);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      text-decoration: none;
+      margin-top: 16px;
+    }
+    @media(max-width: 900px) {
+      .nav-menu {
+        display: none !important;
+      }
+      .product-layout {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+      }
+      .gallery-display {
+        height: 280px;
+        width: 100%;
+        max-width: 100%;
+      }
+      .gallery-actions {
+        flex-direction: column;
+        width: 100%;
+      }
+      .container {
+        padding: 16px 12px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .info-panel, .gallery-panel {
+        padding: 18px 14px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .price-enquiry-box {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .tabs-header {
+        overflow-x: auto;
+        gap: 14px;
+        width: 100%;
+      }
+      .tab-btn {
+        white-space: nowrap;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Universal Header -->
+  <header class="customer-nav" aria-label="Main navigation">
+    <div class="nav-row">
+      <a class="nav-brand" href="../#home" aria-label="Jenefas home">
+        <img class="original-logo" src="../assets/jenefas-logo.svg" alt="Jenefas.com - Something DIFFERENT" width="184" height="86">
+      </a>
+      <div class="nav-menu">
+        <a href="../#catalogue">Products</a>
+        <a href="../#mount-finder">Find the Right Product</a>
+        <a href="../#assembly-guides">Assembly &amp; Support</a>
+        <a href="../#why-jenefas">About Jenefas</a>
+        <a href="../#showroom">Contact</a>
+        <button class="nav-quote" onclick="openProductRfq()">Request a Quote</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container" id="main-content">
+    <div class="breadcrumb-nav">
+      <a href="../#catalogue" id="crumb-catalogue">Products</a>
+      <span>›</span>
+      <span id="crumb-category">Category</span>
+      <span>›</span>
+      <span id="crumb-product" style="color: #0f172a; font-weight: 600;">Product</span>
+    </div>
+
+    <!-- Product not found state -->
+    <div id="product-not-found" style="display: none; padding: 48px 24px; text-align: center; background: white; border-radius: 16px; border: 1px solid var(--border-color);">
+      <h2 style="font-size: 24px; font-weight: 700; color: #0f172a;">Product Not Found</h2>
+      <p style="color: var(--text-muted); margin: 12px 0 24px 0;">We could not find a product matching this model code. Browse our complete catalogue to view available options.</p>
+      <a href="../#catalogue" class="btn-rfq" style="display: inline-block;">Return to Products</a>
+    </div>
+
+    <!-- Product Details Layout -->
+    <div class="product-layout" id="product-detail-layout">
+      
+      <!-- Visual Gallery Panel -->
+      <div class="gallery-panel">
+        <div class="gallery-display" id="gallery-container">
+          <!-- Populated by JS -->
+        </div>
+        <div class="gallery-actions">
+          <button class="view-mode-btn active" id="btn-view-photo" onclick="switchVisualMode('photo')">
+            <span>📷</span> View Product
+          </button>
+          <button class="view-mode-btn" id="btn-view-dimensions" onclick="switchVisualMode('dimensions')">
+            <span>📐</span> Check Dimensions
+          </button>
+          <button class="view-mode-btn" id="btn-view-guide" onclick="switchVisualMode('guide')" style="display: none;">
+            <span>🔧</span> Assembly Guide
+          </button>
+        </div>
+      </div>
+
+      <!-- Information & Enquiry Panel -->
+      <div class="info-panel">
+        <span class="badge-code" id="product-badge-code">MODEL</span>
+        <h1 class="product-title" id="product-title">Product Title</h1>
+        <div class="product-category-tag" id="product-category">Category</div>
+        <p id="product-ideal" style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;"></p>
+
+        <!-- Pricing & Fast Enquiry -->
+        <div class="price-enquiry-box">
+          <div>
+            <div class="price-text" id="product-price">Request Price</div>
+            <div class="price-sub">Wholesale dealer pricing &amp; retail quotes available</div>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <a href="#" id="whatsapp-enquiry-link" target="_blank" class="btn-enquire">
+              <span>💬</span> WhatsApp Enquiry
+            </a>
+            <button onclick="openProductRfq()" class="btn-rfq">
+              Request Quote
+            </button>
+          </div>
+        </div>
+
+        <!-- Detail Tabs -->
+        <div class="tabs-header">
+          <button class="tab-btn active" onclick="switchTab('specs', event)">Specifications &amp; Compatibility</button>
+          <button class="tab-btn" onclick="switchTab('included', event)">What is Included</button>
+          <button class="tab-btn" onclick="switchTab('installation', event)">Installation &amp; Support</button>
+        </div>
+
+        <!-- Tab: Specifications -->
+        <div id="tab-specs" class="tab-content active">
+          <table class="spec-table">
+            <tbody id="spec-table-body">
+              <!-- Populated by JS -->
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Tab: What is Included -->
+        <div id="tab-included" class="tab-content">
+          <h4 style="font-size: 14px; font-weight: 700; margin: 12px 0 8px 0;">Confirmed In Package:</h4>
+          <ul id="confirmed-parts-list" style="padding-left: 20px; color: #334155;"></ul>
+          <div class="notice-card" id="unconfirmed-parts-card">
+            <strong>Hardware Notice:</strong> <span id="unconfirmed-parts-text"></span>
+          </div>
+        </div>
+
+        <!-- Tab: Installation & Support -->
+        <div id="tab-installation" class="tab-content">
+          <p id="installation-requirements" style="color: #334155; margin-bottom: 16px;"></p>
+          <div id="guide-launch-container" style="display: none; padding-top: 12px; border-top: 1px solid #e2e8f0;">
+            <p style="font-weight: 600; color: #0f172a; margin-bottom: 6px;">Interactive Guidance Available:</p>
+            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">Rotate the structural model and explore key parts with our interactive viewer.</p>
+            <a href="#" id="guide-launch-link" class="btn-guide-launch">Launch 3D Assembly Guide ↗</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <script type="module">
+    import { Analytics } from '../assets/analytics.js';
+
+    let currentProduct = null;
+    let allProducts = [];
+
+    async function init() {
+      const params = new URLSearchParams(window.location.search);
+      const queryId = params.get('id') || params.get('code');
+
+      try {
+        const res = await fetch('../data/products.json');
+        allProducts = await res.json();
+      } catch (e) {
+        console.error('Failed to load products.json', e);
+      }
+
+      currentProduct = allProducts.find(p => p.id === queryId || p.code === queryId);
+
+      if (!currentProduct) {
+        document.getElementById('product-not-found').style.display = 'block';
+        document.getElementById('product-detail-layout').style.display = 'none';
+        return;
+      }
+
+      renderProduct(currentProduct);
+      Analytics.track('product_view', { productId: currentProduct.id, code: currentProduct.code });
+    }
+
+    function renderProduct(p) {
+      document.title = `${p.title} (${p.id}) | Jenefas & Jenefas Chennai`;
+      document.getElementById('crumb-category').textContent = p.categoryName;
+      document.getElementById('crumb-product').textContent = p.title;
+
+      document.getElementById('product-badge-code').textContent = p.id;
+      document.getElementById('product-title').textContent = p.title;
+      document.getElementById('product-category').textContent = p.categoryName;
+      document.getElementById('product-ideal').textContent = p.idealFor ? `Recommended for: ${p.idealFor}` : '';
+      document.getElementById('product-price').textContent = p.pricing || 'Request Price';
+
+      // WhatsApp link
+      const pageUrl = window.location.href;
+      const msg = encodeURIComponent(`Hi Jenefas team, I am inquiring about product ${p.id} (${p.title}). Link: ${pageUrl}. Please provide availability and dealer price.`);
+      document.getElementById('whatsapp-enquiry-link').href = `https://wa.me/919840817220?text=${msg}`;
+      document.getElementById('whatsapp-enquiry-link').addEventListener('click', () => {
+        Analytics.track('whatsapp_click', { productId: p.id, source: 'product_detail' });
+      });
+
+      // Gallery Display Initial View
+      renderGalleryPhoto(p);
+
+      // If product has a guide
+      if (p.guideUrl) {
+        document.getElementById('btn-view-guide').style.display = 'flex';
+        document.getElementById('guide-launch-container').style.display = 'block';
+        document.getElementById('guide-launch-link').href = `../${p.guideUrl}`;
+        document.getElementById('guide-launch-link').addEventListener('click', () => {
+          Analytics.track('guide_open', { productId: p.id, guideUrl: p.guideUrl });
+        });
+      }
+
+      // Specs Table
+      const tbody = document.getElementById('spec-table-body');
+      tbody.innerHTML = '';
+      const specs = [
+        { label: 'Screen Size Range', val: p.screenSize, status: 'Observed' },
+        { label: 'VESA Compatibility', val: p.vesa, status: 'Observed' },
+        { label: 'Maximum Load Rating', val: p.maxLoad || 'Awaiting manufacturer test report', status: p.maxLoad ? 'Observed' : 'Pending' },
+        { label: 'Movement / Articulation', val: p.motion, status: 'Observed' },
+        { label: 'Wall / Table Clearance', val: p.wallDistance, status: 'Observed' },
+        { label: 'Standard Carton Pack', val: p.cartonPack || 'Direct individual packing', status: p.cartonPack ? 'Observed' : 'Pending' }
+      ];
+
+      specs.forEach(s => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <th>${s.label}</th>
+          <td>
+            ${s.val}
+            <span class="status-badge ${s.status === 'Observed' ? 'observed' : 'pending'}">${s.status}</span>
+          </td>
+        `;
+        tbody.appendChild(tr);
+      });
+
+      // Included Parts
+      const confirmedList = document.getElementById('confirmed-parts-list');
+      confirmedList.innerHTML = '';
+      if (p.includedParts && p.includedParts.confirmed) {
+        p.includedParts.confirmed.forEach(item => {
+          const li = document.createElement('li');
+          li.textContent = item;
+          confirmedList.appendChild(li);
+        });
+      }
+      document.getElementById('unconfirmed-parts-text').textContent = p.includedParts?.unconfirmed || 'All connection fasteners must be confirmed against your specific display model.';
+
+      // Installation
+      document.getElementById('installation-requirements').textContent = p.installationRequirements || 'Follow manufacturer instructions and verify wall or mounting surface strength prior to fitting.';
+    }
+
+    function renderGalleryPhoto(p) {
+      const container = document.getElementById('gallery-container');
+      if (p.image && p.imageCrop) {
+        container.innerHTML = `
+          <svg viewBox="${p.imageCrop.x} ${p.imageCrop.y} ${p.imageCrop.width} ${p.imageCrop.height}" style="width: 100%; height: 100%;" role="img" aria-label="${p.title} genuine catalogue crop">
+            <defs><clipPath id="crop-view"><rect x="${p.imageCrop.x}" y="${p.imageCrop.y}" width="${p.imageCrop.width}" height="${p.imageCrop.height}"/></clipPath></defs>
+            <image href="../${p.image}" width="1333" height="993" clip-path="url(#crop-view)"/>
+          </svg>
+        `;
+      } else {
+        container.innerHTML = `
+          <div style="text-align: center; color: var(--text-muted); padding: 40px 20px;">
+            <div style="font-size: 48px; margin-bottom: 8px;">📦</div>
+            <div style="font-weight: 700; color: #1e293b; font-size: 16px;">${p.title}</div>
+            <div style="font-size: 12px; margin-top: 4px;">Genuine manufacturer specification from Jenefas Ritchie Street catalogue</div>
+          </div>
+        `;
+      }
+    }
+
+    function renderDimensionsView(p) {
+      const container = document.getElementById('gallery-container');
+      container.innerHTML = `
+        <div style="text-align: center; color: #854d0e; padding: 40px 20px; background: #fffbeb; width: 100%; height: 100%; box-sizing: border-box; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+          <div style="font-size: 40px; margin-bottom: 12px;">📐</div>
+          <div style="font-weight: 700; font-size: 16px; margin-bottom: 6px;">Technical Dimensions Pending</div>
+          <div style="font-size: 13px; max-width: 320px; line-height: 1.5;">Physical dimension drawings for ${p.id} are awaiting manufacturer verification. No estimated dimension lines are drawn.</div>
+        </div>
+      `;
+    }
+
+    window.switchVisualMode = function(mode) {
+      document.querySelectorAll('.view-mode-btn').forEach(b => b.classList.remove('active'));
+      if (mode === 'photo') {
+        document.getElementById('btn-view-photo').classList.add('active');
+        renderGalleryPhoto(currentProduct);
+      } else if (mode === 'dimensions') {
+        document.getElementById('btn-view-dimensions').classList.add('active');
+        renderDimensionsView(currentProduct);
+      } else if (mode === 'guide' && currentProduct.guideUrl) {
+        window.location.href = `../${currentProduct.guideUrl}`;
+      }
+    };
+
+    window.switchTab = function(tabName, evt) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      evt.target.classList.add('active');
+      document.getElementById(`tab-${tabName}`).classList.add('active');
+    };
+
+    window.openProductRfq = function() {
+      if (currentProduct) {
+        window.location.href = `../#catalogue`;
+      }
+    };
+
+    init();
+  </script>
+</body>
+</html>

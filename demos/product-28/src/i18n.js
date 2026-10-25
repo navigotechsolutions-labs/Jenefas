@@ -2,6 +2,7 @@ export const messages = {
   en: {
     brandSub: 'AV mounts & industrial brackets', back: '← Catalogue', language: 'Language',
     allDemos: 'All assembly demos',
+    productSpecs: 'Product 28 Specifications',
     currentProduct: 'Product 28',
     viewProduct29: 'View Product 29 →',
     viewProduct28: 'View Product 28 →',
