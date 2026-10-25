@@ -637,6 +637,10 @@
 
     let previousCategory = 'wall';
 
+    // Shared, unit-tested finder logic (tests/finder.test.mjs); loaded before products render
+    const finderEnginePromise = import('./assets/finder-engine.js');
+    let finderEngine = null;
+
     // Comprehensive Bilingual Dictionary
     const i18n = {
       en: {
@@ -803,6 +807,7 @@
       } catch (e) {
         console.warn('Fallback failed', e);
       }
+      finderEngine = await finderEnginePromise;
       loadFinderState();
       renderFinderQuestions();
       renderProducts();
@@ -823,25 +828,15 @@
 
     // Handle Category change in Guided Finder
     function handleCategoryChange(newCat) {
+      if (!finderEngine) return;
       if (newCat !== previousCategory) {
         const notice = document.getElementById('finderSwitchNotice');
         if (notice) notice.classList.remove('hidden');
-
-        // Clear incompatible fields while preserving compatible ones (VESA, weight, model, size)
-        if (newCat === 'tabletop') {
-          finderState.motion = '';
-          finderState.deskThickness = null;
-        } else if (newCat === 'desk') {
-          finderState.motion = '';
-          finderState.tabletopBase = '';
-        } else if (newCat === 'wall' || newCat === 'ceiling') {
-          finderState.tabletopBase = '';
-          finderState.deskThickness = null;
-        }
-        previousCategory = newCat;
       }
 
-      finderState.surface = newCat;
+      // Clear incompatible fields while preserving compatible ones (VESA, weight, model, size)
+      finderState = finderEngine.cleanIncompatibleAnswers(previousCategory, newCat, finderState);
+      previousCategory = newCat;
       renderFinderQuestions();
       runGuidedFinder();
     }
@@ -1138,50 +1133,9 @@
       runGuidedFinder();
     }
 
-    // Check VESA compatibility against product
-    function checkProductVesaSupport(p, targetVesa) {
-      if (!targetVesa || targetVesa === 'unknown') return { status: 'unknown' };
-      const [tW, tH] = targetVesa.split('x').map(n => parseInt(n, 10));
-      if (!tW || !tH) return { status: 'unknown' };
-
-      const str = p.vesa || '';
-      const matches = str.match(/(\d+)x(\d+)/g);
-      let maxW = 0, maxH = 0;
-      let explicitlyListed = false;
-
-      if (matches) {
-        for (const m of matches) {
-          const [w, h] = m.split('x').map(Number);
-          if (w === tW && h === tH) explicitlyListed = true;
-          if (w > maxW) maxW = w;
-          if (h > maxH) maxH = h;
-        }
-      }
-
-      // If target exceeds max dimensions, definite failure
-      if (maxW > 0 && maxH > 0 && (tW > maxW || tH > maxH)) {
-        return { status: 'fail', maxW, maxH };
-      }
-
-      if (explicitlyListed || (tW <= maxW && tH <= maxH && (str.toLowerCase().includes('up to') || str.toLowerCase().includes('to')))) {
-        return { status: 'pass', maxW, maxH };
-      }
-
-      if (tW <= maxW && tH <= maxH) {
-        return { status: 'pass', maxW, maxH };
-      }
-
-      return { status: 'fail', maxW, maxH };
-    }
-
-    function getProductMaxLoadKg(p) {
-      if (!p.maxLoad) return null;
-      const match = p.maxLoad.match(/(\d+)\s*kg/i);
-      return match ? parseInt(match[1], 10) : null;
-    }
-
     // Main Category-Aware Matching Engine
     function runGuidedFinder() {
+      if (!finderEngine) return;
       const surface = finderState.surface;
       const badge = document.getElementById('guidedOutcomeBadge');
       const text = document.getElementById('guidedOutcomeText');
@@ -1226,73 +1180,12 @@
       let failsSpecList = [];
 
       categoryProducts.forEach(p => {
-        let hasFail = false;
-        let hasUnknown = false;
-        let checks = [];
-
-        // Check 1: VESA
-        if (['wall', 'ceiling', 'tabletop', 'desk'].includes(surface)) {
-          if (!finderState.vesa || finderState.vesa === 'unknown') {
-            hasUnknown = true;
-            checks.push({ name: 'VESA Pattern', status: 'unknown', note: 'Customer VESA unknown' });
-          } else {
-            const vesaRes = checkProductVesaSupport(p, finderState.vesa);
-            if (vesaRes.status === 'fail') {
-              hasFail = true;
-              checks.push({ name: `VESA ${finderState.vesa}`, status: 'fail', note: 'Exceeds mount limit' });
-            } else if (vesaRes.status === 'unknown') {
-              hasUnknown = true;
-              checks.push({ name: `VESA ${finderState.vesa}`, status: 'unknown', note: 'Awaiting confirmation' });
-            } else {
-              // Pass check, but verify if product VESA specification is certified or unconfirmed planning estimate
-              if (p.sourceType === 'internal_planning_taxonomy' || p.specifications?.vesa?.status === 'unconfirmed_planning_estimate' || p.specifications?.vesa?.status === 'unconfirmed_estimate') {
-                hasUnknown = true; // Cannot affirm match from unconfirmed planning estimate!
-                checks.push({ name: `VESA ${finderState.vesa}`, status: 'unknown', note: 'Within planning estimate, awaits factory spec sheet' });
-              } else {
-                checks.push({ name: `VESA ${finderState.vesa}`, status: 'pass', note: 'Supported' });
-              }
-            }
-          }
-        }
-
-        // Check 2: Display Weight
-        if (finderState.weightUnknown || finderState.weightKg === null) {
-          hasUnknown = true;
-          checks.push({ name: 'Display Weight', status: 'unknown', note: 'Weight unknown' });
-        } else {
-          const maxKg = getProductMaxLoadKg(p);
-          if (maxKg === null) {
-            hasUnknown = true;
-            checks.push({ name: `Weight (${finderState.weightKg} kg)`, status: 'unknown', note: 'Load rating awaiting test data' });
-          } else if (finderState.weightKg > maxKg) {
-            hasFail = true;
-            checks.push({ name: `Weight (${finderState.weightKg} kg)`, status: 'fail', note: `Exceeds ${maxKg} kg load limit` });
-          } else {
-            // Within limit
-            if (p.specifications?.maxLoad?.status === 'unconfirmed_planning_estimate') {
-              hasUnknown = true;
-              checks.push({ name: `Weight (${finderState.weightKg} kg)`, status: 'unknown', note: `Within estimated ${maxKg} kg limit; requires certification` });
-            } else {
-              checks.push({ name: `Weight (${finderState.weightKg} kg)`, status: 'pass', note: 'Within verified rating' });
-            }
-          }
-        }
-
-        // Check 3: Screen Size Supplementary
-        if (finderState.sizeGroup) {
-          if (p.sizeGroup !== finderState.sizeGroup && p.sizeGroup !== 'Universal') {
-            // Note: Does not fail by itself if VESA/weight pass, but adds unknown notice
-            checks.push({ name: `Screen Size (${finderState.sizeGroup})`, status: 'unknown', note: 'Differs from nominal screen guide' });
-          } else {
-            checks.push({ name: `Screen Size (${finderState.sizeGroup})`, status: 'pass', note: 'Within nominal screen guide' });
-          }
-        }
-
+        const { state, checks } = finderEngine.evaluateProductCompatibility(p, finderState);
         p._auditChecks = checks;
 
-        if (hasFail) {
+        if (state === 'fails_spec') {
           failsSpecList.push(p);
-        } else if (hasUnknown) {
+        } else if (state === 'more_info_needed') {
           moreInfoList.push(p);
         } else {
           meetsSpecList.push(p);
@@ -1599,32 +1492,8 @@
       }
 
       const pageUrl = window.location.href.split('#')[0];
-      const surface = finderState.surface;
-      const vesa = finderState.vesa || 'Not specified';
-      const weight = finderState.weightUnknown ? 'Unknown' : (finderState.weightKg ? `${finderState.weightKg} kg` : 'Not specified');
-      const motion = finderState.motion || 'No preference';
-      const model = finderState.model || 'Not provided';
-
-      const text = `*New Wholesale & Compatibility Enquiry from Jenefas Platform*\n\n` +
-                   `• *Product / Archetype:* ${product}\n` +
-                   `• *Sales Desk:* +91 98408 17220 (Ritchie Street Showroom, Chennai)\n` +
-                   `• *Reference Page:* ${pageUrl}\n\n` +
-                   `*Finder Specifications Checked:*\n` +
-                   `• *Mounting Location:* ${surface}\n` +
-                   `• *VESA Pattern:* ${vesa}\n` +
-                   `• *Display Weight:* ${weight}\n` +
-                   `• *Movement Preference:* ${motion}\n` +
-                   `• *Customer TV Model:* ${model}\n\n` +
-                   `*Customer Details:*\n` +
-                   `• *Buyer Name:* ${name}\n` +
-                   `• *Company / Shop:* ${company || 'N/A'}\n` +
-                   `• *Mobile:* ${phone}\n` +
-                   `• *Quantity Required:* ${qty || 'Dealer quotation'}\n` +
-                   `• *Location:* ${city || 'Tamil Nadu'}\n` +
-                   `• *Additional Notes:* ${notes || 'Please confirm bracket compatibility and wholesale price.'}`;
-
-      const encoded = encodeURIComponent(text);
-      const waUrl = `https://wa.me/919840817220?text=${encoded}`;
+      const { text, waUrl } = finderEngine.buildWhatsAppEnquiry(
+        product, finderState, { name, company, phone, quantity: qty, city, notes }, pageUrl);
 
       // Show recovery UI
       const recovery = document.getElementById('rfqRecoveryArea');

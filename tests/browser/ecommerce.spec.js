@@ -131,6 +131,17 @@ test.describe('E-Commerce Catalogue & Product Detail Specs', () => {
     await expect(page.locator('#productGrid > div')).toHaveCount(2);
   });
 
+  test('Finder uses the shared engine and does not pass VESA below a documented range', async ({ page }) => {
+    await page.goto('/');
+    await page.locator('#guidedSurface').selectOption('wall');
+    await page.locator('#guidedMotion').selectOption('tilt');
+    // Every tilt mount documents a range starting at 100x100 or larger, so 75x75 must not pass
+    await page.locator('#guidedVesa').selectOption('75x75');
+    await page.locator('#guidedWeightInput').fill('10');
+    await expect(page.locator('#guidedOutcomeBadge')).toContainText('Does not meet a checked requirement');
+    await expect(page.locator('#finderRequirementsAudit')).toContainText('VESA 75x75: Exceeds mount limit');
+  });
+
   test('Bilingual language switching functions seamlessly on Homepage and Product Detail', async ({ page }) => {
     // 1. Homepage switching
     await page.goto('/');
