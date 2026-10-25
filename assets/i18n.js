@@ -13,7 +13,7 @@ export const i18nData = {
     
     // Partial catalogue notice
     partialNoticeTitle: 'Curated Digital Catalogue',
-    partialNoticeText: 'This digital catalogue highlights 20 selected mounting systems from our 90+ model manufacturing range. For unlisted models or wholesale bulk orders, contact our Ritchie Street sales desk directly.',
+    partialNoticeText: 'This digital catalogue showcases selected mounting and stand systems from the Jenefas product range. For unlisted models, specialized brackets, or wholesale bulk inquiries, contact our Ritchie Street sales desk directly.',
     
     // Hero
     heroEyebrow: 'JENEFAS & JENEFAS · RITCHIE STREET, CHENNAI',
@@ -37,30 +37,77 @@ export const i18nData = {
     catAppliance: 'Appliance Brackets',
     
     // Guided Finder
-    finderEyebrow: 'Interactive Selection Tool',
+    finderEyebrow: 'Category-Aware Selection Tool',
     finderTitle: 'Find the Right Mount for Your Display',
-    finderDesc: 'Answer four quick questions. We evaluate only against confirmed manufacturer specifications and highlight where verification is pending.',
-    finderStep1: '1. Mounting Location',
-    finderStep2: '2. Display Screen Size',
-    finderStep3: '3. Estimated Display Weight',
-    finderStep4: '4. Desired Movement',
-    finderOptWall: 'Wall Mount (Concrete / Brick)',
-    finderOptCeiling: 'Ceiling Drop / Roof Truss',
-    finderOptDesk: 'Desk Clamp / Monitor Arm',
-    finderOptTabletop: 'Tabletop Stand (Freestanding)',
-    finderOptAllSizes: 'Any Screen Size',
-    finderOptUnder30kg: 'Under 30 kg (Standard LED)',
-    finderOpt30to50kg: '30 kg – 50 kg (Large / Heavy LED)',
-    finderOptOver50kg: 'Over 50 kg (Commercial Display)',
-    finderOptAllMotion: 'Any Movement Style',
-    finderOptFixed: 'Fixed (Flat against wall)',
-    finderOptTilt: 'Tilt (Glare adjustment ±15°)',
-    finderOptMotion: 'Full-Motion Swivel & Extend',
+    finderDesc: 'Select your installation category and specifications. We evaluate only against confirmed manufacturer data and state clearly where physical verification is required.',
     finderReset: 'Reset Finder',
-    finderResultsTitle: 'Guided Recommendations',
-    finderStatusVerified: 'Matches available verified criteria',
-    finderStatusMoreInfo: 'More information required (e.g. TV weight or VESA spacing)',
-    finderStatusNoMatch: 'No confirmed match found in this curated range. Ask our team for custom fabrication advice.',
+    finderResultsTitle: 'Matching Audit & Evaluation',
+    
+    // Step 1: Category Selection
+    finderCatLabel: '1. Select Product Category / Mounting Surface',
+    finderCatWall: 'TV Wall Mount (Brick / Concrete / Stud)',
+    finderCatCeiling: 'Ceiling Drop Mount (Overhead / Truss)',
+    finderCatTabletop: 'Table-Top TV Stand (Freestanding)',
+    finderCatDesk: 'Desk Clamp / Ergonomic Monitor Arm',
+    finderCatOther: 'Other Utility Brackets (Projector / Speaker / Appliance)',
+    finderCategorySwitchNotice: 'Category updated: cleared category-specific preferences while preserving your display weight and VESA answers.',
+    
+    // Shared Questions
+    finderVesaLabel: '2. VESA Mounting Pattern (mm)',
+    finderVesaHelp: 'How to find VESA: Check your TV manual or measure the horizontal × vertical distance between the 4 screw holes on the back of your TV (in mm).',
+    finderVesaSelect: 'Select VESA pattern...',
+    finderVesaUnknown: 'I don\'t know my VESA pattern',
+    
+    finderWeightLabel: '3. Display Weight (Exact kg)',
+    finderWeightPlaceholder: 'e.g. 24',
+    finderWeightUnknown: 'I don\'t know my TV weight',
+    finderWeightHelp: 'Check the manufacturer specification label on the rear panel of your television (exclude table stand feet).',
+    
+    finderScreenLabel: '4. Screen Diagonal (Inches, Supplementary)',
+    finderScreenAny: 'Any screen size (optional)',
+    finderScreenNotice: 'Supplementary guideline only. Physical VESA spacing and display weight govern actual mounting safety.',
+    
+    finderModelLabel: '5. TV Brand & Model (Optional)',
+    finderModelPlaceholder: 'e.g. Sony Bravia 55X90L / Samsung Crystal 4K',
+    
+    // Wall / Ceiling Specific
+    finderMovementLabel: 'Movement Preference',
+    finderMovementAny: 'Any / No Preference',
+    finderMovementFixed: 'Fixed (Flat against wall, slim profile)',
+    finderMovementTilt: 'Tilt (Anti-glare angle adjustment for elevated mounting)',
+    finderMovementMotion: 'Full-Motion (Articulating arms, swivel left/right & extend)',
+    finderCeilingDropType: 'Ceiling Configuration',
+    finderCeilingSingle: 'Single Display Drop',
+    finderCeilingDual: 'Back-to-Back Dual Displays',
+    
+    // Tabletop Specific
+    finderTabletopBase: 'Base Profile Preference',
+    finderTabletopBaseAny: 'Any Base Profile',
+    finderTabletopBaseRect: 'Flat Rectangular Plate (Product 28 archetype)',
+    finderTabletopBaseV: 'Angled V-Base Legs (Product 29 archetype)',
+    finderTabletopSurfaceDepth: 'Available Table Depth (mm, optional)',
+    
+    // Desk Clamp Specific
+    finderDeskThickness: 'Desk Surface Thickness (mm)',
+    finderDeskDisplays: 'Number of Screens',
+    finderDeskSingle: 'Single Monitor Arm (JF-MA-01)',
+    finderDeskDual: 'Dual Monitor Arms (JF-MA-02)',
+    finderDeskWarning: 'Surface Safety Notice: Desk clamps require solid wood, steel, or reinforced desk edges. Not suitable for tempered glass or hollow honeycomb cardboard desks without structural reinforcement.',
+    
+    // Other Specific
+    finderOtherType: 'Utility Application Type',
+    finderOtherProjector: 'Universal Telescopic Projector Ceiling Mount',
+    finderOtherSpeaker: 'Heavy-Duty Speaker Wall Bracket Pair',
+    finderOtherAC: 'Split AC Outdoor Unit Heavy Stand Pair',
+    finderOtherMicrowave: 'Extendable Microwave Oven Wall Bracket Pair',
+    
+    // Outcome States
+    finderStateMeets: 'Meets the checked specifications',
+    finderStateMoreInfo: 'More information needed to confirm compatibility',
+    finderStateFails: 'Does not meet a checked requirement',
+    finderStateNoMatch: 'No confirmed match found in curated catalogue',
+    finderSurfaceDisclaimer: 'Surface Suitability Notice: Wall composition (concrete, brick, timber stud) or tabletop strength must be physically confirmed before final mounting.',
+    finderNoMatchHelp: 'No catalogued bracket strictly matches all checked criteria. Explore relevant models below to discuss custom fabrication with our sales desk.',
     
     // Product Card
     cardCode: 'Model Reference',
@@ -68,7 +115,7 @@ export const i18nData = {
     cardVesa: 'VESA Pattern',
     cardLoad: 'Max Load',
     cardMotion: 'Movement',
-    cardPackaging: 'Carton Pack',
+    cardPackaging: 'Packaging',
     cardPricing: 'Request price',
     cardViewBtn: 'View Product',
     cardEnquireBtn: 'WhatsApp Quote',
@@ -81,11 +128,11 @@ export const i18nData = {
     detailDimensionsTab: 'Check Dimensions',
     detailIncludedTab: 'What is Included',
     detailInstallationTab: 'Installation & Support',
-    detailConceptBtn: 'Open 3D Concept Preview',
+    detailConceptBtn: 'Open 3D Concept Preview ↗',
     detailPriceOnRequest: 'Price available on request (Wholesale & Retail)',
     detailAskCompatibility: 'Ask About Display Compatibility',
     detailAwaitingMeasurements: 'Detailed technical measurements are awaiting manufacturer confirmation drawings.',
-    detailVisiblePartsTitle: 'Visible Product Components (From Catalogue)',
+    detailVisiblePartsTitle: 'Visible Product Components (From Catalogue Scans)',
     detailPackageStatusTitle: 'Package Contents Status',
     detailPackageNotice: 'Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners are included.',
     detailPackagingNotice: 'Packaging details awaiting confirmation from warehouse.',
@@ -98,17 +145,20 @@ export const i18nData = {
     compareClose: 'Close Comparison',
     
     // RFQ Modal & Destination
-    rfqTitle: 'Request a Quote / Compatibility Check',
-    rfqSubtitle: 'Direct enquiry to our Ritchie Street showroom & sales desk.',
+    rfqTitle: 'Wholesale Request For Quote / Technical Check',
+    rfqSubtitle: 'Verified sales desk: Ritchie Street Showroom (+91 98408 17220, source: Jenefas Client Dossier).',
     rfqNameLabel: 'Your Full Name *',
     rfqPhoneLabel: 'Mobile / WhatsApp Number *',
     rfqCompanyLabel: 'Business / Company Name',
     rfqQtyLabel: 'Estimated Quantity (Units / Cartons)',
     rfqCityLabel: 'City / Delivery Location',
     rfqQuestionLabel: 'Display Model or Compatibility Question',
-    rfqSubmitWhatsApp: 'Prepare WhatsApp Message Draft',
+    rfqSubmitWhatsApp: 'Review Enquiry in WhatsApp ↗',
     rfqCancel: 'Cancel',
-    rfqNotice: 'Submitting prepares a structured message draft for you to review and send to our verified WhatsApp number (+91 98408 17220).'
+    rfqNotice: 'Submitting prepares a structured message draft for you to review and send to our verified WhatsApp sales desk (+91 98408 17220). Zero orders are finalized automatically.',
+    rfqCopyDraft: 'Copy Message Draft',
+    rfqDraftCopied: 'Message draft copied to clipboard!',
+    rfqBlockedNotice: 'If WhatsApp did not launch automatically, click the direct link below or copy the message text:'
   },
   ta: {
     brandName: 'ஜெனிபாஸ் & ஜெனிபாஸ்',
@@ -124,7 +174,7 @@ export const i18nData = {
     
     // Partial catalogue notice
     partialNoticeTitle: 'தேர்ந்தெடுக்கப்பட்ட டிஜிட்டல் பட்டியல்',
-    partialNoticeText: 'எங்களின் 90+ தயாரிப்பு வகைகளில் இருந்து 20 தேர்ந்தெடுக்கப்பட்ட மாதிரிகள் இங்கே காட்டப்பட்டுள்ளன. மற்ற மாதிரிகள் அல்லது மொத்த ஆர்டர்களுக்கு எங்களின் ரிச்சி தெரு விற்பனை மேசையை நேரடியாக தொடர்பு கொள்ளவும்.',
+    partialNoticeText: 'ஜெனிஃபாஸ் தயாரிப்பு வரிசையிலிருந்து தேர்ந்தெடுக்கப்பட்ட மவுண்ட்கள் மற்றும் ஸ்டாண்டுகள் இங்கே காட்டப்பட்டுள்ளன. பிற மாதிரிகள், பிரத்யேக பிராக்கெட்டுகள் அல்லது மொத்த ஆர்டர்களுக்கு எங்களின் ரிச்சி தெரு விற்பனை மேசையை நேரடியாக தொடர்பு கொள்ளவும்.',
     
     // Hero
     heroEyebrow: 'ஜெனிபாஸ் & ஜெனிபாஸ் · ரிச்சி தெரு, சென்னை',
@@ -148,30 +198,77 @@ export const i18nData = {
     catAppliance: 'மின்சாதன பிராக்கெட்டுகள்',
     
     // Guided Finder
-    finderEyebrow: 'தேர்வு செய்யும் கருவி',
+    finderEyebrow: 'வகைக்கேற்ற தேர்வு செய்யும் கருவி',
     finderTitle: 'உங்கள் டிவிக்கு ஏற்ற மவுண்ட்டை தேர்ந்தெடுக்கவும்',
-    finderDesc: 'நான்கு எளிய கேள்விகளுக்கு பதிலளிக்கவும். உறுதிப்படுத்தப்பட்ட அளவுகளுடன் மட்டுமே ஒப்பிடப்படுகிறது.',
-    finderStep1: '1. பொருத்தும் இடம்',
-    finderStep2: '2. திரை அளவு',
-    finderStep3: '3. டிவியின் உத்தேச எடை',
-    finderStep4: '4. தேவையான இயக்கம்',
-    finderOptWall: 'சுவர் மவுண்ட் (செங்கல் / கான்கிரீட்)',
-    finderOptCeiling: 'சீலிங் மவுண்ட் (மேற்கூரை)',
-    finderOptDesk: 'மேசை கிளாம்ப / மானிட்டர் ஆர்ம்',
-    finderOptTabletop: 'டேபிள் டாப் ஸ்டாண்ட்',
-    finderOptAllSizes: 'அனைத்து திரை அளவுகள்',
-    finderOptUnder30kg: '30 கிலோ வரை (சாதாரண LED)',
-    finderOpt30to50kg: '30 – 50 கிலோ (பெரிய LED)',
-    finderOptOver50kg: '50 கிலோவுக்கு மேல் (வணிக டிஸ்பிளே)',
-    finderOptAllMotion: 'அனைத்து இயக்க முறைகள்',
-    finderOptFixed: 'நிலையானது (Fixed)',
-    finderOptTilt: 'சாய்வு வசதி (Tilt ±15°)',
-    finderOptMotion: 'முழு சுழற்சி (Full-Motion)',
+    finderDesc: 'பொருத்தும் வகை மற்றும் அளவுகளைத் தேர்ந்தெடுக்கவும். உறுதிப்படுத்தப்பட்ட தரவுகளுடன் மட்டுமே ஒப்பிடப்பட்டு முடிவு வழங்கப்படும்.',
     finderReset: 'மீட்டமைக்க',
-    finderResultsTitle: 'பரிந்துரைக்கப்பட்ட முடிவுகள்',
-    finderStatusVerified: 'உறுதிப்படுத்தப்பட்ட அளவுகளுடன் பொருந்துகிறது',
-    finderStatusMoreInfo: 'கூடுதல் விவரங்கள் தேவை (டிவி எடை அல்லது VESA அளவு)',
-    finderStatusNoMatch: 'தேர்ந்தெடுத்த தேர்வுகளுக்கு தயாரிப்பு விவரம் கிடைக்கவில்லை. எங்கள் குழுவை அணுகவும்.',
+    finderResultsTitle: 'பொருத்தம் மற்றும் மதிப்பாய்வு',
+    
+    // Step 1: Category Selection
+    finderCatLabel: '1. பொருத்தும் இடம் / தயாரிப்பு வகையைத் தேர்ந்தெடுக்கவும்',
+    finderCatWall: 'டிவி சுவர் மவுண்ட் (செங்கல் / கான்கிரீட் / மரச்சட்டம்)',
+    finderCatCeiling: 'சீலிங் மவுண்ட் (மேற்கூரை அமைப்பு)',
+    finderCatTabletop: 'டேபிள் டாப் ஸ்டாண்ட் (மேஜை மீது வைப்பது)',
+    finderCatDesk: 'மேசை கிளாம்ப / மானிட்டர் ஆர்ம்',
+    finderCatOther: 'பிற சாதன பிராக்கெட்டுகள் (புரொஜெக்டர் / ஸ்பீக்கர் / ஏசி)',
+    finderCategorySwitchNotice: 'வகை மாற்றப்பட்டது: பொதுவான டிவி எடை மற்றும் VESA அளவுகளைத் தக்கவைத்து வகை சார்ந்த அமைப்புகள் மீட்டமைக்கப்பட்டன.',
+    
+    // Shared Questions
+    finderVesaLabel: '2. VESA இடைவெளி அளவு (மிமீ)',
+    finderVesaHelp: 'VESA அளவை எவ்வாறு அறிவது: உங்கள் டிவி கையேட்டைப் பார்க்கவும் அல்லது டிவியின் பின்புறத்தில் உள்ள 4 திருகு துளைகளுக்கு இடையிலான கிடைமட்ட மற்றும் செங்குத்து தூரத்தை மில்லிமீட்டரில் அளவிடவும்.',
+    finderVesaSelect: 'VESA அளவைத் தேர்ந்தெடுக்கவும்...',
+    finderVesaUnknown: 'எனக்கு VESA அளவு தெரியவில்லை',
+    
+    finderWeightLabel: '3. டிவியின் எடை (துல்லியமான கிலோகிராம்)',
+    finderWeightPlaceholder: 'எ.கா. 24',
+    finderWeightUnknown: 'எனக்கு சரியான எடை தெரியவில்லை',
+    finderWeightHelp: 'டிவியின் பின்புற அட்டையில் உள்ள விவரக்குறிப்பு லேபிளைப் பார்க்கவும் (மேஜை கால்கள் சேர்க்காமல்).',
+    
+    finderScreenLabel: '4. திரை அளவு (அங்குலம், கூடுதல் வழிகாட்டி)',
+    finderScreenAny: 'அனைத்து திரை அளவுகள் (விருப்பத்தேர்வு)',
+    finderScreenNotice: 'இது கூடுதல் வழிகாட்டுதல் மட்டுமே. VESA அளவு மற்றும் டிவியின் எடையே பாதுகாப்பை தீர்மானிக்கிறது.',
+    
+    finderModelLabel: '5. டிவி பிராண்ட் & மாடல் (விருப்பத்தேர்வு)',
+    finderModelPlaceholder: 'எ.கா. Sony Bravia 55X90L / Samsung Crystal 4K',
+    
+    // Wall / Ceiling Specific
+    finderMovementLabel: 'இயக்க முறை விருப்பம்',
+    finderMovementAny: 'அனைத்து முறைகளும் / விருப்பமில்லை',
+    finderMovementFixed: 'நிலையானது (சுவரோடு ஒட்டியது, குறைந்த இடைவெளி)',
+    finderMovementTilt: 'சாய்வு வசதி (உயரமான இடங்களில் பொருத்த ஏற்றது)',
+    finderMovementMotion: 'முழு சுழற்சி (இடது/வலது சுழற்சி மற்றும் நீட்டிக்கக்கூடியது)',
+    finderCeilingDropType: 'சீலிங் அமைப்பு',
+    finderCeilingSingle: 'ஒற்றைத் திரை அமைப்பு',
+    finderCeilingDual: 'இரட்டைத் திரை அமைப்பு (Back-to-Back)',
+    
+    // Tabletop Specific
+    finderTabletopBase: 'அடிப்பாக அமைப்பு விருப்பம்',
+    finderTabletopBaseAny: 'அனைத்து அடிப்பாக வகைகளும்',
+    finderTabletopBaseRect: 'செவ்வக அடிப்பாகம் (Product 28 மாதிரி)',
+    finderTabletopBaseV: 'கோண V-வடிவ கால்கள் (Product 29 மாதிரி)',
+    finderTabletopSurfaceDepth: 'மேசையின் ஆழம் (மிமீ, விருப்பத்தேர்வு)',
+    
+    // Desk Clamp Specific
+    finderDeskThickness: 'மேசை பலகையின் தடிமன் (மிமீ)',
+    finderDeskDisplays: 'மானிட்டர் எண்ணிக்கை',
+    finderDeskSingle: 'ஒற்றைத் திரை ஆர்ம் (JF-MA-01)',
+    finderDeskDual: 'இரட்டைத் திரை ஆர்ம்கள் (JF-MA-02)',
+    finderDeskWarning: 'பாதுகாப்பு அறிவிப்பு: கிளாம்ப மவுண்ட்களை திடமான மர அல்லது எஃகு மேசைகளில் மட்டுமே பொருத்த வேண்டும். கண்ணாடியால் ஆன அல்லது வெற்று அட்டை மேசைகளில் கூடுதல் வலுவூட்டல் இன்றி பொருத்தக்கூடாது.',
+    
+    // Other Specific
+    finderOtherType: 'சாதன வகை',
+    finderOtherProjector: 'யுனிவர்சல் புரொஜெக்டர் சீலிங் மவுண்ட்',
+    finderOtherSpeaker: 'ஸ்பீக்கர் சுவர் பிராக்கெட் ஜோடி',
+    finderOtherAC: 'ஸ்ப்ளிட் ஏசி அவுட்டோர் ஸ்டாண்ட் ஜோடி',
+    finderOtherMicrowave: 'மைக்ரோவேவ் ஓவன் சுவர் ஸ்டாண்ட் ஜோடி',
+    
+    // Outcome States
+    finderStateMeets: 'சரிபார்க்கப்பட்ட அளவுகளுடன் பொருந்துகிறது',
+    finderStateMoreInfo: 'பொருத்தத்தை உறுதிப்படுத்த கூடுதல் விவரங்கள் தேவை',
+    finderStateFails: 'தேவைப்படும் அளவுக்கு பொருந்தவில்லை',
+    finderStateNoMatch: 'பட்டியலில் நேரடி மாதிரி கிடைக்கவில்லை',
+    finderSurfaceDisclaimer: 'சுவர் உறுதிப்பாடு அறிவிப்பு: மவுண்ட்டை பொருத்துவதற்கு முன் சுவர் வகை (செங்கல்/கான்கிரீட்) அல்லது மேசையின் வலிமையை உறுதிப்படுத்த வேண்டும்.',
+    finderNoMatchHelp: 'தேர்ந்தெடுத்த அனைத்து தேவைகளுக்கும் நேரடி மாதிரி இல்லை. தனிப்பயன் தயாரிப்பு குறித்து எங்கள் விற்பனை மேசையுடன் ஆலோசிக்கவும்.',
     
     // Product Card
     cardCode: 'மாதிரி குறிப்பு',
@@ -192,7 +289,7 @@ export const i18nData = {
     detailDimensionsTab: 'அளவுகள் பார்க்க',
     detailIncludedTab: 'உள்ளடக்கிய பாகங்கள்',
     detailInstallationTab: 'நிறுவல் மற்றும் ஆதரவு',
-    detailConceptBtn: '3D கருத்து மாதிரியைத் திறக்கவும்',
+    detailConceptBtn: '3D கருத்து முன்னோட்டத்தைத் திறக்கவும் ↗',
     detailPriceOnRequest: 'விலை கோரிக்கையின் பேரில் வழங்கப்படும் (மொத்த மற்றும் சில்லறை)',
     detailAskCompatibility: 'பொருந்துமா என்று கேட்கவும்',
     detailAwaitingMeasurements: 'தயாரிப்பாளர் வரைபட உறுதிப்படுத்தலுக்காக தொழில்நுட்ப அளவுகள் காத்திருக்கின்றன.',
@@ -209,16 +306,19 @@ export const i18nData = {
     compareClose: 'மூடுக',
     
     // RFQ Modal & Destination
-    rfqTitle: 'விலைப்பட்டியல் / பொருந்துதல் கோரிக்கை',
-    rfqSubtitle: 'ரிச்சி தெரு விற்பனை மேசைக்கு நேரடி கோரிக்கை.',
+    rfqTitle: 'விலைப்பட்டியல் / தொழில்நுட்ப பொருந்துதல் கோரிக்கை',
+    rfqSubtitle: 'உறுதிப்படுத்தப்பட்ட விற்பனை மேசை: ரிச்சி தெரு காட்சியகம் (+91 98408 17220, ஆதாரம்: ஜெனிபாஸ் கிளையன்ட் கோப்பு).',
     rfqNameLabel: 'முழு பெயர் *',
     rfqPhoneLabel: 'மொபைல் / வாட்ஸ்அப் எண் *',
     rfqCompanyLabel: 'நிறுவனம் அல்லது கடை பெயர்',
     rfqQtyLabel: 'தேவைப்படும் எண்ணிக்கை',
     rfqCityLabel: 'நகரம் / டெலிவரி இடம்',
     rfqQuestionLabel: 'டிவி மாதிரி அல்லது ஏதேனும் கேள்விகள்',
-    rfqSubmitWhatsApp: 'வாட்ஸ்அப் செய்தி வரைவை உருவாக்கவும்',
+    rfqSubmitWhatsApp: 'வாட்ஸ்அப்பில் விசாரணையை மதிப்பாய்வு செய்யவும் ↗',
     rfqCancel: 'ரத்து செய்',
-    rfqNotice: 'இதனை சமர்ப்பிக்கும் போது எங்கள் வாட்ஸ்அப் எண்ணிற்கு (+91 98408 17220) அனுப்புவதற்கான செய்தி வரைவு உருவாக்கப்படும்.'
+    rfqNotice: 'இதனை சமர்ப்பிக்கும் போது எங்கள் வாட்ஸ்அப் விற்பனை மேசைக்கு (+91 98408 17220) அனுப்புவதற்கான செய்தி வரைவு உருவாக்கப்படும். தானாக எந்த ஆர்டரும் முடிவடையாது.',
+    rfqCopyDraft: 'செய்தி வரைவை நகலெடு',
+    rfqDraftCopied: 'செய்தி வரைவு நகலெடுக்கப்பட்டது!',
+    rfqBlockedNotice: 'வாட்ஸ்அப் தானாக திறக்கப்படவில்லை எனில், நேரடி இணைப்பை கிளிக் செய்யவும் அல்லது செய்தி வரைவை நகலெடுக்கவும்:'
   }
 };

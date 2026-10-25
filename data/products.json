@@ -22,28 +22,28 @@
     "specifications": {
       "screenSize": {
         "value": "14\" - 32\"",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "vesa": {
         "value": "75x75, 100x100, 200x200 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "maxLoad": {
         "value": "25 kg / 55 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "wallDistance": {
         "value": "20 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "motion": {
         "value": "Fixed",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "dimensions": {
         "value": null,
@@ -56,19 +56,13 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": "25 kg / 55 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
       "confirmed": [
-        "Main mounting bracket assembly",
-        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+        "Primary mounting bracket / arm assembly (catalogue design)"
       ],
-      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
     },
     "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
     "guideUrl": null,
@@ -83,7 +77,23 @@
       "Primary mounting bracket / arm assembly (catalogue design)"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true
   },
   {
     "id": "JF-FX55",
@@ -108,28 +118,28 @@
     "specifications": {
       "screenSize": {
         "value": "32\" - 55\"",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "vesa": {
         "value": "200x200 up to 400x400 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "maxLoad": {
         "value": "45 kg / 99 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "wallDistance": {
         "value": "25 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "motion": {
         "value": "Fixed",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "dimensions": {
         "value": null,
@@ -142,19 +152,13 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": "45 kg / 99 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
       "confirmed": [
-        "Main mounting bracket assembly",
-        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+        "Primary mounting bracket / arm assembly (catalogue design)"
       ],
-      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
     },
     "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
     "guideUrl": null,
@@ -169,7 +173,23 @@
       "Primary mounting bracket / arm assembly (catalogue design)"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true
   },
   {
     "id": "JF-FX75",
@@ -194,28 +214,28 @@
     "specifications": {
       "screenSize": {
         "value": "43\" - 75\"",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "vesa": {
         "value": "200x200 up to 600x400 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "maxLoad": {
         "value": "65 kg / 143 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "wallDistance": {
         "value": "28 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "motion": {
         "value": "Fixed",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "dimensions": {
         "value": null,
@@ -228,19 +248,13 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": "65 kg / 143 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
       "confirmed": [
-        "Main mounting bracket assembly",
-        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+        "Primary mounting bracket / arm assembly (catalogue design)"
       ],
-      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
     },
     "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
     "guideUrl": null,
@@ -255,7 +269,23 @@
       "Primary mounting bracket / arm assembly (catalogue design)"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true
   },
   {
     "id": "JF-TL43",
@@ -280,28 +310,28 @@
     "specifications": {
       "screenSize": {
         "value": "26\" - 43\"",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "vesa": {
         "value": "100x100 to 200x200 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "maxLoad": {
         "value": "35 kg / 77 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "wallDistance": {
         "value": "45 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "motion": {
         "value": "Tilt (-12° to +5°)",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "dimensions": {
         "value": null,
@@ -314,19 +344,13 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": "35 kg / 77 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
       "confirmed": [
-        "Main mounting bracket assembly",
-        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+        "Primary mounting bracket / arm assembly (catalogue design)"
       ],
-      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
     },
     "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
     "guideUrl": null,
@@ -341,7 +365,23 @@
       "Primary mounting bracket / arm assembly (catalogue design)"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true
   },
   {
     "id": "JF-TL65",
@@ -366,28 +406,28 @@
     "specifications": {
       "screenSize": {
         "value": "32\" - 65\"",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "vesa": {
         "value": "200x200 to 400x400 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "maxLoad": {
         "value": "50 kg / 110 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "wallDistance": {
         "value": "53 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "motion": {
         "value": "Tilt (-15° to +5°)",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "dimensions": {
         "value": null,
@@ -400,19 +440,13 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": "50 kg / 110 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
       "confirmed": [
-        "Main mounting bracket assembly",
-        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+        "Primary mounting bracket / arm assembly (catalogue design)"
       ],
-      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
     },
     "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
     "guideUrl": null,
@@ -427,7 +461,23 @@
       "Primary mounting bracket / arm assembly (catalogue design)"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true
   },
   {
     "id": "JF-TL85",
@@ -452,28 +502,28 @@
     "specifications": {
       "screenSize": {
         "value": "55\" - 85\"",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "vesa": {
         "value": "300x300 to 800x400 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "maxLoad": {
         "value": "75 kg / 165 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "wallDistance": {
         "value": "65 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "motion": {
         "value": "Tilt (-15° to +5°)",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "dimensions": {
         "value": null,
@@ -486,19 +536,13 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": "75 kg / 165 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
       "confirmed": [
-        "Main mounting bracket assembly",
-        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+        "Primary mounting bracket / arm assembly (catalogue design)"
       ],
-      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
     },
     "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
     "guideUrl": null,
@@ -513,7 +557,23 @@
       "Primary mounting bracket / arm assembly (catalogue design)"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true
   },
   {
     "id": "JF-FM32-S",
@@ -538,28 +598,28 @@
     "specifications": {
       "screenSize": {
         "value": "17\" - 42\"",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "vesa": {
         "value": "75x75, 100x100, 200x200 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "maxLoad": {
         "value": "25 kg / 55 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "wallDistance": {
         "value": "60 mm - 380 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "motion": {
         "value": "Swivel ±90°, Tilt ±15°",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "dimensions": {
         "value": null,
@@ -572,19 +632,13 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": "25 kg / 55 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
       "confirmed": [
-        "Main mounting bracket assembly",
-        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+        "Primary mounting bracket / arm assembly (catalogue design)"
       ],
-      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
     },
     "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
     "guideUrl": null,
@@ -599,7 +653,23 @@
       "Primary mounting bracket / arm assembly (catalogue design)"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true
   },
   {
     "id": "JF-FM55-D",
@@ -624,28 +694,28 @@
     "specifications": {
       "screenSize": {
         "value": "32\" - 65\"",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "vesa": {
         "value": "200x200 to 400x400 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "maxLoad": {
         "value": "45 kg / 99 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "wallDistance": {
         "value": "70 mm - 460 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "motion": {
         "value": "Swivel ±60°, Tilt ±15°, Level ±3°",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "dimensions": {
         "value": null,
@@ -658,19 +728,13 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": "45 kg / 99 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
       "confirmed": [
-        "Main mounting bracket assembly",
-        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+        "Primary mounting bracket / arm assembly (catalogue design)"
       ],
-      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
     },
     "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
     "guideUrl": null,
@@ -685,7 +749,23 @@
       "Primary mounting bracket / arm assembly (catalogue design)"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true
   },
   {
     "id": "JF-FM75-HD",
@@ -710,28 +790,28 @@
     "specifications": {
       "screenSize": {
         "value": "50\" - 85\"",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "vesa": {
         "value": "200x200 to 600x400 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "maxLoad": {
         "value": "65 kg / 143 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "wallDistance": {
         "value": "80 mm - 520 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "motion": {
         "value": "Swivel ±60°, Tilt ±15°",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "dimensions": {
         "value": null,
@@ -744,19 +824,13 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": "65 kg / 143 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
       "confirmed": [
-        "Main mounting bracket assembly",
-        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+        "Primary mounting bracket / arm assembly (catalogue design)"
       ],
-      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
     },
     "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
     "guideUrl": null,
@@ -771,7 +845,23 @@
       "Primary mounting bracket / arm assembly (catalogue design)"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true
   },
   {
     "id": "JF-FM100-PRO",
@@ -796,28 +886,28 @@
     "specifications": {
       "screenSize": {
         "value": "65\" - 100\"",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "vesa": {
         "value": "300x300 to 800x600 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "maxLoad": {
         "value": "90 kg / 198 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "wallDistance": {
         "value": "90 mm - 650 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "motion": {
         "value": "Swivel ±45°, Tilt ±15°",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "dimensions": {
         "value": null,
@@ -830,19 +920,13 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": "90 kg / 198 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
       "confirmed": [
-        "Main mounting bracket assembly",
-        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+        "Primary mounting bracket / arm assembly (catalogue design)"
       ],
-      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
     },
     "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
     "guideUrl": null,
@@ -857,7 +941,23 @@
       "Primary mounting bracket / arm assembly (catalogue design)"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true
   },
   {
     "id": "JF-CL55-S",
@@ -882,28 +982,28 @@
     "specifications": {
       "screenSize": {
         "value": "32\" - 55\"",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "vesa": {
         "value": "100x100 to 400x400 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "maxLoad": {
         "value": "50 kg / 110 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "wallDistance": {
         "value": "600 mm - 1000 mm drop",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "motion": {
         "value": "360° Swivel, -15° Tilt",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "dimensions": {
         "value": null,
@@ -916,19 +1016,13 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": "50 kg / 110 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
       "confirmed": [
-        "Main mounting bracket assembly",
-        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+        "Primary mounting bracket / arm assembly (catalogue design)"
       ],
-      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
     },
     "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
     "guideUrl": null,
@@ -943,7 +1037,23 @@
       "Primary mounting bracket / arm assembly (catalogue design)"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true
   },
   {
     "id": "JF-CL65-D",
@@ -968,28 +1078,28 @@
     "specifications": {
       "screenSize": {
         "value": "40\" - 65\"",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "vesa": {
         "value": "200x200 to 600x400 mm per side",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "maxLoad": {
         "value": "90 kg total (45 kg per side)",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "wallDistance": {
         "value": "1000 mm - 1500 mm drop",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "motion": {
         "value": "Dual display 360° rotation",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "dimensions": {
         "value": null,
@@ -1002,19 +1112,13 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": "90 kg total (45 kg per side)",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
       "confirmed": [
-        "Main mounting bracket assembly",
-        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+        "Primary mounting bracket / arm assembly (catalogue design)"
       ],
-      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
     },
     "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
     "guideUrl": null,
@@ -1029,7 +1133,23 @@
       "Primary mounting bracket / arm assembly (catalogue design)"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true
   },
   {
     "id": "JF-MA-01",
@@ -1054,28 +1174,28 @@
     "specifications": {
       "screenSize": {
         "value": "17\" - 32\"",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "vesa": {
         "value": "75x75, 100x100 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "maxLoad": {
         "value": "9 kg / 19.8 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "wallDistance": {
         "value": "Desk clamp / Grommet",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "motion": {
         "value": "360° Rotation (Portrait/Landscape), ±90° Swivel, ±45° Tilt",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "dimensions": {
         "value": null,
@@ -1088,19 +1208,13 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": "9 kg / 19.8 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
       "confirmed": [
-        "Main mounting bracket assembly",
-        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+        "Primary mounting bracket / arm assembly (catalogue design)"
       ],
-      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
     },
     "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
     "guideUrl": null,
@@ -1115,7 +1229,23 @@
       "Primary mounting bracket / arm assembly (catalogue design)"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true
   },
   {
     "id": "JF-MA-02",
@@ -1140,28 +1270,28 @@
     "specifications": {
       "screenSize": {
         "value": "17\" - 32\" (x2)",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "vesa": {
         "value": "75x75, 100x100 mm each",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "maxLoad": {
         "value": "9 kg per arm (18 kg total)",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "wallDistance": {
         "value": "Desk clamp / Grommet",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "motion": {
         "value": "Dual independent 360° pivot",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "dimensions": {
         "value": null,
@@ -1174,19 +1304,13 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": "9 kg per arm (18 kg total)",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
       "confirmed": [
-        "Main mounting bracket assembly",
-        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+        "Primary mounting bracket / arm assembly (catalogue design)"
       ],
-      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
     },
     "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
     "guideUrl": null,
@@ -1201,7 +1325,23 @@
       "Primary mounting bracket / arm assembly (catalogue design)"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true
   },
   {
     "id": "JF-PR-ADJ",
@@ -1226,28 +1366,28 @@
     "specifications": {
       "screenSize": {
         "value": "Universal projector fitting",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "vesa": {
         "value": "Universal 4-arm spider fitting (up to 380mm dia)",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "maxLoad": {
         "value": "20 kg / 44 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "wallDistance": {
         "value": "430 mm - 650 mm (Extendable to 1.2m)",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "motion": {
         "value": "360° Rotation, ±15° Tilt & Roll",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "dimensions": {
         "value": null,
@@ -1260,19 +1400,13 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": "20 kg / 44 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
       "confirmed": [
-        "Main mounting bracket assembly",
-        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+        "Primary mounting bracket / arm assembly (catalogue design)"
       ],
-      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
     },
     "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
     "guideUrl": null,
@@ -1287,7 +1421,23 @@
       "Primary mounting bracket / arm assembly (catalogue design)"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true
   },
   {
     "id": "JF-SPK-01",
@@ -1312,28 +1462,28 @@
     "specifications": {
       "screenSize": {
         "value": "Bookshelf & Studio Speakers",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "vesa": {
         "value": "Universal clamping plate",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "maxLoad": {
         "value": "15 kg per bracket",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "wallDistance": {
         "value": "140 mm from wall",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "motion": {
         "value": "±60° Swivel, ±10° Tilt",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "dimensions": {
         "value": null,
@@ -1346,19 +1496,13 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": "15 kg per bracket",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
       "confirmed": [
-        "Main mounting bracket assembly",
-        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+        "Primary mounting bracket / arm assembly (catalogue design)"
       ],
-      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
     },
     "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
     "guideUrl": null,
@@ -1373,7 +1517,23 @@
       "Primary mounting bracket / arm assembly (catalogue design)"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true
   },
   {
     "id": "JF-AC-STD",
@@ -1398,28 +1558,28 @@
     "specifications": {
       "screenSize": {
         "value": "1.0 Ton to 2.5 Ton AC units",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "vesa": {
         "value": "Universal slot alignment",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "maxLoad": {
         "value": "180 kg / 396 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "wallDistance": {
         "value": "450 mm bracket length",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "motion": {
         "value": "Rigid Wall Mount",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "dimensions": {
         "value": null,
@@ -1432,19 +1592,13 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": "180 kg / 396 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
       "confirmed": [
-        "Main mounting bracket assembly",
-        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+        "Primary mounting bracket / arm assembly (catalogue design)"
       ],
-      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
     },
     "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
     "guideUrl": null,
@@ -1459,7 +1613,23 @@
       "Primary mounting bracket / arm assembly (catalogue design)"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true
   },
   {
     "id": "JF-MW-01",
@@ -1484,28 +1654,28 @@
     "specifications": {
       "screenSize": {
         "value": "20L to 40L Microwave Ovens",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "vesa": {
         "value": "Universal base slots",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "maxLoad": {
         "value": "40 kg / 88 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "wallDistance": {
         "value": "Extendable 300 mm to 465 mm",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "motion": {
         "value": "Extendable depth",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
+        "status": "unconfirmed_planning_estimate",
+        "source": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)"
       },
       "dimensions": {
         "value": null,
@@ -1518,19 +1688,13 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": "40 kg / 88 lbs",
-        "status": "catalogue_observed",
-        "source": "Jenefas Catalogue 2026"
       }
     },
     "includedParts": {
       "confirmed": [
-        "Main mounting bracket assembly",
-        "Standard installation fastener set (screws, wall plugs, TV bolts)"
+        "Primary mounting bracket / arm assembly (catalogue design)"
       ],
-      "unconfirmed": "Specific screw thread sizes and spacer combinations depend on display model"
+      "unconfirmed": "Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included."
     },
     "installationRequirements": "Solid brick, concrete or wood-stud wall. Check wall composition prior to installation.",
     "guideUrl": null,
@@ -1545,7 +1709,23 @@
       "Primary mounting bracket / arm assembly (catalogue design)"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "internal_planning_taxonomy",
+    "sourceReference": "Internal planning taxonomy (docs/PRODUCT_TAXONOMY.md)",
+    "supportedAttributes": [
+      "internal_platform_id",
+      "product_category_archetype",
+      "descriptive_title"
+    ],
+    "unconfirmedAttributes": [
+      "certified_vesa_patterns",
+      "certified_max_load_kg",
+      "certified_screen_size_range",
+      "wall_distance_mm",
+      "hardware_fastener_bom",
+      "carton_packaging"
+    ],
+    "publicVisibility": true
   },
   {
     "id": "JF-TT28",
@@ -1571,12 +1751,12 @@
       "screenSize": {
         "value": "32\" - 55\"",
         "status": "catalogue_observed",
-        "source": "Jenefas Catalogue Page 7"
+        "source": "Jenefas Catalogue Page 7 scan"
       },
       "vesa": {
         "value": "200x200 to 400x400 mm",
-        "status": "unconfirmed",
-        "source": "Catalogue proportion estimate - awaiting manufacturer confirmation"
+        "status": "unconfirmed_estimate",
+        "source": "Catalogue illustration proportion estimate - awaiting manufacturer verification"
       },
       "maxLoad": {
         "value": null,
@@ -1587,12 +1767,12 @@
       "wallDistance": {
         "value": "Freestanding",
         "status": "catalogue_observed",
-        "source": "Catalogue Page 7"
+        "source": "Jenefas Catalogue Page 7 scan"
       },
       "motion": {
         "value": "Fixed Direct Rail",
         "status": "catalogue_observed",
-        "source": "Catalogue Page 7"
+        "source": "Jenefas Catalogue Page 7 scan"
       },
       "dimensions": {
         "value": null,
@@ -1605,12 +1785,6 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": null,
-        "unit": "kg",
-        "status": "pending",
-        "source": null
       }
     },
     "includedParts": {
@@ -1619,7 +1793,7 @@
         "Vertical column support",
         "Dual direct mounting rails"
       ],
-      "unconfirmed": "Joint fasteners, base-to-post connection bolts, TV mounting screws awaiting manufacturer confirmation"
+      "unconfirmed": "Joint fasteners, base-to-post connection bolts, and TV mounting hardware await manufacturer BOM confirmation."
     },
     "installationRequirements": "Stable, level tabletop surface capable of supporting combined stand and TV weight.",
     "guideUrl": "demos/product-28/",
@@ -1642,7 +1816,22 @@
       "Twin direct horizontal mounting rails"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "manufacturer_catalogue_scan",
+    "sourceReference": "Jenefas Catalogue Page 7 scan (demos/product-28/assets/page_7.png)",
+    "supportedAttributes": [
+      "manufacturer_catalogue_code",
+      "tabletop_form_factor",
+      "visible_structural_components",
+      "general_display_stand_archetype"
+    ],
+    "unconfirmedAttributes": [
+      "exact_dimensions_mm",
+      "certified_weight_limit_kg",
+      "supported_vesa_patterns",
+      "hardware_fastener_bom"
+    ],
+    "publicVisibility": true
   },
   {
     "id": "JF-TT29",
@@ -1668,12 +1857,12 @@
       "screenSize": {
         "value": "32\" - 55\"",
         "status": "catalogue_observed",
-        "source": "Jenefas Catalogue Page 7"
+        "source": "Jenefas Catalogue Page 7 scan"
       },
       "vesa": {
         "value": "200x200 to 400x400 mm",
-        "status": "unconfirmed",
-        "source": "Catalogue proportion estimate - awaiting manufacturer confirmation"
+        "status": "unconfirmed_estimate",
+        "source": "Catalogue illustration proportion estimate - awaiting manufacturer verification"
       },
       "maxLoad": {
         "value": null,
@@ -1684,12 +1873,12 @@
       "wallDistance": {
         "value": "Freestanding",
         "status": "catalogue_observed",
-        "source": "Catalogue Page 7"
+        "source": "Jenefas Catalogue Page 7 scan"
       },
       "motion": {
         "value": "Fixed Direct Rail",
         "status": "catalogue_observed",
-        "source": "Catalogue Page 7"
+        "source": "Jenefas Catalogue Page 7 scan"
       },
       "dimensions": {
         "value": null,
@@ -1702,21 +1891,15 @@
         "unit": "kg",
         "status": "pending",
         "source": null
-      },
-      "weightLimit": {
-        "value": null,
-        "unit": "kg",
-        "status": "pending",
-        "source": null
       }
     },
     "includedParts": {
       "confirmed": [
-        "V-shaped base frame (proportions from catalogue Page 7)",
+        "V-profile angled steel base legs (proportions from catalogue Page 7)",
         "Vertical column support",
         "Dual direct mounting rails"
       ],
-      "unconfirmed": "Joint fasteners, leg joining bolts, TV mounting screws awaiting manufacturer confirmation"
+      "unconfirmed": "Joint fasteners, base-to-post connection bolts, and TV mounting hardware await manufacturer BOM confirmation."
     },
     "installationRequirements": "Stable, level tabletop surface with minimum depth matching base spread.",
     "guideUrl": "demos/product-29/",
@@ -1739,6 +1922,21 @@
       "Twin direct horizontal mounting rails"
     ],
     "confirmedPackageContents": null,
-    "packageContentsStatus": "awaiting_manufacturer_bom"
+    "packageContentsStatus": "awaiting_manufacturer_bom",
+    "sourceType": "manufacturer_catalogue_scan",
+    "sourceReference": "Jenefas Catalogue Page 7 scan (demos/product-28/assets/page_7.png)",
+    "supportedAttributes": [
+      "manufacturer_catalogue_code",
+      "tabletop_form_factor",
+      "visible_structural_components",
+      "general_display_stand_archetype"
+    ],
+    "unconfirmedAttributes": [
+      "exact_dimensions_mm",
+      "certified_weight_limit_kg",
+      "supported_vesa_patterns",
+      "hardware_fastener_bom"
+    ],
+    "publicVisibility": true
   }
 ]

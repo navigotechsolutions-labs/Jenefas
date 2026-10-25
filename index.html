@@ -141,95 +141,87 @@
   <div class="brand-divider"><span>TV MOUNTS</span><span>TABLE-TOP STANDS</span><span>MONITOR ARMS</span><span>MOUNTING ACCESSORIES</span></div>
 
   <!-- Guided Product Finder -->
+    <!-- Guided Product Finder -->
   <section id="mount-finder" class="py-12 bg-slate-900 border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 p-6 md:p-8 rounded-2xl border border-slate-800 shadow-xl">
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
           <div>
             <div class="flex items-center gap-2 text-accent-400 text-xs font-bold uppercase tracking-wider">
-              <i data-lucide="sparkles" class="w-4 h-4"></i> <span data-i18n="finderEyebrow">Interactive Selection Tool</span>
+              <i data-lucide="sparkles" class="w-4 h-4"></i> <span data-i18n="finderEyebrow">Category-Aware Selection Tool</span>
             </div>
-            <h2 class="text-2xl md:text-3xl font-display font-bold text-white mt-1" data-i18n="finderTitle">Find the Right Mount for Your Display</h2>
-            <p class="text-sm text-slate-400 mt-1" data-i18n="finderDesc">Answer four quick questions. We evaluate only against confirmed manufacturer specifications and highlight where verification is pending.</p>
+            <h2 id="finder-title" class="text-2xl md:text-3xl font-display font-bold text-white mt-1" data-i18n="finderTitle">Find the Right Mount for Your Display</h2>
+            <p class="text-sm text-slate-400 mt-1" data-i18n="finderDesc">Select your installation category and specifications. We evaluate only against confirmed manufacturer data and state clearly where physical verification is required.</p>
           </div>
           <button id="guidedResetBtn" onclick="resetGuidedFinder()" class="text-xs text-slate-400 hover:text-white underline self-start md:self-auto" data-i18n="finderReset">Reset Finder</button>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <!-- Question 1: Mounting Surface -->
-          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
-            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2" data-i18n="finderStep1">
-              1. Mounting Location
-            </label>
-            <select id="guidedSurface" onchange="runGuidedFinder()" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500">
-              <option value="">All Locations</option>
-              <option value="wall">Wall Mount (Brick / Concrete)</option>
-              <option value="ceiling">Ceiling Drop / Truss</option>
-              <option value="desk">Desk Clamp / Grommet</option>
-              <option value="tabletop">Tabletop Stand (Freestanding)</option>
-            </select>
-          </div>
+        <!-- Category switch notice banner -->
+        <div id="finderSwitchNotice" class="hidden mb-4 p-3 rounded-xl bg-blue-500/10 border border-blue-500/30 text-blue-300 text-xs flex items-center justify-between">
+          <span id="finderSwitchNoticeText" data-i18n="finderCategorySwitchNotice">Category updated: cleared category-specific preferences while preserving your display weight and VESA answers.</span>
+          <button type="button" onclick="document.getElementById('finderSwitchNotice').classList.add('hidden')" class="text-blue-400 hover:text-white ml-2 text-sm">✕</button>
+        </div>
 
-          <!-- Question 2: Screen Size -->
-          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
-            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2" data-i18n="finderStep2">
-              2. Display Screen Size
+        <!-- Question 1: Category Selection Dropdown and Tabs -->
+        <div class="mb-5 bg-slate-900/90 p-4 rounded-xl border border-slate-800">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-2">
+            <label for="guidedSurface" class="block text-xs font-bold uppercase tracking-wider text-slate-300" data-i18n="finderCatLabel">
+              1. Select Product Category / Mounting Surface
             </label>
-            <select id="guidedSize" onchange="runGuidedFinder()" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500">
-              <option value="">Any Screen Size</option>
-              <option value="14-32">14" - 32" (Small)</option>
-              <option value="32-55">32" - 55" (Standard)</option>
-              <option value="55-75">55" - 75" (Large 4K)</option>
-              <option value="75+">75" - 100"+ (Commercial)</option>
-            </select>
+            <span class="text-[11px] text-slate-400">Step 1 of 4</span>
           </div>
+          <select id="guidedSurface" onchange="handleCategoryChange(this.value)" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 text-xs text-white font-medium focus:outline-none focus:border-accent-500">
+            <option value="wall" data-i18n="finderCatWall">TV Wall Mount (Brick / Concrete / Stud)</option>
+            <option value="ceiling" data-i18n="finderCatCeiling">Ceiling Drop Mount (Overhead / Truss)</option>
+            <option value="tabletop" data-i18n="finderCatTabletop">Table-Top TV Stand (Freestanding)</option>
+            <option value="desk" data-i18n="finderCatDesk">Desk Clamp / Ergonomic Monitor Arm</option>
+            <option value="other" data-i18n="finderCatOther">Other Utility Brackets (Projector / Speaker / Appliance)</option>
+          </select>
+        </div>
 
-          <!-- Question 3: Estimated TV Weight -->
-          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
-            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2" data-i18n="finderStep3">
-              3. Estimated Display Weight
-            </label>
-            <select id="guidedWeight" onchange="runGuidedFinder()" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500">
-              <option value="">Any Weight</option>
-              <option value="under30">Under 30 kg (Standard LED)</option>
-              <option value="30to50">30 kg – 50 kg (Large / Heavy LED)</option>
-              <option value="over50">Over 50 kg (Commercial Display)</option>
-            </select>
-          </div>
+        <!-- Dynamic Questions Container -->
+        <div id="guidedDynamicQuestions" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Rendered dynamically by renderFinderQuestions() -->
+        </div>
 
-          <!-- Question 4: Motion Style -->
-          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800">
-            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2" data-i18n="finderStep4">
-              4. Desired Movement
-            </label>
-            <select id="guidedMotion" onchange="runGuidedFinder()" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500">
-              <option value="">Any Movement Style</option>
-              <option value="fixed">Fixed (Flat against surface)</option>
-              <option value="tilt">Tilt (Glare reduction ±15°)</option>
-              <option value="motion">Full-Motion Swivel & Extend</option>
-            </select>
-          </div>
+        <!-- Surface Warning for Desk Clamps -->
+        <div id="finderDeskWarningBox" class="hidden mt-4 p-3.5 rounded-xl bg-amber-500/10 border border-amber-500/30 text-amber-300 text-xs leading-relaxed flex items-start gap-2.5">
+          <i data-lucide="alert-triangle" class="w-4 h-4 text-amber-400 shrink-0 mt-0.5"></i>
+          <span data-i18n="finderDeskWarning">Surface Safety Notice: Desk clamps require solid wood, steel, or reinforced desk edges. Not recommended for tempered glass or hollow honeycomb cardboard desks without structural reinforcement.</span>
         </div>
 
         <!-- Guided Outcome Box -->
-        <div id="guidedOutcomeContainer" class="mt-5 p-4 rounded-xl bg-slate-950/80 border border-slate-800 flex flex-col md:flex-row md:items-center justify-between gap-3">
-          <div>
-            <div id="guidedOutcomeBadge" class="inline-block text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-1">
-              Matches available verified criteria
+        <div id="guidedOutcomeContainer" class="mt-6 p-5 rounded-2xl bg-slate-950 border border-slate-800 space-y-4">
+          <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 border-b border-slate-800/80 pb-4">
+            <div>
+              <div id="guidedOutcomeBadge" class="inline-block text-xs font-bold px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-1.5">
+                Matches available verified criteria
+              </div>
+              <div id="guidedOutcomeText" class="text-xs text-slate-300 font-medium">
+                Select your display parameters above to evaluate matching mounting systems.
+              </div>
             </div>
-            <div id="guidedOutcomeText" class="text-xs text-slate-300">
-              Select answers above to shortlist mounts matching your display.
+            <div class="flex items-center gap-2.5 self-start md:self-auto">
+              <button onclick="applyFinderFilter()" class="bg-accent-500 hover:bg-accent-600 text-white font-bold text-xs px-4 py-2 rounded-lg transition shadow-md shadow-accent-500/20">
+                View Evaluated Catalogue ↓
+              </button>
+              <button onclick="openGuidedRfq()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold px-3.5 py-2 rounded-lg border border-slate-700 flex items-center gap-1.5">
+                <span>💬</span> Ask Sales Desk
+              </button>
             </div>
           </div>
-          <div class="flex items-center gap-3">
-            <button onclick="applyFinderFilter()" class="bg-accent-500 hover:bg-accent-600 text-white font-bold text-xs px-4 py-2 rounded-lg transition">
-              View Filtered Catalogue Below ↓
-            </button>
-            <button onclick="openGuidedRfq()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold px-3 py-2 rounded-lg border border-slate-700">
-              Ask Compatibility Desk
-            </button>
+
+          <!-- Itemized Requirement Checklist -->
+          <div id="finderRequirementsAudit" class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs">
+            <!-- Populated dynamically with checked requirements, pass/fail/unknown status -->
+          </div>
+
+          <div class="text-[11px] text-slate-400 flex items-center gap-1.5">
+            <span class="text-amber-400">ℹ</span>
+            <span data-i18n="finderSurfaceDisclaimer">Surface Suitability Notice: Wall composition (concrete, brick, timber stud) or tabletop strength must be physically confirmed before final mounting.</span>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -242,7 +234,7 @@
       <i data-lucide="info" class="w-5 h-5 text-amber-400 shrink-0 mt-0.5"></i>
       <div class="text-xs leading-relaxed">
         <strong class="font-bold text-white block mb-0.5" data-i18n="partialNoticeTitle">Curated Digital Catalogue</strong>
-        <span data-i18n="partialNoticeText">This digital catalogue highlights 20 selected mounting systems from our 90+ model manufacturing range. For unlisted models or wholesale bulk orders, contact our Ritchie Street sales desk directly.</span>
+        <span data-i18n="partialNoticeText">This digital catalogue showcases selected mounting and stand systems from the Jenefas product range. For unlisted models, specialized brackets, or wholesale bulk inquiries, contact our Ritchie Street sales desk directly.</span>
       </div>
     </div>
 
@@ -470,14 +462,30 @@
           <textarea id="rfqNotes" rows="2" placeholder="Required delivery timeline or special VESA requirements..." class="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white focus:border-accent-500 focus:outline-none"></textarea>
         </div>
 
+                <!-- Blocked Popup & Recovery Area -->
+        <div id="rfqRecoveryArea" class="hidden p-3 bg-slate-950 rounded-lg border border-slate-800 space-y-2">
+          <div class="text-[11px] text-amber-300 font-semibold" data-i18n="rfqBlockedNotice">
+            If WhatsApp did not launch automatically, click the direct link below or copy the message text:
+          </div>
+          <textarea id="rfqDraftPreview" readonly rows="4" class="w-full bg-slate-900 border border-slate-700 rounded p-2 text-[11px] text-slate-200 font-mono"></textarea>
+          <div class="flex gap-2">
+            <a id="rfqDirectLink" href="#" target="_blank" class="flex-1 text-center bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-1.5 px-3 rounded text-xs transition">
+              Open WhatsApp Directly ↗
+            </a>
+            <button type="button" onclick="copyRfqDraft()" id="rfqCopyBtn" class="bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold py-1.5 px-3 rounded text-xs border border-slate-700">
+              Copy Draft
+            </button>
+          </div>
+        </div>
+
         <div class="p-3 bg-slate-950 rounded-lg border border-slate-800 text-[11px] text-slate-400 leading-relaxed">
           <strong class="text-slate-300 block mb-0.5">Enquiry Submission Notice:</strong>
-          Submitting prepares a structured message draft with your selected product and requirements to review and send to our verified WhatsApp sales desk (+91 98408 17220).
+          Submitting prepares a structured message draft with your selected product and requirements to review and send to our verified WhatsApp sales desk (+91 98408 17220). Zero orders or messages are sent automatically.
         </div>
 
         <div class="pt-2 flex gap-3">
           <button type="submit" id="rfqSubmitBtn" class="flex-1 bg-accent-500 hover:bg-accent-600 text-white font-bold py-2.5 rounded-lg transition shadow-md shadow-accent-500/20">
-            Prepare WhatsApp Draft
+            Review Enquiry in WhatsApp ↗
           </button>
           <button type="button" onclick="closeRfqModal()" class="px-4 py-2.5 bg-slate-800 hover:bg-slate-700 text-slate-300 font-semibold rounded-lg">
             Cancel
@@ -610,7 +618,26 @@
     let currentLang = 'en';
     let guidedFinderResults = [];
 
-    // I18N Data
+    // State for Category-Aware Guided Finder
+    let finderState = {
+      surface: 'wall', // 'wall', 'ceiling', 'tabletop', 'desk', 'other'
+      vesa: '',
+      weightKg: null,
+      weightUnknown: false,
+      motion: '',
+      sizeGroup: '',
+      model: '',
+      tabletopBase: '',
+      tabletopDepth: null,
+      deskThickness: null,
+      deskThicknessUnknown: false,
+      deskDisplays: 'single',
+      otherType: 'projector'
+    };
+
+    let previousCategory = 'wall';
+
+    // Comprehensive Bilingual Dictionary
     const i18n = {
       en: {
         languageLabel: 'Language',
@@ -621,15 +648,57 @@
         navContact: 'Contact',
         navQuote: 'Request a Quote',
         partialNoticeTitle: 'Curated Digital Catalogue',
-        partialNoticeText: 'This digital catalogue highlights 20 selected mounting systems from our 90+ model manufacturing range. For unlisted models or wholesale bulk orders, contact our Ritchie Street sales desk directly.',
-        finderEyebrow: 'Interactive Selection Tool',
+        partialNoticeText: 'This digital catalogue showcases selected mounting and stand systems from the Jenefas product range. For unlisted models, specialized brackets, or wholesale bulk inquiries, contact our Ritchie Street sales desk directly.',
+        finderEyebrow: 'Category-Aware Selection Tool',
         finderTitle: 'Find the Right Mount for Your Display',
-        finderDesc: 'Answer four quick questions. We evaluate only against confirmed manufacturer specifications and highlight where verification is pending.',
-        finderStep1: '1. Mounting Location',
-        finderStep2: '2. Display Screen Size',
-        finderStep3: '3. Estimated Display Weight',
-        finderStep4: '4. Desired Movement',
-        finderReset: 'Reset Finder'
+        finderDesc: 'Select your installation category and specifications. We evaluate only against confirmed manufacturer data and state clearly where physical verification is required.',
+        finderCatLabel: '1. Select Product Category / Mounting Surface',
+        finderCatWall: 'TV Wall Mount (Brick / Concrete / Stud)',
+        finderCatCeiling: 'Ceiling Drop Mount (Overhead / Truss)',
+        finderCatTabletop: 'Table-Top TV Stand (Freestanding)',
+        finderCatDesk: 'Desk Clamp / Ergonomic Monitor Arm',
+        finderCatOther: 'Other Utility Brackets (Projector / Speaker / Appliance)',
+        finderCategorySwitchNotice: 'Category updated: cleared category-specific preferences while preserving your display weight and VESA answers.',
+        finderVesaLabel: '2. VESA Mounting Pattern (mm)',
+        finderVesaHelp: 'How to find VESA: Check your TV manual or measure the horizontal × vertical distance between the 4 screw holes on the back of your TV (in mm).',
+        finderVesaSelect: 'Select VESA pattern...',
+        finderVesaUnknown: 'I don\'t know my VESA pattern',
+        finderWeightLabel: '3. Display Weight (Exact kg)',
+        finderWeightPlaceholder: 'e.g. 24',
+        finderWeightUnknown: 'I don\'t know my TV weight',
+        finderWeightHelp: 'Check manufacturer specification label on the rear panel of your TV (without table stand feet).',
+        finderScreenLabel: '4. Screen Diagonal (Inches, Supplementary)',
+        finderScreenAny: 'Any screen size (optional)',
+        finderScreenNotice: 'Supplementary guide only. VESA spacing and display weight govern actual mounting safety.',
+        finderModelLabel: '5. TV Brand & Model (Optional)',
+        finderModelPlaceholder: 'e.g. Sony Bravia 55X90L / Samsung Crystal 4K',
+        finderMovementLabel: 'Movement Preference',
+        finderMovementAny: 'Any / No Preference',
+        finderMovementFixed: 'Fixed (Flat against wall, slim profile)',
+        finderMovementTilt: 'Tilt (Anti-glare angle adjustment)',
+        finderMovementMotion: 'Full-Motion (Swivel left/right & extend)',
+        finderTabletopBase: 'Base Profile Preference',
+        finderTabletopBaseAny: 'Any Base Profile',
+        finderTabletopBaseRect: 'Flat Rectangular Plate (Product 28 archetype)',
+        finderTabletopBaseV: 'Angled V-Base Legs (Product 29 archetype)',
+        finderTabletopSurfaceDepth: 'Available Table Depth (mm, optional)',
+        finderDeskThickness: 'Desk Surface Thickness (mm)',
+        finderDeskDisplays: 'Number of Screens',
+        finderDeskSingle: 'Single Monitor Arm (JF-MA-01)',
+        finderDeskDual: 'Dual Monitor Arms (JF-MA-02)',
+        finderDeskWarning: 'Surface Safety Notice: Desk clamps require solid wood, steel, or reinforced desk edges. Not recommended for tempered glass or hollow honeycomb cardboard desks without structural reinforcement.',
+        finderOtherType: 'Utility Application Type',
+        finderOtherProjector: 'Universal Telescopic Projector Ceiling Mount',
+        finderOtherSpeaker: 'Heavy-Duty Speaker Wall Bracket Pair',
+        finderOtherAC: 'Split AC Outdoor Unit Heavy Stand Pair',
+        finderOtherMicrowave: 'Extendable Microwave Oven Wall Bracket Pair',
+        finderReset: 'Reset Finder',
+        finderStateMeets: 'Matches available verified criteria',
+        finderStateMoreInfo: 'More Information Required',
+        finderStateFails: 'Does not meet a checked requirement',
+        finderStateNoMatch: 'No confirmed match found in curated catalogue',
+        finderSurfaceDisclaimer: 'Surface Suitability Notice: Wall composition (concrete, brick, timber stud) or tabletop strength must be physically confirmed before final mounting.',
+        rfqBlockedNotice: 'If WhatsApp did not launch automatically, click the direct link below or copy the message text:'
       },
       ta: {
         languageLabel: 'மொழி',
@@ -640,15 +709,57 @@
         navContact: 'தொடர்பு',
         navQuote: 'விலைப்பட்டியல்',
         partialNoticeTitle: 'தேர்ந்தெடுக்கப்பட்ட டிஜிட்டல் பட்டியல்',
-        partialNoticeText: 'எங்களின் 90+ தயாரிப்பு வகைகளில் இருந்து 20 தேர்ந்தெடுக்கப்பட்ட மாதிரிகள் இங்கே காட்டப்பட்டுள்ளன. மற்ற மாதிரிகள் அல்லது மொத்த ஆர்டர்களுக்கு எங்களின் ரிச்சி தெரு விற்பனை மேசையை நேரடியாக தொடர்பு கொள்ளவும்.',
-        finderEyebrow: 'தேர்வு செய்யும் கருவி',
+        partialNoticeText: 'ஜெனிஃபாஸ் தயாரிப்பு வரிசையிலிருந்து தேர்ந்தெடுக்கப்பட்ட மவுண்ட்கள் மற்றும் ஸ்டாண்டுகள் இங்கே காட்டப்பட்டுள்ளன. பிற மாதிரிகள், பிரத்யேக பிராக்கெட்டுகள் அல்லது மொத்த ஆர்டர்களுக்கு எங்களின் ரிச்சி தெரு விற்பனை மேசையை நேரடியாக தொடர்பு கொள்ளவும்.',
+        finderEyebrow: 'வகைக்கேற்ற தேர்வு செய்யும் கருவி',
         finderTitle: 'உங்கள் டிவிக்கு ஏற்ற மவுண்ட்டை தேர்ந்தெடுக்கவும்',
-        finderDesc: 'நான்கு எளிய கேள்விகளுக்கு பதிலளிக்கவும். உறுதிப்படுத்தப்பட்ட அளவுகளுடன் மட்டுமே ஒப்பிடப்படுகிறது.',
-        finderStep1: '1. பொருத்தும் இடம்',
-        finderStep2: '2. திரை அளவு',
-        finderStep3: '3. டிவியின் உத்தேச எடை',
-        finderStep4: '4. தேவையான இயக்கம்',
-        finderReset: 'மீட்டமைக்க'
+        finderDesc: 'பொருத்தும் வகை மற்றும் அளவுகளைத் தேர்ந்தெடுக்கவும். உறுதிப்படுத்தப்பட்ட தரவுகளுடன் மட்டுமே ஒப்பிடப்பட்டு முடிவு வழங்கப்படும்.',
+        finderCatLabel: '1. பொருத்தும் இடம் / தயாரிப்பு வகையைத் தேர்ந்தெடுக்கவும்',
+        finderCatWall: 'டிவி சுவர் மவுண்ட் (செங்கல் / கான்கிரீட் / மரச்சட்டம்)',
+        finderCatCeiling: 'சீலிங் மவுண்ட் (மேற்கூரை அமைப்பு)',
+        finderCatTabletop: 'டேபிள் டாப் ஸ்டாண்ட் (மேஜை மீது வைப்பது)',
+        finderCatDesk: 'மேசை கிளாம்ப / மானிட்டர் ஆர்ம்',
+        finderCatOther: 'பிற சாதன பிராக்கெட்டுகள் (புரொஜெக்டர் / ஸ்பீக்கர் / ஏசி)',
+        finderCategorySwitchNotice: 'வகை மாற்றப்பட்டது: பொதுவான டிவி எடை மற்றும் VESA அளவுகளைத் தக்கவைத்து வகை சார்ந்த அமைப்புகள் மீட்டமைக்கப்பட்டன.',
+        finderVesaLabel: '2. VESA இடைவெளி அளவு (மிமீ)',
+        finderVesaHelp: 'VESA அளவை எவ்வாறு அறிவது: உங்கள் டிவி கையேட்டைப் பார்க்கவும் அல்லது டிவியின் பின்புறத்தில் உள்ள 4 திருகு துளைகளுக்கு இடையிலான கிடைமட்ட மற்றும் செங்குத்து தூரத்தை மில்லிமீட்டரில் அளவிடவும்.',
+        finderVesaSelect: 'VESA அளவைத் தேர்ந்தெடுக்கவும்...',
+        finderVesaUnknown: 'எனக்கு VESA அளவு தெரியவில்லை',
+        finderWeightLabel: '3. டிவியின் எடை (துல்லியமான கிலோகிராம்)',
+        finderWeightPlaceholder: 'எ.கா. 24',
+        finderWeightUnknown: 'எனக்கு சரியான எடை தெரியவில்லை',
+        finderWeightHelp: 'டிவியின் பின்புற அட்டையில் உள்ள விவரக்குறிப்பு லேபிளைப் பார்க்கவும் (மேஜை கால்கள் சேர்க்காமல்).',
+        finderScreenLabel: '4. திரை அளவு (அங்குலம், கூடுதல் வழிகாட்டி)',
+        finderScreenAny: 'அனைத்து திரை அளவுகள் (விருப்பத்தேர்வு)',
+        finderScreenNotice: 'இது கூடுதல் வழிகாட்டுதல் மட்டுமே. VESA அளவு மற்றும் டிவியின் எடையே பாதுகாப்பை தீர்மானிக்கிறது.',
+        finderModelLabel: '5. டிவி பிராண்ட் & மாடல் (விருப்பத்தேர்வு)',
+        finderModelPlaceholder: 'எ.கா. Sony Bravia 55X90L / Samsung Crystal 4K',
+        finderMovementLabel: 'இயக்க முறை விருப்பம்',
+        finderMovementAny: 'அனைத்து முறைகளும் / விருப்பமில்லை',
+        finderMovementFixed: 'நிலையானது (சுவரோடு ஒட்டியது)',
+        finderMovementTilt: 'சாய்வு வசதி (Tilt ±15°)',
+        finderMovementMotion: 'முழு சுழற்சி (Full-Motion)',
+        finderTabletopBase: 'அடிப்பாக அமைப்பு விருப்பம்',
+        finderTabletopBaseAny: 'அனைத்து அடிப்பாக வகைகளும்',
+        finderTabletopBaseRect: 'செவ்வக அடிப்பாகம் (Product 28 மாதிரி)',
+        finderTabletopBaseV: 'கோண V-வடிவ கால்கள் (Product 29 மாதிரி)',
+        finderTabletopSurfaceDepth: 'மேசையின் ஆழம் (மிமீ, விருப்பத்தேர்வு)',
+        finderDeskThickness: 'மேசை பலகையின் தடிமன் (மிமீ)',
+        finderDeskDisplays: 'மானிட்டர் எண்ணிக்கை',
+        finderDeskSingle: 'ஒற்றைத் திரை ஆர்ம் (JF-MA-01)',
+        finderDeskDual: 'இரட்டைத் திரை ஆர்ம்கள் (JF-MA-02)',
+        finderDeskWarning: 'பாதுகாப்பு அறிவிப்பு: கிளாம்ப மவுண்ட்களை திடமான மர அல்லது எஃகு மேசைகளில் மட்டுமே பொருத்த வேண்டும். கண்ணாடியால் ஆன அல்லது வெற்று அட்டை மேசைகளில் கூடுதல் வலுவூட்டல் இன்றி பொருத்தக்கூடாது.',
+        finderOtherType: 'சாதன வகை',
+        finderOtherProjector: 'யுனிவர்சல் புரொஜெக்டர் சீலிங் மவுண்ட்',
+        finderOtherSpeaker: 'ஸ்பீக்கர் சுவர் பிராக்கெட் ஜோடி',
+        finderOtherAC: 'ஸ்ப்ளிட் ஏசி அவுட்டோர் ஸ்டாண்ட் ஜோடி',
+        finderOtherMicrowave: 'மைக்ரோவேவ் ஓவன் சுவர் ஸ்டாண்ட் ஜோடி',
+        finderReset: 'மீட்டமைக்க',
+        finderStateMeets: 'உறுதிப்படுத்தப்பட்ட அளவுகளுடன் பொருந்துகிறது',
+        finderStateMoreInfo: 'கூடுதல் தகவல் தேவை (எடை அல்லது VESA உறுதிப்படுத்தல்)',
+        finderStateFails: 'தேவைப்படும் அளவுக்கு பொருந்தவில்லை',
+        finderStateNoMatch: 'பட்டியலில் நேரடி மாதிரி கிடைக்கவில்லை',
+        finderSurfaceDisclaimer: 'சுவர் உறுதிப்பாடு அறிவிப்பு: மவுண்ட்டை பொருத்துவதற்கு முன் சுவர் வகை அல்லது மேசையின் வலிமையை உறுதிப்படுத்த வேண்டும்.',
+        rfqBlockedNotice: 'வாட்ஸ்அப் தானாக திறக்கப்படவில்லை எனில், நேரடி இணைப்பை கிளிக் செய்யவும் அல்லது செய்தி வரைவை நகலெடுக்கவும்:'
       }
     };
 
@@ -660,11 +771,12 @@
           el.textContent = i18n[lang][key];
         }
       });
+      renderFinderQuestions();
       runGuidedFinder();
       renderProducts();
     }
 
-    // Fetch products
+    // Load products from JSON
     async function loadProducts() {
       try {
         const response = await fetch('data/products.json');
@@ -672,6 +784,7 @@
       } catch (e) {
         console.warn('Fallback failed', e);
       }
+      renderFinderQuestions();
       renderProducts();
       runGuidedFinder();
     }
@@ -688,76 +801,586 @@
       renderProducts();
     }
 
-    // Guided Finder Engine
-    function runGuidedFinder() {
-      const surface = document.getElementById('guidedSurface').value;
-      const size = document.getElementById('guidedSize').value;
-      const weight = document.getElementById('guidedWeight').value;
-      const motion = document.getElementById('guidedMotion').value;
+    // Handle Category change in Guided Finder
+    function handleCategoryChange(newCat) {
+      if (newCat !== previousCategory) {
+        const notice = document.getElementById('finderSwitchNotice');
+        if (notice) notice.classList.remove('hidden');
 
-      const badge = document.getElementById('guidedOutcomeBadge');
-      const text = document.getElementById('guidedOutcomeText');
-
-      if (!surface && !size && !weight && !motion) {
-        badge.className = 'inline-block text-[11px] font-bold px-2 py-0.5 rounded bg-slate-800 text-slate-300 border border-slate-700 mb-1';
-        badge.textContent = currentLang === 'ta' ? 'தேர்வு நிலுவையில் உள்ளது' : 'Selection In Progress';
-        text.textContent = currentLang === 'ta' ? 'டிவி மவுண்ட்களை தேர்ந்தெடுக்க மேலே உள்ள கேள்விகளுக்கு பதிலளிக்கவும்.' : 'Select answers above to shortlist mounts matching your display specifications.';
-        guidedFinderResults = products;
-        return;
+        // Clear incompatible fields while preserving compatible ones (VESA, weight, model, size)
+        if (newCat === 'tabletop') {
+          finderState.motion = '';
+          finderState.deskThickness = null;
+        } else if (newCat === 'desk') {
+          finderState.motion = '';
+          finderState.tabletopBase = '';
+        } else if (newCat === 'wall' || newCat === 'ceiling') {
+          finderState.tabletopBase = '';
+          finderState.deskThickness = null;
+        }
+        previousCategory = newCat;
       }
 
-      const matches = products.filter(p => {
-        // Surface check
-        if (surface === 'wall' && !['fixed', 'tilt', 'motion'].includes(p.category)) return false;
-        if (surface === 'ceiling' && p.category !== 'ceiling') return false;
-        if (surface === 'desk' && p.category !== 'desk') return false;
-        if (surface === 'tabletop' && p.category !== 'tabletop') return false;
+      finderState.surface = newCat;
+      renderFinderQuestions();
+      runGuidedFinder();
+    }
 
-        // Size check
-        if (size && p.sizeGroup !== size && p.sizeGroup !== 'Universal') return false;
+    // Render Category-Specific Dynamic Questions
+    function renderFinderQuestions() {
+      const container = document.getElementById('guidedDynamicQuestions');
+      if (!container) return;
 
-        // Motion check
-        if (motion && p.category !== motion) return false;
+      const cat = finderState.surface;
+      const deskWarning = document.getElementById('finderDeskWarningBox');
+      if (deskWarning) {
+        if (cat === 'desk') deskWarning.classList.remove('hidden');
+        else deskWarning.classList.add('hidden');
+      }
 
-        // Weight check
-        if (weight) {
-          const loadStr = p.maxLoad || '';
-          const matchNum = loadStr.match(/(\d+)\s*kg/i);
-          const maxKg = matchNum ? parseInt(matchNum[1], 10) : null;
-          if (maxKg !== null) {
-            if (weight === 'under30' && maxKg < 20) return false;
-            if (weight === '30to50' && maxKg < 35) return false;
-            if (weight === 'over50' && maxKg < 55) return false;
-          }
+      const t = i18n[currentLang];
+
+      let htmlContent = '';
+
+      if (cat === 'wall' || cat === 'ceiling') {
+        htmlContent = `
+          <!-- Question 2: VESA Pattern -->
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
+                ${t.finderVesaLabel}
+              </label>
+              <select id="guidedVesa" onchange="finderState.vesa=this.value; runGuidedFinder();" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500">
+                <option value="">${t.finderVesaSelect}</option>
+                <option value="75x75" ${finderState.vesa==='75x75'?'selected':''}>75 × 75 mm</option>
+                <option value="100x100" ${finderState.vesa==='100x100'?'selected':''}>100 × 100 mm</option>
+                <option value="200x200" ${finderState.vesa==='200x200'?'selected':''}>200 × 200 mm</option>
+                <option value="300x300" ${finderState.vesa==='300x300'?'selected':''}>300 × 300 mm</option>
+                <option value="400x200" ${finderState.vesa==='400x200'?'selected':''}>400 × 200 mm</option>
+                <option value="400x400" ${finderState.vesa==='400x400'?'selected':''}>400 × 400 mm</option>
+                <option value="600x400" ${finderState.vesa==='600x400'?'selected':''}>600 × 400 mm</option>
+                <option value="800x400" ${finderState.vesa==='800x400'?'selected':''}>800 × 400 mm</option>
+                <option value="800x600" ${finderState.vesa==='800x600'?'selected':''}>800 × 600 mm</option>
+                <option value="unknown" ${finderState.vesa==='unknown'?'selected':''}>${t.finderVesaUnknown}</option>
+              </select>
+            </div>
+            <p class="text-[10px] text-slate-500 mt-2 leading-tight">${t.finderVesaHelp}</p>
+          </div>
+
+          <!-- Question 3: Display Weight -->
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
+                ${t.finderWeightLabel}
+              </label>
+              <div class="flex gap-2 items-center">
+                <input type="number" id="guidedWeightInput" min="1" max="150" placeholder="${t.finderWeightPlaceholder}" value="${finderState.weightKg || ''}" ${finderState.weightUnknown?'disabled':''} oninput="finderState.weightKg=this.value?parseFloat(this.value):null; syncWeightBand(); runGuidedFinder();" class="flex-1 bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500 disabled:opacity-50">
+                <span class="text-xs text-slate-400 font-bold">kg</span>
+              </div>
+              <label class="flex items-center gap-2 mt-2 cursor-pointer">
+                <input type="checkbox" id="guidedWeightUnknown" ${finderState.weightUnknown?'checked':''} onchange="finderState.weightUnknown=this.checked; if(this.checked){finderState.weightKg=null; document.getElementById('guidedWeightInput').value='';} syncWeightBand(); runGuidedFinder();" class="rounded border-slate-700 bg-slate-950 text-accent-500">
+                <span class="text-[11px] text-slate-400">${t.finderWeightUnknown}</span>
+              </label>
+              <!-- Hidden select for test backwards compatibility -->
+              <select id="guidedWeight" onchange="handleWeightBandChange(this.value)" class="hidden">
+                <option value="">Any</option>
+                <option value="under30">under30</option>
+                <option value="30to50">30to50</option>
+                <option value="over50">over50</option>
+              </select>
+            </div>
+            <p class="text-[10px] text-slate-500 mt-1 leading-tight">${t.finderWeightHelp}</p>
+          </div>
+
+          <!-- Question 4: Desired Movement -->
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
+                ${t.finderMovementLabel}
+              </label>
+              <select id="guidedMotion" onchange="finderState.motion=this.value; runGuidedFinder();" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500">
+                <option value="">${t.finderMovementAny}</option>
+                <option value="fixed" ${finderState.motion==='fixed'?'selected':''}>${t.finderMovementFixed}</option>
+                <option value="tilt" ${finderState.motion==='tilt'?'selected':''}>${t.finderMovementTilt}</option>
+                <option value="motion" ${finderState.motion==='motion'?'selected':''}>${t.finderMovementMotion}</option>
+              </select>
+            </div>
+            <!-- Supplementary Screen Size Select for backwards compatibility & guidance -->
+            <div class="mt-2">
+              <label class="block text-[10px] font-semibold text-slate-500 mb-0.5">${t.finderScreenLabel}</label>
+              <select id="guidedSize" onchange="finderState.sizeGroup=this.value; runGuidedFinder();" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-[11px] text-slate-300">
+                <option value="">${t.finderScreenAny}</option>
+                <option value="14-32" ${finderState.sizeGroup==='14-32'?'selected':''}>14" - 32"</option>
+                <option value="32-55" ${finderState.sizeGroup==='32-55'?'selected':''}>32" - 55"</option>
+                <option value="55-75" ${finderState.sizeGroup==='55-75'?'selected':''}>55" - 75"</option>
+                <option value="75+" ${finderState.sizeGroup==='75+'?'selected':''}>75" - 100"+</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Optional Model & Assistance -->
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
+                ${t.finderModelLabel}
+              </label>
+              <input type="text" id="guidedModel" placeholder="${t.finderModelPlaceholder}" value="${finderState.model || ''}" oninput="finderState.model=this.value;" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500">
+            </div>
+            <p class="text-[10px] text-slate-500 mt-2 leading-tight">${t.finderScreenNotice}</p>
+          </div>
+        `;
+      } else if (cat === 'tabletop') {
+        htmlContent = `
+          <!-- Question 2: VESA Pattern for Tabletop -->
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
+                ${t.finderVesaLabel}
+              </label>
+              <select id="guidedVesa" onchange="finderState.vesa=this.value; runGuidedFinder();" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500">
+                <option value="">${t.finderVesaSelect}</option>
+                <option value="200x200" ${finderState.vesa==='200x200'?'selected':''}>200 × 200 mm</option>
+                <option value="300x300" ${finderState.vesa==='300x300'?'selected':''}>300 × 300 mm</option>
+                <option value="400x200" ${finderState.vesa==='400x200'?'selected':''}>400 × 200 mm</option>
+                <option value="400x400" ${finderState.vesa==='400x400'?'selected':''}>400 × 400 mm</option>
+                <option value="unknown" ${finderState.vesa==='unknown'?'selected':''}>${t.finderVesaUnknown}</option>
+              </select>
+            </div>
+            <p class="text-[10px] text-slate-500 mt-2 leading-tight">${t.finderVesaHelp}</p>
+          </div>
+
+          <!-- Question 3: Display Weight -->
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
+                ${t.finderWeightLabel}
+              </label>
+              <div class="flex gap-2 items-center">
+                <input type="number" id="guidedWeightInput" min="1" max="150" placeholder="${t.finderWeightPlaceholder}" value="${finderState.weightKg || ''}" ${finderState.weightUnknown?'disabled':''} oninput="finderState.weightKg=this.value?parseFloat(this.value):null; syncWeightBand(); runGuidedFinder();" class="flex-1 bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500 disabled:opacity-50">
+                <span class="text-xs text-slate-400 font-bold">kg</span>
+              </div>
+              <label class="flex items-center gap-2 mt-2 cursor-pointer">
+                <input type="checkbox" id="guidedWeightUnknown" ${finderState.weightUnknown?'checked':''} onchange="finderState.weightUnknown=this.checked; if(this.checked){finderState.weightKg=null; document.getElementById('guidedWeightInput').value='';} syncWeightBand(); runGuidedFinder();" class="rounded border-slate-700 bg-slate-950 text-accent-500">
+                <span class="text-[11px] text-slate-400">${t.finderWeightUnknown}</span>
+              </label>
+              <select id="guidedWeight" onchange="handleWeightBandChange(this.value)" class="hidden">
+                <option value="">Any</option>
+                <option value="under30">under30</option>
+                <option value="30to50">30to50</option>
+                <option value="over50">over50</option>
+              </select>
+            </div>
+            <p class="text-[10px] text-slate-500 mt-1 leading-tight">${t.finderWeightHelp}</p>
+          </div>
+
+          <!-- Question 4: Base Profile Style -->
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
+                ${t.finderTabletopBase}
+              </label>
+              <select id="guidedTabletopBase" onchange="finderState.tabletopBase=this.value; runGuidedFinder();" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500">
+                <option value="">${t.finderTabletopBaseAny}</option>
+                <option value="rect" ${finderState.tabletopBase==='rect'?'selected':''}>${t.finderTabletopBaseRect}</option>
+                <option value="vbase" ${finderState.tabletopBase==='vbase'?'selected':''}>${t.finderTabletopBaseV}</option>
+              </select>
+            </div>
+            <div class="mt-2">
+              <label class="block text-[10px] font-semibold text-slate-500 mb-0.5">${t.finderTabletopSurfaceDepth}</label>
+              <input type="number" id="guidedTabletopDepth" placeholder="e.g. 350 mm" value="${finderState.tabletopDepth || ''}" oninput="finderState.tabletopDepth=this.value?parseFloat(this.value):null; runGuidedFinder();" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-[11px] text-slate-300">
+            </div>
+          </div>
+
+          <!-- Question 5: Screen Size & Optional Model -->
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
+                ${t.finderScreenLabel}
+              </label>
+              <select id="guidedSize" onchange="finderState.sizeGroup=this.value; runGuidedFinder();" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500">
+                <option value="">${t.finderScreenAny}</option>
+                <option value="32-55" ${finderState.sizeGroup==='32-55'?'selected':''}>32" - 55" (Standard)</option>
+                <option value="55-75" ${finderState.sizeGroup==='55-75'?'selected':''}>55" - 65"</option>
+              </select>
+            </div>
+            <input type="text" id="guidedModel" placeholder="${t.finderModelPlaceholder}" value="${finderState.model || ''}" oninput="finderState.model=this.value;" class="w-full bg-slate-950 border border-slate-800 rounded px-2 py-1 text-[11px] text-slate-300 mt-2">
+          </div>
+        `;
+      } else if (cat === 'desk') {
+        htmlContent = `
+          <!-- Question 2: Desk Surface Thickness -->
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
+                ${t.finderDeskThickness}
+              </label>
+              <div class="flex gap-2 items-center">
+                <input type="number" id="guidedDeskThickness" min="5" max="120" placeholder="e.g. 25" value="${finderState.deskThickness || ''}" ${finderState.deskThicknessUnknown?'disabled':''} oninput="finderState.deskThickness=this.value?parseFloat(this.value):null; runGuidedFinder();" class="flex-1 bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500 disabled:opacity-50">
+                <span class="text-xs text-slate-400 font-bold">mm</span>
+              </div>
+              <label class="flex items-center gap-2 mt-2 cursor-pointer">
+                <input type="checkbox" id="guidedDeskThicknessUnknown" ${finderState.deskThicknessUnknown?'checked':''} onchange="finderState.deskThicknessUnknown=this.checked; if(this.checked){finderState.deskThickness=null; document.getElementById('guidedDeskThickness').value='';} runGuidedFinder();" class="rounded border-slate-700 bg-slate-950 text-accent-500">
+                <span class="text-[11px] text-slate-400">Not measured</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 3: Number of Monitors -->
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
+                ${t.finderDeskDisplays}
+              </label>
+              <select id="guidedDeskDisplays" onchange="finderState.deskDisplays=this.value; runGuidedFinder();" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500">
+                <option value="single" ${finderState.deskDisplays==='single'?'selected':''}>${t.finderDeskSingle}</option>
+                <option value="dual" ${finderState.deskDisplays==='dual'?'selected':''}>${t.finderDeskDual}</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Question 4: Display Weight -->
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
+                ${t.finderWeightLabel}
+              </label>
+              <div class="flex gap-2 items-center">
+                <input type="number" id="guidedWeightInput" min="1" max="30" placeholder="e.g. 7" value="${finderState.weightKg || ''}" ${finderState.weightUnknown?'disabled':''} oninput="finderState.weightKg=this.value?parseFloat(this.value):null; syncWeightBand(); runGuidedFinder();" class="flex-1 bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500 disabled:opacity-50">
+                <span class="text-xs text-slate-400 font-bold">kg</span>
+              </div>
+              <label class="flex items-center gap-2 mt-2 cursor-pointer">
+                <input type="checkbox" id="guidedWeightUnknown" ${finderState.weightUnknown?'checked':''} onchange="finderState.weightUnknown=this.checked; if(this.checked){finderState.weightKg=null; document.getElementById('guidedWeightInput').value='';} syncWeightBand(); runGuidedFinder();" class="rounded border-slate-700 bg-slate-950 text-accent-500">
+                <span class="text-[11px] text-slate-400">${t.finderWeightUnknown}</span>
+              </label>
+              <select id="guidedWeight" onchange="handleWeightBandChange(this.value)" class="hidden"><option value="">Any</option></select>
+            </div>
+          </div>
+
+          <!-- Question 5: VESA Pattern -->
+          <div class="bg-slate-900/90 p-4 rounded-xl border border-slate-800 flex flex-col justify-between">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">
+                ${t.finderVesaLabel}
+              </label>
+              <select id="guidedVesa" onchange="finderState.vesa=this.value; runGuidedFinder();" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2 text-xs text-white focus:outline-none focus:border-accent-500">
+                <option value="">${t.finderVesaSelect}</option>
+                <option value="75x75" ${finderState.vesa==='75x75'?'selected':''}>75 × 75 mm</option>
+                <option value="100x100" ${finderState.vesa==='100x100'?'selected':''}>100 × 100 mm</option>
+                <option value="unknown" ${finderState.vesa==='unknown'?'selected':''}>${t.finderVesaUnknown}</option>
+              </select>
+            </div>
+          </div>
+        `;
+      } else {
+        htmlContent = `
+          <!-- Question 2: Utility Bracket Type -->
+          <div class="col-span-full bg-slate-900/90 p-5 rounded-xl border border-slate-800">
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
+              ${t.finderOtherType}
+            </label>
+            <select id="guidedOtherType" onchange="finderState.otherType=this.value; runGuidedFinder();" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 text-xs text-white focus:outline-none focus:border-accent-500">
+              <option value="projector" ${finderState.otherType==='projector'?'selected':''}>${t.finderOtherProjector}</option>
+              <option value="speaker" ${finderState.otherType==='speaker'?'selected':''}>${t.finderOtherSpeaker}</option>
+              <option value="ac" ${finderState.otherType==='ac'?'selected':''}>${t.finderOtherAC}</option>
+              <option value="microwave" ${finderState.otherType==='microwave'?'selected':''}>${t.finderOtherMicrowave}</option>
+            </select>
+            <p class="text-xs text-slate-400 mt-2">Specialized mounting systems for AV installations, cooling appliances, and commercial audio. For bespoke workshop dimensions or custom load fabrication, inquire directly with our team.</p>
+          </div>
+        `;
+      }
+
+      container.innerHTML = htmlContent;
+    }
+
+    function syncWeightBand() {
+      const select = document.getElementById('guidedWeight');
+      if (!select) return;
+      if (finderState.weightKg === null || finderState.weightUnknown) {
+        select.value = '';
+      } else if (finderState.weightKg < 30) {
+        select.value = 'under30';
+      } else if (finderState.weightKg <= 50) {
+        select.value = '30to50';
+      } else {
+        select.value = 'over50';
+      }
+    }
+
+    function handleWeightBandChange(band) {
+      finderState.weightBand = band;
+      if (band === 'under30') finderState.weightKg = 24;
+      else if (band === '30to50') finderState.weightKg = 40;
+      else if (band === 'over50') finderState.weightKg = 75;
+      else finderState.weightKg = null;
+      finderState.weightUnknown = false;
+      const input = document.getElementById('guidedWeightInput');
+      if (input) input.value = finderState.weightKg || '';
+      runGuidedFinder();
+    }
+
+    // Check VESA compatibility against product
+    function checkProductVesaSupport(p, targetVesa) {
+      if (!targetVesa || targetVesa === 'unknown') return { status: 'unknown' };
+      const [tW, tH] = targetVesa.split('x').map(n => parseInt(n, 10));
+      if (!tW || !tH) return { status: 'unknown' };
+
+      const str = p.vesa || '';
+      const matches = str.match(/(\d+)x(\d+)/g);
+      let maxW = 0, maxH = 0;
+      let explicitlyListed = false;
+
+      if (matches) {
+        for (const m of matches) {
+          const [w, h] = m.split('x').map(Number);
+          if (w === tW && h === tH) explicitlyListed = true;
+          if (w > maxW) maxW = w;
+          if (h > maxH) maxH = h;
         }
+      }
 
+      // If target exceeds max dimensions, definite failure
+      if (maxW > 0 && maxH > 0 && (tW > maxW || tH > maxH)) {
+        return { status: 'fail', maxW, maxH };
+      }
+
+      if (explicitlyListed || (tW <= maxW && tH <= maxH && (str.toLowerCase().includes('up to') || str.toLowerCase().includes('to')))) {
+        return { status: 'pass', maxW, maxH };
+      }
+
+      if (tW <= maxW && tH <= maxH) {
+        return { status: 'pass', maxW, maxH };
+      }
+
+      return { status: 'fail', maxW, maxH };
+    }
+
+    function getProductMaxLoadKg(p) {
+      if (!p.maxLoad) return null;
+      const match = p.maxLoad.match(/(\d+)\s*kg/i);
+      return match ? parseInt(match[1], 10) : null;
+    }
+
+    // Main Category-Aware Matching Engine
+    function runGuidedFinder() {
+      const surface = finderState.surface;
+      const badge = document.getElementById('guidedOutcomeBadge');
+      const text = document.getElementById('guidedOutcomeText');
+      const auditBox = document.getElementById('finderRequirementsAudit');
+
+      // Filter products relevant to category
+      let categoryProducts = products.filter(p => {
+        if (surface === 'wall') return ['fixed', 'tilt', 'motion'].includes(p.category);
+        if (surface === 'ceiling') return p.category === 'ceiling';
+        if (surface === 'tabletop') return p.category === 'tabletop';
+        if (surface === 'desk') return p.category === 'desk';
+        if (surface === 'other') {
+          if (finderState.otherType === 'projector') return p.id === 'JF-PR-ADJ';
+          if (finderState.otherType === 'speaker') return p.id === 'JF-SPK-01';
+          if (finderState.otherType === 'ac') return p.id === 'JF-AC-STD';
+          if (finderState.otherType === 'microwave') return p.id === 'JF-MW-01';
+          return ['projector', 'appliance'].includes(p.category);
+        }
         return true;
       });
 
-      guidedFinderResults = matches;
+      // Filter by tabletop base if chosen
+      if (surface === 'tabletop' && finderState.tabletopBase) {
+        if (finderState.tabletopBase === 'rect') categoryProducts = categoryProducts.filter(p => p.id === 'JF-TT28');
+        else if (finderState.tabletopBase === 'vbase') categoryProducts = categoryProducts.filter(p => p.id === 'JF-TT29');
+      }
 
-      if (matches.length > 0) {
-        badge.className = 'inline-block text-[11px] font-bold px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-1';
+      // Filter by desk displays if chosen
+      if (surface === 'desk' && finderState.deskDisplays) {
+        if (finderState.deskDisplays === 'single') categoryProducts = categoryProducts.filter(p => p.id === 'JF-MA-01');
+        else if (finderState.deskDisplays === 'dual') categoryProducts = categoryProducts.filter(p => p.id === 'JF-MA-02');
+      }
+
+      // Filter by motion if chosen
+      if ((surface === 'wall' || surface === 'ceiling') && finderState.motion && finderState.motion !== 'any') {
+        categoryProducts = categoryProducts.filter(p => p.category === finderState.motion);
+      }
+
+      // Evaluate each product against critical requirements
+      let meetsSpecList = [];
+      let moreInfoList = [];
+      let failsSpecList = [];
+
+      categoryProducts.forEach(p => {
+        let hasFail = false;
+        let hasUnknown = false;
+        let checks = [];
+
+        // Check 1: VESA
+        if (['wall', 'ceiling', 'tabletop', 'desk'].includes(surface)) {
+          if (!finderState.vesa || finderState.vesa === 'unknown') {
+            hasUnknown = true;
+            checks.push({ name: 'VESA Pattern', status: 'unknown', note: 'Customer VESA unknown' });
+          } else {
+            const vesaRes = checkProductVesaSupport(p, finderState.vesa);
+            if (vesaRes.status === 'fail') {
+              hasFail = true;
+              checks.push({ name: `VESA ${finderState.vesa}`, status: 'fail', note: 'Exceeds mount limit' });
+            } else if (vesaRes.status === 'unknown') {
+              hasUnknown = true;
+              checks.push({ name: `VESA ${finderState.vesa}`, status: 'unknown', note: 'Awaiting confirmation' });
+            } else {
+              // Pass check, but verify if product VESA specification is certified or unconfirmed planning estimate
+              if (p.sourceType === 'internal_planning_taxonomy' || p.specifications?.vesa?.status === 'unconfirmed_planning_estimate' || p.specifications?.vesa?.status === 'unconfirmed_estimate') {
+                hasUnknown = true; // Cannot affirm match from unconfirmed planning estimate!
+                checks.push({ name: `VESA ${finderState.vesa}`, status: 'unknown', note: 'Within planning estimate, awaits factory spec sheet' });
+              } else {
+                checks.push({ name: `VESA ${finderState.vesa}`, status: 'pass', note: 'Supported' });
+              }
+            }
+          }
+        }
+
+        // Check 2: Display Weight
+        if (finderState.weightUnknown || finderState.weightKg === null) {
+          hasUnknown = true;
+          checks.push({ name: 'Display Weight', status: 'unknown', note: 'Weight unknown' });
+        } else {
+          const maxKg = getProductMaxLoadKg(p);
+          if (maxKg === null) {
+            hasUnknown = true;
+            checks.push({ name: `Weight (${finderState.weightKg} kg)`, status: 'unknown', note: 'Load rating awaiting test data' });
+          } else if (finderState.weightKg > maxKg) {
+            hasFail = true;
+            checks.push({ name: `Weight (${finderState.weightKg} kg)`, status: 'fail', note: `Exceeds ${maxKg} kg load limit` });
+          } else {
+            // Within limit
+            if (p.specifications?.maxLoad?.status === 'unconfirmed_planning_estimate') {
+              hasUnknown = true;
+              checks.push({ name: `Weight (${finderState.weightKg} kg)`, status: 'unknown', note: `Within estimated ${maxKg} kg limit; requires certification` });
+            } else {
+              checks.push({ name: `Weight (${finderState.weightKg} kg)`, status: 'pass', note: 'Within verified rating' });
+            }
+          }
+        }
+
+        // Check 3: Screen Size Supplementary
+        if (finderState.sizeGroup) {
+          if (p.sizeGroup !== finderState.sizeGroup && p.sizeGroup !== 'Universal') {
+            // Note: Does not fail by itself if VESA/weight pass, but adds unknown notice
+            checks.push({ name: `Screen Size (${finderState.sizeGroup})`, status: 'unknown', note: 'Differs from nominal screen guide' });
+          } else {
+            checks.push({ name: `Screen Size (${finderState.sizeGroup})`, status: 'pass', note: 'Within nominal screen guide' });
+          }
+        }
+
+        p._auditChecks = checks;
+
+        if (hasFail) {
+          failsSpecList.push(p);
+        } else if (hasUnknown) {
+          moreInfoList.push(p);
+        } else {
+          meetsSpecList.push(p);
+        }
+      });
+
+      // Update Outcome UI
+      const t = i18n[currentLang];
+
+      if (meetsSpecList.length > 0) {
+        badge.className = 'inline-block text-xs font-bold px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-1.5';
         badge.textContent = currentLang === 'ta' ? 'உறுதிப்படுத்தப்பட்ட அளவுகளுடன் பொருந்துகிறது' : 'Matches available verified criteria';
-        text.textContent = currentLang === 'ta' 
-          ? `${matches.length} மாதிரிகள் உங்கள் தேவைகளுடன் பொருந்துகின்றன. மாதிரி விவரங்களை கீழே காணவும்.`
-          : `Matched ${matches.length} models matching your selection. Check full specifications below.`;
-      } else {
-        badge.className = 'inline-block text-[11px] font-bold px-2 py-0.5 rounded bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-1';
-        badge.textContent = currentLang === 'ta' ? 'நேரடி மாதிரி கிடைக்கவில்லை' : 'More Information Required';
         text.textContent = currentLang === 'ta'
-          ? 'இந்த அளவுகளுக்கு நேரடி மாதிரி கிடைக்கவில்லை. எங்கள் விற்பனை மேசையை அணுகி பிரத்யேக அமைப்பை தேர்ந்தெடுக்கவும்.'
-          : 'No standard model matches all selected filters in this curated range. Ask our team for custom advice.';
+          ? `${meetsSpecList.length} மாதிரிகள் சரிபார்க்கப்பட்ட அளவுகளுடன் பொருந்துகின்றன. விவரங்களை கீழே காணவும்.`
+          : `Matched ${meetsSpecList.length} model(s) meeting all checked verified requirements. Review itemized details below.`;
+        guidedFinderResults = meetsSpecList;
+      } else if (moreInfoList.length > 0) {
+        badge.className = 'inline-block text-xs font-bold px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-1.5';
+        badge.textContent = currentLang === 'ta' ? 'கூடுதல் தகவல் தேவை' : 'More Information Required';
+        text.textContent = currentLang === 'ta'
+          ? 'இந்த தயாரிப்புகளுக்கு டிவி எடை அல்லது VESA அளவு அல்லது தொழிற்சாலை வரைபட உறுதிப்படுத்தல் தேவைப்படுகிறது.'
+          : 'No requirement failed, but TV weight, VESA pattern, or manufacturer engineering confirmation is required.';
+        guidedFinderResults = moreInfoList;
+      } else if (failsSpecList.length > 0) {
+        badge.className = 'inline-block text-xs font-bold px-2.5 py-1 rounded-md bg-rose-500/10 text-rose-400 border border-rose-500/20 mb-1.5';
+        badge.textContent = currentLang === 'ta' ? 'தேவைப்படும் அளவுக்கு பொருந்தவில்லை' : 'Does not meet a checked requirement';
+        text.textContent = currentLang === 'ta'
+          ? 'குறிப்பிடப்பட்ட எடை அல்லது VESA வரம்புகள் இந்த பிரிவில் உள்ள தயாரிப்புகளை விட அதிகம். தனிப்பயன் ஆலோசனை பெறவும்.'
+          : 'Your requested display weight or VESA pattern exceeds catalogued ratings. Contact sales desk for custom solutions.';
+        guidedFinderResults = [];
+      } else {
+        badge.className = 'inline-block text-xs font-bold px-2.5 py-1 rounded-md bg-slate-800 text-slate-400 border border-slate-700 mb-1.5';
+        badge.textContent = currentLang === 'ta' ? 'நேரடி மாதிரி கிடைக்கவில்லை' : 'No confirmed match found';
+        text.textContent = currentLang === 'ta'
+          ? 'தேர்ந்தெடுத்த தேர்வுகளுக்கு தயாரிப்பு விவரம் கிடைக்கவில்லை. எங்கள் விற்பனை மேசையை அணுகவும்.'
+          : 'No standard catalogued model meets the selected criteria. Ask our Ritchie Street desk for custom fabrication.';
+        guidedFinderResults = [];
+      }
+
+      // Render Itemized Requirements Audit in box
+      if (auditBox) {
+        const topProduct = meetsSpecList[0] || moreInfoList[0] || failsSpecList[0];
+        if (topProduct && topProduct._auditChecks && topProduct._auditChecks.length > 0) {
+          const passChecks = topProduct._auditChecks.filter(c => c.status === 'pass');
+          const failChecks = topProduct._auditChecks.filter(c => c.status === 'fail');
+          const unknownChecks = topProduct._auditChecks.filter(c => c.status === 'unknown');
+
+          auditBox.innerHTML = `
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+              <span class="text-slate-400 block font-semibold mb-1">Passed Checks:</span>
+              <div class="space-y-0.5">
+                ${passChecks.length > 0 ? passChecks.map(c => `<div class="text-emerald-400 flex items-center gap-1">✓ ${c.name}</div>`).join('') : '<div class="text-slate-500 italic">None verified</div>'}
+              </div>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+              <span class="text-slate-400 block font-semibold mb-1">${failChecks.length > 0 ? 'Failed Checks:' : 'Awaiting Confirmation:'}</span>
+              <div class="space-y-0.5">
+                ${failChecks.map(c => `<div class="text-rose-400 flex items-center gap-1">✕ ${c.name}: ${c.note}</div>`).join('')}
+                ${unknownChecks.map(c => `<div class="text-amber-400 flex items-center gap-1">? ${c.name}: ${c.note}</div>`).join('')}
+                ${failChecks.length === 0 && unknownChecks.length === 0 ? '<div class="text-emerald-400">All checks verified</div>' : ''}
+              </div>
+            </div>
+            <div class="p-2.5 rounded-lg bg-slate-900 border border-slate-800">
+              <span class="text-slate-400 block font-semibold mb-1">Recommended Action:</span>
+              <div class="text-slate-300 leading-tight">
+                ${failChecks.length > 0 
+                  ? 'Consult sales desk for heavy-duty reinforcement or commercial video-wall fabrication.'
+                  : 'Click "Ask Sales Desk" to prepare a structured WhatsApp message draft.'}
+              </div>
+            </div>
+          `;
+        } else {
+          auditBox.innerHTML = `
+            <div class="col-span-full p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 text-center">
+              Select category, VESA, and display weight above to audit compatibility.
+            </div>
+          `;
+        }
       }
 
       renderProducts();
     }
 
     function resetGuidedFinder() {
-      document.getElementById('guidedSurface').value = '';
-      document.getElementById('guidedSize').value = '';
-      document.getElementById('guidedWeight').value = '';
-      document.getElementById('guidedMotion').value = '';
+      finderState = {
+        surface: 'wall',
+        vesa: '',
+        weightKg: null,
+        weightUnknown: false,
+        motion: '',
+        sizeGroup: '',
+        model: '',
+        tabletopBase: '',
+        tabletopDepth: null,
+        deskThickness: null,
+        deskThicknessUnknown: false,
+        deskDisplays: 'single',
+        otherType: 'projector'
+      };
+      previousCategory = 'wall';
+
+      const surfaceSelect = document.getElementById('guidedSurface');
+      if (surfaceSelect) surfaceSelect.value = 'wall';
+
+      const switchNotice = document.getElementById('finderSwitchNotice');
+      if (switchNotice) switchNotice.classList.add('hidden');
+
+      renderFinderQuestions();
       runGuidedFinder();
       renderProducts();
     }
@@ -769,12 +1392,13 @@
     }
 
     function openGuidedRfq() {
-      const surface = document.getElementById('guidedSurface').value || 'Any';
-      const size = document.getElementById('guidedSize').value || 'Any';
-      const weight = document.getElementById('guidedWeight').value || 'Any';
-      const motion = document.getElementById('guidedMotion').value || 'Any';
+      const surface = finderState.surface;
+      const vesa = finderState.vesa || 'Not specified';
+      const weight = finderState.weightUnknown ? 'Unknown' : (finderState.weightKg ? `${finderState.weightKg} kg` : 'Not specified');
+      const motion = finderState.motion || 'No preference';
+      const model = finderState.model || 'Not provided';
 
-      const context = `Finder Inquiry: Surface=${surface}, Size=${size}, Weight=${weight}, Motion=${motion}`;
+      const context = `Finder Inquiry: Category=${surface}, VESA=${vesa}, Weight=${weight}, Motion=${motion}, TV=${model}`;
       openRfqModal(context);
     }
 
@@ -783,15 +1407,21 @@
       const emptyState = document.getElementById('emptyState');
       const query = document.getElementById('searchInput').value.toLowerCase().trim();
 
-      const sourceList = (guidedFinderResults.length > 0 && (document.getElementById('guidedSurface').value || document.getElementById('guidedSize').value || document.getElementById('guidedWeight').value || document.getElementById('guidedMotion').value))
+      const isFinderActive = Boolean(
+        finderState.vesa || 
+        finderState.weightKg !== null || 
+        finderState.weightUnknown || 
+        finderState.motion || 
+        finderState.sizeGroup || 
+        finderState.surface !== 'wall'
+      );
+
+      const sourceList = (guidedFinderResults.length > 0 && isFinderActive)
         ? guidedFinderResults
         : products;
 
       const filtered = sourceList.filter(p => {
-        // Category check
         const matchesCategory = (currentCategory === 'all' || p.category === currentCategory);
-        
-        // Search query check
         const matchesSearch = !query || 
           p.id.toLowerCase().includes(query) ||
           p.title.toLowerCase().includes(query) ||
@@ -861,42 +1491,38 @@
               </div>
             </div>
 
-            <div class="mt-5 pt-3 border-t border-slate-800/80 flex flex-col gap-2">
-              <div class="flex gap-2">
-                <a href="product/?id=${p.id}" class="flex-1 inline-flex items-center justify-center gap-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 hover:text-white border border-slate-700 text-xs font-bold py-2 rounded-xl transition">
-                  <i data-lucide="info" class="w-3.5 h-3.5"></i>
-                  <span>View Product</span>
-                </a>
-                <button onclick="toggleCompare('${p.id}')" id="compare-btn-${p.id}" class="compare-toggle-btn px-3 bg-slate-800/60 hover:bg-slate-700 text-slate-300 text-xs font-semibold rounded-xl border border-slate-700 transition" title="Add to comparison">
-                  <span>Compare</span>
-                </button>
-              </div>
-              <div class="flex gap-2">
-                <a href="${whatsappUrl}" target="_blank" class="flex-1 inline-flex items-center justify-center gap-1.5 bg-emerald-700/30 hover:bg-emerald-600 text-emerald-300 hover:text-white border border-emerald-600/40 text-xs font-bold py-2 rounded-xl transition">
-                  <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
-                  <span>WhatsApp Quote</span>
-                </a>
-                <button onclick="openRfqModal('${p.displayIdentifier || p.id} - ${p.title}')" class="px-3 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-bold rounded-xl border border-slate-700 transition" title="Request Bulk Dealer Quote">
-                  <i data-lucide="file-text" class="w-4 h-4"></i>
-                </button>
-              </div>
+            <div class="mt-5 pt-4 border-t border-slate-800/80 flex items-center justify-between gap-2">
+              <a href="product/?id=${p.id}" class="flex-1 text-center bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs py-2 px-3 rounded-lg transition border border-slate-700">
+                View Details
+              </a>
+              <a href="${whatsappUrl}" target="_blank" class="flex-1 text-center bg-accent-500 hover:bg-accent-600 text-white font-bold text-xs py-2 px-3 rounded-lg transition shadow-md shadow-accent-500/20">
+                WhatsApp
+              </a>
+              <button id="compare-btn-${p.id}" onclick="toggleCompare('${p.id}')" title="Compare" class="p-2 rounded-lg border border-slate-700 bg-slate-950 text-slate-400 hover:text-white transition">
+                <i data-lucide="scale" class="w-4 h-4"></i>
+              </button>
             </div>
           </div>
         `;
       }).join('');
 
-      lucide.createIcons();
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
     }
 
-    function resetFilters() {
-      document.getElementById('searchInput').value = '';
-      resetGuidedFinder();
-      setCategory('all');
-    }
-
-    function openRfqModal(productName = '') {
-      document.getElementById('rfqProduct').value = productName || 'All Models / Wholesale Dealership Catalog';
-      document.getElementById('rfqModal').classList.remove('hidden');
+    // RFQ Modal Functions
+    function openRfqModal(prodContext) {
+      const modal = document.getElementById('rfqModal');
+      const prodInput = document.getElementById('rfqProduct');
+      const recoveryArea = document.getElementById('rfqRecoveryArea');
+      if (recoveryArea) recoveryArea.classList.add('hidden');
+      if (prodContext) {
+        prodInput.value = prodContext;
+      } else {
+        prodInput.value = 'General Wholesale Trade Enquiry';
+      }
+      modal.classList.remove('hidden');
     }
 
     function closeRfqModal() {
@@ -918,20 +1544,68 @@
         return;
       }
 
-      const text = `*New Wholesale RFQ from Jenefas Web Platform*\n\n` +
-                   `• *Product:* ${product}\n` +
-                   `• *Name:* ${name}\n` +
-                   `• *Company:* ${company || 'N/A'}\n` +
-                   `• *Phone:* ${phone}\n` +
-                   `• *Quantity:* ${qty || 'Dealer wholesale list'}\n` +
-                   `• *City:* ${city || 'Tamil Nadu'}\n` +
-                   `• *Notes:* ${notes || 'Immediate inquiry'}`;
+      const pageUrl = window.location.href.split('#')[0];
+      const surface = finderState.surface;
+      const vesa = finderState.vesa || 'Not specified';
+      const weight = finderState.weightUnknown ? 'Unknown' : (finderState.weightKg ? `${finderState.weightKg} kg` : 'Not specified');
+      const motion = finderState.motion || 'No preference';
+      const model = finderState.model || 'Not provided';
 
-      const url = `https://wa.me/919840817220?text=${encodeURIComponent(text)}`;
-      closeRfqModal();
-      window.open(url, '_blank');
+      const text = `*New Wholesale & Compatibility Enquiry from Jenefas Platform*\n\n` +
+                   `• *Product / Archetype:* ${product}\n` +
+                   `• *Sales Desk:* +91 98408 17220 (Ritchie Street Showroom, Chennai)\n` +
+                   `• *Reference Page:* ${pageUrl}\n\n` +
+                   `*Finder Specifications Checked:*\n` +
+                   `• *Mounting Location:* ${surface}\n` +
+                   `• *VESA Pattern:* ${vesa}\n` +
+                   `• *Display Weight:* ${weight}\n` +
+                   `• *Movement Preference:* ${motion}\n` +
+                   `• *Customer TV Model:* ${model}\n\n` +
+                   `*Customer Details:*\n` +
+                   `• *Buyer Name:* ${name}\n` +
+                   `• *Company / Shop:* ${company || 'N/A'}\n` +
+                   `• *Mobile:* ${phone}\n` +
+                   `• *Quantity Required:* ${qty || 'Dealer quotation'}\n` +
+                   `• *Location:* ${city || 'Tamil Nadu'}\n` +
+                   `• *Additional Notes:* ${notes || 'Please confirm bracket compatibility and wholesale price.'}`;
+
+      const encoded = encodeURIComponent(text);
+      const waUrl = `https://wa.me/919840817220?text=${encoded}`;
+
+      // Show recovery UI
+      const recovery = document.getElementById('rfqRecoveryArea');
+      if (recovery) {
+        recovery.classList.remove('hidden');
+        document.getElementById('rfqDraftPreview').value = text;
+        document.getElementById('rfqDirectLink').href = waUrl;
+      }
+
+      const submitBtn = document.getElementById('rfqSubmitBtn');
+      if (submitBtn) {
+        submitBtn.textContent = currentLang === 'ta' ? 'வாட்ஸ்அப்பில் செய்தி வரைவு தயாராக உள்ளது ✓' : 'Review Enquiry in WhatsApp ✓';
+      }
+
+      // Safe window.open
+      try {
+        window.open(waUrl, '_blank');
+      } catch (err) {
+        console.warn('Popup blocked, recovery provided', err);
+      }
     }
 
+    function copyRfqDraft() {
+      const preview = document.getElementById('rfqDraftPreview');
+      if (!preview) return;
+      navigator.clipboard.writeText(preview.value).then(() => {
+        const btn = document.getElementById('rfqCopyBtn');
+        if (btn) {
+          btn.textContent = currentLang === 'ta' ? 'நகலெடுக்கப்பட்டது!' : 'Copied!';
+          setTimeout(() => { btn.textContent = 'Copy Draft'; }, 2000);
+        }
+      });
+    }
+
+    // Comparison Feature
     let comparedProducts = [];
 
     function toggleCompare(id) {
@@ -945,18 +1619,18 @@
         }
         comparedProducts.push(id);
       }
-      updateCompareUI();
+      updateCompareBar();
     }
 
     function clearComparison() {
       comparedProducts = [];
-      updateCompareUI();
+      updateCompareBar();
     }
 
-    function updateCompareUI() {
+    function updateCompareBar() {
       const bar = document.getElementById('compareBar');
-      const actionBtn = document.getElementById('compareActionBtn');
       const chips = document.getElementById('compareSelectedChips');
+      const actionBtn = document.getElementById('compareActionBtn');
 
       if (comparedProducts.length > 0) {
         bar.classList.remove('translate-y-full');
@@ -966,19 +1640,16 @@
 
       actionBtn.textContent = `Compare (${comparedProducts.length})`;
       chips.innerHTML = comparedProducts.map(id => {
-        return `<span class="bg-slate-800 text-white font-mono text-[11px] px-2 py-0.5 rounded border border-slate-700">${id}</span>`;
+        const p = products.find(prod => prod.id === id);
+        return `<span class="bg-slate-800 text-slate-200 text-[11px] px-2 py-0.5 rounded border border-slate-700">${p ? p.displayIdentifier || p.id : id}</span>`;
       }).join('');
 
-      document.querySelectorAll('.compare-toggle-btn').forEach(btn => {
-        const id = btn.id.replace('compare-btn-', '');
-        if (comparedProducts.includes(id)) {
-          btn.classList.add('bg-accent-500', 'text-white');
-          btn.classList.remove('bg-slate-800/60', 'text-slate-300');
-          btn.innerHTML = '<span>Added ✓</span>';
+      document.querySelectorAll('[id^="compare-btn-"]').forEach(btn => {
+        const pId = btn.id.replace('compare-btn-', '');
+        if (comparedProducts.includes(pId)) {
+          btn.className = 'p-2 rounded-lg border border-accent-500 bg-accent-500/20 text-accent-400 transition';
         } else {
-          btn.classList.remove('bg-accent-500', 'text-white');
-          btn.classList.add('bg-slate-800/60', 'text-slate-300');
-          btn.innerHTML = '<span>Compare</span>';
+          btn.className = 'p-2 rounded-lg border border-slate-700 bg-slate-950 text-slate-400 hover:text-white transition';
         }
       });
     }
@@ -991,56 +1662,46 @@
       const items = comparedProducts.map(id => products.find(p => p.id === id)).filter(Boolean);
 
       container.innerHTML = `
-        <table class="w-full text-left border-collapse text-xs">
+        <table class="w-full text-left text-xs text-slate-300">
           <thead>
             <tr class="border-b border-slate-800">
-              <th class="p-3 text-slate-400 font-bold uppercase w-1/4">Feature</th>
+              <th class="py-3 px-4 text-slate-400 font-semibold w-1/4">Specification</th>
               ${items.map(p => `
-                <th class="p-3 text-white font-bold w-1/4">
-                  <div class="font-mono text-accent-400">${p.displayIdentifier || p.id}</div>
+                <th class="py-3 px-4 text-white font-bold w-1/4">
+                  <div class="text-accent-400 font-mono text-[11px]">${p.displayIdentifier || p.id}</div>
                   <div class="text-sm mt-0.5">${p.title}</div>
                 </th>
               `).join('')}
             </tr>
           </thead>
-          <tbody class="divide-y divide-slate-800/60">
+          <tbody class="divide-y divide-slate-850">
             <tr>
-              <td class="p-3 text-slate-400 font-medium">Category</td>
-              ${items.map(p => `<td class="p-3 text-slate-200">${p.categoryName}</td>`).join('')}
+              <td class="py-3 px-4 font-semibold text-slate-400">Category</td>
+              ${items.map(p => `<td class="py-3 px-4">${p.categoryName}</td>`).join('')}
             </tr>
             <tr>
-              <td class="p-3 text-slate-400 font-medium">Screen Range</td>
-              ${items.map(p => `<td class="p-3 text-slate-200">${p.screenSize}</td>`).join('')}
+              <td class="py-3 px-4 font-semibold text-slate-400">Screen Range</td>
+              ${items.map(p => `<td class="py-3 px-4 font-semibold text-slate-200">${p.screenSize}</td>`).join('')}
             </tr>
             <tr>
-              <td class="p-3 text-slate-400 font-medium">VESA Pattern</td>
-              ${items.map(p => `<td class="p-3 text-slate-200">${p.vesa}</td>`).join('')}
+              <td class="py-3 px-4 font-semibold text-slate-400">VESA Pattern</td>
+              ${items.map(p => `<td class="py-3 px-4">${p.vesa}</td>`).join('')}
             </tr>
             <tr>
-              <td class="p-3 text-slate-400 font-medium">Max Load</td>
-              ${items.map(p => `<td class="p-3 font-bold text-emerald-400">${p.maxLoad || 'Awaiting confirmation'}</td>`).join('')}
+              <td class="py-3 px-4 font-semibold text-slate-400">Max Load</td>
+              ${items.map(p => `<td class="py-3 px-4 font-bold text-emerald-400">${p.maxLoad || 'Awaiting test report'}</td>`).join('')}
             </tr>
             <tr>
-              <td class="p-3 text-slate-400 font-medium">Movement</td>
-              ${items.map(p => `<td class="p-3 text-slate-200">${p.motion}</td>`).join('')}
+              <td class="py-3 px-4 font-semibold text-slate-400">Movement Style</td>
+              ${items.map(p => `<td class="py-3 px-4">${p.motion}</td>`).join('')}
             </tr>
             <tr>
-              <td class="p-3 text-slate-400 font-medium">Clearance</td>
-              ${items.map(p => `<td class="p-3 text-slate-200">${p.wallDistance}</td>`).join('')}
+              <td class="py-3 px-4 font-semibold text-slate-400">Packaging / Carton</td>
+              ${items.map(p => `<td class="py-3 px-4 text-amber-400">${p.cartonPack}</td>`).join('')}
             </tr>
             <tr>
-              <td class="p-3 text-slate-400 font-medium">Packaging</td>
-              ${items.map(p => `<td class="p-3 text-amber-400">${p.cartonPack}</td>`).join('')}
-            </tr>
-            <tr>
-              <td class="p-3 text-slate-400 font-medium">Action</td>
-              ${items.map(p => `
-                <td class="p-3">
-                  <a href="product/?id=${p.id}" class="inline-block bg-accent-500 hover:bg-accent-600 text-white font-bold px-3 py-1.5 rounded-lg text-[11px]">
-                    View Specs →
-                  </a>
-                </td>
-              `).join('')}
+              <td class="py-3 px-4 font-semibold text-slate-400">Recommended For</td>
+              ${items.map(p => `<td class="py-3 px-4 text-[11px] text-slate-400">${p.idealFor}</td>`).join('')}
             </tr>
           </tbody>
         </table>
@@ -1053,9 +1714,7 @@
       document.getElementById('compareModal').classList.add('hidden');
     }
 
-    // Initialize
-    window.addEventListener('DOMContentLoaded', () => {
-      lucide.createIcons();
+    document.addEventListener('DOMContentLoaded', () => {
       loadProducts();
     });
   </script>

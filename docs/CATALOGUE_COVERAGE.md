@@ -1,53 +1,66 @@
 # Jenefas Catalogue Coverage & Source Traceability Matrix
 
-**Document Version:** 1.0  
+**Document Version:** 2.0  
 **Updated:** 2026-10-25  
-**Scope:** Complete inventory of digital product records in `data/products.json`, mapped against primary manufacturer source material, internal IDs, and verification gates.
+**Scope:** Complete inventory of digital product records in `data/products.json`, mapped against primary manufacturer source material, internal taxonomy IDs, supported attributes, and unconfirmed attributes.
 
 ---
 
-## 1. Executive Summary & Source Assessment
+## 1. Executive Summary & Source Provenance
 
-- **Catalogue Reality:** The physical Jenefas product range encompasses approximately 94–97 hardware items across multiple legacy printed catalogue pages, price sheets, and workshop fabrications since 1978.
-- **Repository Source Material:** Currently, the repository contains:
-  1. `docs/PRODUCT_TAXONOMY.md`: 18 structured hardware models categorized into fixed, tilt, motion, ceiling, desk, projector, and appliance brackets.
-  2. `demos/product-28/assets/page_7.png` (scan of Jenefas Catalogue Page 7): Contains physical visual references for Product Code 28 (Table Top Stand, Laser Rectangle Flat Base) and Product Code 29 (Table Top Stand, Laser V Type Base).
-- **Catalogue Presentation:** The website represents a **curated digital demonstration and enquiry catalogue** of verified/observed products. It explicitly notes that it is a *partial catalogue* and directs customers needing any of the 90+ additional wholesale models to request the complete printed dealer price list.
-- **Identifier Separation:**
-  - **Internal Identifiers:** Codes prefixed with `JF-` (e.g., `JF-FX32`, `JF-TT28`) are internal platform IDs created for database indexing, URL query parameters, and test stability.
-  - **Manufacturer Codes:** Authentic factory codes appear where documented (e.g., Catalogue Page 7: `Product 28`, `Product 29`). For models where manufacturer model numbers are unconfirmed, the UI clearly displays the internal reference without falsely presenting it as a certified factory SKU.
+### Physical Heritage & Manufacturing Reality
+- **History:** Jenefas & Jenefas has manufactured television mounting hardware, audio-visual brackets, and utility fixtures in Chennai since 1978.
+- **Physical Range:** The physical workshop range spans multiple printed brochure pages (observed as 21 scanned page images on the legacy site `jenefas.com`) and custom fabrications for AV integrators. There is no unified, numbered master engineering index covering every historical bracket.
+- **Curated Digital Catalogue:** The website is honestly described as a **curated digital showcase of selected mounting and stand systems**. It does not make unsupported claims of "90+ models" or a specific fixed count, but provides a direct enquiry channel to the Ritchie Street sales desk for unlisted products, special brackets, or bulk orders.
+
+### Source Classification
+1. **Manufacturer Brochure Scans (`demos/product-28/assets/page_7.png`):**
+   - High-resolution scans from Page 7 of the Jenefas printed brochure.
+   - Primary evidence for **Product Code 28** (Tabletop Stand, rectangular base) and **Product Code 29** (Tabletop Stand, V-angle base).
+   - Confirms visible structural assemblies (base plates, vertical uprights, direct mounting rails) and authentic manufacturer codes `28` and `29`.
+   - Dimensions, load ratings, and fastener packs are not printed on the brochure crop and remain pending physical measurement or manufacturer verification.
+2. **Internal Planning Taxonomy (`docs/PRODUCT_TAXONOMY.md`):**
+   - An internal taxonomy document compiled during early platform architecture to categorize Jenefas's product classes (fixed wall brackets, tilt mounts, full-motion cantilevers, ceiling drops, monitor arms, appliance brackets).
+   - Provides product archetypes and internal reference keys (`JF-FX32`, `JF-FX55`, etc.).
+   - **Crucial Provenance Rule:** Specifications originating from `PRODUCT_TAXONOMY.md` are **internal planning estimates**, NOT certified manufacturer engineering specifications. They are marked `unconfirmed_planning_estimate` and are strictly excluded from automated affirmative compatibility decisions.
 
 ---
 
-## 2. Traceability Matrix
+## 2. Product Provenance & Traceability Table
 
-| Internal ID | Sourced Model / Code | Manufacturer Status | Primary Source Reference | Stated Specs Status | Package Contents Status |
+| Product Identifier | Original Source Reference | Source Type | Supported Attributes | Unconfirmed Attributes | Public Visibility |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| `JF-FX32` | FX32 (Fixed 14"-32") | Internal SKU | `PRODUCT_TAXONOMY.md` (Cat 1) | Catalogue Observed (Screen, VESA, Load) | **Awaiting manufacturer confirmation** |
-| `JF-FX55` | FX55 (Fixed 32"-55") | Internal SKU | `PRODUCT_TAXONOMY.md` (Cat 1) | Catalogue Observed (Screen, VESA, Load) | **Awaiting manufacturer confirmation** |
-| `JF-FX75` | FX75 (Fixed 43"-75") | Internal SKU | `PRODUCT_TAXONOMY.md` (Cat 1) | Catalogue Observed (Screen, VESA, Load) | **Awaiting manufacturer confirmation** |
-| `JF-TL43` | TL43 (Tilt 26"-43") | Internal SKU | `PRODUCT_TAXONOMY.md` (Cat 2) | Catalogue Observed (Screen, Tilt, Load) | **Awaiting manufacturer confirmation** |
-| `JF-TL65` | TL65 (Tilt 32"-65") | Internal SKU | `PRODUCT_TAXONOMY.md` (Cat 2) | Catalogue Observed (Screen, Tilt, Load) | **Awaiting manufacturer confirmation** |
-| `JF-TL85` | TL85 (Tilt 55"-85") | Internal SKU | `PRODUCT_TAXONOMY.md` (Cat 2) | Catalogue Observed (Screen, Tilt, Load) | **Awaiting manufacturer confirmation** |
-| `JF-FM32-S` | FM32-S (Single-Arm 17"-42")| Internal SKU | `PRODUCT_TAXONOMY.md` (Cat 3) | Catalogue Observed (Screen, Swivel, Load)| **Awaiting manufacturer confirmation** |
-| `JF-FM55-D` | FM55-D (Dual-Arm 32"-65") | Internal SKU | `PRODUCT_TAXONOMY.md` (Cat 3) | Catalogue Observed (Screen, Swivel, Load)| **Awaiting manufacturer confirmation** |
-| `JF-FM75-HD` | FM75-HD (Dual-Arm 43"-85")| Internal SKU | `PRODUCT_TAXONOMY.md` (Cat 3) | Catalogue Observed (Screen, Swivel, Load)| **Awaiting manufacturer confirmation** |
-| `JF-FM100-PRO`| FM100-PRO (Commercial) | Internal SKU | `PRODUCT_TAXONOMY.md` (Cat 3) | Catalogue Observed (Screen, Swivel, Load)| **Awaiting manufacturer confirmation** |
-| `JF-CL55-S` | CL55-S (Ceiling 32"-55") | Internal SKU | `PRODUCT_TAXONOMY.md` (Cat 4) | Catalogue Observed (Screen, Drop, Load) | **Awaiting manufacturer confirmation** |
-| `JF-CL65-D` | CL65-D (Dual Ceiling) | Internal SKU | `PRODUCT_TAXONOMY.md` (Cat 4) | Catalogue Observed (Screen, Drop, Load) | **Awaiting manufacturer confirmation** |
-| `JF-MA-01` | MA-01 (Monitor Arm Desk) | Internal SKU | `PRODUCT_TAXONOMY.md` (Cat 5) | Catalogue Observed (Screen, Desk, Load) | **Awaiting manufacturer confirmation** |
-| `JF-MA-02` | MA-02 (Dual Monitor Arm) | Internal SKU | `PRODUCT_TAXONOMY.md` (Cat 5) | Catalogue Observed (Screen, Desk, Load) | **Awaiting manufacturer confirmation** |
-| `JF-PR-ADJ` | PR-ADJ (Projector Mount) | Internal SKU | `PRODUCT_TAXONOMY.md` (Cat 6) | Catalogue Observed (Drop, Roll, Load) | **Awaiting manufacturer confirmation** |
-| `JF-SPK-01` | SPK-01 (Speaker Brackets) | Internal SKU | `PRODUCT_TAXONOMY.md` (Cat 6) | Catalogue Observed (Swivel, Pair) | **Awaiting manufacturer confirmation** |
-| `JF-AC-STD` | AC-STD (AC Outdoor Stand) | Internal SKU | `PRODUCT_TAXONOMY.md` (Cat 7) | Catalogue Observed (Tonnage, Load) | **Awaiting manufacturer confirmation** |
-| `JF-MW-01` | MW-01 (Microwave Bracket) | Internal SKU | `PRODUCT_TAXONOMY.md` (Cat 7) | Catalogue Observed (Capacity, Depth) | **Awaiting manufacturer confirmation** |
-| `JF-TT28` | **Product 28** (Tabletop Stand)| **Catalogue Code 28** | Catalogue Page 7 (Upper Right) | **Concept Prototype** (Proportions Only) | **Visible parts only; hardware unconfirmed** |
-| `JF-TT29` | **Product 29** (V Tabletop Stand)| **Catalogue Code 29** | Catalogue Page 7 (Lower Right) | **Concept Prototype** (Proportions Only) | **Visible parts only; hardware unconfirmed** |
+| `JF-FX32` | `docs/PRODUCT_TAXONOMY.md` (Cat 1) | Internal planning taxonomy | `internal_id`, `category_archetype` (Fixed Wall Mount), `descriptive_title` | `certified_vesa_patterns`, `certified_max_load_kg`, `certified_screen_size_range`, `wall_distance_mm`, `hardware_fastener_bom` | `true` (Active public showcase) |
+| `JF-FX55` | `docs/PRODUCT_TAXONOMY.md` (Cat 1) | Internal planning taxonomy | `internal_id`, `category_archetype` (Fixed Wall Mount), `descriptive_title` | `certified_vesa_patterns`, `certified_max_load_kg`, `certified_screen_size_range`, `wall_distance_mm`, `hardware_fastener_bom` | `true` (Active public showcase) |
+| `JF-FX75` | `docs/PRODUCT_TAXONOMY.md` (Cat 1) | Internal planning taxonomy | `internal_id`, `category_archetype` (Fixed Wall Mount), `descriptive_title` | `certified_vesa_patterns`, `certified_max_load_kg`, `certified_screen_size_range`, `wall_distance_mm`, `hardware_fastener_bom` | `true` (Active public showcase) |
+| `JF-TL43` | `docs/PRODUCT_TAXONOMY.md` (Cat 2) | Internal planning taxonomy | `internal_id`, `category_archetype` (Tilt Wall Mount), `descriptive_title` | `certified_vesa_patterns`, `certified_max_load_kg`, `tilt_angle_range`, `hardware_fastener_bom` | `true` (Active public showcase) |
+| `JF-TL65` | `docs/PRODUCT_TAXONOMY.md` (Cat 2) | Internal planning taxonomy | `internal_id`, `category_archetype` (Tilt Wall Mount), `descriptive_title` | `certified_vesa_patterns`, `certified_max_load_kg`, `tilt_angle_range`, `hardware_fastener_bom` | `true` (Active public showcase) |
+| `JF-TL85` | `docs/PRODUCT_TAXONOMY.md` (Cat 2) | Internal planning taxonomy | `internal_id`, `category_archetype` (Tilt Wall Mount), `descriptive_title` | `certified_vesa_patterns`, `certified_max_load_kg`, `tilt_angle_range`, `hardware_fastener_bom` | `true` (Active public showcase) |
+| `JF-FM32-S` | `docs/PRODUCT_TAXONOMY.md` (Cat 3) | Internal planning taxonomy | `internal_id`, `category_archetype` (Single-Arm Motion), `descriptive_title` | `certified_vesa_patterns`, `certified_max_load_kg`, `extension_range_mm`, `hardware_fastener_bom` | `true` (Active public showcase) |
+| `JF-FM55-D` | `docs/PRODUCT_TAXONOMY.md` (Cat 3) | Internal planning taxonomy | `internal_id`, `category_archetype` (Dual-Arm Motion), `descriptive_title` | `certified_vesa_patterns`, `certified_max_load_kg`, `extension_range_mm`, `hardware_fastener_bom` | `true` (Active public showcase) |
+| `JF-FM75-HD` | `docs/PRODUCT_TAXONOMY.md` (Cat 3) | Internal planning taxonomy | `internal_id`, `category_archetype` (Dual-Arm Motion), `descriptive_title` | `certified_vesa_patterns`, `certified_max_load_kg`, `extension_range_mm`, `hardware_fastener_bom` | `true` (Active public showcase) |
+| `JF-FM100-PRO`| `docs/PRODUCT_TAXONOMY.md` (Cat 3)| Internal planning taxonomy | `internal_id`, `category_archetype` (Heavy Dual-Arm), `descriptive_title` | `certified_vesa_patterns`, `certified_max_load_kg`, `extension_range_mm`, `hardware_fastener_bom` | `true` (Active public showcase) |
+| `JF-CL55-S` | `docs/PRODUCT_TAXONOMY.md` (Cat 4) | Internal planning taxonomy | `internal_id`, `category_archetype` (Single Ceiling Drop), `descriptive_title` | `certified_vesa_patterns`, `certified_max_load_kg`, `drop_range_mm`, `hardware_fastener_bom` | `true` (Active public showcase) |
+| `JF-CL65-D` | `docs/PRODUCT_TAXONOMY.md` (Cat 4) | Internal planning taxonomy | `internal_id`, `category_archetype` (Dual Ceiling Drop), `descriptive_title` | `certified_vesa_patterns`, `certified_max_load_kg`, `drop_range_mm`, `hardware_fastener_bom` | `true` (Active public showcase) |
+| `JF-MA-01` | `docs/PRODUCT_TAXONOMY.md` (Cat 5) | Internal planning taxonomy | `internal_id`, `category_archetype` (Desk Clamp Single Arm), `descriptive_title` | `clamp_opening_range_mm`, `supported_desk_thickness_mm`, `max_load_kg`, `hardware_fastener_bom` | `true` (Active public showcase) |
+| `JF-MA-02` | `docs/PRODUCT_TAXONOMY.md` (Cat 5) | Internal planning taxonomy | `internal_id`, `category_archetype` (Desk Clamp Dual Arm), `descriptive_title` | `clamp_opening_range_mm`, `supported_desk_thickness_mm`, `max_load_kg`, `hardware_fastener_bom` | `true` (Active public showcase) |
+| `JF-PR-ADJ` | `docs/PRODUCT_TAXONOMY.md` (Cat 6) | Internal planning taxonomy | `internal_id`, `category_archetype` (Projector Ceiling Mount), `descriptive_title` | `drop_length_mm`, `max_load_kg`, `hardware_fastener_bom` | `true` (Active public showcase) |
+| `JF-SPK-01` | `docs/PRODUCT_TAXONOMY.md` (Cat 6) | Internal planning taxonomy | `internal_id`, `category_archetype` (Speaker Wall Bracket Pair), `descriptive_title` | `bracket_depth_mm`, `max_load_kg`, `hardware_fastener_bom` | `true` (Active public showcase) |
+| `JF-AC-STD` | `docs/PRODUCT_TAXONOMY.md` (Cat 7) | Internal planning taxonomy | `internal_id`, `category_archetype` (AC Outdoor Unit Stand Pair), `descriptive_title`| `steel_gauge`, `vibration_dampers`, `max_tonnage`, `hardware_fastener_bom` | `true` (Active public showcase) |
+| `JF-MW-01` | `docs/PRODUCT_TAXONOMY.md` (Cat 7) | Internal planning taxonomy | `internal_id`, `category_archetype` (Microwave Oven Wall Bracket Pair), `descriptive_title`| `depth_extension_mm`, `max_load_kg`, `hardware_fastener_bom` | `true` (Active public showcase) |
+| `JF-TT28` | Jenefas Catalogue Page 7 scan (`page_7.png`) | Manufacturer brochure scan | `manufacturer_catalogue_code: 28`, `tabletop_form_factor`, `visible_structures` (rectangular base, column, rails) | `exact_dimensions_mm`, `certified_weight_limit_kg`, `supported_vesa_patterns`, `hardware_fastener_bom` | `true` (Featured showcase + 3D Concept Preview) |
+| `JF-TT29` | Jenefas Catalogue Page 7 scan (`page_7.png`) | Manufacturer brochure scan | `manufacturer_catalogue_code: 29`, `tabletop_form_factor`, `visible_structures` (V-angle base, column, rails) | `exact_dimensions_mm`, `certified_weight_limit_kg`, `supported_vesa_patterns`, `hardware_fastener_bom` | `true` (Featured showcase + 3D Concept Preview) |
 
 ---
 
-## 3. Policy on Incomplete Information
+## 3. Product Finder & Compatibility Decision Rules
 
-1. **Package Contents:** Only structural components visible in catalogue photos or confirmed drawings are listed as *Visible components*. Screws, bolts, spacers, and tools are strictly designated as *Awaiting manufacturer bill of materials*.
-2. **Packaging:** Replaced all speculative packaging phrases with `"Packaging details awaiting confirmation"`.
-3. **Engineering Integrity:** TV screen size is treated as a physical guideline only; customers are explicitly instructed to confirm TV weight and rear VESA mounting-hole spacing.
+1. **No Speculative Affirmative Matching:**
+   An affirmative compatibility badge (`Meets the checked specifications`) is **never** granted based on screen size alone or unconfirmed planning estimates.
+2. **Four Mutually Exclusive Outcome States:**
+   - **State A: Meets the checked specifications (`meets_spec`):** Every required attribute (VESA pattern, display weight, movement) was verified against evidence and passed.
+   - **State B: More information needed (`more_info_needed`):** No requirement failed, but one or more critical attributes (e.g. VESA spacing, exact TV weight, or unconfirmed manufacturer specifications) remain unknown.
+   - **State C: Does not meet a checked requirement (`fails_spec`):** One or more verified requirements failed (e.g., TV weight exceeds load capacity, or required VESA pattern exceeds mount capacity).
+   - **State D: No confirmed match found (`no_match`):** No catalogued product satisfies the criteria.
+3. **Transparent Audit Card:** Every evaluated product itemizes which requirements passed, which failed, and which remain unconfirmed.
+4. **Surface Suitability Notice:** The UI explicitly clarifies that wall/desk surface composition (concrete, brick, stud, solid wood) requires confirmation prior to installation.

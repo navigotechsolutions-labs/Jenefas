@@ -34,7 +34,7 @@ test.describe('E-Commerce Catalogue & Product Detail Specs', () => {
     // Tab switching
     await page.getByRole('button', { name: 'What is Included' }).click();
     await expect(page.locator('#tab-included')).toBeVisible();
-    await expect(page.locator('#confirmed-parts-list')).toContainText('Main mounting bracket assembly');
+    await expect(page.locator('#confirmed-parts-list')).toContainText('Primary mounting bracket');
 
     // Check dimensions view displays awaiting notice
     await page.locator('#btn-view-dimensions').click();
@@ -104,20 +104,24 @@ test.describe('E-Commerce Catalogue & Product Detail Specs', () => {
     const notice = page.locator('#catalogue-notice-banner');
     await expect(notice).toBeVisible();
     await expect(notice).toContainText('Curated Digital Catalogue');
-    await expect(notice).toContainText('90+ model manufacturing range');
 
     // Select Table Top surface
     await page.locator('#guidedSurface').selectOption('tabletop');
     const outcomeContainer = page.locator('#guidedOutcomeContainer');
     await expect(outcomeContainer).toBeVisible();
-    await expect(page.locator('#guidedOutcomeBadge')).toContainText('Matches available verified criteria');
+    await expect(page.locator('#guidedOutcomeBadge')).toContainText('More Information Required');
+
+    // Select VESA 200x200 and weight 15 kg
+    await page.locator('#guidedVesa').selectOption('200x200');
+    await page.locator('#guidedWeightInput').fill('15');
+    await expect(page.locator('#guidedOutcomeBadge')).toContainText('More Information Required');
     await expect(page.locator('#productGrid')).toContainText('Rectangle-Base Table-Top TV Stand');
 
-    // Select Ceiling drop with 75+ and over 50kg requiring custom verification
-    await page.locator('#guidedSurface').selectOption('ceiling');
-    await page.locator('#guidedSize').selectOption('75+');
-    await page.locator('#guidedWeight').selectOption('over50');
-    await expect(page.locator('#guidedOutcomeBadge')).toContainText('More Information Required');
+    // Select Wall mount - verify state preservation & switch notice
+    await page.locator('#guidedSurface').selectOption('wall');
+    await expect(page.locator('#guidedVesa')).toHaveValue('200x200');
+    await expect(page.locator('#guidedWeightInput')).toHaveValue('15');
+    await expect(page.locator('#finderSwitchNotice')).toBeVisible();
 
     // Reset finder
     await page.locator('#guidedResetBtn').click();
@@ -155,9 +159,9 @@ test.describe('E-Commerce Catalogue & Product Detail Specs', () => {
     await page.evaluate(() => window.openRfqModal('Product 28'));
     await expect(page.locator('#rfqModal')).toBeVisible();
 
-    // Verify WhatsApp notice banner in modal
+    // Verify WhatsApp notice in modal
     const notice = page.locator('#rfqModal');
-    await expect(notice).toContainText('WhatsApp Draft');
+    await expect(notice).toContainText('verified WhatsApp sales desk');
 
     // Fill the enquiry form
     await page.locator('#rfqName').fill('Ritchie Street Partner');

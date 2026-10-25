@@ -51,8 +51,8 @@ test('Product 28 and 29 specific isolation and 3D concept preview status', () =>
   assert.equal(p29.guideUrl, 'demos/product-29/', 'Product 29 must link to its interactive guide');
 
   // Verify unknown measurements are pending
-  assert.equal(p28.specifications.weightLimit.value, null);
-  assert.equal(p29.specifications.weightLimit.value, null);
+  assert.equal(p28.specifications.maxLoad.value, null);
+  assert.equal(p29.specifications.maxLoad.value, null);
 });
 
 test('Guided Finder logic handles categories, weights, and search filters honestly', () => {
