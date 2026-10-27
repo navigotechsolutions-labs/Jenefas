@@ -82,17 +82,37 @@ test.describe('E-Commerce Catalogue & Product Detail Specs', () => {
 
   test('Mobile viewport (320px & 390px) contains product cards and comparison without overflow', async ({ page }) => {
     for (const width of [320, 390]) {
-      await page.setViewportSize({ width, height: 800 });
+      await page.setViewportSize({ width, height: 667 });
       await page.goto('/');
 
       // Check document scroll width
       const scrollWidth = await page.evaluate(() => document.documentElement.scrollWidth);
       expect(scrollWidth).toBeLessThanOrEqual(width);
 
+      // Verify RFQ modal on mobile fits in viewport
+      await page.evaluate(() => window.openRfqModal());
+      await page.waitForTimeout(100);
+      const modalBox = await page.locator('#rfqModal > div').boundingBox();
+      expect(modalBox.y).toBeGreaterThanOrEqual(0);
+      expect(modalBox.y + modalBox.height).toBeLessThanOrEqual(667);
+      await page.evaluate(() => window.closeRfqModal());
+
       // Verify product detail page on mobile
       await page.goto('/product/?id=JF-TT28');
       const detailScrollWidth = await page.evaluate(() => document.documentElement.scrollWidth);
       expect(detailScrollWidth).toBeLessThanOrEqual(width);
+
+      // Verify product detail mobile menu toggle works
+      const toggle = page.locator('#product-menu-toggle');
+      await expect(toggle).toBeVisible();
+      await toggle.click();
+      await expect(page.locator('#product-main-menu')).toBeVisible();
+
+      // Verify product detail RFQ modal fits in viewport
+      await page.locator('#product-main-menu button.nav-quote').click();
+      const prodModalBox = await page.locator('#productRfqModal > div').boundingBox();
+      expect(prodModalBox.y).toBeGreaterThanOrEqual(0);
+      expect(prodModalBox.y + prodModalBox.height).toBeLessThanOrEqual(667);
     }
   });
 
@@ -147,13 +167,23 @@ test.describe('E-Commerce Catalogue & Product Detail Specs', () => {
     await page.goto('/');
     await page.locator('#siteLanguage').selectOption('ta');
 
-    // Verify Tamil labels
+    // Verify Tamil labels across hero, finder, categories, cards, and why-jenefas
+    await expect(page.locator('[data-i18n="heroTitle"]')).toContainText('சரியான பிடிப்பு');
     await expect(page.locator('[data-i18n="finderTitle"]')).toContainText('உங்கள் டிவிக்கு ஏற்ற மவுண்ட்டை தேர்ந்தெடுக்கவும்');
     await expect(page.locator('[data-i18n="navProducts"]')).toHaveText('பொருட்கள்');
+    await expect(page.locator('[data-i18n="catAll"]')).toHaveText('அனைத்து பொருட்கள்');
+    await expect(page.locator('[data-i18n="whyTitle"]')).toContainText('டீலர்கள் ஜெனிஃபாஸை விரும்புவது ஏன்?');
+
+    // Verify product card translations
+    const firstCard = page.locator('#productGrid > div').first();
+    await expect(firstCard).toContainText('திரை அளவு வரம்பு:');
+    await expect(firstCard).toContainText('அதிகபட்ச எடை:');
 
     // Switch back to English
     await page.locator('#siteLanguage').selectOption('en');
+    await expect(page.locator('[data-i18n="heroTitle"]')).toContainText('The right support');
     await expect(page.locator('[data-i18n="finderTitle"]')).toContainText('Find the Right Mount for Your Display');
+    await expect(firstCard).toContainText('Screen Range:');
 
     // 2. Product Detail switching
     await page.goto('/product/?id=JF-TT28');
@@ -161,10 +191,14 @@ test.describe('E-Commerce Catalogue & Product Detail Specs', () => {
 
     await expect(page.locator('#tab-btn-included')).toHaveText('உள்ளடக்கிய பாகங்கள்');
     await expect(page.locator('[data-i18n="navProducts"]')).toHaveText('பொருட்கள்');
+    await expect(page.locator('#whatsapp-enquiry-text')).toHaveText('இந்த தயாரிப்பு பற்றி விசாரிக்க');
+    await expect(page.locator('#spec-table-body')).toContainText('சரிபார்க்கப்பட்டது');
 
     // Switch back to English
     await page.locator('#productLanguage').selectOption('en');
     await expect(page.locator('#tab-btn-included')).toHaveText('What is Included');
+    await expect(page.locator('#whatsapp-enquiry-text')).toHaveText('Ask About This Product');
+    await expect(page.locator('#spec-table-body')).toContainText('Observed');
   });
 
   test('RFQ modal prepares structured WhatsApp draft without fake backend submission', async ({ page }) => {

@@ -283,9 +283,50 @@
       text-decoration: none;
       margin-top: 16px;
     }
+    .nav-toggle {
+      display: none;
+      min-height: 38px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 8px 12px;
+      background: white;
+      color: #19212b;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+    }
     @media(max-width: 900px) {
+      .nav-row {
+        flex-wrap: wrap;
+      }
+      .nav-toggle {
+        display: block;
+      }
       .nav-menu {
-        display: none !important;
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        margin-top: 10px;
+        padding-top: 8px;
+        border-top: 1px solid #e2e8f0;
+      }
+      .nav-menu.is-open {
+        display: flex !important;
+      }
+      .nav-menu a {
+        padding: 12px 6px;
+        border-bottom: 1px solid #f1f5f9;
+        font-size: 14px;
+        font-weight: 600;
+        color: #334155;
+        text-decoration: none;
+      }
+      .nav-quote {
+        margin-top: 12px;
+        width: 100%;
+        text-align: center;
       }
       .product-layout {
         display: flex;
@@ -319,15 +360,39 @@
         align-items: stretch;
         width: 100%;
         box-sizing: border-box;
+        gap: 12px;
+      }
+      .price-enquiry-box > div:last-child {
+        flex-direction: column;
+        width: 100%;
+      }
+      .btn-enquire, .btn-rfq {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        min-height: 44px;
       }
       .tabs-header {
         overflow-x: auto;
         gap: 14px;
         width: 100%;
+        -webkit-overflow-scrolling: touch;
       }
       .tab-btn {
         white-space: nowrap;
         font-size: 13px;
+      }
+      .spec-table th, .spec-table td {
+        padding: 8px 6px;
+        font-size: 12px;
+      }
+      .spec-table th {
+        width: 40%;
+        word-break: break-word;
+      }
+      .prod-rfq-grid-2 {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
       }
     }
   </style>
@@ -348,8 +413,9 @@
             <option value="ta">தமிழ்</option>
           </select>
         </label>
+        <button class="nav-toggle" id="product-menu-toggle" aria-expanded="false" aria-controls="product-main-menu">Menu ☰</button>
       </div>
-      <div class="nav-menu">
+      <div class="nav-menu" id="product-main-menu">
         <a href="../#catalogue" data-i18n="navProducts">Products</a>
         <a href="../#mount-finder" data-i18n="navFinder">Find the Right Product</a>
         <a href="../#assembly-guides" data-i18n="navAssembly">Assembly &amp; Support</a>
@@ -413,14 +479,14 @@
         <!-- Pricing & Fast Enquiry -->
         <div class="price-enquiry-box">
           <div>
-            <div class="price-text" id="product-price">Request Price</div>
-            <div class="price-sub">Wholesale dealer pricing &amp; retail quotes available</div>
+            <div class="price-text" id="product-price" data-i18n="detailPriceOnRequest">Request Price</div>
+            <div class="price-sub" id="product-price-sub" data-i18n="detailPriceSub">Wholesale dealer pricing &amp; retail quotes available</div>
           </div>
           <div style="display: flex; gap: 8px;">
             <a href="#" id="whatsapp-enquiry-link" target="_blank" class="btn-enquire">
-              <span>💬</span> Ask About This Product
+              <span>💬</span> <span id="whatsapp-enquiry-text" data-i18n="detailAskCompatibility">Ask About This Product</span>
             </a>
-            <button onclick="openProductRfq()" class="btn-rfq">
+            <button onclick="openProductRfq()" class="btn-rfq" id="btn-request-quote" data-i18n="detailRequestQuote">
               Request Quote
             </button>
           </div>
@@ -435,24 +501,26 @@
 
         <!-- Tab: Specifications -->
         <div id="tab-specs" class="tab-content active">
-          <table class="spec-table">
-            <tbody id="spec-table-body">
-              <!-- Populated by JS -->
-            </tbody>
-          </table>
+          <div style="overflow-x: auto; -webkit-overflow-scrolling: touch; width: 100%;">
+            <table class="spec-table">
+              <tbody id="spec-table-body">
+                <!-- Populated by JS -->
+              </tbody>
+            </table>
+          </div>
           <div class="notice-card" id="missing-specs-notice" style="margin-top: 16px; background: #f8fafc; border: 1px solid #e2e8f0; color: #475569; font-size: 12px; line-height: 1.5;">
-            <strong>Technical Information Notice:</strong> Precise millimetre drawings, fastener specifications, and certified load limits for this model are pending manufacturer verification. Values not confirmed by manufacturer drawings are kept pending.
+            <strong data-i18n="detailTechnicalNoticeTitle">Technical Information Notice:</strong> <span data-i18n="detailTechnicalNoticeText">Precise millimetre drawings, fastener specifications, and certified load limits for this model are pending manufacturer verification. Values not confirmed by manufacturer drawings are kept pending.</span>
           </div>
         </div>
 
         <!-- Tab: What is Included -->
         <div id="tab-included" class="tab-content">
-          <h4 style="font-size: 14px; font-weight: 700; margin: 12px 0 8px 0;" id="visible-parts-header">Visible Product Components (From Catalogue Scans):</h4>
+          <h4 style="font-size: 14px; font-weight: 700; margin: 12px 0 8px 0;" id="visible-parts-header" data-i18n="detailVisiblePartsTitle">Visible Product Components (From Catalogue Scans):</h4>
           <ul id="confirmed-parts-list" style="padding-left: 20px; color: #334155;"></ul>
           
-          <h4 style="font-size: 14px; font-weight: 700; margin: 20px 0 8px 0; color: #92400e;">Package Contents Status:</h4>
+          <h4 style="font-size: 14px; font-weight: 700; margin: 20px 0 8px 0; color: #92400e;" data-i18n="detailPackageStatusTitle">Package Contents Status:</h4>
           <div class="notice-card" id="unconfirmed-parts-card">
-            <strong>Package Contents Notice:</strong> Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included.
+            <strong data-i18n="detailPackageStatusTitle">Package Contents Notice:</strong> <span data-i18n="detailPackageNotice">Hardware pack contents (screws, wall anchors, spacers) are awaiting manufacturer bill of materials confirmation. Do not assume fasteners or installation tools are included.</span>
           </div>
         </div>
 
@@ -460,9 +528,9 @@
         <div id="tab-installation" class="tab-content">
           <p id="installation-requirements" style="color: #334155; margin-bottom: 16px;"></p>
           <div id="guide-launch-container" style="display: none; padding-top: 12px; border-top: 1px solid #e2e8f0;">
-            <p style="font-weight: 600; color: #0f172a; margin-bottom: 6px;">Interactive Guidance Available:</p>
-            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">Rotate the structural model and explore key parts with our interactive viewer.</p>
-            <a href="#" id="guide-launch-link" class="btn-guide-launch">Launch 3D Concept Preview ↗</a>
+            <p style="font-weight: 600; color: #0f172a; margin-bottom: 6px;" data-i18n="guideHubTitle">Interactive Guidance Available:</p>
+            <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;" data-i18n="guideHubSubtitle">Rotate the structural model and explore key parts with our interactive viewer.</p>
+            <a href="#" id="guide-launch-link" class="btn-guide-launch" data-i18n="detailConceptBtn">Launch 3D Concept Preview ↗</a>
           </div>
         </div>
 
@@ -473,9 +541,11 @@
 
   <script type="module">
     import { Analytics } from '../assets/analytics.js';
+    import { i18nData as i18n } from '../assets/i18n.js';
 
     let currentProduct = null;
     let allProducts = [];
+    let currentLang = 'en';
 
     async function init() {
       const params = new URLSearchParams(window.location.search);
@@ -500,41 +570,29 @@
       Analytics.track('product_view', { productId: currentProduct.id, code: currentProduct.code });
     }
 
-    const i18n = {
-      en: {
-        languageLabel: 'Language',
-        navProducts: 'Products',
-        navFinder: 'Find the Right Product',
-        navAssembly: 'Assembly & Support',
-        navAbout: 'About Jenefas',
-        navContact: 'Contact',
-        navQuote: 'Request a Quote',
-        tabSpecs: 'Specifications & Compatibility',
-        tabIncluded: 'What is Included',
-        tabInstallation: 'Installation & Support'
-      },
-      ta: {
-        languageLabel: 'மொழி',
-        navProducts: 'பொருட்கள்',
-        navFinder: 'மவுண்ட் தேர்வு',
-        navAssembly: 'பொருத்துதல் வழிகாட்டி',
-        navAbout: 'எங்களை பற்றி',
-        navContact: 'தொடர்பு',
-        navQuote: 'விலைப்பட்டியல்',
-        tabSpecs: 'விவரக்குறிப்புகள்',
-        tabIncluded: 'உள்ளடக்கிய பாகங்கள்',
-        tabInstallation: 'நிறுவல் ஆதரவு'
+    window.switchProductLanguage = function(lang) {
+      currentLang = lang;
+      const t = i18n[lang] || i18n.en;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (t && t[key]) {
+          if (t[key].includes('\n')) {
+            el.innerHTML = t[key].replace(/\n/g, '<br>');
+          } else {
+            el.textContent = t[key];
+          }
+        }
+      });
+      if (currentProduct) {
+        renderProduct(currentProduct);
       }
     };
 
-    window.switchProductLanguage = function(lang) {
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (i18n[lang] && i18n[lang][key]) el.textContent = i18n[lang][key];
-      });
-    };
-
     function renderProduct(p) {
+      if (!p) return;
+      const t = i18n[currentLang] || i18n.en;
+      const isTa = currentLang === 'ta';
+
       if (!p.isPublicCatalogue) {
         const banner = document.getElementById('planning-notice-banner');
         if (banner) {
@@ -547,46 +605,67 @@
       }
 
       document.title = `${p.title} (${p.id}) | Jenefas & Jenefas Chennai`;
+      const crumbCat = document.getElementById('crumb-catalogue');
+      if (crumbCat) crumbCat.textContent = t.navProducts;
       document.getElementById('crumb-category').textContent = p.categoryName;
       document.getElementById('crumb-product').textContent = p.title;
 
       document.getElementById('product-badge-code').textContent = p.displayIdentifier || p.id;
       document.getElementById('product-title').textContent = p.title;
       document.getElementById('product-category').textContent = p.categoryName;
-      document.getElementById('product-ideal').textContent = p.idealFor ? `Recommended for: ${p.idealFor}` : '';
-      document.getElementById('product-price').textContent = p.pricing || 'Request Price';
+      document.getElementById('product-ideal').textContent = p.idealFor ? `${t.cardRecommendedFor || 'Recommended for:'} ${p.idealFor}` : '';
+      document.getElementById('product-price').textContent = t.detailPriceOnRequest || 'Request Price';
+      const priceSub = document.getElementById('product-price-sub');
+      if (priceSub) priceSub.textContent = t.detailPriceSub || 'Wholesale dealer pricing & retail quotes available';
+
+      // View mode buttons
+      const btnPhoto = document.getElementById('btn-view-photo');
+      if (btnPhoto) btnPhoto.innerHTML = `<span>📷</span> ${t.detailViewPhoto || 'View Product'}`;
+      const btnDims = document.getElementById('btn-view-dimensions');
+      if (btnDims) btnDims.innerHTML = `<span>📐</span> ${t.detailCheckDims || 'Check Dimensions'}`;
+      const btnGuide = document.getElementById('btn-view-guide');
+      if (btnGuide) btnGuide.innerHTML = `<span>🔧</span> ${t.detail3dConcept || '3D Concept Preview'}`;
+
+      // Action buttons
+      const btnEnquireText = document.getElementById('whatsapp-enquiry-text');
+      if (btnEnquireText) btnEnquireText.textContent = t.detailAskCompatibility || 'Ask About This Product';
+      const btnRfq = document.getElementById('btn-request-quote');
+      if (btnRfq) btnRfq.textContent = t.detailRequestQuote || 'Request Quote';
 
       // WhatsApp link
       const pageUrl = window.location.href;
       const msg = encodeURIComponent(`Hi Jenefas team, I am inquiring about product ${p.id} (${p.title}). Link: ${pageUrl}. Please provide availability and dealer price.`);
-      document.getElementById('whatsapp-enquiry-link').href = `https://wa.me/919840817220?text=${msg}`;
-      document.getElementById('whatsapp-enquiry-link').addEventListener('click', () => {
-        Analytics.track('whatsapp_click', { productId: p.id, source: 'product_detail' });
-      });
+      const whatsappLink = document.getElementById('whatsapp-enquiry-link');
+      if (whatsappLink) {
+        whatsappLink.href = `https://wa.me/919840817220?text=${msg}`;
+      }
 
       // Gallery Display Initial View
       renderGalleryPhoto(p);
 
       // If product has a guide
       if (p.guideUrl) {
-        document.getElementById('btn-view-guide').style.display = 'flex';
+        if (btnGuide) btnGuide.style.display = 'flex';
         document.getElementById('guide-launch-container').style.display = 'block';
         document.getElementById('guide-launch-link').href = `../${p.guideUrl}`;
-        document.getElementById('guide-launch-link').addEventListener('click', () => {
-          Analytics.track('guide_open', { productId: p.id, guideUrl: p.guideUrl });
-        });
+        document.getElementById('guide-launch-link').textContent = t.detailConceptBtn || 'Launch 3D Concept Preview ↗';
       }
 
       // Specs Table
       const tbody = document.getElementById('spec-table-body');
       tbody.innerHTML = '';
+      const observedText = isTa ? 'சரிபார்க்கப்பட்டது' : 'Observed';
+      const pendingText = isTa ? 'நிலுவையில்' : 'Pending';
+      const awaitingText = isTa ? 'ஆய்வறிக்கை நிலுவையில் உள்ளது' : 'Awaiting manufacturer test report';
+      const directPackText = isTa ? 'தனிநபர் பேக்கிங்' : 'Direct individual packing';
+
       const specs = [
-        { label: 'Screen Size Range', val: p.screenSize, status: 'Observed' },
-        { label: 'VESA Compatibility', val: p.vesa, status: 'Observed' },
-        { label: 'Maximum Load Rating', val: p.maxLoad || 'Awaiting manufacturer test report', status: p.maxLoad ? 'Observed' : 'Pending' },
-        { label: 'Movement / Articulation', val: p.motion, status: 'Observed' },
-        { label: 'Wall / Table Clearance', val: p.wallDistance, status: 'Observed' },
-        { label: 'Standard Carton Pack', val: p.cartonPack || 'Direct individual packing', status: p.cartonPack ? 'Observed' : 'Pending' }
+        { label: t.specScreenRange || 'Screen Size Range', val: p.screenSize, status: observedText, rawStatus: 'Observed' },
+        { label: t.specVesa || 'VESA Compatibility', val: p.vesa, status: observedText, rawStatus: 'Observed' },
+        { label: t.specMaxLoad || 'Maximum Load Rating', val: p.maxLoad || awaitingText, status: p.maxLoad ? observedText : pendingText, rawStatus: p.maxLoad ? 'Observed' : 'Pending' },
+        { label: t.specMountType || 'Movement / Articulation', val: p.motion, status: observedText, rawStatus: 'Observed' },
+        { label: t.specProfile || 'Wall / Table Clearance', val: p.wallDistance, status: observedText, rawStatus: 'Observed' },
+        { label: t.cardPackaging ? t.cardPackaging.replace(':', '') : 'Standard Carton Pack', val: p.cartonPack || directPackText, status: p.cartonPack ? observedText : pendingText, rawStatus: p.cartonPack ? 'Observed' : 'Pending' }
       ];
 
       specs.forEach(s => {
@@ -595,7 +674,7 @@
           <th>${s.label}</th>
           <td>
             ${s.val}
-            <span class="status-badge ${s.status === 'Observed' ? 'observed' : 'pending'}">${s.status}</span>
+            <span class="status-badge ${s.rawStatus === 'Observed' ? 'observed' : 'pending'}">${s.status}</span>
           </td>
         `;
         tbody.appendChild(tr);
@@ -611,10 +690,10 @@
           confirmedList.appendChild(li);
         });
       }
-      document.getElementById('unconfirmed-parts-text').textContent = p.includedParts?.unconfirmed || 'All connection fasteners must be confirmed against your specific display model.';
+      document.getElementById('unconfirmed-parts-text').textContent = p.includedParts?.unconfirmed || (isTa ? 'அனைத்து இணைப்பு திருகுகளும் உங்கள் குறிப்பிட்ட டிவி மாதிரியுடன் சரிபார்க்கப்பட வேண்டும்.' : 'All connection fasteners must be confirmed against your specific display model.');
 
       // Installation
-      document.getElementById('installation-requirements').textContent = p.installationRequirements || 'Follow manufacturer instructions and verify wall or mounting surface strength prior to fitting.';
+      document.getElementById('installation-requirements').textContent = p.installationRequirements || (isTa ? 'தயாரிப்பாளர் வழிமுறைகளைப் பின்பற்றவும் மற்றும் பொருத்துவதற்கு முன் சுவர் அல்லது பலகையின் வலிமையை உறுதிப்படுத்தவும்.' : 'Follow manufacturer instructions and verify wall or mounting surface strength prior to fitting.');
     }
 
     function renderGalleryPhoto(p) {
@@ -726,56 +805,83 @@
     };
 
     init();
+
+    // Mobile Navigation Toggle
+    const menuToggle = document.getElementById('product-menu-toggle');
+    const mainMenu = document.getElementById('product-main-menu');
+    if (menuToggle && mainMenu) {
+      const closeMenu = () => {
+        mainMenu.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      };
+      menuToggle.addEventListener('click', () => {
+        const open = menuToggle.getAttribute('aria-expanded') !== 'true';
+        mainMenu.classList.toggle('is-open', open);
+        menuToggle.setAttribute('aria-expanded', String(open));
+      });
+      mainMenu.addEventListener('click', (e) => {
+        if (e.target.closest('a, button')) closeMenu();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menuToggle.getAttribute('aria-expanded') === 'true') {
+          closeMenu();
+          menuToggle.focus();
+        }
+      });
+      document.addEventListener('click', (e) => {
+        if (!e.target.closest('.customer-nav')) closeMenu();
+      });
+    }
   </script>
 
   <!-- Product Detail RFQ Modal -->
-  <div id="productRfqModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center; padding:16px;">
-    <div style="background:#fff; border-radius:12px; max-width:480px; width:100%; padding:24px; box-shadow:0 10px 25px rgba(0,0,0,0.2); position:relative;">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; border-bottom:1px solid #e2e8f0; padding-bottom:12px;">
+  <div id="productRfqModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:9999; align-items:flex-start; justify-content:center; padding:12px; overflow-y:auto;">
+    <div style="background:#fff; border-radius:12px; max-width:480px; width:100%; max-height:calc(100vh - 24px); overflow-y:auto; padding:20px 16px; box-shadow:0 10px 25px rgba(0,0,0,0.2); position:relative; margin:auto;">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; border-bottom:1px solid #e2e8f0; padding-bottom:10px;">
         <h3 style="margin:0; font-size:18px; font-weight:700;">Wholesale Request For Quote</h3>
-        <button onclick="closeProductRfq()" style="background:none; border:none; font-size:20px; cursor:pointer; color:#64748b;">✕</button>
+        <button onclick="closeProductRfq()" style="background:none; border:none; font-size:20px; cursor:pointer; color:#64748b; padding:4px;">✕</button>
       </div>
       <form id="productRfqForm" onsubmit="submitProductRfq(event)">
         <div style="margin-bottom:12px;">
           <label style="display:block; font-size:12px; font-weight:600; color:#475569; margin-bottom:4px;">Selected Product</label>
-          <input type="text" id="prodRfqProduct" readonly style="width:100%; padding:8px 10px; border:1px solid #cbd5e1; border-radius:6px; font-size:13px; background:#f1f5f9; color:#0f172a;">
+          <input type="text" id="prodRfqProduct" readonly style="width:100%; padding:8px 10px; border:1px solid #cbd5e1; border-radius:6px; font-size:13px; background:#f1f5f9; color:#0f172a; box-sizing:border-box;">
         </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+        <div class="prod-rfq-grid-2" style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
           <div>
             <label style="display:block; font-size:12px; font-weight:600; color:#475569; margin-bottom:4px;">Your Name *</label>
-            <input type="text" id="prodRfqName" required placeholder="e.g. Ramesh Kumar" style="width:100%; padding:8px 10px; border:1px solid #cbd5e1; border-radius:6px; font-size:13px;">
+            <input type="text" id="prodRfqName" required placeholder="e.g. Ramesh Kumar" style="width:100%; padding:8px 10px; border:1px solid #cbd5e1; border-radius:6px; font-size:13px; box-sizing:border-box;">
           </div>
           <div>
             <label style="display:block; font-size:12px; font-weight:600; color:#475569; margin-bottom:4px;">Company / Shop</label>
-            <input type="text" id="prodRfqCompany" placeholder="e.g. Star Electronics" style="width:100%; padding:8px 10px; border:1px solid #cbd5e1; border-radius:6px; font-size:13px;">
+            <input type="text" id="prodRfqCompany" placeholder="e.g. Star Electronics" style="width:100%; padding:8px 10px; border:1px solid #cbd5e1; border-radius:6px; font-size:13px; box-sizing:border-box;">
           </div>
         </div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
+        <div class="prod-rfq-grid-2" style="display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:12px;">
           <div>
             <label style="display:block; font-size:12px; font-weight:600; color:#475569; margin-bottom:4px;">Mobile / WhatsApp *</label>
-            <input type="tel" id="prodRfqPhone" required placeholder="+91 98765 43210" style="width:100%; padding:8px 10px; border:1px solid #cbd5e1; border-radius:6px; font-size:13px;">
+            <input type="tel" id="prodRfqPhone" required placeholder="+91 98765 43210" style="width:100%; padding:8px 10px; border:1px solid #cbd5e1; border-radius:6px; font-size:13px; box-sizing:border-box;">
           </div>
           <div>
             <label style="display:block; font-size:12px; font-weight:600; color:#475569; margin-bottom:4px;">Quantity</label>
-            <input type="text" id="prodRfqQty" placeholder="e.g. 20 pcs" style="width:100%; padding:8px 10px; border:1px solid #cbd5e1; border-radius:6px; font-size:13px;">
+            <input type="text" id="prodRfqQty" placeholder="e.g. 20 pcs" style="width:100%; padding:8px 10px; border:1px solid #cbd5e1; border-radius:6px; font-size:13px; box-sizing:border-box;">
           </div>
         </div>
         <div id="prodRfqRecovery" style="display:none; margin-bottom:14px; padding:10px 12px; background:#f0fdf4; border:1px solid #bbf7d0; border-radius:6px; font-size:11px;">
           <strong style="display:block; color:#166534; margin-bottom:4px;">Draft Prepared:</strong>
           <div style="display:flex; gap:8px;">
-            <a href="#" id="prodRfqDirectLink" target="_blank" style="flex:1; text-align:center; background:#16a34a; color:#fff; padding:6px 10px; border-radius:4px; text-decoration:none; font-weight:700;">Open WhatsApp ↗</a>
-            <button type="button" id="prodRfqCopyBtn" onclick="copyProdDraft()" style="background:#e2e8f0; border:none; padding:6px 10px; border-radius:4px; font-weight:600; cursor:pointer;">Copy</button>
+            <a href="#" id="prodRfqDirectLink" target="_blank" style="flex:1; text-align:center; background:#16a34a; color:#fff; padding:8px 10px; border-radius:4px; text-decoration:none; font-weight:700;">Open WhatsApp ↗</a>
+            <button type="button" id="prodRfqCopyBtn" onclick="copyProdDraft()" style="background:#e2e8f0; border:none; padding:8px 12px; border-radius:4px; font-weight:600; cursor:pointer;">Copy</button>
           </div>
         </div>
-        <div style="padding:10px 12px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; font-size:11px; color:#64748b; margin-bottom:16px;">
+        <div style="padding:10px 12px; background:#f8fafc; border:1px solid #e2e8f0; border-radius:6px; font-size:11px; color:#64748b; margin-bottom:16px; line-height:1.5;">
           <strong style="display:block; color:#0f172a; margin-bottom:2px;">WhatsApp Draft Notice:</strong>
           Submitting prepares a structured message draft with this product's code and details to review and send to our verified WhatsApp sales desk (+91 98408 17220). Zero messages or orders are placed automatically.
         </div>
-        <div style="display:flex; gap:10px;">
-          <button type="submit" id="prodRfqSubmitBtn" style="flex:1; background:var(--primary-red); color:#fff; border:none; padding:10px 16px; border-radius:6px; font-weight:700; cursor:pointer; font-size:13px;">
+        <div style="display:flex; flex-direction:row; gap:10px;">
+          <button type="submit" id="prodRfqSubmitBtn" style="flex:1; min-height:44px; background:var(--primary-red); color:#fff; border:none; padding:10px 16px; border-radius:6px; font-weight:700; cursor:pointer; font-size:13px;">
             Review Enquiry in WhatsApp ↗
           </button>
-          <button type="button" onclick="closeProductRfq()" style="background:#f1f5f9; color:#475569; border:none; padding:10px 16px; border-radius:6px; font-weight:600; cursor:pointer; font-size:13px;">
+          <button type="button" onclick="closeProductRfq()" style="min-height:44px; background:#f1f5f9; color:#475569; border:none; padding:10px 16px; border-radius:6px; font-weight:600; cursor:pointer; font-size:13px;">
             Cancel
           </button>
         </div>
