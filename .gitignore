@@ -37,3 +37,12 @@ yarn-error.log*
 
 # Local Netlify folder
 .netlify
+
+# Temporary and generated build outputs
+scratch/
+*.zip
+test_output.pdf
+Jenefas_Deliverables_and_Price_Breakdown.html
+Jenefas_Deliverables_and_Price_Breakdown.pdf
+Jenefas_Deliverables_and_Price_Breakdown.png
+Jenefas_and_Jenefas_Proposal.pdf
